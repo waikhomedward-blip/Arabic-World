@@ -1,0 +1,62 @@
+{
+ "cycles": [
+  {
+   "cycle": 0,
+   "date": "2026-11-15",
+   "overall": 76.7,
+   "suiteR": 1,
+   "suiteC": 0.9946,
+   "gameplay": 1,
+   "crashes": 0,
+   "checkerAccuracy": 1,
+   "ladder": 1,
+   "learnersMedianRetained": 22,
+   "lemmas": 35,
+   "days": 3,
+   "speech": "not built",
+   "perf": "not built",
+   "visual": "not built",
+   "cases": 1448,
+   "failures": 9,
+   "parts": {
+    "C": 24.865350089766608,
+    "G": 15,
+    "checker": 15,
+    "ladder": 10,
+    "learners": 11.79375,
+    "P": 0,
+    "S": 0,
+    "V": 0
+   }
+  },
+  {
+   "cycle": 1,
+   "date": "2026-11-15",
+   "overall": 76.2,
+   "suiteR": 1,
+   "suiteC": 0.9964,
+   "gameplay": 1,
+   "crashes": 0,
+   "checkerAccuracy": 1,
+   "ladder": 1,
+   "learnersMedianRetained": 21,
+   "lemmas": 35,
+   "days": 3,
+   "speech": "not built",
+   "perf": "not built",
+   "visual": "not built",
+   "cases": 1468,
+   "failures": 8,
+   "parts": {
+    "C": 24.910233393177737,
+    "G": 15,
+    "checker": 15,
+    "ladder": 10,
+    "learners": 11.249999999999998,
+    "P": 0,
+    "S": 0,
+    "V": 0
+   }
+  }
+ ]
+}

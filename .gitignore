@@ -1,0 +1,11 @@
+node_modules/
+dist/
+app/dist/
+.env
+.env.*
+*.local
+lab/results/**/audio/
+lab/fixtures/external/
+playwright-report/
+test-results/
+.DS_Store

@@ -1,0 +1,282 @@
+[
+ {
+  "id": "wa",
+  "ar": "وَ",
+  "en": "and",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "ana",
+  "ar": "أَنَا",
+  "en": "I",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "anta",
+  "ar": "أَنْتَ",
+  "en": "you (m.)",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "hadha",
+  "ar": "هٰذَا",
+  "en": "this (m.)",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "hadhihi",
+  "ar": "هٰذِهِ",
+  "en": "this (f. noun)",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "ala",
+  "ar": "عَلَى",
+  "en": "on, upon",
+  "tier": 0,
+  "root": "ع ل و",
+  "targetRung": 1
+ },
+ {
+  "id": "kum",
+  "ar": "ـكُمْ",
+  "en": "you (pl.), your",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "ii",
+  "ar": "ـِي",
+  "en": "my",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "ka",
+  "ar": "ـكَ",
+  "en": "you, your (m.)",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "ya",
+  "ar": "يَا",
+  "en": "O (calling someone)",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "la",
+  "ar": "لَا",
+  "en": "no, not",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "hal",
+  "ar": "هَلْ",
+  "en": "(question word: is…?)",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "li",
+  "ar": "لِـ",
+  "en": "for, to",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "bi",
+  "ar": "بِـ",
+  "en": "with, in",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "salam",
+  "ar": "سَلَامٌ",
+  "en": "peace",
+  "tier": 1,
+  "root": "س ل م",
+  "targetRung": 4
+ },
+ {
+  "id": "ahlan",
+  "ar": "أَهْلًا وَسَهْلًا",
+  "en": "welcome",
+  "tier": "everyday",
+  "root": "أ ه ل",
+  "targetRung": 2
+ },
+ {
+  "id": "bayt",
+  "ar": "بَيْتٌ",
+  "en": "house, home",
+  "tier": 1,
+  "root": "ب ي ت",
+  "targetRung": 4
+ },
+ {
+  "id": "shukran",
+  "ar": "شُكْرًا",
+  "en": "thank you",
+  "tier": "everyday",
+  "root": "ش ك ر",
+  "targetRung": 4
+ },
+ {
+  "id": "afwan",
+  "ar": "عَفْوًا",
+  "en": "you're welcome",
+  "tier": "everyday",
+  "root": "ع ف و",
+  "targetRung": 2
+ },
+ {
+  "id": "tafaddal",
+  "ar": "تَفَضَّلْ",
+  "en": "please, go ahead / here you are",
+  "tier": "everyday",
+  "root": "ف ض ل",
+  "targetRung": 2
+ },
+ {
+  "id": "maa",
+  "ar": "مَاءٌ",
+  "en": "water",
+  "tier": 1,
+  "root": "م و ه",
+  "targetRung": 4
+ },
+ {
+  "id": "tuffaha",
+  "ar": "تُفَّاحَةٌ",
+  "en": "apple",
+  "tier": "everyday",
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "khudh",
+  "ar": "خُذْ",
+  "en": "take!",
+  "tier": 1,
+  "root": "أ خ ذ",
+  "targetRung": 2
+ },
+ {
+  "id": "naam",
+  "ar": "نَعَمْ",
+  "en": "yes",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "masjid",
+  "ar": "مَسْجِدٌ",
+  "en": "masjid",
+  "tier": 1,
+  "root": "س ج د",
+  "targetRung": 4
+ },
+ {
+  "id": "hamd",
+  "ar": "حَمْدٌ",
+  "en": "praise",
+  "tier": 1,
+  "root": "ح م د",
+  "targetRung": 2
+ },
+ {
+  "id": "allah",
+  "ar": "ٱللّٰه",
+  "en": "Allah",
+  "tier": 1,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "kayfa",
+  "ar": "كَيْفَ",
+  "en": "how",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "hal_state",
+  "ar": "حَالٌ",
+  "en": "state, condition",
+  "tier": "everyday",
+  "root": "ح و ل",
+  "targetRung": 2
+ },
+ {
+  "id": "khayr",
+  "ar": "خَيْرٌ",
+  "en": "good, well",
+  "tier": 1,
+  "root": "خ ي ر",
+  "targetRung": 4
+ },
+ {
+  "id": "qahwa",
+  "ar": "قَهْوَةٌ",
+  "en": "coffee",
+  "tier": "everyday",
+  "root": "ق ه و",
+  "targetRung": 4
+ },
+ {
+  "id": "kitab",
+  "ar": "كِتَابٌ",
+  "en": "book",
+  "tier": 1,
+  "root": "ك ت ب",
+  "targetRung": 4
+ },
+ {
+  "id": "katib",
+  "ar": "كَاتِبٌ",
+  "en": "writer",
+  "tier": 1,
+  "root": "ك ت ب",
+  "targetRung": 2
+ },
+ {
+  "id": "ab",
+  "ar": "أَبٌ",
+  "en": "father",
+  "tier": 1,
+  "root": "أ ب و",
+  "targetRung": 4
+ },
+ {
+  "id": "sadiq",
+  "ar": "صَدِيقٌ",
+  "en": "friend",
+  "tier": "everyday",
+  "root": "ص د ق",
+  "targetRung": 4
+ }
+]

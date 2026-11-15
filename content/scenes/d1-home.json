@@ -1,0 +1,243 @@
+{
+ "id": "d1-home",
+ "day": 1,
+ "place": "home",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "اَلْوُصُولُ",
+  "en": "Arrival"
+ },
+ "cast": [
+  "abu_faisal",
+  "faisal"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "السَّلَامُ عَلَيْكُمْ.",
+   "en": "Peace be upon you.",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  },
+  {
+   "type": "prompt",
+   "id": "d1h-greet",
+   "speaker": "abu_faisal",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "أَهْلًا وَسَهْلًا! أَنَا أَبُو فَيْصَلٍ.",
+   "en": "Welcome! I am Abu Faisal.",
+   "lemmas": [
+    "ahlan",
+    "ana"
+   ],
+   "register": "white",
+   "gesture": "open_arms",
+   "names": [
+    "أَبُو فَيْصَلٍ"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "هٰذَا بَيْتِي.",
+   "en": "This is my house.",
+   "lemmas": [
+    "hadha",
+    "bayt",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "point:house"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "أَنَا فَيْصَلٌ. أَهْلًا وَسَهْلًا!",
+   "en": "I am Faisal. Welcome!",
+   "lemmas": [
+    "ana",
+    "ahlan"
+   ],
+   "register": "white",
+   "gesture": "wave_small",
+   "names": [
+    "فَيْصَلٌ"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "هٰذَا مَاءٌ.",
+   "en": "This is water.",
+   "lemmas": [
+    "hadha",
+    "maa"
+   ],
+   "register": "white",
+   "gesture": "hold_up:water"
+  },
+  {
+   "type": "prompt",
+   "id": "d1h-take",
+   "speaker": "abu_faisal",
+   "ask": {
+    "ar": "خُذْ.",
+    "en": "Take it."
+   },
+   "options": [
+    {
+     "ar": "✋ 💧",
+     "en": "(take the water)",
+     "lemmas": [
+      "maa"
+     ],
+     "correct": true,
+     "action": "take:water"
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "خُذْ…",
+    "en": "Take…",
+    "gesture": "hold_out:water"
+   },
+   "lemmas": [
+    "khudh",
+    "maa"
+   ],
+   "action": "take:water"
+  },
+  {
+   "type": "prompt",
+   "id": "d1h-thanks",
+   "speaker": "abu_faisal",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَنَا",
+     "en": "I",
+     "lemmas": [
+      "ana"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "عَفْوًا.",
+   "en": "You're welcome.",
+   "lemmas": [
+    "afwan"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  }
+ ]
+}

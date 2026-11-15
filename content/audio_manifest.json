@@ -1,0 +1,4 @@
+{ "files": [], "placeholders": [
+  { "id": "adhan", "kind": "adhan", "status": "needs licensed recording" },
+  { "id": "quran-station", "kind": "quran", "status": "text only until a reciter is commissioned" }
+] }

@@ -1,0 +1,261 @@
+{
+ "id": "d1-souq",
+ "day": 1,
+ "place": "souq",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "اَلسُّوقُ",
+  "en": "The souq"
+ },
+ "cast": [
+  "saeed"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "السَّلَامُ عَلَيْكُمْ!",
+   "en": "Peace be upon you!",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum"
+   ],
+   "register": "white",
+   "gesture": "raise_hand"
+  },
+  {
+   "type": "prompt",
+   "id": "d1s-greet",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "هٰذِهِ تُفَّاحَةٌ.",
+   "en": "This is an apple.",
+   "lemmas": [
+    "hadhihi",
+    "tuffaha"
+   ],
+   "register": "white",
+   "gesture": "hold_up:apple"
+  },
+  {
+   "type": "prompt",
+   "id": "d1s-yesno",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "هَلْ هٰذِهِ تُفَّاحَةٌ؟",
+    "en": "Is this an apple?",
+    "lemmas": [
+     "hal",
+     "hadhihi",
+     "tuffaha"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، هٰذِهِ تُفَّاحَةٌ.",
+     "en": "Yes, this is an apple.",
+     "lemmas": [
+      "naam",
+      "hadhihi",
+      "tuffaha"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، هٰذَا مَاءٌ.",
+     "en": "No, this is water.",
+     "lemmas": [
+      "la",
+      "hadha",
+      "maa"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، هٰذِهِ تُفَّاحَةٌ",
+    "نَعَمْ",
+    "نعم هذه تفاحة"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "هٰذِهِ",
+    "تُفَّاحَةٌ",
+    "مَاءٌ"
+   ],
+   "recast": {
+    "ar": "هِمْ… تُفَّاحَةٌ؟",
+    "en": "Hmm… an apple?",
+    "gesture": "tilt_apple"
+   },
+   "lemmas": [
+    "naam",
+    "hadhihi",
+    "tuffaha"
+   ]
+  },
+  {
+   "type": "prompt",
+   "id": "d1s-take",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "خُذْ تُفَّاحَةً!",
+    "en": "Take an apple!",
+    "lemmas": [
+     "khudh",
+     "tuffaha"
+    ]
+   },
+   "options": [
+    {
+     "ar": "✋ 🍎",
+     "en": "(take the apple)",
+     "lemmas": [
+      "tuffaha"
+     ],
+     "correct": true,
+     "action": "take:apple"
+    },
+    {
+     "ar": "✋ 💧",
+     "en": "(take the water)",
+     "lemmas": [
+      "maa"
+     ],
+     "correct": false,
+     "action": "take:water"
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "تُفَّاحَةً…",
+    "en": "An apple…",
+    "gesture": "hold_out:apple"
+   },
+   "lemmas": [
+    "khudh",
+    "tuffaha"
+   ],
+   "action": "take:apple"
+  },
+  {
+   "type": "prompt",
+   "id": "d1s-thanks",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَنَا",
+     "en": "I",
+     "lemmas": [
+      "ana"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "عَفْوًا!",
+   "en": "You're welcome!",
+   "lemmas": [
+    "afwan"
+   ],
+   "register": "white",
+   "gesture": "nod"
+  }
+ ]
+}

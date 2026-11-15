@@ -1,0 +1,245 @@
+{
+ "id": "d2-masjid",
+ "day": 2,
+ "place": "masjid",
+ "tags": [
+  "sanctuary"
+ ],
+ "kind": "story",
+ "title": {
+  "ar": "صَحْنُ الْمَسْجِدِ",
+  "en": "The masjid courtyard"
+ },
+ "cast": [
+  "tariq"
+ ],
+ "note": {
+  "en": "This is a story scene, not worship. Prayer is never part of the gameplay."
+ },
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "السَّلَامُ عَلَيْكُمْ. أَنَا طَارِقٌ.",
+   "en": "Peace be upon you. I am Tariq.",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum",
+    "ana"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart",
+   "names": [
+    "طَارِقٌ"
+   ]
+  },
+  {
+   "type": "prompt",
+   "id": "d2m-greet",
+   "speaker": "tariq",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "هٰذَا مَسْجِدٌ.",
+   "en": "This is a masjid.",
+   "lemmas": [
+    "hadha",
+    "masjid"
+   ],
+   "register": "white",
+   "gesture": "point:minaret"
+  },
+  {
+   "type": "prompt",
+   "id": "d2m-yesno",
+   "speaker": "tariq",
+   "ask": {
+    "ar": "هَلْ هٰذَا مَاءٌ؟",
+    "en": "Is this water?",
+    "lemmas": [
+     "hal",
+     "hadha",
+     "maa"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، هٰذَا مَاءٌ.",
+     "en": "Yes, this is water.",
+     "lemmas": [
+      "naam",
+      "hadha",
+      "maa"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، هٰذَا بَيْتٌ.",
+     "en": "No, this is a house.",
+     "lemmas": [
+      "la",
+      "hadha",
+      "bayt"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، هٰذَا مَاءٌ",
+    "نَعَمْ",
+    "نعم هذا ماء"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "هٰذَا",
+    "مَاءٌ",
+    "بَيْتٌ"
+   ],
+   "recast": {
+    "ar": "هِمْ… مَاءٌ؟",
+    "en": "Hmm… water?",
+    "gesture": "tap_cooler"
+   },
+   "lemmas": [
+    "naam",
+    "hadha",
+    "maa"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "تَفَضَّلْ، خُذِ الْمَاءَ.",
+   "en": "Please, take the water.",
+   "lemmas": [
+    "tafaddal",
+    "khudh",
+    "maa"
+   ],
+   "register": "white",
+   "gesture": "hold_out:cup"
+  },
+  {
+   "type": "prompt",
+   "id": "d2m-take",
+   "speaker": "tariq",
+   "ask": {
+    "ar": "خُذْ.",
+    "en": "Take it."
+   },
+   "options": [
+    {
+     "ar": "✋ 💧",
+     "en": "(take the cup of water)",
+     "lemmas": [
+      "maa"
+     ],
+     "correct": true,
+     "action": "take:water"
+    },
+    {
+     "ar": "✋ 🍎",
+     "en": "(take an apple)",
+     "lemmas": [
+      "tuffaha"
+     ],
+     "correct": false,
+     "action": "take:apple"
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "الْمَاءَ…",
+    "en": "The water…",
+    "gesture": "hold_out:cup"
+   },
+   "lemmas": [
+    "khudh",
+    "maa"
+   ],
+   "action": "take:water"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "الْحَمْدُ لِلّٰهِ.",
+   "en": "Praise be to Allah.",
+   "lemmas": [
+    "hamd",
+    "li",
+    "allah"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "أَنْتَ صَدِيقِي.",
+   "en": "You are my friend.",
+   "lemmas": [
+    "anta",
+    "sadiq",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "hand_on_shoulder"
+  }
+ ]
+}

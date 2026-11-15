@@ -1,0 +1,21 @@
+{
+  "allowedVoices": ["ar-SA-HamedNeural", "ar-AE-HamdanNeural", "ar-QA-MoazNeural", "ar-EG-ShakirNeural", "ar-SY-LaithNeural", "ar-JO-TaimNeural", "ar-KW-FahedNeural"],
+  "allowedGarments": {
+    "thobe": { "coverage": "neck-to-ankle", "fit": "loose" },
+    "bisht": { "coverage": "shoulder-to-ankle", "fit": "loose" },
+    "loose_shirt_long_sleeve": { "coverage": "neck-to-wrist", "fit": "loose" },
+    "loose_trousers": { "coverage": "waist-to-ankle", "fit": "loose" },
+    "jacket": { "coverage": "neck-to-hip", "fit": "loose" },
+    "kufi": { "coverage": "head", "fit": "loose" },
+    "ghutra": { "coverage": "head", "fit": "loose" }
+  },
+  "characters": [
+    { "id": "abu_faisal", "nameAr": "أَبُو فَيْصَلٍ", "nameEn": "Abu Faisal", "role": "host father", "gender": "male", "age": "adult", "face": "none", "voice": "ar-SA-HamedNeural", "register": "white", "garments": ["thobe", "bisht", "ghutra"], "colour": "#e8e0d0", "height": 1.78, "build": 1.1 },
+    { "id": "faisal", "nameAr": "فَيْصَلٌ", "nameEn": "Faisal", "role": "host son", "gender": "male", "age": "young adult", "face": "none", "voice": "ar-AE-HamdanNeural", "register": "white", "garments": ["thobe", "kufi"], "colour": "#f4f1ea", "height": 1.74, "build": 0.95 },
+    { "id": "majid", "nameAr": "مَاجِدٌ", "nameEn": "Majid", "role": "host son (boy)", "gender": "male", "age": "boy", "face": "none", "voice": "ar-QA-MoazNeural", "register": "white", "garments": ["thobe"], "colour": "#d9e4ec", "height": 1.35, "build": 0.85 },
+    { "id": "tariq", "nameAr": "طَارِقٌ", "nameEn": "Tariq", "role": "friend (from Pakistan)", "gender": "male", "age": "young adult", "face": "none", "voice": "ar-JO-TaimNeural", "register": "white", "garments": ["loose_shirt_long_sleeve", "loose_trousers", "kufi"], "colour": "#7a8f6a", "height": 1.72, "build": 1.0 },
+    { "id": "karim", "nameAr": "كَرِيمٌ", "nameEn": "Karim", "role": "friend (from Egypt; light dialect, listen-only)", "gender": "male", "age": "young adult", "face": "none", "voice": "ar-EG-ShakirNeural", "register": "dialect-listen", "garments": ["loose_shirt_long_sleeve", "loose_trousers", "jacket"], "colour": "#3d5a80", "height": 1.8, "build": 1.05 },
+    { "id": "nabil", "nameAr": "نَبِيلٌ", "nameEn": "Nabil", "role": "friend (from Syria)", "gender": "male", "age": "young adult", "face": "none", "voice": "ar-SY-LaithNeural", "register": "white", "garments": ["loose_shirt_long_sleeve", "loose_trousers"], "colour": "#9c6644", "height": 1.7, "build": 0.95 },
+    { "id": "saeed", "nameAr": "سَعِيدٌ", "nameEn": "Saeed", "role": "shopkeeper", "gender": "male", "age": "older adult", "face": "none", "voice": "ar-KW-FahedNeural", "register": "white", "garments": ["thobe", "ghutra"], "colour": "#c9b79c", "height": 1.68, "build": 1.2 }
+  ]
+}

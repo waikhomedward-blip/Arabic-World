@@ -1,0 +1,312 @@
+{
+ "id": "d3-home",
+ "day": 3,
+ "place": "home",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "عَلَى السَّطْحِ",
+  "en": "On the roof"
+ },
+ "cast": [
+  "faisal",
+  "abu_faisal"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "السَّلَامُ عَلَيْكُمْ! كَيْفَ حَالُكَ؟",
+   "en": "Peace be upon you! How are you?",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum",
+    "kayfa",
+    "hal_state",
+    "ka"
+   ],
+   "register": "white",
+   "gesture": "raise_hand"
+  },
+  {
+   "type": "prompt",
+   "id": "d3h-fine",
+   "speaker": "faisal",
+   "ask": {
+    "en": "Say you are well"
+   },
+   "options": [
+    {
+     "ar": "بِخَيْرٍ، الْحَمْدُ لِلّٰهِ",
+     "en": "Well, praise be to Allah",
+     "lemmas": [
+      "bi",
+      "khayr",
+      "hamd",
+      "li",
+      "allah"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "هٰذَا بَيْتٌ",
+     "en": "This is a house",
+     "lemmas": [
+      "hadha",
+      "bayt"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
+     "lemmas": [
+      "afwan"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "بِخَيْرٍ، الْحَمْدُ لِلّٰهِ",
+    "بِخَيْرٍ وَالْحَمْدُ لِلّٰهِ",
+    "الْحَمْدُ لِلّٰهِ، بِخَيْرٍ",
+    "بخير"
+   ],
+   "tiles": [
+    "بِخَيْرٍ",
+    "الْحَمْدُ",
+    "لِلّٰهِ",
+    "قَهْوَةٌ"
+   ],
+   "recast": {
+    "ar": "بِخَيْرٍ…؟",
+    "en": "Well…?",
+    "gesture": "thumbs_up_small"
+   },
+   "lemmas": [
+    "bi",
+    "khayr",
+    "hamd",
+    "li",
+    "allah"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "هٰذَا بَيْتِي، وَهٰذَا مَسْجِدٌ.",
+   "en": "This is my house, and this is a masjid.",
+   "lemmas": [
+    "hadha",
+    "bayt",
+    "ii",
+    "wa",
+    "masjid"
+   ],
+   "register": "white",
+   "gesture": "point:minaret"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "هٰذَا كِتَابٌ، يَا صَدِيقِي.",
+   "en": "This is a book, my friend.",
+   "lemmas": [
+    "hadha",
+    "kitab",
+    "ya",
+    "sadiq",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "hold_up:book"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "هٰذَا أَبِي.",
+   "en": "This is my father.",
+   "lemmas": [
+    "hadha",
+    "ab",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "point:abu_faisal"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "أَبِي كَاتِبٌ. كِتَابٌ… كَاتِبٌ!",
+   "en": "My father is a writer. Book… writer!",
+   "lemmas": [
+    "ab",
+    "ii",
+    "katib",
+    "kitab"
+   ],
+   "register": "white",
+   "gesture": "trace_letters",
+   "notice": {
+    "root": "ك ت ب",
+    "words": [
+     "kitab",
+     "katib"
+    ],
+    "en": "Same three letters: k-t-b. Book, writer."
+   }
+  },
+  {
+   "type": "prompt",
+   "id": "d3h-yesno",
+   "speaker": "abu_faisal",
+   "ask": {
+    "ar": "هَلْ هٰذَا كِتَابٌ؟",
+    "en": "Is this a book?",
+    "lemmas": [
+     "hal",
+     "hadha",
+     "kitab"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، هٰذَا كِتَابٌ.",
+     "en": "Yes, this is a book.",
+     "lemmas": [
+      "naam",
+      "hadha",
+      "kitab"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، هٰذَا مَاءٌ.",
+     "en": "No, this is water.",
+     "lemmas": [
+      "la",
+      "hadha",
+      "maa"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، هٰذَا كِتَابٌ",
+    "نَعَمْ",
+    "نعم هذا كتاب"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "هٰذَا",
+    "كِتَابٌ",
+    "مَاءٌ"
+   ],
+   "recast": {
+    "ar": "هِمْ… كِتَابٌ؟",
+    "en": "Hmm… a book?",
+    "gesture": "tilt_book"
+   },
+   "lemmas": [
+    "naam",
+    "hadha",
+    "kitab"
+   ]
+  },
+  {
+   "type": "prompt",
+   "id": "d3h-take",
+   "speaker": "abu_faisal",
+   "ask": {
+    "ar": "خُذِ الْكِتَابَ.",
+    "en": "Take the book.",
+    "lemmas": [
+     "khudh",
+     "kitab"
+    ]
+   },
+   "options": [
+    {
+     "ar": "✋ 📖",
+     "en": "(take the book)",
+     "lemmas": [
+      "kitab"
+     ],
+     "correct": true,
+     "action": "take:book"
+    },
+    {
+     "ar": "✋ 💧",
+     "en": "(take the water)",
+     "lemmas": [
+      "maa"
+     ],
+     "correct": false,
+     "action": "take:water"
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "الْكِتَابَ…",
+    "en": "The book…",
+    "gesture": "hold_out:book"
+   },
+   "lemmas": [
+    "khudh",
+    "kitab"
+   ],
+   "action": "take:book"
+  },
+  {
+   "type": "prompt",
+   "id": "d3h-thanks",
+   "speaker": "abu_faisal",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَنَا",
+     "en": "I",
+     "lemmas": [
+      "ana"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  }
+ ]
+}

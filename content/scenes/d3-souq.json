@@ -1,0 +1,359 @@
+{
+ "id": "d3-souq",
+ "day": 3,
+ "place": "souq",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "مِشْوَارٌ",
+  "en": "An errand"
+ },
+ "cast": [
+  "saeed",
+  "karim"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "السَّلَامُ عَلَيْكُمْ!",
+   "en": "Peace be upon you!",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum"
+   ],
+   "register": "white",
+   "gesture": "raise_hand"
+  },
+  {
+   "type": "prompt",
+   "id": "d3s-greet",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "أَهْلًا وَسَهْلًا!",
+   "en": "Welcome!",
+   "lemmas": [
+    "ahlan"
+   ],
+   "register": "white",
+   "gesture": "open_arms"
+  },
+  {
+   "type": "prompt",
+   "id": "d3s-friend",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "هَلْ هٰذَا صَدِيقُكَ؟",
+    "en": "Is this your friend?",
+    "lemmas": [
+     "hal",
+     "hadha",
+     "sadiq",
+     "ka"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، هٰذَا صَدِيقِي.",
+     "en": "Yes, this is my friend.",
+     "lemmas": [
+      "naam",
+      "hadha",
+      "sadiq",
+      "ii"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، هٰذَا كِتَابٌ.",
+     "en": "No, this is a book.",
+     "lemmas": [
+      "la",
+      "hadha",
+      "kitab"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، هٰذَا صَدِيقِي",
+    "نَعَمْ",
+    "نعم هذا صديقي"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "هٰذَا",
+    "صَدِيقِي",
+    "كِتَابٌ"
+   ],
+   "recast": {
+    "ar": "صَدِيقُكَ؟",
+    "en": "Your friend?",
+    "gesture": "point:karim"
+   },
+   "lemmas": [
+    "naam",
+    "hadha",
+    "sadiq",
+    "ii"
+   ]
+  },
+  {
+   "type": "prompt",
+   "id": "d3s-coffee",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "قَهْوَةٌ؟",
+    "en": "Coffee?",
+    "lemmas": [
+     "qahwa"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، شُكْرًا.",
+     "en": "Yes, thank you.",
+     "lemmas": [
+      "naam",
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، شُكْرًا.",
+     "en": "No, thank you.",
+     "lemmas": [
+      "la",
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "هٰذَا أَبِي.",
+     "en": "This is my father.",
+     "lemmas": [
+      "hadha",
+      "ab",
+      "ii"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، شُكْرًا",
+    "لَا، شُكْرًا",
+    "نعم شكرا",
+    "لا شكرا"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "لَا",
+    "شُكْرًا",
+    "أَبِي"
+   ],
+   "recast": {
+    "ar": "قَهْوَةٌ… نَعَمْ؟ لَا؟",
+    "en": "Coffee… yes? no?",
+    "gesture": "hold_up:coffee"
+   },
+   "lemmas": [
+    "naam",
+    "shukran"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "أَبُو فَيْصَلٍ كَاتِبٌ.",
+   "en": "Abu Faisal is a writer.",
+   "lemmas": [
+    "ab",
+    "katib"
+   ],
+   "register": "white",
+   "gesture": "nod",
+   "names": []
+  },
+  {
+   "type": "prompt",
+   "id": "d3s-take",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "خُذْ هٰذَا الْكِتَابَ لِأَبِي فَيْصَلٍ.",
+    "en": "Take this book for Abu Faisal.",
+    "lemmas": [
+     "khudh",
+     "hadha",
+     "kitab",
+     "li",
+     "ab"
+    ]
+   },
+   "options": [
+    {
+     "ar": "✋ 📖",
+     "en": "(take the book)",
+     "lemmas": [
+      "kitab"
+     ],
+     "correct": true,
+     "action": "take:book"
+    },
+    {
+     "ar": "✋ 🍎",
+     "en": "(take an apple)",
+     "lemmas": [
+      "tuffaha"
+     ],
+     "correct": false,
+     "action": "take:apple"
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "الْكِتَابَ…",
+    "en": "The book…",
+    "gesture": "hold_out:book"
+   },
+   "lemmas": [
+    "khudh",
+    "kitab"
+   ],
+   "action": "take:book"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "وَخُذْ تُفَّاحَةً، يَا صَدِيقِي!",
+   "en": "And take an apple, my friend!",
+   "lemmas": [
+    "wa",
+    "khudh",
+    "tuffaha",
+    "sadiq",
+    "ii",
+    "ya"
+   ],
+   "register": "white",
+   "gesture": "hand_over:apple"
+  },
+  {
+   "type": "prompt",
+   "id": "d3s-thanks",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَنَا",
+     "en": "I",
+     "lemmas": [
+      "ana"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "عَفْوًا!",
+   "en": "You're welcome!",
+   "lemmas": [
+    "afwan"
+   ],
+   "register": "white",
+   "gesture": "nod"
+  }
+ ]
+}
