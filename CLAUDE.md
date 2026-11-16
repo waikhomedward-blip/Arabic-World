@@ -25,6 +25,7 @@ The game must welcome **everyone, Muslim or not**. Build on what every human agr
 - **Religion is part of the city, not the subject.** Characters may speak their faith naturally (as-salāmu ʿalaykum, in shā' Allāh, al-ḥamdu lillāh) as Arabic speakers of all backgrounds do; the masjid is a landmark and a calm place. Keep it a small share of all text (Suite C `universal:religious-share` ≤ 12%; now 7.8%).
 - **The player is never required to say or affirm anything religious:** every such prompt has a neutral correct reply (Suite C `neutral-option`).
 - **No preaching, no debate, no claims about other faiths.** Explanations are cultural or linguistic facts.
+- **Provisional choices (DECISIONS.md, 16 Nov):** a Hijazi port-city old quarter open to everyone (not near the Haram); a traveller hero whose faith is never stated; the Quran meter and station as an optional track.
 - The hard rules still apply in full.
 
 ## Other languages later
