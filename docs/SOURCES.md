@@ -4,3 +4,4 @@ All research sources so far are listed inline (with links and Muslim/non-Muslim 
 
 | Date | Source | URL | Label | Used for |
 |---|---|---|---|---|
+| 2026-11-16 | Tanzil Project, Quran text + licence notice | https://tanzil.net/download | Muslim (Quran text project) | Quran text, licence terms |

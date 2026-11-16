@@ -1,0 +1,16 @@
+{
+ "source": "Tanzil Uthmani",
+ "licence": "CC BY 3.0 (verbatim, credit tanzil.net)",
+ "sha256": "bf4f57b968d03f4131c070b1e285da9be0e0a108a21c910e872801ca273312c8",
+ "verses": 6236,
+ "runningWords": 77881,
+ "distinctForms": 15556,
+ "formsForCoverage": {
+  "0.5": 302,
+  "0.7": 1505,
+  "0.8": 3358,
+  "0.85": 5077,
+  "0.9": 7768,
+  "0.95": 11662
+ }
+}
