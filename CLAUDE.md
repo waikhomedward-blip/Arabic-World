@@ -3,7 +3,7 @@
 Full spec: `docs/research/CLAUDE_CODE_MASTER_PROMPT.md` (section 0A overrides older text in it). Owner: Edward (not a programmer, reads on phone). Budget: $0.
 
 ## Start of every session
-1. Read this file, `LESSONS.md`, `STATE.md`, and the last entries of `docs/CYCLE_LOG.md`.
+1. Read this file, `LESSONS.md`, `docs/ART_BIBLE.md` (before any visual work), `docs/research/READ_LOG.md`, `STATE.md`, and the last entries of `docs/CYCLE_LOG.md`.
 2. Continue the next cycle. Never restart from scratch.
 3. Before a session ends: finish the step, commit, update `STATE.md`.
 
