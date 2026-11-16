@@ -20,6 +20,7 @@ Full spec: `docs/research/CLAUDE_CODE_MASTER_PROMPT.md` (section 0A overrides ol
 - Release gate: **scholar review** (unchecked).
 
 ## Universal first (Edward, 16 Nov 2026 — "very important")
+In Edward's words: **"I am a Muslim and I just want the game to be peaceful and usable by everyone."** The game is made with Muslim care and values (the hard rules, respect for the Quran) and is calm, kind and open to every player.
 The game must welcome **everyone, Muslim or not**. Build on what every human agrees on: water, food, air, home, family, friends, weather, numbers, work, kindness, hospitality, helping a neighbour.
 - **Lessons use universal examples.** Every teaching moment (root noticing, new word, grammar nudge) uses everyday life, never a religious phrase (Suite C `universal-teaching-example`).
 - **Religion is part of the city, not the subject.** Characters may speak their faith naturally (as-salāmu ʿalaykum, in shā' Allāh, al-ḥamdu lillāh) as Arabic speakers of all backgrounds do; the masjid is a landmark and a calm place. Keep it a small share of all text (Suite C `universal:religious-share` ≤ 12%; now 7.8%).
