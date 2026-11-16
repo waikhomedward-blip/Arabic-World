@@ -42,3 +42,18 @@ A sunlit Hijazi morning in a small, dense, imaginary port-city quarter: coral-st
 - Before/after screenshots from fixed cameras (all places, iPhone + Android).
 - Failure tags counted per version: MAT-plastic, SCL-wrong, STG-hidden, CON-float, CAM-dead, LGT-unmotivated, READ-lost.
 - Rubric 1–7: READ, CMP, LGT, COL, DEP. Readability beats realism.
+
+## From Edward's realism list and the 12-channel filmmaking study (16 Nov)
+Edward's test for every frame: **"Would every object in this frame physically respond this way if I were standing inside this place?"**
+Tier 1 (do first):
+1. **Layers:** foreground element near camera (awning edge, doorframe, hanging lantern, stall pole), subject, background fading into haze; stagger people at different depths; some occlusion.
+2. **Light falloff and luminance variation:** sunlit side vs shaded side of the lane; pools of sun; no evenly lit walls; **commit to contrast** (rich shade, bright sun; bright daylight may sit near clipping).
+3. **Contact shadows** under people, props, stalls; shadow direction consistent with one sun.
+4. **Motivated light:** the sun is the only key; bounce from warm walls and paving fills the shade (warm-tinted, never neutral grey); sky fill is cool.
+5. **Motion parallax:** a slow lateral camera drift so the foreground slides faster than the background.
+6. **Production design with hierarchy:** one hero prop per place, 3–5 supporting props, then clutter; signs of use (worn steps, stains at wall bases, a crate left open); slightly uneven spacing and crooked objects; nothing perfectly symmetric.
+7. **Limited palette:** warm sand/coral as the dominant; 1–2 counterpointed accents per place (indigo, saffron, faded green); thobes mostly neutral so a single coloured one reads.
+8. **Life in the background:** men working in the background (carrying, sweeping, selling, sitting), never a frozen frame.
+Tier 2: subtle haze increasing with distance (never an "effect"); controlled reflections (brass, fountain water, glass); material variety (roughness, wear, dust).
+Tier 3: very fine grain, gentle vignette, highlight roll-off (AgX); no sharpening, no heavy chromatic aberration.
+Not applicable: eyes, catchlights and skin realism (characters are faceless by rule); f/1.8 depth of field is optional (phones), and must never blur away the setting.

@@ -9,6 +9,8 @@
 | Arabic World: world and story bible (PDF) | same | ✅ full; facts verified | Story layers, world systems, art direction → art bible |
 | Game visuals playbook (PDF) | same | ✅ full; facts verified | Materials, light, tone mapping, budgets → art bible. **Not applied until cycle 6 — the cause of the poor visuals** |
 | Podcast transcript (agent workflow) | pasted in chat | ✅ | Verification-first cycle |
+| Edward's pasted "complete realism list" (79 sections, ~500 points) | chat | ✅ full | Art bible Tier 1–3 |
+| All channels frames and transcripts.docx (534 videos, 12 filmmaking channels, ~3.5M chars) | /Volumes/EdwardWaikhom/Channel transcripts | 🟡 all 344 transcript titles read; light/depth/colour/realism passages of the 18 visual-craft videos read; acting, story, AI-tool and camera-gear videos skipped as off-topic. Too large to read every word | Art bible: contrast, motivated light, 3-colour palette, dirty-up-the-frame, background life, layers + parallax |
 | Short-form money / TikTok / cinema-breakdown files | same folders | Not read: other projects, not about this game | — |
 
 ## Named in the master prompt but not on this Mac or the drive
