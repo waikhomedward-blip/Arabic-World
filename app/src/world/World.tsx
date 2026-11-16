@@ -135,7 +135,7 @@ function CameraRig({ target }: { target: [number, number, number] }) {
 
 export interface Placed { c: Char; at: [number, number, number] }
 
-export function World({ place, people, speaker, onTapPerson, activeId }: { place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void }) {
+export function World({ place, people, speaker, onTapPerson, activeId, time = 'dusk' }: { time?: 'dusk' | 'night'; place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void }) {
   const target = PLACES[place] ?? PLACES.home;
   const buildings = useMemo(() => {
     const cols = ['#d8b98f', '#e3c9a1', '#cfa77a', '#e8d2ad', '#c99d74'];
@@ -146,11 +146,26 @@ export function World({ place, people, speaker, onTapPerson, activeId }: { place
   }, []);
   return (
     <Canvas dpr={[1, 1.5]} camera={{ fov: 45, position: [target[0], 2.3, 8] }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
-      <color attach="background" args={['#e9a777']} />
-      <fog attach="fog" args={['#d99a72', 14, 46]} />
-      <hemisphereLight args={['#ffd9b0', '#5a3a2a', 0.9]} />
-      <directionalLight position={[-18, 9, 6]} intensity={2.1} color="#ffb070" />
-      <ambientLight intensity={0.15} color="#8f7cff" />
+      {time === 'night' ? (
+        <>
+          <color attach="background" args={['#121833']} />
+          <fog attach="fog" args={['#151c3a', 12, 42]} />
+          <hemisphereLight args={['#7f8fc4', '#1d1712', 0.45]} />
+          <directionalLight position={[10, 14, 8]} intensity={0.55} color="#b9c8ff" />
+          <mesh position={[target[0] + 6, 13, -20]}><sphereGeometry args={[1.1, 24, 16]} /><meshBasicMaterial color="#f4f0dc" fog={false} /></mesh>
+          {[[-5, 15, -22], [3, 17, -24], [12, 14, -23], [-11, 16, -21], [8, 19, -25]].map((p, i) => (
+            <mesh key={i} position={[target[0] + p[0], p[1], p[2]]}><sphereGeometry args={[0.08, 6, 6]} /><meshBasicMaterial color="#ffffff" fog={false} /></mesh>
+          ))}
+        </>
+      ) : (
+        <>
+          <color attach="background" args={['#e9a777']} />
+          <fog attach="fog" args={['#d99a72', 14, 46]} />
+          <hemisphereLight args={['#ffd9b0', '#5a3a2a', 0.9]} />
+          <directionalLight position={[-18, 9, 6]} intensity={2.1} color="#ffb070" />
+          <ambientLight intensity={0.15} color="#8f7cff" />
+        </>
+      )}
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
         <planeGeometry args={[90, 40]} />
         <meshStandardMaterial color="#b9946b" roughness={1} />

@@ -9,6 +9,8 @@ import { AudioPolicy, playClick } from './core/audio';
 import type { Prompt, Line, Scene } from './core/content';
 import { Keyboard } from './ui/Keyboard';
 import { Journal } from './ui/Journal';
+import { MorningCheck } from './ui/MorningCheck';
+import { pickMorningWords, buildMorningCheck } from './core/morning';
 
 const KEY = 'arabic-world-progress';
 const today = () => new Date().toLocaleDateString('en-CA');
@@ -55,6 +57,11 @@ export function App() {
     for (const l of lemmas) if (!words[l] && lemmaById[l]) words[l] = newWord(l, lemmaById[l].targetRung as Rung, Date.now());
     return words;
   };
+  const firstSeen = (p: Progress, lemmas: string[]) => {
+    const f = { ...p.firstSeenDay };
+    for (const l of lemmas) if (f[l] === undefined && lemmaById[l]) f[l] = p.inGameDay;
+    return f;
+  };
 
   // record "heard" for each line as it is shown
   useEffect(() => {
@@ -62,7 +69,7 @@ export function App() {
     setProgress((p) => {
       const words = ensureWords(p, step.lemmas);
       for (const l of step.lemmas) if (words[l]) words[l] = recordHeard(words[l], SESSION, Date.now());
-      return { ...p, words };
+      return { ...p, words, firstSeenDay: firstSeen(p, step.lemmas) };
     });
   }, [sceneState?.step, sceneState?.sceneId]);
 
@@ -113,7 +120,7 @@ export function App() {
           rungUsed: rungForReply(used), correct: r.correct, firstTry: sceneState.misses === 0,
           hinted: used === 'typeHint' || forcedTap, session: SESSION, now: Date.now(),
         });
-        return { ...p, words, recentReplyTypes: [...p.recentReplyTypes, used].slice(-6) };
+        return { ...p, words, firstSeenDay: firstSeen(p, step.lemmas), recentReplyTypes: [...p.recentReplyTypes, used].slice(-6) };
       });
     }
     if (r.feedback.type === 'correct' || r.feedback.type === 'modelled') {
@@ -129,9 +136,27 @@ export function App() {
 
   const speakerChar = step ? charById[step.speaker] : null;
 
+  const morningItems = useMemo(() => {
+    if (progress.morningDoneDay >= progress.inGameDay || progress.inGameDay > maxDay) return [];
+    const ids = pickMorningWords(progress.firstSeenDay, progress.words, progress.inGameDay, Date.now());
+    return buildMorningCheck(ids, content.lemmas, progress.inGameDay * 7919, new Set(Object.keys(progress.firstSeenDay)));
+  }, [progress.inGameDay, progress.morningDoneDay]);
+  const morningActive = begun && !sceneState && progress.morningDoneDay < progress.inGameDay;
+  useEffect(() => {
+    if (morningActive && morningItems.length === 0) setProgress((p) => ({ ...p, morningDoneDay: p.inGameDay }));
+  }, [morningActive, morningItems.length]);
+  const morningAnswer = (lemma: string, correct: boolean) => {
+    click();
+    setProgress((p) => {
+      const words = ensureWords(p, [lemma]);
+      words[lemma] = recordAttempt(words[lemma], { rungUsed: Rung.Recognised, correct, firstTry: true, hinted: false, session: SESSION, now: Date.now() });
+      return { ...p, words };
+    });
+  };
+
   return (
     <div className="app">
-      <World place={place} people={people} speaker={step?.type === 'line' ? step.speaker : step?.type === 'prompt' && feedback?.type !== 'correct' ? step.speaker : null}
+      <World place={morningActive && morningItems.length ? 'home' : place} time={scene?.time ?? 'dusk'} people={people} speaker={step?.type === 'line' ? step.speaker : step?.type === 'prompt' && feedback?.type !== 'correct' ? step.speaker : null}
         activeId={!sceneState && nextScene ? nextScene.cast[0] : null} onTapPerson={() => !sceneState && openScene()} />
 
       <div className="hud" dir="ltr">
@@ -148,13 +173,17 @@ export function App() {
         </div>
       )}
 
-      {begun && !sceneState && nextScene && (
+      {morningActive && morningItems.length > 0 && (
+        <MorningCheck items={morningItems} onAnswer={morningAnswer} onDone={() => { click(); setProgress((p) => ({ ...p, morningDoneDay: p.inGameDay })); }} />
+      )}
+
+      {begun && !sceneState && !morningActive && nextScene && (
         <div className="hint" onClick={openScene}>
           <span dir="rtl">{nextScene.title.ar}</span> · tap {charById[nextScene.cast[0]].nameEn} ✨
         </div>
       )}
 
-      {begun && !sceneState && !nextScene && (
+      {begun && !sceneState && !morningActive && !nextScene && (
         <div className="panel evening">
           {progress.inGameDay <= maxDay ? (
             <>

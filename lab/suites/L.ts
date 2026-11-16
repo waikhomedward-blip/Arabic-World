@@ -90,7 +90,9 @@ function profiles(n: number, R: () => number): Profile[] {
 }
 
 /** Simulate a learner through the authored days with the real ladder + director, then a 7-day break. */
-function simulate(content: Content, p: Profile, mode: 'auto' | 'musafir' | 'talib' | 'muqim', R: () => number) {
+function simulate(content: Content, p: Profile, mode: 'auto' | 'musafir' | 'talib' | 'muqim', R: () => number, morning = true) {
+  const firstSeen = new Map<string, number>();
+  const suffix = new Set(content.lemmas.filter((l) => l.ar.includes('ـ')).map((l) => l.id));
   const strength = new Map<string, number>(); // 0..1 memory strength
   const words: Record<string, WordState> = {};
   for (const l of content.lemmas) words[l.id] = newWord(l.id, l.targetRung as Rung);
@@ -102,15 +104,25 @@ function simulate(content: Content, p: Profile, mode: 'auto' | 'musafir' | 'tali
   let now = 0;
   for (const d of days) {
     const session = `day${d}`; let newThisDay = 0;
+    if (morning) {
+      // Morning check: yesterday's words, 3-option recognition (models app/src/core/morning.ts)
+      const ys = [...firstSeen].filter(([l, fd]) => fd === d - 1 && !suffix.has(l)).map(([l]) => l).slice(0, 6);
+      for (const l of ys) {
+        const ok = R() < Math.min(0.95, know(l) + (1 - know(l)) / 3);
+        bump(l, p.learn * (ok ? 1.0 : 0.5));
+        words[l] = recordAttempt(words[l], { rungUsed: Rung.Recognised, correct: ok, firstTry: true, hinted: false, session, now });
+      }
+    }
+    const meet = (l: string) => { if (!firstSeen.has(l)) firstSeen.set(l, d); };
     for (const s of content.scenes.filter((x) => x.day === d)) for (const st of s.steps) {
-      if (st.type === 'line') { st.lemmas.forEach((l) => { if (!know(l)) newThisDay++; bump(l, p.learn * (st.gesture ? 1 : 0.6)); words[l] = recordHeard(words[l], session, now); }); continue; }
+      if (st.type === 'line') { st.lemmas.forEach((l) => { meet(l); if (!know(l)) newThisDay++; bump(l, p.learn * (st.gesture ? 1 : 0.6)); words[l] = recordHeard(words[l], session, now); }); continue; }
       const type = chooseReplyType(st.lemmas, words, mode, recent); recent.push(type);
       const difficulty = { tap: 0, tiles: 0.1, typeHint: 0.2, typeFree: 0.3 }[type];
       const k = st.lemmas.reduce((a, l) => a * (0.35 + 0.65 * know(l)), 1);
       const pOk = Math.max(0.02, Math.min(0.98, k - difficulty + (type === 'tap' ? p.guess * (1 - k) : 0)));
       let tries = 0, ok = false;
       while (!ok && tries < 3) { tries++; ok = R() < pOk + tries * 0.15; }
-      for (const l of st.lemmas) { words[l] = recordAttempt(words[l], { rungUsed: rungForReply(type), correct: ok && tries === 1, firstTry: tries === 1, hinted: tries > 1, session, now }); bump(l, p.learn * (ok ? 0.8 : 0.4)); }
+      for (const l of st.lemmas) { meet(l); words[l] = recordAttempt(words[l], { rungUsed: rungForReply(type), correct: ok && tries === 1, firstTry: tries === 1, hinted: tries > 1, session, now }); bump(l, p.learn * (ok ? 0.8 : 0.4)); }
       missRun = ok && tries === 1 ? 0 : missRun + (tries === 3 && !ok ? 1 : 0);
       if (tries === 3 && !ok) frustration++;
     }
@@ -161,6 +173,9 @@ export function suiteL(content: Content, seed = 11): SuiteResult {
     cases.push(t(`learners:${m}:slow-frustration<=1/day`, slowFr <= 1, slowFr.toFixed(2)));
     cases.push(t(`learners:${m}:median-retained>=80%-of-lemmas`, median >= 0.8 * content.lemmas.length, `${median}/${content.lemmas.length}`));
   }
+  // A/B: the same population without the morning check
+  const off = pop.map((p) => simulate(content, p, 'auto', R, false).retained).sort((a, b) => a - b);
+  metrics['auto:noMorningMedianRetained'] = off[Math.floor(off.length / 2)];
   metrics.retainedFraction = +((metrics['auto:medianRetained'] as number) / content.lemmas.length).toFixed(3);
   return { suite: 'L', cases, metrics };
 }

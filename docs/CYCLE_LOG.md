@@ -20,3 +20,13 @@
 - **Still weak:** 78 of 150 lemmas; only 24% of lemmas reach ~10 encounters; day 7 "night" scenes still render at dusk; no voices; P/S/V suites unbuilt.
 - **Note:** the in-app preview tool still reads the old session folder's settings; the game was checked by running Vite from the drive on port 5180.
 - **Research:** none needed.
+
+## Cycle 3 — 2026-11-16 (morning re-test + night)
+**Goal:** spec §9 step 6, "tomorrow, yesterday's new words return for a quick re-test" (sleep consolidation, Dumay & Gaskell 2007). **Effort:** medium build; high for the A/B check.
+
+- **Built:** morning check before each day (up to 6 words: yesterday's first, then any due), 3-option recognition at home "before breakfast". Distractors come from words already met. A wrong pick shows the meaning gently, with no red X; the word comes back soon (ladder demote + short reschedule). Night lighting for night scenes.
+- **A/B in the lab:** same 120 learners, with vs without the morning check: median retained **64 vs 54 of 78** (+10 words, 69% → 82%).
+- **Scores:** overall **80.0** (+2.3, best ever); R 100%; G 100% (+5 morning-check cases); learners' retained fraction 0.82 (meets the 0.8 target).
+- **Still weak:** slow learners in Muqīm-only mode sit at exactly 1.00 frustration/day (borderline fail); 78/150 lemmas; moon/stars not visible from street level (needs a rooftop set); no voices; P/S/V unbuilt.
+- **Caveat:** the learner model is a toy; the gain is an estimate, not proof.
+- **Research:** none needed (evidence already in the research digest).

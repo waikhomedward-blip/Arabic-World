@@ -63,3 +63,7 @@ button { font: inherit; cursor: pointer; min-height: 44px; min-width: 44px; }
 .words .gloss { color: var(--soft); font-size: 14px; }
 .words .rung { color: #b8862e; letter-spacing: 1px; }
 .root { margin-top: 6px; font-size: 18px; }
+.caption.big { font-size: 48px; text-align: center; }
+.option.en { font-size: 19px; text-align: center; font-family: -apple-system, system-ui, sans-serif; }
+.option.right { border-color: var(--ok); background: #eef5ea; }
+.option:disabled { opacity: .45; }

@@ -13,7 +13,7 @@ export type Step = Line | Prompt;
 export interface Scene {
   id: string; day: number; place: 'home' | 'souq' | 'cafe' | 'shop' | 'masjid';
   tags: string[]; kind: 'story' | 'menu' | 'failure' | 'reward' | 'loading';
-  title: { ar: string; en: string }; cast: string[]; note?: { en: string };
+  title: { ar: string; en: string }; cast: string[]; note?: { en: string }; time?: 'dusk' | 'night';
   quran?: { surah: number; ayahStart: number; ayahEnd: number; text: string }[];
   steps: Step[];
 }

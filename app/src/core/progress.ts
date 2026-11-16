@@ -14,13 +14,15 @@ export interface Progress {
   recentReplyTypes: ReplyType[];
   friendship: Record<string, number>; // never decays
   journal: { lemma: string; guess: string; day: number }[];
+  firstSeenDay: Record<string, number>; // in-game day each word was first met
+  morningDoneDay: number;              // last in-game day whose morning check is done
   settings: { showEnglishOnTap: boolean; reducedMotion: boolean; voiceInput: boolean };
 }
 
 export function newProgress(now = Date.now()): Progress {
   return {
     version: 1, createdAt: now, daysInCity: 0, lastPlayedDay: null, inGameDay: 1, completedScenes: [], words: {},
-    mode: 'auto', recentReplyTypes: [], friendship: {}, journal: [],
+    mode: 'auto', recentReplyTypes: [], friendship: {}, journal: [], firstSeenDay: {}, morningDoneDay: 1,
     settings: { showEnglishOnTap: true, reducedMotion: false, voiceInput: false },
   };
 }

@@ -3,6 +3,8 @@ import type { Content, Scene } from '../../app/src/core/content';
 import { start, answer, advance, type Answer } from '../../app/src/core/engine';
 import { serialise, deserialise, newProgress } from '../../app/src/core/progress';
 import { mk, type SuiteResult, type Case } from './types';
+import { buildMorningCheck, pickMorningWords } from '../../app/src/core/morning';
+import { newWord } from '../../app/src/core/ladder';
 
 function play(scene: Scene, pick: (stepIdx: number, attempt: number) => Answer): { done: boolean; steps: number } {
   let s = start(scene); let guard = 0;
@@ -51,6 +53,14 @@ export function suiteG(content: Content, seed = 1): SuiteResult {
       cases.push(t(`fuzz:${sc.id}:${k}`, r.done));
     } catch (e) { crashes++; cases.push(t(`fuzz:${sc.id}:${k}`, false, String(e))); }
   }
+  // morning check: well-formed for every word, empty input safe, picks yesterday first
+  const all = buildMorningCheck(content.lemmas.map((l) => l.id), content.lemmas, seed);
+  cases.push(t('morning:no-suffix-forms', all.every((x) => !x.ar.includes('ـ'))));
+  cases.push(t('morning:answer-index-valid', all.every((x) => x.options[x.answer] === content.lemmas.find((l) => l.id === x.lemma)!.en)));
+  cases.push(t('morning:three-distinct-options', all.every((x) => x.options.length === 3 && new Set(x.options).size === 3)));
+  cases.push(t('morning:empty-safe', buildMorningCheck([], content.lemmas, seed).length === 0));
+  const picked = pickMorningWords({ a: 3, b: 4, c: 4 }, { z: { ...newWord('z', 4), due: 0 } }, 5, 10);
+  cases.push(t('morning:yesterday-first-then-due', JSON.stringify(picked) === JSON.stringify(['b', 'c', 'z'])));
   // save/load round trip, including a corrupted save
   const p = newProgress(Date.UTC(2026, 10, 16));
   p.daysInCity = 3; p.completedScenes = ['d1-home'];
