@@ -52,50 +52,51 @@
    "id": "d6h-small",
    "speaker": "abu_faisal",
    "ask": {
-    "ar": "هَلْ مَاجِدٌ صَغِيرٌ؟",
-    "en": "Is Majid small?",
+    "ar": "هَلْ مَاجِدٌ كَبِيرٌ؟",
+    "en": "Is Majid big?",
     "lemmas": [
      "hal",
-     "saghir"
+     "kabir"
     ]
    },
    "options": [
     {
-     "ar": "نَعَمْ، مَاجِدٌ صَغِيرٌ.",
-     "en": "Yes, Majid is small.",
+     "ar": "لَا، مَاجِدٌ صَغِيرٌ.",
+     "en": "No, Majid is small.",
      "lemmas": [
-      "naam",
+      "la",
       "saghir"
      ],
      "correct": true
     },
     {
-     "ar": "لَا، مَاجِدٌ كَبِيرٌ.",
-     "en": "No, Majid is big.",
+     "ar": "نَعَمْ، مَاجِدٌ كَبِيرٌ.",
+     "en": "Yes, Majid is big.",
      "lemmas": [
-      "la",
+      "naam",
       "kabir"
      ],
      "correct": false
     }
    ],
    "accepted": [
-    "نَعَمْ، مَاجِدٌ صَغِيرٌ",
-    "نَعَمْ"
+    "لَا، مَاجِدٌ صَغِيرٌ",
+    "لَا، صَغِيرٌ",
+    "لَا"
    ],
    "tiles": [
-    "نَعَمْ",
+    "لَا",
     "مَاجِدٌ",
     "صَغِيرٌ",
     "كَبِيرٌ"
    ],
    "recast": {
-    "ar": "مَاجِدٌ… صَغِيرٌ؟",
-    "en": "Majid… small?",
+    "ar": "مَاجِدٌ… كَبِيرٌ؟",
+    "en": "Majid… big?",
     "gesture": "hand_low"
    },
    "lemmas": [
-    "naam",
+    "la",
     "saghir"
    ]
   },

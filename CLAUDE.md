@@ -3,7 +3,7 @@
 Full spec: `docs/research/CLAUDE_CODE_MASTER_PROMPT.md` (section 0A overrides older text in it). Owner: Edward (not a programmer, reads on phone). Budget: $0.
 
 ## Start of every session
-1. Read this file, `STATE.md`, and the last entries of `docs/CYCLE_LOG.md`.
+1. Read this file, `LESSONS.md`, `STATE.md`, and the last entries of `docs/CYCLE_LOG.md`.
 2. Continue the next cycle. Never restart from scratch.
 3. Before a session ends: finish the step, commit, update `STATE.md`.
 
@@ -19,6 +19,13 @@ Full spec: `docs/research/CLAUDE_CODE_MASTER_PROMPT.md` (section 0A overrides ol
 - No QAC data shipped. No unclear-licence media committed. No secrets committed.
 - Release gate: **scholar review** (unchecked).
 
+## Universal first (Edward, 16 Nov 2026)
+The game must welcome **everyone, Muslim or not**. Build on what all people share: water, food, home, family, friends, weather, numbers, work, kindness, hospitality.
+- Characters are people of this city and may speak their faith naturally (as-salāmu ʿalaykum, in shā' Allāh, al-ḥamdu lillāh), as Arabic speakers of all backgrounds do.
+- The player is **never required** to say a religious statement: every such prompt also has a neutral correct reply (Suite C `neutral-option`).
+- No preaching, no debate, no claims about other faiths. Explanations are cultural or linguistic facts ("you hear أَكْبَرُ in every adhan").
+- The hard rules still apply in full.
+
 ## Sourcing rule
 Prefer Muslim sources; non-Muslim only when no Muslim source covers the point, labelled. Never guess anyone's religion ("affiliation unconfirmed"). Log every source in `docs/SOURCES.md`.
 
@@ -33,8 +40,12 @@ Every 10 cycles: deep review + `docs/reports/milestone-NN.html` (phone-friendly,
 ## Commands
 - `npm run dev` — game in browser (Vite, root `app/`)
 - `npm test` — unit tests (Vitest)
-- `npm run lab` — full lab cycle + scoreboard
+- `npm run lab` — full lab cycle: Playwright play-through on 5 devices, then all suites + scoreboard
+- `npm run lab:fast` — suites without the browser run (uses the last e2e results)
 - `npm run validate` — content validator
+
+## Definition of done (any change)
+Checks pass, phone screenshots look right (look at them), committed and pushed, and the report says honestly what was and wasn't verified. When a mistake happens twice: add a test, rule or script, and a line in `LESSONS.md`.
 
 ## Ask Edward only for
 Irreversible public decisions, anything costing money, his accounts/credentials, hard-rule conflicts. One plain sentence, then keep working.

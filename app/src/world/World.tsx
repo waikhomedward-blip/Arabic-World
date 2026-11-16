@@ -1,5 +1,5 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { useMemo, useRef } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import * as THREE from 'three';
 import type { Character as Char } from '../core/content';
 import { characterParts, type Part } from './characterSpec';
@@ -36,11 +36,11 @@ function Person({ c, at, speaking, active, onTap }: { c: Char; at: [number, numb
     head.current.rotation.x = speaking ? Math.sin(t * 6) * 0.08 : 0;
   });
   return (
-    <group position={at} rotation={[0, Math.PI / 10, 0]} onClick={(e) => { e.stopPropagation(); onTap?.(); }}>
+    <group position={at} rotation={[0, Math.PI / 10, 0]} userData={{ charId: c.id }} onClick={(e) => { e.stopPropagation(); onTap?.(); }}>
       {rest.map((p) => <Shape key={p.name} p={p} />)}
       <group ref={head}>{top.map((p) => <Shape key={p.name} p={p} />)}</group>
       {active && (
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]}>
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 0]} userData={{ noRay: true }}>
           <ringGeometry args={[0.38, 0.46, 40]} />
           <meshBasicMaterial color="#ffd38a" transparent opacity={0.85} />
         </mesh>
@@ -125,11 +125,56 @@ function CameraRig({ target }: { target: [number, number, number] }) {
     const cam = camera as THREE.PerspectiveCamera;
     const fov = aspect < 1 ? 64 : 45;
     if (cam.fov !== fov) { cam.fov = fov; cam.updateProjectionMatrix(); }
-    const want = new THREE.Vector3(target[0] + 0.8, aspect < 1 ? 2.2 : 1.9, target[2] + dist);
+    const want = new THREE.Vector3(target[0] + 0.3, aspect < 1 ? 2.2 : 1.9, target[2] + dist);
     camera.position.lerp(want, k);
-    look.current.lerp(new THREE.Vector3(target[0] + 0.4, aspect < 1 ? 0.55 : 1.2, target[2]), k);
+    look.current.lerp(new THREE.Vector3(target[0], aspect < 1 ? 0.55 : 1.2, target[2]), k);
     camera.lookAt(look.current);
   });
+  return null;
+}
+
+const LAB = typeof location !== 'undefined' && new URLSearchParams(location.search).has('lab');
+
+/** Lab-only probe (?lab=1): visibility of each character from the camera, screen position, frame times, draw stats. */
+function LabProbe() {
+  const { camera, scene, gl, size } = useThree();
+  const frames = useRef<number[]>([]);
+  useFrame(() => { frames.current.push(performance.now()); if (frames.current.length > 2000) frames.current.splice(0, 1000); });
+  useEffect(() => {
+    if (!LAB) return;
+    const ray = new THREE.Raycaster();
+    (window as unknown as { __awProbe: unknown }).__awProbe = {
+      visibility: () => {
+        camera.updateMatrixWorld();
+        const out: Record<string, { visible: boolean; blockedBy: string | null; screen: { x: number; y: number }; inFrame: boolean }> = {};
+        scene.traverse((o) => {
+          const id = o.userData.charId as string | undefined;
+          if (!id) return;
+          const box = new THREE.Box3().setFromObject(o);
+          const c = box.getCenter(new THREE.Vector3());
+          const head = new THREE.Vector3(c.x, box.max.y - 0.12, c.z);
+          const checks = [head, c].map((pt) => {
+            const dir = pt.clone().sub(camera.position); const dist = dir.length();
+            ray.set(camera.position, dir.normalize()); ray.far = dist;
+            const hit = ray.intersectObjects(scene.children, true).find((h) => !h.object.userData.noRay);
+            let owner: THREE.Object3D | null = hit?.object ?? null; let mine = false;
+            while (owner) { if (owner === o) { mine = true; break; } owner = owner.parent; }
+            return { clear: !hit || mine, by: hit && !mine ? (hit.object.name || hit.object.type) : null };
+          });
+          const ndc = head.clone().project(camera);
+          out[id] = {
+            visible: checks.some((k) => k.clear),
+            blockedBy: checks.every((k) => !k.clear) ? checks[0].by : null,
+            screen: { x: (ndc.x + 1) / 2 * size.width, y: (1 - ndc.y) / 2 * size.height },
+            inFrame: Math.abs(ndc.x) <= 1 && Math.abs(ndc.y) <= 1 && ndc.z < 1,
+          };
+        });
+        return out;
+      },
+      frames: () => frames.current.slice(),
+      stats: () => ({ calls: gl.info.render.calls, triangles: gl.info.render.triangles, textures: gl.info.memory.textures, geometries: gl.info.memory.geometries }),
+    };
+  }, [camera, scene, gl, size]);
   return null;
 }
 
@@ -144,8 +189,16 @@ export function World({ place, people, speaker, onTapPerson, activeId, time = 'd
     for (let i = 0; i < 10; i++) out.push({ x: -18 + i * 4.8, z: 13, w: 4.4, h: 5 + ((i * 3) % 4) * 1.8, d: 4, c: cols[(i + 2) % cols.length] });
     return out;
   }, []);
+  // Phones can drop the WebGL context under memory pressure: pause calmly and rebuild the view on tap.
+  const [lost, setLost] = useState(false);
+  const [gen, setGen] = useState(0);
+  if (lost) return (
+    <div className="gl-lost" onClick={() => { setLost(false); setGen((g) => g + 1); }}>
+      <p>The view paused to save memory.</p><p className="small">Tap to continue</p>
+    </div>
+  );
   return (
-    <Canvas dpr={[1, 1.5]} camera={{ fov: 45, position: [target[0], 2.3, 8] }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
+    <Canvas key={gen} onCreated={({ gl }) => gl.domElement.addEventListener('webglcontextlost', (e) => { e.preventDefault(); setLost(true); })} dpr={[1, 1.5]} camera={{ fov: 45, position: [target[0], 2.3, 8] }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
       {time === 'night' ? (
         <>
           <color attach="background" args={['#121833']} />
@@ -178,6 +231,7 @@ export function World({ place, people, speaker, onTapPerson, activeId, time = 'd
         <Person key={p.c.id} c={p.c} at={p.at} speaking={speaker === p.c.id} active={activeId === p.c.id} onTap={() => onTapPerson(p.c.id)} />
       ))}
       <CameraRig target={target} />
+      {LAB && <LabProbe />}
     </Canvas>
   );
 }

@@ -30,3 +30,12 @@
 - **Still weak:** slow learners in Muqīm-only mode sit at exactly 1.00 frustration/day (borderline fail); 78/150 lemmas; moon/stars not visible from street level (needs a rooftop set); no voices; P/S/V unbuilt.
 - **Caveat:** the learner model is a toy; the gain is an estimate, not proof.
 - **Research:** none needed (evidence already in the research digest).
+
+## Cycle 4 — 2026-11-16 (verification: the agent gets eyes)
+**Goal:** see the game the way a player does, automatically (from the agent-workflow talk and the "Building a product with AI agents" playbook). **Effort:** high.
+
+- **Built:** a Playwright play-through of all 20 scenes on 5 devices (iPhone 13, iPhone SE, iPad, Pixel 7, budget Android): visibility probe (is each character seen by the camera, above the UI panel, in frame), off-screen buttons, axe accessibility scan, tap targets and text size, fps / p95 frame time (+4× CPU throttling on Chromium), draw calls. Screenshots per scene (intro, dialogue, prompt, keyboard). Suites V and P now score. LESSONS.md, `tools/author.ts`, `run-cycle` and `verify` skills, PNG home-screen icons, pinch-zoom allowed.
+- **Bugs the new checks found and fixed:** (1) Abu Faisal's headscarf left a partial head opening that could read as a face → full enclosure + Suite R rule; (2) third character cut off on narrow phones → centred cast; (3) Arabic keyboard rows overflowed the iPhone SE → shrinkable keys; (4) on the SE a two-line question pushed the ✓ key off screen → compact typing layout; (5) **answer leak:** the right answer was always shown first (54/54) and was the longest 95% of the time → shuffled display + rebalanced distractors + "no" answers (bias checks in Suite C); (6) the game froze on WebGL context loss → calm "tap to continue" recovery.
+- **Universal first** (Edward): neutral correct reply added wherever the correct reply was a religious formula; Suite C `neutral-option`.
+- **Scores:** overall **94.9** (best ever; V and P now counted). R 100%; P 100% (59–60 fps median on all 5 devices, p95 18–19 ms, ≤41 draw calls, ≤11k triangles); V 99/100 runs clean (the one failure was the test rig under load, re-run alone → pass); 2,540 tap targets between 24 and 44 px (mostly keyboard keys, like the system keyboard).
+- **Honest limits:** fps is the M1's GPU, not a phone's; the only real-device numbers will come from HUMAN_CHECKS. Retention estimate dipped 64 → 62/78 (seed noise after content edits; morning-check A/B still +10).

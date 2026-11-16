@@ -76,12 +76,13 @@
      "correct": true
     },
     {
-     "ar": "لَا، الْقَمَرُ مَاءٌ.",
-     "en": "No, the moon is water.",
+     "ar": "لَا، الْقَمَرُ نَجْمٌ صَغِيرٌ.",
+     "en": "No, the moon is a small star.",
      "lemmas": [
       "la",
       "qamar",
-      "maa"
+      "najm",
+      "saghir"
      ],
      "correct": false
     }

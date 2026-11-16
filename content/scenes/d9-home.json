@@ -87,12 +87,13 @@
      "correct": true
     },
     {
-     "ar": "لَا، أَنْتَ قَمَرٌ.",
-     "en": "No, you are a moon.",
+     "ar": "لَا، أَنْتَ قَمَرٌ جَمِيلٌ.",
+     "en": "No, you are a beautiful moon.",
      "lemmas": [
       "la",
       "anta",
-      "qamar"
+      "qamar",
+      "jamil"
      ],
      "correct": false
     }
@@ -150,18 +151,18 @@
      "correct": true
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
      "lemmas": [
-      "la"
+      "afwan"
      ],
      "correct": false
     },
     {
-     "ar": "أَنَا",
-     "en": "I",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "ana"
+      "ahlan"
      ],
      "correct": false
     }

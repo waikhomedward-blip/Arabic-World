@@ -9,3 +9,5 @@ lab/fixtures/external/
 playwright-report/
 test-results/
 .DS_Store
+lab/results/e2e/
+research-private/

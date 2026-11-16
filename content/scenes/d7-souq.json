@@ -47,18 +47,20 @@
      "correct": true
     },
     {
-     "ar": "شُكْرًا",
-     "en": "Thank you",
+     "ar": "السَّلَامُ عَلَيْكُمْ",
+     "en": "Peace be upon you (repeating the greeting back)",
      "lemmas": [
-      "shukran"
+      "salam",
+      "ala",
+      "kum"
      ],
      "correct": false
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "la"
+      "ahlan"
      ],
      "correct": false
     }
@@ -104,7 +106,7 @@
    "speaker": "saeed",
    "ask": {
     "ar": "هَلْ هٰذَا نَجْمٌ؟",
-    "en": "Is this a star?",
+    "en": "Is this a star? (he holds up bread)",
     "lemmas": [
      "hal",
      "hadha",
@@ -113,16 +115,6 @@
    },
    "options": [
     {
-     "ar": "نَعَمْ، هٰذَا نَجْمٌ.",
-     "en": "Yes, this is a star.",
-     "lemmas": [
-      "naam",
-      "hadha",
-      "najm"
-     ],
-     "correct": true
-    },
-    {
      "ar": "لَا، هٰذَا خُبْزٌ.",
      "en": "No, this is bread.",
      "lemmas": [
@@ -130,28 +122,39 @@
       "hadha",
       "khubz"
      ],
+     "correct": true
+    },
+    {
+     "ar": "نَعَمْ، هٰذَا نَجْمٌ.",
+     "en": "Yes, this is a star.",
+     "lemmas": [
+      "naam",
+      "hadha",
+      "najm"
+     ],
      "correct": false
     }
    ],
    "accepted": [
-    "نَعَمْ، هٰذَا نَجْمٌ",
-    "نَعَمْ"
+    "لَا، هٰذَا خُبْزٌ",
+    "لَا، خُبْزٌ",
+    "لَا"
    ],
    "tiles": [
-    "نَعَمْ",
+    "لَا",
     "هٰذَا",
-    "نَجْمٌ",
-    "خُبْزٌ"
+    "خُبْزٌ",
+    "نَجْمٌ"
    ],
    "recast": {
-    "ar": "نَجْمٌ؟",
-    "en": "A star?",
-    "gesture": "point:star"
+    "ar": "نَجْمٌ؟ خُبْزٌ؟",
+    "en": "A star? Bread?",
+    "gesture": "hold_up:bread"
    },
    "lemmas": [
-    "naam",
+    "la",
     "hadha",
-    "najm"
+    "khubz"
    ]
   },
   {
@@ -185,18 +188,18 @@
      "correct": true
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
      "lemmas": [
-      "la"
+      "afwan"
      ],
      "correct": false
     },
     {
-     "ar": "أَنَا",
-     "en": "I",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "ana"
+      "ahlan"
      ],
      "correct": false
     }

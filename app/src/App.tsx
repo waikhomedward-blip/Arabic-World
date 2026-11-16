@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { content, lemmaById, charById } from './data';
 import { World, PLACES, type Placed } from './world/World';
-import { start, advance, answer, correctLine, type SceneState, type Feedback, type Answer } from './core/engine';
+import { start, advance, answer, correctLine, optionOrder, type SceneState, type Feedback, type Answer } from './core/engine';
 import { chooseReplyType, rungForReply, type ReplyType, type Mode } from './core/director';
 import { newWord, recordAttempt, recordHeard, RUNG_NAMES, Rung } from './core/ladder';
 import { deserialise, serialise, touchDay, type Progress } from './core/progress';
@@ -47,7 +47,9 @@ export function App() {
 
   const people: Placed[] = useMemo(() => {
     const at = PLACES[place];
-    return (scene?.cast ?? []).map((id, i) => ({ c: charById[id], at: [at[0] + (i === 0 ? 0 : 1.3 * i), 0, at[2] + (i === 0 ? 0 : -0.4)] as [number, number, number] }));
+    // centre the group on the camera's focus, in a gentle arc (keeps 3+ people in frame on narrow phones)
+    const cast = scene?.cast ?? []; const n = cast.length;
+    return cast.map((id, i) => { const off = (i - (n - 1) / 2) * 1.1; return { c: charById[id], at: [at[0] + off, 0, at[2] - 0.3 * Math.abs(off)] as [number, number, number] }; });
   }, [scene, place]);
 
   const click = () => { if (audio.current) playClick(audio.current, policy); };
@@ -203,7 +205,7 @@ export function App() {
       )}
 
       {scene && sceneState && !sceneState.done && step && (
-        <div className="dialogue">
+        <div className={`dialogue ${step.type === 'prompt' && !step.action && !sceneState.showOptions && (replyType === 'typeHint' || replyType === 'typeFree') && feedback?.type !== 'correct' && feedback?.type !== 'modelled' ? 'typing' : ''}`}>
           {scene.note && sceneState.step === 0 && <div className="note">{scene.note.en}</div>}
           <div className="speaker" dir="rtl">{speakerChar?.nameAr} <span className="en">{speakerChar?.nameEn}</span></div>
           {step.type === 'line' ? (
@@ -255,7 +257,7 @@ function PromptView(props: {
       <>
         <div className="caption ok" dir="rtl">{feedback.target}</div>
         {feedback.note && <div className="soft">✓ {feedback.note}</div>}
-        <button className="btn primary next" onClick={props.onContinue}>←</button>
+        <button className="btn primary next" onClick={props.onContinue} aria-label="next">←</button>
       </>
     );
   }
@@ -264,7 +266,7 @@ function PromptView(props: {
       <>
         <div className="soft">They say it for you:</div>
         <div className="caption" dir="rtl">{feedback.ar}</div>
-        <button className="btn primary next" onClick={props.onContinue}>←</button>
+        <button className="btn primary next" onClick={props.onContinue} aria-label="next">←</button>
       </>
     );
   }
@@ -290,11 +292,11 @@ function PromptView(props: {
       )}
       {showOptions && (
         <div className="options" dir="rtl">
-          {p.options.map((o, i) => (
+          {optionOrder(p).map((i) => { const o = p.options[i]; return (
             <button key={i} className="option" onClick={() => props.onSubmit(o.action ? { kind: 'action', action: o.action } : { kind: 'option', index: i })}>
               <span lang="ar">{o.ar}</span>
             </button>
-          ))}
+          ); })}
         </div>
       )}
       {!showOptions && replyType === 'tiles' && (

@@ -54,18 +54,20 @@
      "correct": true
     },
     {
-     "ar": "شُكْرًا",
-     "en": "Thank you",
+     "ar": "السَّلَامُ عَلَيْكُمْ",
+     "en": "Peace be upon you (repeating the greeting back)",
      "lemmas": [
-      "shukran"
+      "salam",
+      "ala",
+      "kum"
      ],
      "correct": false
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "la"
+      "ahlan"
      ],
      "correct": false
     }
@@ -129,12 +131,12 @@
      "correct": true
     },
     {
-     "ar": "لَا، هٰذَا بَيْتٌ.",
-     "en": "No, this is a house.",
+     "ar": "لَا، هٰذِهِ تُفَّاحَةٌ.",
+     "en": "No, this is an apple.",
      "lemmas": [
       "la",
-      "hadha",
-      "bayt"
+      "hadhihi",
+      "tuffaha"
      ],
      "correct": false
     }

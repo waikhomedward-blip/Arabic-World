@@ -50,19 +50,34 @@
      "correct": true
     },
     {
-     "ar": "هٰذَا بَيْتٌ",
-     "en": "This is a house",
+     "ar": "بِخَيْرٍ، شُكْرًا",
+     "en": "Well, thank you",
      "lemmas": [
-      "hadha",
-      "bayt"
+      "bi",
+      "khayr",
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
      ],
      "correct": false
     },
     {
-     "ar": "عَفْوًا",
-     "en": "You're welcome",
+     "ar": "أَهْلًا وَسَهْلًا يَا صَدِيقِي",
+     "en": "Welcome, my friend",
      "lemmas": [
-      "afwan"
+      "ahlan",
+      "ya",
+      "sadiq",
+      "ii"
      ],
      "correct": false
     }
@@ -71,13 +86,15 @@
     "بِخَيْرٍ، الْحَمْدُ لِلّٰهِ",
     "بِخَيْرٍ وَالْحَمْدُ لِلّٰهِ",
     "الْحَمْدُ لِلّٰهِ، بِخَيْرٍ",
-    "بخير"
+    "بخير",
+    "بِخَيْرٍ، شُكْرًا",
+    "بخير شكرا"
    ],
    "tiles": [
     "بِخَيْرٍ",
+    "شُكْرًا",
     "الْحَمْدُ",
-    "لِلّٰهِ",
-    "قَهْوَةٌ"
+    "لِلّٰهِ"
    ],
    "recast": {
     "ar": "بِخَيْرٍ…؟",
@@ -123,18 +140,18 @@
      "correct": true
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
      "lemmas": [
-      "la"
+      "afwan"
      ],
      "correct": false
     },
     {
-     "ar": "أَنَا",
-     "en": "I",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "ana"
+      "ahlan"
      ],
      "correct": false
     }
@@ -206,11 +223,23 @@
      "correct": true
     },
     {
-     "ar": "هٰذَا شَايٌ.",
-     "en": "This is tea.",
+     "ar": "نَعَمْ، غَدًا.",
+     "en": "Yes, tomorrow.",
      "lemmas": [
-      "hadha",
-      "shay"
+      "naam",
+      "ghadan"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "صَبَاحُ الْخَيْرِ يَا صَدِيقِي.",
+     "en": "Good morning, my friend.",
+     "lemmas": [
+      "sabah",
+      "khayr",
+      "ya",
+      "sadiq",
+      "ii"
      ],
      "correct": false
     }
@@ -218,14 +247,16 @@
    "accepted": [
     "نَعَمْ، إِنْ شَاءَ اللّٰهُ",
     "إِنْ شَاءَ اللّٰهُ",
-    "نَعَمْ"
+    "نَعَمْ",
+    "نَعَمْ، غَدًا",
+    "نعم غدا"
    ],
    "tiles": [
     "نَعَمْ",
+    "غَدًا",
     "إِنْ",
     "شَاءَ",
-    "اللّٰهُ",
-    "شَايٌ"
+    "اللّٰهُ"
    ],
    "recast": {
     "ar": "غَدًا… إِنْ…؟",

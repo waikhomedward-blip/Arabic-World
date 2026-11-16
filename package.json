@@ -7,9 +7,10 @@
     "dev": "vite app",
     "build": "tsc -p tsconfig.json --noEmit && vite build app",
     "test": "vitest run",
-    "lab": "tsx lab/run-cycle.ts",
+    "lab": "playwright test; tsx lab/run-cycle.ts",
     "validate": "tsx tools/validate-content.ts",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "lab:fast": "tsx lab/run-cycle.ts"
   },
   "dependencies": {
     "@react-three/drei": "^9.122.0",
@@ -19,6 +20,7 @@
     "three": "^0.170.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@playwright/test": "^1.61.1",
     "@types/node": "^20.19.43",
     "@types/react": "^18.3.31",

@@ -47,18 +47,20 @@
      "correct": true
     },
     {
-     "ar": "شُكْرًا",
-     "en": "Thank you",
+     "ar": "السَّلَامُ عَلَيْكُمْ",
+     "en": "Peace be upon you (repeating the greeting back)",
      "lemmas": [
-      "shukran"
+      "salam",
+      "ala",
+      "kum"
      ],
      "correct": false
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "la"
+      "ahlan"
      ],
      "correct": false
     }
@@ -150,12 +152,14 @@
      "correct": true
     },
     {
-     "ar": "لَا، هٰذَا شَايٌ.",
-     "en": "No, this is tea.",
+     "ar": "لَا، هٰذَا شَايٌ وَسُكَّرٌ.",
+     "en": "No, this is tea and sugar.",
      "lemmas": [
       "la",
       "hadha",
-      "shay"
+      "shay",
+      "wa",
+      "sukkar"
      ],
      "correct": false
     }

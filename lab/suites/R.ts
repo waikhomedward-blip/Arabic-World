@@ -35,6 +35,14 @@ export function suiteR(content: Content, root: string): SuiteResult {
     cases.push(t(`not-prophet-or-companion:${c.id}`, !PROPHETS_COMPANIONS_EN.test(c.nameEn + ' ' + c.role)));
     const parts = characterParts(c);
     const head = parts.filter((p) => p.slot === 'head');
+    // A headwear sphere must fully enclose the head or not touch it: a partial overlap leaves an opening that can read as a face.
+    const hd = head[0];
+    for (const hw of parts.filter((p) => p.slot === 'headwear' && p.shape === 'sphere')) {
+      const d = Math.hypot(hw.pos[0] - hd.pos[0], hw.pos[1] - hd.pos[1], hw.pos[2] - hd.pos[2]);
+      const encloses = d + hd.size[0] <= hw.size[0] + 1e-9;
+      const apart = d >= hw.size[0] + hd.size[0];
+      cases.push(t(`no-partial-head-opening:${c.id}:${hw.name}`, encloses || apart, `d=${d.toFixed(3)}`));
+    }
     cases.push(t(`smooth-head-geometry:${c.id}`, head.length === 1 && head[0].shape === 'sphere' && parts.every((p) => !/eye|nose|mouth|lip|brow|pupil|face/i.test(p.name)), parts.map((p) => p.name).join(',')));
   }
   const castIds = new Set(chars.map((c) => c.id));

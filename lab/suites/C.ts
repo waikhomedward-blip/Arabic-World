@@ -4,6 +4,7 @@ import { sceneTexts } from '../../app/src/core/content';
 import { tashkeelReport } from '../../app/src/core/arabic';
 import { checkTyped } from '../../app/src/core/checker';
 import { baseForm } from '../../app/src/core/arabic';
+import { optionOrder } from '../../app/src/core/engine';
 import { mk, type SuiteResult, type Case } from './types';
 
 function occurrences(s: Scene): { lemma: string; step: number }[] {
@@ -84,7 +85,23 @@ export function suiteC(content: Content): SuiteResult {
   for (const l of content.lemmas) if (l.root) roots.set(l.root, [...(roots.get(l.root) ?? []), l.id]);
   const noticed = new Set(content.scenes.flatMap((s) => s.steps.flatMap((st) => (st.type === 'line' && st.notice ? [st.notice.root] : []))));
   for (const [r, ids] of roots) if (ids.length >= 2) cases.push(t(`root-twist:${r}`, noticed.has(r), ids.join(',')));
-  // 9. ten-day scope (v1 target)
+  // 9. answer-pattern bias (a learner must not be able to guess without reading)
+  const prompts = content.scenes.flatMap((s) => s.steps.filter((x): x is Extract<typeof x, { type: 'prompt' }> => x.type === 'prompt'));
+  const shownFirstCorrect = prompts.filter((p) => p.options[optionOrder(p)[0]].correct).length / prompts.length;
+  const single = prompts.filter((p) => !p.action && p.options.filter((o) => o.correct).length === 1 && p.options.length > 1);
+  const longest = single.filter((p) => { const L = (o: { ar: string }) => baseForm(o.ar).length; const c = p.options.find((o) => o.correct)!; return p.options.every((o) => o === c || L(o) < L(c)); }).length / single.length;
+  const yn = prompts.filter((p) => p.options.some((o) => o.correct && /^(نَعَمْ|لَا)/.test(o.ar)) && p.options.filter((o) => o.correct).length === 1);
+  const noShare = yn.filter((p) => p.options.find((o) => o.correct)!.ar.startsWith('لَا')).length / Math.max(1, yn.length);
+  cases.push(t('bias:correct-shown-first<=60%', shownFirstCorrect <= 0.6, `${(shownFirstCorrect * 100).toFixed(0)}%`));
+  cases.push(t('bias:correct-is-longest<=40%', longest <= 0.4, `${(longest * 100).toFixed(0)}% of ${single.length}`));
+  cases.push(t('bias:yes-no-answer-is-no>=25%', noShare >= 0.25, `${(noShare * 100).toFixed(0)}% of ${yn.length}`));
+  // 10. universal first: the player is never required to say a religious formula; there is always a neutral correct reply
+  for (const p of prompts) {
+    const correct = p.options.filter((o) => o.correct);
+    if (correct.length && correct.every((o) => /اللّٰه|الله/.test(o.ar))) cases.push(t(`neutral-option:${p.id}`, false, 'every correct reply contains a religious formula'));
+    else cases.push(t(`neutral-option:${p.id}`, true));
+  }
+  // 11. ten-day scope (v1 target)
   cases.push(t('ten-days-authored', days.length >= 10, `${days.length} days`));
   cases.push(t('lemma-target-150', content.lemmas.length >= 150, `${content.lemmas.length} lemmas`));
   const covVals = Object.values(sceneCoverage);

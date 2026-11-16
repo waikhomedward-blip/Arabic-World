@@ -46,18 +46,20 @@
      "correct": true
     },
     {
-     "ar": "شُكْرًا",
-     "en": "Thank you",
+     "ar": "السَّلَامُ عَلَيْكُمْ",
+     "en": "Peace be upon you (repeating the greeting back)",
      "lemmas": [
-      "shukran"
+      "salam",
+      "ala",
+      "kum"
      ],
      "correct": false
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "la"
+      "ahlan"
      ],
      "correct": false
     }
@@ -196,18 +198,18 @@
      "correct": true
     },
     {
-     "ar": "لَا",
-     "en": "No",
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
      "lemmas": [
-      "la"
+      "afwan"
      ],
      "correct": false
     },
     {
-     "ar": "أَنَا",
-     "en": "I",
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
      "lemmas": [
-      "ana"
+      "ahlan"
      ],
      "correct": false
     }

@@ -62,3 +62,12 @@ export function answer(scene: Scene, s: SceneState, a: Answer, quranLevel = fals
   if (misses === 2) return { state: { ...s, misses, showOptions: true }, feedback: { type: 'offerOptions' }, correct: false };
   return { state: advance(scene, s), feedback: { type: 'modelled', ar: target }, correct: false };
 }
+
+/** Display order of options: a stable shuffle per prompt id, so the right answer's position carries no information. */
+export function optionOrder(p: Prompt): number[] {
+  let seed = 0; for (const ch of p.id) seed = (seed * 31 + ch.charCodeAt(0)) >>> 0;
+  seed %= 233280;
+  const a = p.options.map((_, i) => i);
+  for (let i = a.length - 1; i > 0; i--) { seed = (seed * 9301 + 49297) % 233280; const j = Math.floor((seed / 233280) * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+  return a;
+}

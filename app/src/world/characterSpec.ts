@@ -21,10 +21,13 @@ export function characterParts(c: Character): Part[] {
     { name: 'arm-right', slot: 'arm', shape: 'capsule', size: [0.045 * c.build, h * 0.3, 0.045], pos: [w * 0.95, bodyH * 0.72, 0], colour: c.colour },
   ];
   if (c.garments.includes('ghutra')) {
-    parts.push({ name: 'ghutra', slot: 'headwear', shape: 'sphere', size: [h * 0.074, h * 0.074, h * 0.074], pos: [0, bodyH + h * 0.082, -0.012], colour: '#f2efe8' });
+    // the ghutra fully encloses the smooth head (same centre, larger radius) so no partial opening ever shows
+    parts.push({ name: 'ghutra', slot: 'headwear', shape: 'sphere', size: [h * 0.074, h * 0.074, h * 0.074], pos: [0, bodyH + h * 0.075, 0], colour: '#f2efe8' });
     parts.push({ name: 'ghutra-drape', slot: 'headwear', shape: 'cone', size: [h * 0.085, h * 0.13, h * 0.06], pos: [0, bodyH + h * 0.02, -0.03], colour: '#f2efe8' });
     parts.push({ name: 'agal', slot: 'headwear', shape: 'torus', size: [h * 0.058, h * 0.008, h * 0.058], pos: [0, bodyH + h * 0.125, -0.01], colour: '#1d1a18' });
   } else if (c.garments.includes('kufi')) parts.push({ name: 'kufi', slot: 'headwear', shape: 'cylinder', size: [h * 0.062, h * 0.035, h * 0.062], pos: [0, bodyH + h * 0.118, 0], colour: '#fbfaf6' });
   if (c.garments.includes('bisht')) parts.push({ name: 'bisht', slot: 'outer', shape: 'cone', size: [w * 1.4, bodyH * 0.92, w * 0.95], pos: [0, bodyH * 0.5, -0.01], colour: '#5b4636' });
+  // under a ghutra the neck is covered by the drape: same cloth colour, no skin-coloured nub
+  if (c.garments.includes('ghutra')) for (const p of parts) if (p.name === 'neck') p.colour = '#f2efe8';
   return parts;
 }
