@@ -2,6 +2,7 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, extname } from 'node:path';
 import type { Content } from '../../app/src/core/content';
+import { clockAllowed } from '../../app/src/core/content';
 import { sceneTexts } from '../../app/src/core/content';
 import { AudioPolicy, ALLOWED_AUDIO_KINDS } from '../../app/src/core/audio';
 import { characterParts } from '../../app/src/world/characterSpec';
@@ -10,6 +11,9 @@ import { mk, type SuiteResult } from './types';
 const FEMALE_NAMES = ['فاطمة', 'عائشة', 'مريم', 'زينب', 'خديجة', 'سارة', 'ليلى', 'هند', 'أمينة', 'سلمى', 'رقية', 'حفصة', 'آمنة', 'نادية', 'منى', 'هدى', 'رانيا', 'ياسمين', 'دينا', 'أسماء'];
 const FEMALE_NAMES_EN = /\b(fatima|aisha|maryam|zainab|khadija|sara|sarah|layla|hind|amina|salma|ruqayya|hafsa|nadia|mona|huda|rania|yasmin|dina|asma)\b/i;
 const FACE_EMOJI = /[\u{1F600}-\u{1F64F}\u{1F910}-\u{1F92F}\u{1F970}-\u{1F97A}\u{1F466}-\u{1F487}\u{1F574}-\u{1F575}\u{1F645}-\u{1F64E}\u{1F926}\u{1F937}\u{1F9D1}-\u{1F9DD}\u{263A}\u{2639}\u{1F642}\u{1F643}\u{1F47C}\u{1F478}\u{1F470}\u{1F930}\u{1F931}\u{1F9D5}]/u;
+// Words for a female person, in Arabic (base form, no vowels) and English. Strict: not even a passing mention.
+const FEMALE_PERSON_AR = /(^|\s)[وفبلك]?(ام|امي|امك|امه|والدة|والدتي|اخت|اختي|اخته|زوجة|زوجتي|زوجته|بنت|بنتي|ابنة|ابنتي|خالة|خالتي|عمة|عمتي|جدة|جدتي|امرأة|امراة|مرأة|نساء|فتاة|فتيات|سيدة|سيدات|بنات|هي)(\s|$|[،.!؟])/;
+const FEMALE_PERSON_EN = /\b(she|her|hers|herself|woman|women|girl|girls|lady|ladies|mother|mum|mom|sister|sisters|wife|daughter|aunt|grandmother|grandma|niece|female|madam|mrs|ms|miss)\b/i;
 const PROPHETS_COMPANIONS_EN = /\b(muhammad|ibrahim|abraham|musa|moses|isa|jesus|nuh|noah|abu bakr|uthman|ali ibn|umar ibn|bilal ibn)\b/i;
 
 function walk(dir: string, out: string[] = []): string[] {
@@ -45,6 +49,8 @@ export function suiteR(content: Content, root: string): SuiteResult {
     }
     cases.push(t(`smooth-head-geometry:${c.id}`, head.length === 1 && head[0].shape === 'sphere' && parts.every((p) => !/eye|nose|mouth|lip|brow|pupil|face/i.test(p.name)), parts.map((p) => p.name).join(',')));
   }
+  for (const l of content.lemmas) cases.push(t(`no-female-person-word-lemma:${l.id}`, !FEMALE_PERSON_EN.test(l.en) && !FEMALE_PERSON_AR.test(' ' + l.ar.replace(/[\u064B-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا') + ' ')));
+  for (const c of chars) cases.push(t(`no-female-person-word-role:${c.id}`, !FEMALE_PERSON_EN.test(c.role + ' ' + c.age)));
   const castIds = new Set(chars.map((c) => c.id));
   for (const s of content.scenes) {
     for (const st of s.steps) cases.push(t(`speaker-in-cast:${s.id}:${st.speaker}`, castIds.has(st.speaker)));
@@ -52,8 +58,16 @@ export function suiteR(content: Content, root: string): SuiteResult {
       cases.push(t(`no-female-name-text:${x.where}`, !FEMALE_NAMES.some((n) => x.ar.replace(/[ً-ْٰ]/g, '').includes(n))));
       cases.push(t(`no-feminine-address:${x.where}`, !/أَنْتِ|أنتِ/.test(x.ar)));
       cases.push(t(`no-face-emoji:${x.where}`, !FACE_EMOJI.test(x.ar)));
+      cases.push(t(`no-female-person-word-ar:${x.where}`, !FEMALE_PERSON_AR.test(x.ar.replace(/[\u064B-\u0652\u0670\u0640]/g, '').replace(/[أإآ]/g, 'ا'))));
     }
     s.steps.forEach((st, i) => { if (st.type === 'prompt') st.options.forEach((o, j) => cases.push(t(`no-face-emoji:${s.id}#${i}.opt${j}`, !FACE_EMOJI.test(o.ar)))); });
+    // English glosses, prompts, notices and titles too
+    const en: string[] = [s.title.en, s.note?.en ?? ''];
+    for (const st of s.steps) { if (st.type === 'line') { en.push(st.en); if (st.notice) en.push(st.notice.en); } else { en.push(st.ask.en, st.recast.en, ...st.options.map((o) => o.en)); } }
+    cases.push(t(`no-female-person-word-en:${s.id}`, !en.some((x) => FEMALE_PERSON_EN.test(x)), en.filter((x) => FEMALE_PERSON_EN.test(x)).join(' | ')));
+    // Strict rule (Edward): the game world only exists between 08:00 and 11:00
+    cases.push(t(`world-time-08-11:${s.id}`, clockAllowed((s as { clock?: string }).clock ?? ''), (s as { clock?: string }).clock ?? 'no clock'));
+    cases.push(t(`no-night-scene:${s.id}`, !('time' in s)));
     // Quran etiquette
     const hasQuran = (s.quran?.length ?? 0) > 0;
     cases.push(t(`quran-only-sanctuary:${s.id}`, !hasQuran || s.tags.includes('sanctuary')));

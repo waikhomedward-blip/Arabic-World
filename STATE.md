@@ -1,6 +1,6 @@
 # STATE
 
-**Cycle:** 4 complete (2026-11-16) · **Overall:** 94.9 · **Best ever:** 94.9 (cycle 4; V and P suites now count) · **Suite R:** 100%
+**Cycle:** 5 complete (2026-11-16) · **Overall:** 95.0 · **Best ever:** 95.0 (cycle 5) · **Suite R:** 100%
 
 ## Release gates
 - [ ] Scholar review (release gate)
@@ -29,7 +29,7 @@
 
 ## Next actions (cycles 2–10: foundations)
 1. Content: add a second scene layer per day (and review scenes) toward ~150 lemmas and ~10 encounters per word.
-2. Rooftop set so the night-sky scenes show the moon and stars.
+2. Rooftop set for the 'on the roof' morning scenes (sky, birds, clouds visible).
 2b. Muqīm-only slow learners: frustration 1.00/day (borderline) → gentler hints in free typing.
 4. Speech port into `app/speech/` behind a flag (needs Edward's speech-test files) and start Suite S.
 5. Suite V next step: visual rubric score per place + MediaPipe face check on renders.

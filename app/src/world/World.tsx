@@ -5,7 +5,7 @@ import type { Character as Char } from '../core/content';
 import { characterParts, type Part } from './characterSpec';
 
 export const PLACES: Record<string, [number, number, number]> = {
-  home: [-14, 0, 0], souq: [-4, 0, 0], masjid: [7, 0, 0], cafe: [17, 0, 0], shop: [24, 0, 0],
+  home: [-14, 0, 0], souq: [-4, 0, 0], square: [7, 0, 0], masjid: [7, 0, 0], cafe: [17, 0, 0], shop: [24, 0, 0],
 };
 
 function Shape({ p }: { p: Part }) {
@@ -82,8 +82,8 @@ function Minaret({ x, z }: { x: number; z: number }) {
 function Lantern({ x, y, z }: { x: number; y: number; z: number }) {
   return (
     <group position={[x, y, z]}>
-      <mesh><boxGeometry args={[0.22, 0.32, 0.22]} /><meshBasicMaterial color="#ffcf7a" /></mesh>
-      <pointLight color="#ffb35c" intensity={3} distance={6} decay={2} />
+      {/* morning only: lanterns are unlit brass and glass */}
+      <mesh><boxGeometry args={[0.22, 0.32, 0.22]} /><meshStandardMaterial color="#9c7a45" metalness={0.5} roughness={0.5} /></mesh>
     </group>
   );
 }
@@ -101,10 +101,14 @@ function Props() {
           ))}
         </group>
       ))}
-      {/* masjid courtyard water cooler */}
-      <group position={[5.6, 0, -1.6]}>
-        <mesh position={[0, 0.6, 0]}><boxGeometry args={[0.8, 1.2, 0.5]} /><meshStandardMaterial color="#cfd6d8" metalness={0.4} roughness={0.4} /></mesh>
+      {/* the square's public drinking fountain (sabil): water for everyone */}
+      <group position={[5.4, 0, -1.7]}>
+        <mesh position={[0, 0.35, 0]}><cylinderGeometry args={[0.75, 0.85, 0.7, 24]} /><meshStandardMaterial color="#d9c7a8" roughness={0.9} /></mesh>
+        <mesh position={[0, 0.71, 0]}><cylinderGeometry args={[0.62, 0.62, 0.03, 24]} /><meshStandardMaterial color="#6fa3b5" metalness={0.1} roughness={0.15} /></mesh>
+        <mesh position={[0, 1.1, 0]}><cylinderGeometry args={[0.08, 0.1, 0.8, 12]} /><meshStandardMaterial color="#b08d57" metalness={0.6} roughness={0.35} /></mesh>
       </group>
+      {/* paving of the square */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[7, 0.005, 0.6]}><circleGeometry args={[4.2, 40]} /><meshStandardMaterial color="#c9a882" roughness={1} /></mesh>
       {/* café benches */}
       {[15.5, 18.5].map((x) => (
         <mesh key={x} position={[x, 0.25, -1.5]}><boxGeometry args={[1.6, 0.5, 0.6]} /><meshStandardMaterial color="#5d3b28" /></mesh>
@@ -180,7 +184,7 @@ function LabProbe() {
 
 export interface Placed { c: Char; at: [number, number, number] }
 
-export function World({ place, people, speaker, onTapPerson, activeId, time = 'dusk' }: { time?: 'dusk' | 'night'; place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void }) {
+export function World({ place, people, speaker, onTapPerson, activeId }: { place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void }) {
   const target = PLACES[place] ?? PLACES.home;
   const buildings = useMemo(() => {
     const cols = ['#d8b98f', '#e3c9a1', '#cfa77a', '#e8d2ad', '#c99d74'];
@@ -199,26 +203,12 @@ export function World({ place, people, speaker, onTapPerson, activeId, time = 'd
   );
   return (
     <Canvas key={gen} onCreated={({ gl }) => gl.domElement.addEventListener('webglcontextlost', (e) => { e.preventDefault(); setLost(true); })} dpr={[1, 1.5]} camera={{ fov: 45, position: [target[0], 2.3, 8] }} gl={{ antialias: true, powerPreference: 'high-performance' }}>
-      {time === 'night' ? (
-        <>
-          <color attach="background" args={['#121833']} />
-          <fog attach="fog" args={['#151c3a', 12, 42]} />
-          <hemisphereLight args={['#7f8fc4', '#1d1712', 0.45]} />
-          <directionalLight position={[10, 14, 8]} intensity={0.55} color="#b9c8ff" />
-          <mesh position={[target[0] + 6, 13, -20]}><sphereGeometry args={[1.1, 24, 16]} /><meshBasicMaterial color="#f4f0dc" fog={false} /></mesh>
-          {[[-5, 15, -22], [3, 17, -24], [12, 14, -23], [-11, 16, -21], [8, 19, -25]].map((p, i) => (
-            <mesh key={i} position={[target[0] + p[0], p[1], p[2]]}><sphereGeometry args={[0.08, 6, 6]} /><meshBasicMaterial color="#ffffff" fog={false} /></mesh>
-          ))}
-        </>
-      ) : (
-        <>
-          <color attach="background" args={['#e9a777']} />
-          <fog attach="fog" args={['#d99a72', 14, 46]} />
-          <hemisphereLight args={['#ffd9b0', '#5a3a2a', 0.9]} />
-          <directionalLight position={[-18, 9, 6]} intensity={2.1} color="#ffb070" />
-          <ambientLight intensity={0.15} color="#8f7cff" />
-        </>
-      )}
+      {/* Morning only (strict rule: 08:00–11:00): clear Hijazi morning, sun in the east, soft warm light */}
+      <color attach="background" args={['#cfe2ee']} />
+      <fog attach="fog" args={['#dfe6e6', 18, 60]} />
+      <hemisphereLight args={['#eef6ff', '#8a6a4c', 1.0]} />
+      <directionalLight position={[22, 16, 10]} intensity={2.4} color="#fff1dc" />
+      <ambientLight intensity={0.18} color="#ffffff" />
       <mesh rotation={[-Math.PI / 2, 0, 0]} receiveShadow>
         <planeGeometry args={[90, 40]} />
         <meshStandardMaterial color="#b9946b" roughness={1} />

@@ -145,11 +145,11 @@
      "correct": true
     },
     {
-     "ar": "هٰذَا قَمَرٌ.",
-     "en": "This is a moon.",
+     "ar": "هٰذَا طَائِرٌ.",
+     "en": "This is a bird.",
      "lemmas": [
       "hadha",
-      "qamar"
+      "tair"
      ],
      "correct": false
     }
@@ -206,5 +206,6 @@
    "register": "white",
    "gesture": "hand_on_heart"
   }
- ]
+ ],
+ "clock": "09:45"
 }

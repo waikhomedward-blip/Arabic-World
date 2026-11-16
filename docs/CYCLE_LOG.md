@@ -39,3 +39,14 @@
 - **Universal first** (Edward): neutral correct reply added wherever the correct reply was a religious formula; Suite C `neutral-option`.
 - **Scores:** overall **94.9** (best ever; V and P now counted). R 100%; P 100% (59–60 fps median on all 5 devices, p95 18–19 ms, ≤41 draw calls, ≤11k triangles); V 99/100 runs clean (the one failure was the test rig under load, re-run alone → pass); 2,540 tap targets between 24 and 44 px (mostly keyboard keys, like the system keyboard).
 - **Honest limits:** fps is the M1's GPU, not a phone's; the only real-device numbers will come from HUMAN_CHECKS. Retention estimate dipped 64 → 62/78 (seed noise after content edits; morning-check A/B still +10).
+
+## Cycle 5 — 2026-11-16 (Edward's new strict rules + review-free core)
+**Goal:** apply four of Edward's rules: peaceful and usable by everyone; most of the game needs no scholar review; no female characters (strict); the world only exists 08:00–11:00 (strict). **Effort:** high (hard-rule work).
+
+- **Review-free core:** the three masjid-courtyard scenes became a public square with a drinking fountain ("water is for everyone"); prayer lines replaced by universal ones (the sun, "knowledge is light"). Every line is auto-labelled universal / cultural / sacred; sacred content may only live in optional scenes; `docs/SCHOLAR_REVIEW.md` is regenerated each cycle (80% of text universal, 18 everyday phrases to review, 0 sacred scenes).
+- **Universal first:** the one lesson that used "اللّٰهُ أَكْبَرُ" as its example now uses "Faisal is bigger than Majid" and two apples; new checks for lesson examples and religious share (7.8%).
+- **No female characters, strict:** Suite R now blocks any word for a female person in Arabic or English anywhere (self-tested with planted cases; a first version over-matched السلام → fixed, lesson recorded).
+- **08:00–11:00, strict:** day 7's night scenes rewritten as morning (sky, cloud, bird, air; "water and air are for everyone"); night words retired; every scene has a clock; morning light only; lanterns unlit; HUD clock; "until tomorrow" at 11:00. Suite R `world-time-08-11`.
+- **Bug found by the lab:** the typed-answer checker accepted هوء for هَوَاءٌ (dropped long vowel) because two lenient rules interacted; fixed by comparing with and without the final-alif rule; regression tests added.
+- **Scores:** overall **95.0** (best ever); R 100%; V 100% (100/100 play-throughs); P 100%; checker 100% of 2,596 slips.
+- **Still weak:** 80/150 lemmas; "on the roof" scenes still shown at street level; Muqīm-only slow learners at 1.05 frustration/day (borderline).

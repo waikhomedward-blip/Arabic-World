@@ -1,14 +1,12 @@
 {
- "id": "d5-masjid",
+ "id": "d5-square",
  "day": 5,
- "place": "masjid",
- "tags": [
-  "sanctuary"
- ],
+ "place": "square",
+ "tags": [],
  "kind": "story",
  "title": {
-  "ar": "بَعْدَ الصَّلَاةِ",
-  "en": "After the prayer"
+  "ar": "الْمَاءُ لِلنَّاسِ",
+  "en": "Water for everyone"
  },
  "cast": [
   "tariq"
@@ -92,37 +90,36 @@
   {
    "type": "line",
    "speaker": "tariq",
-   "ar": "النَّاسُ فِي الْمَسْجِدِ.",
-   "en": "The people are in the masjid.",
+   "ar": "النَّاسُ فِي السَّاحَةِ.",
+   "en": "The people are in the square.",
    "lemmas": [
     "nas",
     "fi",
-    "masjid"
+    "saha"
    ],
    "register": "white",
-   "gesture": "point:courtyard"
+   "gesture": "point:people"
   },
   {
    "type": "line",
    "speaker": "tariq",
-   "ar": "الصَّلَاةُ فِي الْمَسْجِدِ.",
-   "en": "The prayer is in the masjid.",
+   "ar": "هٰذِهِ الشَّمْسُ.",
+   "en": "This is the sun.",
    "lemmas": [
-    "salah",
-    "fi",
-    "masjid"
+    "hadhihi",
+    "shams"
    ],
    "register": "white",
-   "gesture": "point:minaret"
+   "gesture": "point:sun"
   },
   {
    "type": "line",
    "speaker": "tariq",
-   "ar": "بَعْدَ الصَّلَاةِ، اِذْهَبْ إِلَى الْبَيْتِ.",
-   "en": "After the prayer, go home.",
+   "ar": "بَعْدَ الْمَاءِ، اِذْهَبْ إِلَى الْبَيْتِ.",
+   "en": "After the water, go home.",
    "lemmas": [
     "baada",
-    "salah",
+    "maa",
     "idhhab",
     "ila",
     "bayt"
@@ -202,18 +199,16 @@
   {
    "type": "line",
    "speaker": "tariq",
-   "ar": "الْحَمْدُ لِلّٰهِ.",
-   "en": "Praise be to Allah.",
+   "ar": "الْمَاءُ لِلنَّاسِ.",
+   "en": "The water is for everyone.",
    "lemmas": [
-    "hamd",
+    "maa",
     "li",
-    "allah"
+    "nas"
    ],
    "register": "white",
-   "gesture": "hand_on_heart"
+   "gesture": "open_palms"
   }
  ],
- "note": {
-  "en": "This is a story scene, not worship. Prayer is never part of the gameplay."
- }
+ "clock": "09:45"
 }

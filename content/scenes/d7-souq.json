@@ -5,8 +5,8 @@
  "tags": [],
  "kind": "story",
  "title": {
-  "ar": "سُوقُ اللَّيْلِ",
-  "en": "The night souq"
+  "ar": "صَبَاحُ السُّوقِ",
+  "en": "Morning at the souq"
  },
  "cast": [
   "saeed"
@@ -15,13 +15,13 @@
   {
    "type": "line",
    "speaker": "saeed",
-   "ar": "السَّلَامُ عَلَيْكُمْ! اللَّيْلُ جَمِيلٌ.",
-   "en": "Peace be upon you! The night is beautiful.",
+   "ar": "السَّلَامُ عَلَيْكُمْ! الْهَوَاءُ جَمِيلٌ.",
+   "en": "Peace be upon you! The air is lovely.",
    "lemmas": [
     "salam",
     "ala",
     "kum",
-    "layl",
+    "hawa",
     "jamil"
    ],
    "register": "white",
@@ -90,27 +90,41 @@
   {
    "type": "line",
    "speaker": "saeed",
-   "ar": "الْقَمَرُ فِي السَّمَاءِ.",
-   "en": "The moon is in the sky.",
+   "ar": "الشَّمْسُ فِي السَّمَاءِ.",
+   "en": "The sun is in the sky.",
    "lemmas": [
-    "qamar",
+    "shams",
     "fi",
     "sama"
    ],
    "register": "white",
-   "gesture": "point:moon"
+   "gesture": "point:sun"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "سَحَابَةٌ صَغِيرَةٌ فِي السَّمَاءِ.",
+   "en": "A small cloud in the sky.",
+   "lemmas": [
+    "sahaba",
+    "saghir",
+    "fi",
+    "sama"
+   ],
+   "register": "white",
+   "gesture": "point:cloud"
   },
   {
    "type": "prompt",
-   "id": "d7s-star",
+   "id": "d7s-bird",
    "speaker": "saeed",
    "ask": {
-    "ar": "هَلْ هٰذَا نَجْمٌ؟",
-    "en": "Is this a star? (he holds up bread)",
+    "ar": "هَلْ هٰذَا طَائِرٌ؟",
+    "en": "Is this a bird? (he holds up bread)",
     "lemmas": [
      "hal",
      "hadha",
-     "najm"
+     "tair"
     ]
    },
    "options": [
@@ -125,30 +139,29 @@
      "correct": true
     },
     {
-     "ar": "نَعَمْ، هٰذَا نَجْمٌ.",
-     "en": "Yes, this is a star.",
+     "ar": "نَعَمْ، هٰذَا طَائِرٌ.",
+     "en": "Yes, this is a bird.",
      "lemmas": [
       "naam",
       "hadha",
-      "najm"
+      "tair"
      ],
      "correct": false
     }
    ],
    "accepted": [
     "لَا، هٰذَا خُبْزٌ",
-    "لَا، خُبْزٌ",
     "لَا"
    ],
    "tiles": [
     "لَا",
     "هٰذَا",
     "خُبْزٌ",
-    "نَجْمٌ"
+    "طَائِرٌ"
    ],
    "recast": {
-    "ar": "نَجْمٌ؟ خُبْزٌ؟",
-    "en": "A star? Bread?",
+    "ar": "طَائِرٌ؟ خُبْزٌ؟",
+    "en": "A bird? Bread?",
     "gesture": "hold_up:bread"
    },
    "lemmas": [
@@ -221,5 +234,5 @@
    ]
   }
  ],
- "time": "night"
+ "clock": "09:45"
 }

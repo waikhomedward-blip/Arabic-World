@@ -87,12 +87,12 @@
      "correct": true
     },
     {
-     "ar": "لَا، أَنْتَ قَمَرٌ جَمِيلٌ.",
-     "en": "No, you are a beautiful moon.",
+     "ar": "لَا، أَنْتَ طَائِرٌ جَمِيلٌ.",
+     "en": "No, you are a beautiful bird.",
      "lemmas": [
       "la",
       "anta",
-      "qamar",
+      "tair",
       "jamil"
      ],
      "correct": false
@@ -106,7 +106,7 @@
     "نَعَمْ",
     "أَنْتَ",
     "مُعَلِّمٌ",
-    "قَمَرٌ"
+    "طَائِرٌ"
    ],
    "recast": {
     "ar": "مُعَلِّمٌ؟",
@@ -183,5 +183,6 @@
     "shukran"
    ]
   }
- ]
+ ],
+ "clock": "08:30"
 }

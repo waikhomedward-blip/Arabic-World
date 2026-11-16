@@ -16,7 +16,7 @@ export function baseForm(s: string): string {
 }
 
 /** Lenient form: hamza seats, ة/ه/ت, ى/ي, final verbal alif (build rule 9 "accept with note"). */
-export function lenientForm(s: string): string {
+export function lenientForm(s: string, verbalAlif = true): string {
   return baseForm(s)
     .split(' ')
     .map((w) =>
@@ -24,10 +24,10 @@ export function lenientForm(s: string): string {
         .replace(/[أإآٱ]/g, 'ا')
         .replace(/ؤ/g, 'و')
         .replace(/ئ/g, 'ي')
+        .replace(verbalAlif ? /وا$/u : /$^/u, verbalAlif ? 'و' : '') // final verbal alif (checker also compares without it)
         .replace(/ء/g, '')
         .replace(/ى/g, 'ي')
-        .replace(/[ةت]$/u, 'ه')
-        .replace(/وا$/u, 'و'),
+        .replace(/[ةت]$/u, 'ه'),
     )
     .join(' ');
 }
@@ -77,6 +77,8 @@ export function tashkeelReport(text: string): TashkeelReport {
       // article: (و|ف|ب|ل|ك)? + ال
       const artStart = letters[0] && ['و', 'ف', 'ب', 'ك'].includes(letters[0].ch) && letters[1]?.ch === 'ا' ? 1 : 0;
       if (i === artStart + 1 && l.ch === 'ل' && ['ا', 'ٱ'].includes(letters[artStart]?.ch) && letters[i + 1]?.marks.includes('ّ')) return;
+      // لِـ + الـ drops the alif: لِلنَّاسِ — the article's lam (index 1) before a shadda'd sun letter needs no mark
+      if (i === 1 && l.ch === 'ل' && letters[0]?.ch === 'ل' && letters[i + 1]?.marks.includes('ّ')) return;
       rep.required++;
       if (l.marks) rep.marked++;
       else rep.missing.push(`${word}[${i}:${l.ch}]`);

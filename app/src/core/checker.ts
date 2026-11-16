@@ -14,9 +14,10 @@ export function checkTyped(typed: string, accepted: string[], quranLevel = false
   if (!t) return { verdict: 'reject', target: accepted[0] };
   for (const a of accepted) if (baseForm(a) === t) return { verdict: 'correct', target: a };
 
-  const tl = lenientForm(typed);
+  // compare with and without the final-verbal-alif rule, so كتبو≈كتبوا and هوا≈هواء, but هوء≠هواء
+  const same = (a: string) => lenientForm(a, true) === lenientForm(typed, true) || lenientForm(a, false) === lenientForm(typed, false);
   for (const a of accepted) {
-    if (lenientForm(a) === tl) {
+    if (same(a)) {
       if (quranLevel) return { verdict: 'did_you_mean', target: a, note: 'exact spelling needed for Quran text' };
       return { verdict: 'accept_with_note', target: a, note: spellingNote(typed, a) };
     }

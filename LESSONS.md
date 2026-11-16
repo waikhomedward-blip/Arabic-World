@@ -11,6 +11,8 @@
 9. **Distractors should be words the player has already met** (morning check), or the "wrong" answers teach nothing.
 10. **Node 18 on this Mac:** keep Vite 5, Vitest 2, R3F 8 / React 18.
 11. **Write content with `tools/author.ts`,** not throwaway scripts; it keeps prompts consistent (greet / thanks / fine / morning, yes-no, act).
-12. **Night sky is hidden from street level** by the buildings; night-sky scenes need a rooftop set.
+12. ~~Night sky~~ — obsolete: the world only exists 08:00–11:00 (strict rule). Sky scenes are morning sky, sun, clouds and birds.
 13. **Run at most 2 Playwright browsers at once** (and fewer while yt-dlp or other heavy jobs run): GPU starvation caused a false "WebGL context lost" failure. Re-run a failing scene alone before calling it a game bug. The game itself now recovers from context loss (tap to continue).
 14. **Universal first:** every prompt whose correct reply is a religious formula also needs a neutral correct reply (Suite C `neutral-option`).
+15. **Arabic word-list checks must anchor prefixes at word start** (`(^|\s)[وفبلك]?`), or endings like السلامُ read as أم (mother). Self-test every new word rule with planted good and bad text.
+16. **لِـ + الـ drops the alif** (لِلنَّاسِ): the tashkeel validator now handles it.

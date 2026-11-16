@@ -5,8 +5,8 @@
  "tags": [],
  "kind": "story",
  "title": {
-  "ar": "اللَّيْلُ",
-  "en": "Night on the roof"
+  "ar": "عَلَى السَّطْحِ صَبَاحًا",
+  "en": "Morning on the roof"
  },
  "cast": [
   "faisal",
@@ -16,109 +16,125 @@
   {
    "type": "line",
    "speaker": "faisal",
-   "ar": "اللَّيْلُ جَمِيلٌ.",
-   "en": "The night is beautiful.",
+   "ar": "صَبَاحُ الْخَيْرِ! السَّمَاءُ جَمِيلَةٌ.",
+   "en": "Good morning! The sky is beautiful.",
    "lemmas": [
-    "layl",
-    "jamil"
-   ],
-   "register": "white",
-   "gesture": "point:sky"
-  },
-  {
-   "type": "line",
-   "speaker": "faisal",
-   "ar": "هٰذَا الْقَمَرُ.",
-   "en": "This is the moon.",
-   "lemmas": [
-    "hadha",
-    "qamar"
-   ],
-   "register": "white",
-   "gesture": "point:moon"
-  },
-  {
-   "type": "line",
-   "speaker": "majid",
-   "ar": "وَهٰذَا نَجْمٌ صَغِيرٌ!",
-   "en": "And this is a small star!",
-   "lemmas": [
-    "wa",
-    "hadha",
-    "najm",
-    "saghir"
-   ],
-   "register": "white",
-   "gesture": "point:star"
-  },
-  {
-   "type": "prompt",
-   "id": "d7h-moon",
-   "speaker": "faisal",
-   "ask": {
-    "ar": "هَلِ الْقَمَرُ كَبِيرٌ؟",
-    "en": "Is the moon big?",
-    "lemmas": [
-     "hal",
-     "qamar",
-     "kabir"
-    ]
-   },
-   "options": [
-    {
-     "ar": "نَعَمْ، الْقَمَرُ كَبِيرٌ.",
-     "en": "Yes, the moon is big.",
-     "lemmas": [
-      "naam",
-      "qamar",
-      "kabir"
-     ],
-     "correct": true
-    },
-    {
-     "ar": "لَا، الْقَمَرُ نَجْمٌ صَغِيرٌ.",
-     "en": "No, the moon is a small star.",
-     "lemmas": [
-      "la",
-      "qamar",
-      "najm",
-      "saghir"
-     ],
-     "correct": false
-    }
-   ],
-   "accepted": [
-    "نَعَمْ، الْقَمَرُ كَبِيرٌ",
-    "نَعَمْ"
-   ],
-   "tiles": [
-    "نَعَمْ",
-    "الْقَمَرُ",
-    "كَبِيرٌ",
-    "مَاءٌ"
-   ],
-   "recast": {
-    "ar": "الْقَمَرُ… كَبِيرٌ؟",
-    "en": "The moon… big?",
-    "gesture": "arms_wide"
-   },
-   "lemmas": [
-    "naam",
-    "qamar",
-    "kabir"
-   ]
-  },
-  {
-   "type": "line",
-   "speaker": "faisal",
-   "ar": "السَّمَاءُ جَمِيلَةٌ.",
-   "en": "The sky is beautiful.",
-   "lemmas": [
+    "sabah",
+    "khayr",
     "sama",
     "jamil"
    ],
    "register": "white",
    "gesture": "point:sky"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "هٰذِهِ سَحَابَةٌ.",
+   "en": "This is a cloud.",
+   "lemmas": [
+    "hadhihi",
+    "sahaba"
+   ],
+   "register": "white",
+   "gesture": "point:cloud"
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "وَهٰذَا طَائِرٌ صَغِيرٌ!",
+   "en": "And this is a small bird!",
+   "lemmas": [
+    "wa",
+    "hadha",
+    "tair",
+    "saghir"
+   ],
+   "register": "white",
+   "gesture": "point:bird"
+  },
+  {
+   "type": "prompt",
+   "id": "d7h-bird",
+   "speaker": "faisal",
+   "ask": {
+    "ar": "هَلِ الطَّائِرُ كَبِيرٌ؟",
+    "en": "Is the bird big?",
+    "lemmas": [
+     "hal",
+     "tair",
+     "kabir"
+    ]
+   },
+   "options": [
+    {
+     "ar": "لَا، الطَّائِرُ صَغِيرٌ.",
+     "en": "No, the bird is small.",
+     "lemmas": [
+      "la",
+      "tair",
+      "saghir"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "نَعَمْ، الطَّائِرُ كَبِيرٌ.",
+     "en": "Yes, the bird is big.",
+     "lemmas": [
+      "naam",
+      "tair",
+      "kabir"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "لَا، الطَّائِرُ صَغِيرٌ",
+    "لَا"
+   ],
+   "tiles": [
+    "لَا",
+    "الطَّائِرُ",
+    "صَغِيرٌ",
+    "كَبِيرٌ"
+   ],
+   "recast": {
+    "ar": "الطَّائِرُ… كَبِيرٌ؟",
+    "en": "The bird… big?",
+    "gesture": "hands_small"
+   },
+   "lemmas": [
+    "la",
+    "tair",
+    "saghir"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "الْهَوَاءُ جَمِيلٌ.",
+   "en": "The air is lovely.",
+   "lemmas": [
+    "hawa",
+    "jamil"
+   ],
+   "register": "white",
+   "gesture": "breathe_in"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "الْمَاءُ وَالْهَوَاءُ لِلنَّاسِ.",
+   "en": "Water and air are for everyone.",
+   "lemmas": [
+    "maa",
+    "wa",
+    "hawa",
+    "li",
+    "nas"
+   ],
+   "register": "white",
+   "gesture": "open_palms"
   },
   {
    "type": "line",
@@ -138,5 +154,5 @@
    "gesture": "hand_on_heart"
   }
  ],
- "time": "night"
+ "clock": "08:30"
 }

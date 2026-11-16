@@ -11,9 +11,11 @@ export interface Prompt {
 }
 export type Step = Line | Prompt;
 export interface Scene {
-  id: string; day: number; place: 'home' | 'souq' | 'cafe' | 'shop' | 'masjid';
-  tags: string[]; kind: 'story' | 'menu' | 'failure' | 'reward' | 'loading';
-  title: { ar: string; en: string }; cast: string[]; note?: { en: string }; time?: 'dusk' | 'night';
+  id: string; day: number; place: 'home' | 'souq' | 'cafe' | 'shop' | 'square' | 'masjid'; // 'masjid' is reserved for optional, reviewed content
+  tags: string[]; optional?: boolean; kind: 'story' | 'menu' | 'failure' | 'reward' | 'loading';
+  title: { ar: string; en: string }; cast: string[]; note?: { en: string };
+  /** In-world clock 'HH:MM'. Strict rule (Edward): the game world only exists between 08:00 and 11:00. */
+  clock: string;
   quran?: { surah: number; ayahStart: number; ayahEnd: number; text: string }[];
   steps: Step[];
 }
@@ -22,7 +24,7 @@ export interface Cast { allowedVoices: string[]; allowedGarments: Record<string,
 export interface Content { lemmas: Lemma[]; scenes: Scene[]; cast: Cast }
 
 export function sortScenes(scenes: Scene[]): Scene[] {
-  const order = ['home', 'souq', 'masjid', 'cafe', 'shop'];
+  const order = ['home', 'souq', 'square', 'masjid', 'cafe', 'shop'];
   return [...scenes].sort((a, b) => a.day - b.day || order.indexOf(a.place) - order.indexOf(b.place));
 }
 
@@ -40,3 +42,8 @@ export function sceneTexts(s: Scene): { where: string; ar: string; register?: st
   });
   return out;
 }
+
+/** The game world exists only from 08:00 to 11:00 (strict rule). */
+export const WORLD_OPEN = '08:00';
+export const WORLD_CLOSE = '11:00';
+export function clockAllowed(c: string): boolean { return /^\d\d:\d\d$/.test(c) && c >= WORLD_OPEN && c <= WORLD_CLOSE; }

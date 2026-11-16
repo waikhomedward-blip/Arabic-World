@@ -7,6 +7,7 @@ import { suiteC } from './suites/C';
 import { suiteG } from './suites/G';
 import { suiteL } from './suites/L';
 import type { SuiteResult } from './suites/types';
+import { writeScholarList } from '../tools/scholar-list';
 
 const root = process.cwd();
 const boardPath = join(root, 'lab/scoreboard.json');
@@ -15,6 +16,7 @@ const cycle = Number(process.argv[2] ?? (board.cycles.at(-1)?.cycle ?? 0) + 1);
 const seed = cycle * 101;
 
 const content = loadContentFromDisk(root);
+writeScholarList(root); // keep docs/SCHOLAR_REVIEW.md current every cycle
 const notBuilt = (s: string, why: string): SuiteResult => ({ suite: s, cases: [{ suite: s, id: `${s}:not-built`, status: 'not_built', detail: why }], metrics: {} });
 // Suites V and P come from the Playwright play-through (tests/e2e/verify.spec.ts → lab/results/e2e/<project>/<scene>.json)
 function e2eSuites(): SuiteResult[] {

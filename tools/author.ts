@@ -49,8 +49,10 @@ export function act(id: string, sp: string, ask: { ar: string; en: string; lemma
   return P(id, sp, ask, [O(good[0], good[1], good[2], true, action), O(bad[0], bad[1], bad[2], false, bad[3])], [], [], recast, lemmas, action);
 }
 
+/** `clock` must be between 08:00 and 11:00 (strict rule; Suite R checks it). */
 export function scene(id: string, day: number, place: Scene['place'], title: Scene['title'], cast: string[], steps: Scene['steps'], opts: Partial<Scene> = {}): Scene {
-  return { id, day, place, tags: [], kind: 'story', title, cast, steps, ...opts };
+  const slots: Record<string, string> = { home: '08:30', souq: '09:45', square: '09:45', cafe: '10:30', shop: '09:45', masjid: '10:30' };
+  return { id, day, place, tags: [], kind: 'story', title, cast, steps, clock: slots[place] ?? '09:00', ...opts };
 }
 export const SANCTUARY: Partial<Scene> = { tags: ['sanctuary'], note: { en: 'This is a story scene, not worship. Prayer is never part of the gameplay.' } };
 

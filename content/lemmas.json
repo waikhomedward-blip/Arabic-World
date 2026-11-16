@@ -400,14 +400,6 @@
   "targetRung": 2
  },
  {
-  "id": "salah",
-  "ar": "صَلَاةٌ",
-  "en": "prayer",
-  "tier": 1,
-  "root": "ص ل و",
-  "targetRung": 4
- },
- {
   "id": "baada",
   "ar": "بَعْدَ",
   "en": "after",
@@ -494,30 +486,6 @@
   "tier": 1,
   "root": "ك ب ر",
   "targetRung": 1
- },
- {
-  "id": "layl",
-  "ar": "لَيْلٌ",
-  "en": "night",
-  "tier": 1,
-  "root": "ل ي ل",
-  "targetRung": 4
- },
- {
-  "id": "qamar",
-  "ar": "قَمَرٌ",
-  "en": "moon",
-  "tier": 1,
-  "root": "ق م ر",
-  "targetRung": 4
- },
- {
-  "id": "najm",
-  "ar": "نَجْمٌ",
-  "en": "star",
-  "tier": 1,
-  "root": "ن ج م",
-  "targetRung": 2
  },
  {
   "id": "sama",
@@ -630,5 +598,45 @@
   "tier": "everyday",
   "root": "س ل م",
   "targetRung": 4
+ },
+ {
+  "id": "saha",
+  "ar": "سَاحَةٌ",
+  "en": "square (open place in town)",
+  "tier": "everyday",
+  "root": "س و ح",
+  "targetRung": 4
+ },
+ {
+  "id": "shams",
+  "ar": "شَمْسٌ",
+  "en": "sun",
+  "tier": 1,
+  "root": "ش م س",
+  "targetRung": 4
+ },
+ {
+  "id": "hawa",
+  "ar": "هَوَاءٌ",
+  "en": "air",
+  "tier": 1,
+  "root": "ه و ي",
+  "targetRung": 4
+ },
+ {
+  "id": "tair",
+  "ar": "طَائِرٌ",
+  "en": "bird",
+  "tier": 1,
+  "root": "ط ي ر",
+  "targetRung": 4
+ },
+ {
+  "id": "sahaba",
+  "ar": "سَحَابَةٌ",
+  "en": "cloud",
+  "tier": "everyday",
+  "root": "س ح ب",
+  "targetRung": 2
  }
 ]

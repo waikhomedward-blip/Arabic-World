@@ -1,14 +1,12 @@
 {
- "id": "d9-masjid",
- "day": 9,
- "place": "masjid",
- "tags": [
-  "sanctuary"
- ],
+ "id": "d2-square",
+ "day": 2,
+ "place": "square",
+ "tags": [],
  "kind": "story",
  "title": {
-  "ar": "الْقَلَمُ",
-  "en": "The pen"
+  "ar": "السَّاحَةُ",
+  "en": "The square"
  },
  "cast": [
   "tariq"
@@ -17,19 +15,23 @@
   {
    "type": "line",
    "speaker": "tariq",
-   "ar": "السَّلَامُ عَلَيْكُمْ.",
-   "en": "Peace be upon you.",
+   "ar": "السَّلَامُ عَلَيْكُمْ. أَنَا طَارِقٌ.",
+   "en": "Peace be upon you. I am Tariq.",
    "lemmas": [
     "salam",
     "ala",
-    "kum"
+    "kum",
+    "ana"
    ],
    "register": "white",
-   "gesture": "hand_on_heart"
+   "gesture": "hand_on_heart",
+   "names": [
+    "طَارِقٌ"
+   ]
   },
   {
    "type": "prompt",
-   "id": "d9m-greet",
+   "id": "d2m-greet",
    "speaker": "tariq",
    "ask": {
     "en": "Reply to the greeting"
@@ -90,163 +92,152 @@
   {
    "type": "line",
    "speaker": "tariq",
-   "ar": "هٰذَا قَلَمٌ.",
-   "en": "This is a pen.",
+   "ar": "هٰذِهِ سَاحَةٌ.",
+   "en": "This is a square.",
    "lemmas": [
-    "hadha",
-    "qalam"
+    "hadhihi",
+    "saha"
    ],
    "register": "white",
-   "gesture": "hold_up:pen"
-  },
-  {
-   "type": "line",
-   "speaker": "tariq",
-   "ar": "الْقَلَمُ لِلْعِلْمِ.",
-   "en": "The pen is for knowledge.",
-   "lemmas": [
-    "qalam",
-    "li",
-    "ilm"
-   ],
-   "register": "white",
-   "gesture": "write_in_air"
-  },
-  {
-   "type": "line",
-   "speaker": "tariq",
-   "ar": "الصَّلَاةُ وَالْعِلْمُ فِي الْمَسْجِدِ.",
-   "en": "Prayer and knowledge are in the masjid.",
-   "lemmas": [
-    "salah",
-    "wa",
-    "ilm",
-    "fi",
-    "masjid"
-   ],
-   "register": "white",
-   "gesture": "point:courtyard"
+   "gesture": "open_arms"
   },
   {
    "type": "prompt",
-   "id": "d9m-pen",
+   "id": "d2m-yesno",
    "speaker": "tariq",
    "ask": {
-    "ar": "هَلْ هٰذَا قَلَمٌ؟",
-    "en": "Is this a pen?",
+    "ar": "هَلْ هٰذَا مَاءٌ؟",
+    "en": "Is this water?",
     "lemmas": [
      "hal",
      "hadha",
-     "qalam"
+     "maa"
     ]
    },
    "options": [
     {
-     "ar": "نَعَمْ، هٰذَا قَلَمٌ.",
-     "en": "Yes, this is a pen.",
+     "ar": "نَعَمْ، هٰذَا مَاءٌ.",
+     "en": "Yes, this is water.",
      "lemmas": [
       "naam",
       "hadha",
-      "qalam"
+      "maa"
      ],
      "correct": true
     },
     {
-     "ar": "لَا، هٰذَا شَايٌ وَسُكَّرٌ.",
-     "en": "No, this is tea and sugar.",
+     "ar": "لَا، هٰذِهِ تُفَّاحَةٌ.",
+     "en": "No, this is an apple.",
      "lemmas": [
       "la",
-      "hadha",
-      "shay",
-      "wa",
-      "sukkar"
+      "hadhihi",
+      "tuffaha"
      ],
      "correct": false
     }
    ],
    "accepted": [
-    "نَعَمْ، هٰذَا قَلَمٌ",
-    "نَعَمْ"
+    "نَعَمْ، هٰذَا مَاءٌ",
+    "نَعَمْ",
+    "نعم هذا ماء"
    ],
    "tiles": [
     "نَعَمْ",
     "هٰذَا",
-    "قَلَمٌ",
-    "شَايٌ"
+    "مَاءٌ",
+    "بَيْتٌ"
    ],
    "recast": {
-    "ar": "قَلَمٌ؟",
-    "en": "A pen?",
-    "gesture": "hold_up:pen"
+    "ar": "هِمْ… مَاءٌ؟",
+    "en": "Hmm… water?",
+    "gesture": "tap_cooler"
    },
    "lemmas": [
     "naam",
     "hadha",
-    "qalam"
+    "maa"
    ]
   },
   {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "تَفَضَّلْ، خُذِ الْمَاءَ.",
+   "en": "Please, take the water.",
+   "lemmas": [
+    "tafaddal",
+    "khudh",
+    "maa"
+   ],
+   "register": "white",
+   "gesture": "hold_out:cup"
+  },
+  {
    "type": "prompt",
-   "id": "d9m-take",
+   "id": "d2m-take",
    "speaker": "tariq",
    "ask": {
-    "ar": "خُذِ الْقَلَمَ.",
-    "en": "Take the pen.",
-    "lemmas": [
-     "khudh",
-     "qalam"
-    ]
+    "ar": "خُذْ.",
+    "en": "Take it."
    },
    "options": [
     {
-     "ar": "✋ ✏️",
-     "en": "(take the pen)",
-     "lemmas": [
-      "qalam"
-     ],
-     "correct": true,
-     "action": "take:pen"
-    },
-    {
      "ar": "✋ 💧",
-     "en": "(take the water)",
+     "en": "(take the cup of water)",
      "lemmas": [
       "maa"
      ],
-     "correct": false,
+     "correct": true,
      "action": "take:water"
+    },
+    {
+     "ar": "✋ 🍎",
+     "en": "(take an apple)",
+     "lemmas": [
+      "tuffaha"
+     ],
+     "correct": false,
+     "action": "take:apple"
     }
    ],
    "accepted": [],
    "tiles": [],
    "recast": {
-    "ar": "الْقَلَمَ…",
-    "en": "The pen…",
-    "gesture": "hold_out:pen"
+    "ar": "الْمَاءَ…",
+    "en": "The water…",
+    "gesture": "hold_out:cup"
    },
    "lemmas": [
     "khudh",
-    "qalam"
+    "maa"
    ],
-   "action": "take:pen"
+   "action": "take:water"
   },
   {
    "type": "line",
    "speaker": "tariq",
-   "ar": "اللّٰهُ أَكْبَرُ، وَالْحَمْدُ لِلّٰهِ.",
-   "en": "Allah is the Greatest, and praise be to Allah.",
+   "ar": "الْحَمْدُ لِلّٰهِ.",
+   "en": "Praise be to Allah.",
    "lemmas": [
-    "allah",
-    "akbar",
-    "wa",
     "hamd",
-    "li"
+    "li",
+    "allah"
    ],
    "register": "white",
    "gesture": "hand_on_heart"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "أَنْتَ صَدِيقِي.",
+   "en": "You are my friend.",
+   "lemmas": [
+    "anta",
+    "sadiq",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "hand_on_shoulder"
   }
  ],
- "note": {
-  "en": "This is a story scene, not worship. Prayer is never part of the gameplay."
- }
+ "clock": "08:30"
 }

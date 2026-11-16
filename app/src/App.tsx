@@ -158,12 +158,13 @@ export function App() {
 
   return (
     <div className="app">
-      <World place={morningActive && morningItems.length ? 'home' : place} time={scene?.time ?? 'dusk'} people={people} speaker={step?.type === 'line' ? step.speaker : step?.type === 'prompt' && feedback?.type !== 'correct' ? step.speaker : null}
+      <World place={morningActive && morningItems.length ? 'home' : place} people={people} speaker={step?.type === 'line' ? step.speaker : step?.type === 'prompt' && feedback?.type !== 'correct' ? step.speaker : null}
         activeId={!sceneState && nextScene ? nextScene.cast[0] : null} onTapPerson={() => !sceneState && openScene()} />
 
       <div className="hud" dir="ltr">
         <button className="chip" onClick={() => setJournal(true)} aria-label="Words I have met">📖 {Object.keys(progress.words).length}</button>
-        <span className="chip quiet" title="Days in the city">🌙 {progress.daysInCity}</span>
+        <span className="chip quiet" title="Days in the city">📅 {progress.daysInCity}</span>
+        <span className="chip quiet" title="Time in the city (mornings only, 8–11)">🕗 {morningActive ? '08:00' : (scene?.clock ?? '11:00')}</span>
         <span className="chip quiet" dir="rtl">اَلْيَوْمُ {progress.inGameDay}</span>
       </div>
 
@@ -189,10 +190,10 @@ export function App() {
         <div className="panel evening">
           {progress.inGameDay <= maxDay ? (
             <>
-              <h2 dir="rtl">اَلْمَسَاءُ</h2>
-              <p>The day is done. New words come back tomorrow for a quick check.</p>
+              <h2 dir="rtl">إِلَى الْغَدِ</h2>
+              <p>It's 11:00 and the morning is done. Yesterday's new words come back tomorrow at 8:00 for a quick check.</p>
               <button className="btn" onClick={() => setJournal(true)}>📖 Words I understand</button>
-              <button className="btn primary" onClick={sleep}>🌙 Sleep</button>
+              <button className="btn primary" onClick={sleep}>☀️ Next morning</button>
             </>
           ) : (
             <>

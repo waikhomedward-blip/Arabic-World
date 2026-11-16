@@ -5,6 +5,7 @@ import { tashkeelReport } from '../../app/src/core/arabic';
 import { checkTyped } from '../../app/src/core/checker';
 import { baseForm } from '../../app/src/core/arabic';
 import { optionOrder } from '../../app/src/core/engine';
+import { classifyScene, classifyText } from '../../app/src/core/review';
 import { mk, type SuiteResult, type Case } from './types';
 
 function occurrences(s: Scene): { lemma: string; step: number }[] {
@@ -109,9 +110,13 @@ export function suiteC(content: Content): SuiteResult {
   const allTexts = content.scenes.flatMap(sceneTexts).filter((x) => !/\.tile\d+$/.test(x.where) && !/\.recast$/.test(x.where));
   const religiousShare = allTexts.filter((x) => /اللّٰه|الله|لِلّٰه|صَلَاة|الصَّلَاة|مَسْجِد/.test(x.ar)).length / allTexts.length;
   cases.push(t('universal:religious-share<=12%', religiousShare <= 0.12, `${(religiousShare * 100).toFixed(1)}%`));
-  // 12. ten-day scope (v1 target)
+  // 12. review-free core: sacred content (worship, scripture) only in optional scenes; most text is universal
+  for (const s of content.scenes) { const cls = classifyScene(s); cases.push(t(`sacred-only-optional:${s.id}`, cls !== 'sacred' || !!s.optional, cls)); }
+  const universalShare = allTexts.filter((x) => classifyText(x.ar) === 'universal').length / allTexts.length;
+  cases.push(t('review-free:universal-share>=80%', universalShare >= 0.8, `${(universalShare * 100).toFixed(1)}%`));
+  // 13. ten-day scope (v1 target)
   cases.push(t('ten-days-authored', days.length >= 10, `${days.length} days`));
   cases.push(t('lemma-target-150', content.lemmas.length >= 150, `${content.lemmas.length} lemmas`));
   const covVals = Object.values(sceneCoverage);
-  return { suite: 'C', cases, metrics: { lemmas: content.lemmas.length, days: days.length, scenes: content.scenes.length, tenEncounterShare: +(tenPlus / content.lemmas.length).toFixed(3), minSceneCoverage: +Math.min(...covVals).toFixed(3), meanSceneCoverage: +(covVals.reduce((a, b) => a + b, 0) / covVals.length).toFixed(3) } };
+  return { suite: 'C', cases, metrics: { universalShare: +universalShare.toFixed(3), lemmas: content.lemmas.length, days: days.length, scenes: content.scenes.length, tenEncounterShare: +(tenPlus / content.lemmas.length).toFixed(3), minSceneCoverage: +Math.min(...covVals).toFixed(3), meanSceneCoverage: +(covVals.reduce((a, b) => a + b, 0) / covVals.length).toFixed(3) } };
 }

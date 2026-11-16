@@ -26,6 +26,10 @@ describe('checker', () => {
     expect(checkTyped('سديق', ['صَدِيقٌ']).verdict).toBe('did_you_mean');
     expect(checkTyped('كتب', ['كِتَابٌ']).verdict).toBe('did_you_mean');
     expect(checkTyped('بيت', ['كِتَابٌ']).verdict).toBe('reject');
+    // regression (cycle 5): a dropped long vowel in a noun ending -اء must not be accepted
+    expect(checkTyped('هوء', ['هَوَاءٌ']).verdict).not.toMatch(/correct|accept_with_note/);
+    expect(checkTyped('هوا', ['هَوَاءٌ']).verdict).toBe('accept_with_note');
+    expect(checkTyped('كتبو', ['كَتَبُوا']).verdict).toBe('accept_with_note');
   });
 });
 describe('tashkeel validator', () => {

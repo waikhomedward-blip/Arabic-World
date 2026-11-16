@@ -10,14 +10,18 @@ Full spec: `docs/research/CLAUDE_CODE_MASTER_PROMPT.md` (section 0A overrides ol
 ## Hard rules (override everything; Suite R checks them every cycle)
 1. **No faces.** No eyes, nose or mouth on any character; heads are smooth. No faces in textures, posters, icons, UI art, reports.
 2. **Modest dress** for everyone (thobes, loose clothing).
-3. **No female characters** anywhere: NPCs, voices, TTS, crowds, names in messages. All-male cast.
+3. **No female characters** anywhere — **strict** (Edward, 16 Nov): no NPCs, voices, TTS, crowds, names, texts, photos or illustrations, and not even a passing mention of a female person in Arabic or English (mother, sister, wife, girl, she…). All-male cast. Suite R `no-female-person-word-*` blocks it.
 4. **No music.** Only Quran recitation and the adhan as melodic audio. Allowed: speech, ambient, plain non-melodic clicks. Unsure → it's music, leave it out.
+5. **The game world only exists from 08:00 to 11:00 in the morning** — **strict** (Edward, 16 Nov). Every scene has a `clock` in that window; no night, evening or sunset scenes; morning light only. Suite R `world-time-08-11` blocks anything else.
 - Quran text/audio only in `sanctuary` scenes; never cut a verse; never in failure/reward/menu/loading; never on floors.
 - Everything mutes during the adhan.
 - No depiction of prophets or Companions. No ads. No loot boxes/gacha. No XP, coins, streaks, leaderboards.
 - No AI-generated Quran recitation. Never alter Quran text (Tanzil, verbatim, credited).
 - No QAC data shipped. No unclear-licence media committed. No secrets committed.
 - Release gate: **scholar review** (unchecked).
+
+## Review-free core (Edward, 16 Nov)
+Most of the game must need **no scholar review**: build on self-evident everyday life (we need water, food and air; there is day and night; the sun is in the sky; people greet neighbours). An imaginary city is fine. Every line is auto-labelled universal / cultural / sacred (`app/src/core/review.ts`). Sacred content (worship, scripture) lives only in optional scenes; ≥80% of text is universal; `docs/SCHOLAR_REVIEW.md` is regenerated every cycle as the complete, short review list.
 
 ## Universal first (Edward, 16 Nov 2026 — "very important")
 In Edward's words: **"I am a Muslim and I just want the game to be peaceful and usable by everyone."** The game is made with Muslim care and values (the hard rules, respect for the Quran) and is calm, kind and open to every player.
