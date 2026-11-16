@@ -22,3 +22,7 @@ These seven were never provided as files. If they exist, put them in `docs/resea
 7. Speech test page: `index.html`, `worker.js`, `SETUP.md`
 
 The master prompt and Waves 2–5 summarise points 2–5, so work continued from those summaries.
+
+## Everything given in this chat (16 Nov)
+1. Master prompt ✅ · 2. Waves 2–5 ✅ · 3. GitHub empty-repo screenshot ✅ · 4. Pasted podcast transcript ✅ · 5. Pasted YouTube channel-study master prompt ✅ (applied as Edward narrowed it: transcripts only) · 6–8. Three PDFs ✅ · 9. GitHub "all set" screenshot ✅ · 10. Channel and playlist links ✅.
+The failure was **not applying** what was read. `MASTER_PROMPT_CHECKLIST.md` now tracks every master-prompt requirement as done / partly / not started.
