@@ -24,6 +24,9 @@
 ## Waiting on Edward
 - Missing research files (see `docs/RESEARCH_DIGEST.md`).
 
+## Later (confirmed)
+- Optional Madinah chapter after the main game: chosen by the player, never required; no depiction of Masjid an-Nabawi, prophets or Companions; scholar review first.
+
 ## Next actions (cycles 2–10: foundations)
 1. Content: add a second scene layer per day (and review scenes) toward ~150 lemmas and ~10 encounters per word.
 2. Rooftop set so the night-sky scenes show the moon and stars.
