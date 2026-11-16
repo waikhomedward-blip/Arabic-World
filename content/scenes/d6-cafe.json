@@ -1,0 +1,216 @@
+{
+ "id": "d6-cafe",
+ "day": 6,
+ "place": "cafe",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "شَايٌ",
+  "en": "Tea"
+ },
+ "cast": [
+  "nabil"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "أَهْلًا! تَفَضَّلْ إِلَى الْمَقْهَى.",
+   "en": "Welcome! Come into the café.",
+   "lemmas": [
+    "ahlan",
+    "tafaddal",
+    "ila",
+    "maqha"
+   ],
+   "register": "white",
+   "gesture": "beckon"
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "هٰذَا شَايٌ، وَهٰذِهِ قَهْوَةٌ.",
+   "en": "This is tea, and this is coffee.",
+   "lemmas": [
+    "hadha",
+    "shay",
+    "wa",
+    "hadhihi",
+    "qahwa"
+   ],
+   "register": "white",
+   "gesture": "hold_up:tea"
+  },
+  {
+   "type": "prompt",
+   "id": "d6c-want",
+   "speaker": "nabil",
+   "ask": {
+    "ar": "مَاذَا تُرِيدُ؟ شَايٌ أَوْ قَهْوَةٌ؟",
+    "en": "What do you want? Tea or coffee?",
+    "lemmas": [
+     "madha",
+     "arada",
+     "shay",
+     "aw",
+     "qahwa"
+    ]
+   },
+   "options": [
+    {
+     "ar": "أُرِيدُ شَايًا.",
+     "en": "I want tea.",
+     "lemmas": [
+      "arada",
+      "shay"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "أُرِيدُ قَهْوَةً.",
+     "en": "I want coffee.",
+     "lemmas": [
+      "arada",
+      "qahwa"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "أَنَا بَيْتٌ.",
+     "en": "I am a house.",
+     "lemmas": [
+      "ana",
+      "bayt"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "أُرِيدُ شَايًا",
+    "أُرِيدُ قَهْوَةً"
+   ],
+   "tiles": [
+    "أُرِيدُ",
+    "شَايًا",
+    "قَهْوَةً",
+    "بَيْتٌ"
+   ],
+   "recast": {
+    "ar": "شَايٌ؟ قَهْوَةٌ؟",
+    "en": "Tea? Coffee?",
+    "gesture": "hold_up:tea"
+   },
+   "lemmas": [
+    "arada",
+    "shay"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "سُكَّرٌ؟",
+   "en": "Sugar?",
+   "lemmas": [
+    "sukkar"
+   ],
+   "register": "white",
+   "gesture": "hold_up:sugar"
+  },
+  {
+   "type": "prompt",
+   "id": "d6c-sugar",
+   "speaker": "nabil",
+   "ask": {
+    "ar": "سُكَّرٌ؟",
+    "en": "Sugar?",
+    "lemmas": [
+     "sukkar"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، شُكْرًا.",
+     "en": "Yes, thank you.",
+     "lemmas": [
+      "naam",
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، شُكْرًا.",
+     "en": "No, thank you.",
+     "lemmas": [
+      "la",
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "هٰذَا كِتَابٌ.",
+     "en": "This is a book.",
+     "lemmas": [
+      "hadha",
+      "kitab"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، شُكْرًا",
+    "لَا، شُكْرًا"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "لَا",
+    "شُكْرًا",
+    "كِتَابٌ"
+   ],
+   "recast": {
+    "ar": "سُكَّرٌ… نَعَمْ؟ لَا؟",
+    "en": "Sugar… yes? no?",
+    "gesture": "hold_up:sugar"
+   },
+   "lemmas": [
+    "naam",
+    "shukran"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "النَّاسُ فِي الْمَقْهَى.",
+   "en": "The people are in the café.",
+   "lemmas": [
+    "nas",
+    "fi",
+    "maqha"
+   ],
+   "register": "white",
+   "gesture": "point:people"
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "بَعْدَ الْقَهْوَةِ، اِذْهَبْ إِلَى الْبَيْتِ.",
+   "en": "After the coffee, go home.",
+   "lemmas": [
+    "baada",
+    "qahwa",
+    "idhhab",
+    "ila",
+    "bayt"
+   ],
+   "register": "white",
+   "gesture": "point:home",
+   "notice": {
+    "root": "ب ع د",
+    "words": [
+     "baada",
+     "baid"
+    ],
+    "en": "Same letters b-ʿ-d: after, far. Both are about distance, in time or in place."
+   }
+  }
+ ]
+}

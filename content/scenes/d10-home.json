@@ -1,0 +1,201 @@
+{
+ "id": "d10-home",
+ "day": 10,
+ "place": "home",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "غَدًا",
+  "en": "Tomorrow"
+ },
+ "cast": [
+  "abu_faisal",
+  "faisal",
+  "majid"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "أَهْلًا! كَيْفَ حَالُكَ؟",
+   "en": "Welcome! How are you?",
+   "lemmas": [
+    "ahlan",
+    "kayfa",
+    "hal_state",
+    "ka"
+   ],
+   "register": "white",
+   "gesture": "open_arms"
+  },
+  {
+   "type": "prompt",
+   "id": "d10h-fine",
+   "speaker": "abu_faisal",
+   "ask": {
+    "en": "Say you are well"
+   },
+   "options": [
+    {
+     "ar": "بِخَيْرٍ، الْحَمْدُ لِلّٰهِ",
+     "en": "Well, praise be to Allah",
+     "lemmas": [
+      "bi",
+      "khayr",
+      "hamd",
+      "li",
+      "allah"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "هٰذَا بَيْتٌ",
+     "en": "This is a house",
+     "lemmas": [
+      "hadha",
+      "bayt"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
+     "lemmas": [
+      "afwan"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "بِخَيْرٍ، الْحَمْدُ لِلّٰهِ",
+    "بِخَيْرٍ وَالْحَمْدُ لِلّٰهِ",
+    "الْحَمْدُ لِلّٰهِ، بِخَيْرٍ",
+    "بخير"
+   ],
+   "tiles": [
+    "بِخَيْرٍ",
+    "الْحَمْدُ",
+    "لِلّٰهِ",
+    "قَهْوَةٌ"
+   ],
+   "recast": {
+    "ar": "بِخَيْرٍ…؟",
+    "en": "Well…?",
+    "gesture": "thumbs_up_small"
+   },
+   "lemmas": [
+    "bi",
+    "khayr",
+    "hamd",
+    "li",
+    "allah"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "غَدًا يَوْمٌ جَمِيلٌ، إِنْ شَاءَ اللّٰهُ!",
+   "en": "Tomorrow is a beautiful day, if Allah wills!",
+   "lemmas": [
+    "ghadan",
+    "yawm",
+    "jamil",
+    "inshaallah"
+   ],
+   "register": "white",
+   "gesture": "point:sky"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "السَّلَامُ عَلَيْكُمْ… مَعَ السَّلَامَةِ!",
+   "en": "Peace be upon you… go with safety!",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum",
+    "maa_with",
+    "salama"
+   ],
+   "register": "white",
+   "gesture": "wave",
+   "notice": {
+    "root": "س ل م",
+    "words": [
+     "salam",
+     "salama"
+    ],
+    "en": "Same letters s-l-m: peace, safety. Hello and goodbye share a root."
+   }
+  },
+  {
+   "type": "prompt",
+   "id": "d10h-bye",
+   "speaker": "abu_faisal",
+   "ask": {
+    "en": "Say goodbye"
+   },
+   "options": [
+    {
+     "ar": "مَعَ السَّلَامَةِ!",
+     "en": "Goodbye! (go with safety)",
+     "lemmas": [
+      "maa_with",
+      "salama"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "صَبَاحُ النُّورِ!",
+     "en": "Good morning!",
+     "lemmas": [
+      "sabah",
+      "nur"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "مَعَ السَّلَامَةِ",
+    "مع السلامة"
+   ],
+   "tiles": [
+    "مَعَ",
+    "السَّلَامَةِ",
+    "النُّورِ"
+   ],
+   "recast": {
+    "ar": "مَعَ…؟",
+    "en": "With…?",
+    "gesture": "wave"
+   },
+   "lemmas": [
+    "maa_with",
+    "salama"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "مَعَ السَّلَامَةِ، يَا ابْنِي.",
+   "en": "Goodbye, my son.",
+   "lemmas": [
+    "maa_with",
+    "salama",
+    "ya",
+    "ibn",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  }
+ ]
+}

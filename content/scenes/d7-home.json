@@ -1,0 +1,140 @@
+{
+ "id": "d7-home",
+ "day": 7,
+ "place": "home",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "اللَّيْلُ",
+  "en": "Night on the roof"
+ },
+ "cast": [
+  "faisal",
+  "majid"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "اللَّيْلُ جَمِيلٌ.",
+   "en": "The night is beautiful.",
+   "lemmas": [
+    "layl",
+    "jamil"
+   ],
+   "register": "white",
+   "gesture": "point:sky"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "هٰذَا الْقَمَرُ.",
+   "en": "This is the moon.",
+   "lemmas": [
+    "hadha",
+    "qamar"
+   ],
+   "register": "white",
+   "gesture": "point:moon"
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "وَهٰذَا نَجْمٌ صَغِيرٌ!",
+   "en": "And this is a small star!",
+   "lemmas": [
+    "wa",
+    "hadha",
+    "najm",
+    "saghir"
+   ],
+   "register": "white",
+   "gesture": "point:star"
+  },
+  {
+   "type": "prompt",
+   "id": "d7h-moon",
+   "speaker": "faisal",
+   "ask": {
+    "ar": "هَلِ الْقَمَرُ كَبِيرٌ؟",
+    "en": "Is the moon big?",
+    "lemmas": [
+     "hal",
+     "qamar",
+     "kabir"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، الْقَمَرُ كَبِيرٌ.",
+     "en": "Yes, the moon is big.",
+     "lemmas": [
+      "naam",
+      "qamar",
+      "kabir"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، الْقَمَرُ مَاءٌ.",
+     "en": "No, the moon is water.",
+     "lemmas": [
+      "la",
+      "qamar",
+      "maa"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، الْقَمَرُ كَبِيرٌ",
+    "نَعَمْ"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "الْقَمَرُ",
+    "كَبِيرٌ",
+    "مَاءٌ"
+   ],
+   "recast": {
+    "ar": "الْقَمَرُ… كَبِيرٌ؟",
+    "en": "The moon… big?",
+    "gesture": "arms_wide"
+   },
+   "lemmas": [
+    "naam",
+    "qamar",
+    "kabir"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "السَّمَاءُ جَمِيلَةٌ.",
+   "en": "The sky is beautiful.",
+   "lemmas": [
+    "sama",
+    "jamil"
+   ],
+   "register": "white",
+   "gesture": "point:sky"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "أَنَا ابْنُ أَبِي فَيْصَلٍ، وَأَنْتَ صَدِيقِي.",
+   "en": "I am Abu Faisal's son, and you are my friend.",
+   "lemmas": [
+    "ana",
+    "ibn",
+    "ab",
+    "wa",
+    "anta",
+    "sadiq",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  }
+ ]
+}

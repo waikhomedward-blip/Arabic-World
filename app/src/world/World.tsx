@@ -93,21 +93,21 @@ function Props() {
     <group>
       {/* souq stalls */}
       {[-6.5, -3.5, -0.8].map((x, i) => (
-        <group key={i} position={[x, 0, 2.6]}>
+        <group key={i} position={[x - 0.6, 0, -1.7]}>
           <mesh position={[0, 0.45, 0]}><boxGeometry args={[1.8, 0.9, 0.9]} /><meshStandardMaterial color="#8a5a3c" /></mesh>
-          <mesh position={[0, 2.1, 0.1]} rotation={[0.25, 0, 0]}><boxGeometry args={[2.1, 0.05, 1.4]} /><meshStandardMaterial color={['#b5543c', '#c99a3b', '#3f6e73'][i]} side={THREE.DoubleSide} /></mesh>
+          <mesh position={[0, 2.1, 0.1]} rotation={[-0.25, 0, 0]}><boxGeometry args={[2.1, 0.05, 1.4]} /><meshStandardMaterial color={['#b5543c', '#c99a3b', '#3f6e73'][i]} side={THREE.DoubleSide} /></mesh>
           {i === 0 && [0, 1, 2, 3, 4].map((k) => (
             <mesh key={k} position={[-0.6 + k * 0.3, 1.0, 0]}><sphereGeometry args={[0.11, 12, 10]} /><meshStandardMaterial color="#b3261e" /></mesh>
           ))}
         </group>
       ))}
       {/* masjid courtyard water cooler */}
-      <group position={[5.2, 0, 2.4]}>
+      <group position={[5.6, 0, -1.6]}>
         <mesh position={[0, 0.6, 0]}><boxGeometry args={[0.8, 1.2, 0.5]} /><meshStandardMaterial color="#cfd6d8" metalness={0.4} roughness={0.4} /></mesh>
       </group>
       {/* café benches */}
       {[15.5, 18.5].map((x) => (
-        <mesh key={x} position={[x, 0.25, 2.4]}><boxGeometry args={[1.6, 0.5, 0.6]} /><meshStandardMaterial color="#5d3b28" /></mesh>
+        <mesh key={x} position={[x, 0.25, -1.5]}><boxGeometry args={[1.6, 0.5, 0.6]} /><meshStandardMaterial color="#5d3b28" /></mesh>
       ))}
       {/* home door */}
       <mesh position={[-14, 1.2, -1.4]}><boxGeometry args={[1.3, 2.4, 0.1]} /><meshStandardMaterial color="#4a2f1f" /></mesh>

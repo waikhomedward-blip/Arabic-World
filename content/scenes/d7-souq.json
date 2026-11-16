@@ -1,0 +1,221 @@
+{
+ "id": "d7-souq",
+ "day": 7,
+ "place": "souq",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "سُوقُ اللَّيْلِ",
+  "en": "The night souq"
+ },
+ "cast": [
+  "saeed"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "السَّلَامُ عَلَيْكُمْ! اللَّيْلُ جَمِيلٌ.",
+   "en": "Peace be upon you! The night is beautiful.",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum",
+    "layl",
+    "jamil"
+   ],
+   "register": "white",
+   "gesture": "raise_hand"
+  },
+  {
+   "type": "prompt",
+   "id": "d7s-greet",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "الْقَمَرُ فِي السَّمَاءِ.",
+   "en": "The moon is in the sky.",
+   "lemmas": [
+    "qamar",
+    "fi",
+    "sama"
+   ],
+   "register": "white",
+   "gesture": "point:moon"
+  },
+  {
+   "type": "prompt",
+   "id": "d7s-star",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "هَلْ هٰذَا نَجْمٌ؟",
+    "en": "Is this a star?",
+    "lemmas": [
+     "hal",
+     "hadha",
+     "najm"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، هٰذَا نَجْمٌ.",
+     "en": "Yes, this is a star.",
+     "lemmas": [
+      "naam",
+      "hadha",
+      "najm"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، هٰذَا خُبْزٌ.",
+     "en": "No, this is bread.",
+     "lemmas": [
+      "la",
+      "hadha",
+      "khubz"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، هٰذَا نَجْمٌ",
+    "نَعَمْ"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "هٰذَا",
+    "نَجْمٌ",
+    "خُبْزٌ"
+   ],
+   "recast": {
+    "ar": "نَجْمٌ؟",
+    "en": "A star?",
+    "gesture": "point:star"
+   },
+   "lemmas": [
+    "naam",
+    "hadha",
+    "najm"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "خُذْ خُبْزًا لِلْبَيْتِ.",
+   "en": "Take some bread for the house.",
+   "lemmas": [
+    "khudh",
+    "khubz",
+    "li",
+    "bayt"
+   ],
+   "register": "white",
+   "gesture": "hand_over:bread"
+  },
+  {
+   "type": "prompt",
+   "id": "d7s-thanks",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَنَا",
+     "en": "I",
+     "lemmas": [
+      "ana"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  }
+ ]
+}

@@ -96,6 +96,14 @@
   "targetRung": 4
  },
  {
+  "id": "ila",
+  "ar": "إِلَى",
+  "en": "to, towards",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
   "id": "li",
   "ar": "لِـ",
   "en": "for, to",
@@ -277,6 +285,342 @@
   "en": "friend",
   "tier": "everyday",
   "root": "ص د ق",
+  "targetRung": 4
+ },
+ {
+  "id": "madha",
+  "ar": "مَاذَا",
+  "en": "what",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "fi",
+  "ar": "فِي",
+  "en": "in",
+  "tier": 0,
+  "root": null,
+  "targetRung": 1
+ },
+ {
+  "id": "aw",
+  "ar": "أَوْ",
+  "en": "or",
+  "tier": 0,
+  "root": null,
+  "targetRung": 2
+ },
+ {
+  "id": "kam",
+  "ar": "كَمْ",
+  "en": "how many, how much",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "nahnu",
+  "ar": "نَحْنُ",
+  "en": "we",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "maa_with",
+  "ar": "مَعَ",
+  "en": "with",
+  "tier": 0,
+  "root": null,
+  "targetRung": 2
+ },
+ {
+  "id": "sabah",
+  "ar": "صَبَاحٌ",
+  "en": "morning",
+  "tier": "everyday",
+  "root": "ص ب ح",
+  "targetRung": 4
+ },
+ {
+  "id": "nur",
+  "ar": "نُورٌ",
+  "en": "light",
+  "tier": 1,
+  "root": "ن و ر",
+  "targetRung": 2
+ },
+ {
+  "id": "yawm",
+  "ar": "يَوْمٌ",
+  "en": "day",
+  "tier": 1,
+  "root": "ي و م",
+  "targetRung": 4
+ },
+ {
+  "id": "jamil",
+  "ar": "جَمِيلٌ",
+  "en": "beautiful",
+  "tier": "everyday",
+  "root": "ج م ل",
+  "targetRung": 4
+ },
+ {
+  "id": "khubz",
+  "ar": "خُبْزٌ",
+  "en": "bread",
+  "tier": "everyday",
+  "root": "خ ب ز",
+  "targetRung": 4
+ },
+ {
+  "id": "arada",
+  "ar": "أَرَادَ",
+  "en": "to want (أُرِيدُ I want)",
+  "tier": 1,
+  "root": "ر و د",
+  "targetRung": 4
+ },
+ {
+  "id": "nas",
+  "ar": "نَاسٌ",
+  "en": "people",
+  "tier": 1,
+  "root": "ن و س",
+  "targetRung": 2
+ },
+ {
+  "id": "salah",
+  "ar": "صَلَاةٌ",
+  "en": "prayer",
+  "tier": 1,
+  "root": "ص ل و",
+  "targetRung": 4
+ },
+ {
+  "id": "baada",
+  "ar": "بَعْدَ",
+  "en": "after",
+  "tier": 1,
+  "root": "ب ع د",
+  "targetRung": 4
+ },
+ {
+  "id": "idhhab",
+  "ar": "ذَهَبَ",
+  "en": "to go (اِذْهَبْ go!)",
+  "tier": 1,
+  "root": "ذ ه ب",
+  "targetRung": 4
+ },
+ {
+  "id": "qarib",
+  "ar": "قَرِيبٌ",
+  "en": "near",
+  "tier": 1,
+  "root": "ق ر ب",
+  "targetRung": 4
+ },
+ {
+  "id": "baid",
+  "ar": "بَعِيدٌ",
+  "en": "far",
+  "tier": 1,
+  "root": "ب ع د",
+  "targetRung": 4
+ },
+ {
+  "id": "maqha",
+  "ar": "مَقْهًى",
+  "en": "café",
+  "tier": "everyday",
+  "root": "ق ه و",
+  "targetRung": 4
+ },
+ {
+  "id": "shay",
+  "ar": "شَايٌ",
+  "en": "tea",
+  "tier": "everyday",
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "sukkar",
+  "ar": "سُكَّرٌ",
+  "en": "sugar",
+  "tier": "everyday",
+  "root": null,
+  "targetRung": 2
+ },
+ {
+  "id": "ibn",
+  "ar": "اِبْنٌ",
+  "en": "son",
+  "tier": 1,
+  "root": "ب ن ي",
+  "targetRung": 4
+ },
+ {
+  "id": "saghir",
+  "ar": "صَغِيرٌ",
+  "en": "small",
+  "tier": 1,
+  "root": "ص غ ر",
+  "targetRung": 4
+ },
+ {
+  "id": "kabir",
+  "ar": "كَبِيرٌ",
+  "en": "big",
+  "tier": 1,
+  "root": "ك ب ر",
+  "targetRung": 4
+ },
+ {
+  "id": "akbar",
+  "ar": "أَكْبَرُ",
+  "en": "greater, greatest",
+  "tier": 1,
+  "root": "ك ب ر",
+  "targetRung": 1
+ },
+ {
+  "id": "layl",
+  "ar": "لَيْلٌ",
+  "en": "night",
+  "tier": 1,
+  "root": "ل ي ل",
+  "targetRung": 4
+ },
+ {
+  "id": "qamar",
+  "ar": "قَمَرٌ",
+  "en": "moon",
+  "tier": 1,
+  "root": "ق م ر",
+  "targetRung": 4
+ },
+ {
+  "id": "najm",
+  "ar": "نَجْمٌ",
+  "en": "star",
+  "tier": 1,
+  "root": "ن ج م",
+  "targetRung": 2
+ },
+ {
+  "id": "sama",
+  "ar": "سَمَاءٌ",
+  "en": "sky",
+  "tier": 1,
+  "root": "س م و",
+  "targetRung": 4
+ },
+ {
+  "id": "suq",
+  "ar": "سُوقٌ",
+  "en": "market, souq",
+  "tier": "everyday",
+  "root": "س و ق",
+  "targetRung": 4
+ },
+ {
+  "id": "wahid",
+  "ar": "وَاحِدٌ",
+  "en": "one",
+  "tier": 1,
+  "root": "و ح د",
+  "targetRung": 4
+ },
+ {
+  "id": "ithnan",
+  "ar": "اِثْنَانِ",
+  "en": "two",
+  "tier": 1,
+  "root": "ث ن ي",
+  "targetRung": 4
+ },
+ {
+  "id": "thalatha",
+  "ar": "ثَلَاثَةٌ",
+  "en": "three",
+  "tier": 1,
+  "root": "ث ل ث",
+  "targetRung": 4
+ },
+ {
+  "id": "dirham",
+  "ar": "دِرْهَمٌ",
+  "en": "dirham (coin)",
+  "tier": 1,
+  "root": null,
+  "targetRung": 2
+ },
+ {
+  "id": "qalam",
+  "ar": "قَلَمٌ",
+  "en": "pen",
+  "tier": 1,
+  "root": "ق ل م",
+  "targetRung": 4
+ },
+ {
+  "id": "ilm",
+  "ar": "عِلْمٌ",
+  "en": "knowledge",
+  "tier": 1,
+  "root": "ع ل م",
+  "targetRung": 4
+ },
+ {
+  "id": "muallim",
+  "ar": "مُعَلِّمٌ",
+  "en": "teacher",
+  "tier": "everyday",
+  "root": "ع ل م",
+  "targetRung": 4
+ },
+ {
+  "id": "lugha",
+  "ar": "لُغَةٌ",
+  "en": "language",
+  "tier": "everyday",
+  "root": "ل غ و",
+  "targetRung": 4
+ },
+ {
+  "id": "arabi",
+  "ar": "عَرَبِيٌّ",
+  "en": "Arabic, Arab",
+  "tier": "everyday",
+  "root": "ع ر ب",
+  "targetRung": 4
+ },
+ {
+  "id": "ghadan",
+  "ar": "غَدًا",
+  "en": "tomorrow",
+  "tier": "everyday",
+  "root": "غ د و",
+  "targetRung": 4
+ },
+ {
+  "id": "inshaallah",
+  "ar": "إِنْ شَاءَ اللّٰهُ",
+  "en": "if Allah wills",
+  "tier": "everyday",
+  "root": null,
+  "targetRung": 4
+ },
+ {
+  "id": "salama",
+  "ar": "سَلَامَةٌ",
+  "en": "safety (مَعَ السَّلَامَةِ goodbye)",
+  "tier": "everyday",
+  "root": "س ل م",
   "targetRung": 4
  }
 ]

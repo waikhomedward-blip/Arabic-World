@@ -1,0 +1,208 @@
+{
+ "id": "d8-cafe",
+ "day": 8,
+ "place": "cafe",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "نَحْنُ ثَلَاثَةٌ",
+  "en": "Three friends"
+ },
+ "cast": [
+  "nabil",
+  "karim"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "السَّلَامُ عَلَيْكُمْ! شَايٌ؟",
+   "en": "Peace be upon you! Tea?",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum",
+    "shay"
+   ],
+   "register": "white",
+   "gesture": "hold_up:tea"
+  },
+  {
+   "type": "prompt",
+   "id": "d8c-greet",
+   "speaker": "nabil",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "شَايٌ وَاحِدٌ وَسُكَّرٌ.",
+   "en": "One tea and sugar.",
+   "lemmas": [
+    "shay",
+    "wahid",
+    "wa",
+    "sukkar"
+   ],
+   "register": "white",
+   "gesture": "hand_over:tea"
+  },
+  {
+   "type": "line",
+   "speaker": "karim",
+   "ar": "مِيَّةْ مِيَّةْ!",
+   "en": "Perfect! (Egyptian, just listen)",
+   "lemmas": [],
+   "register": "dialect-listen",
+   "gesture": "thumbs_up"
+  },
+  {
+   "type": "prompt",
+   "id": "d8c-sugar",
+   "speaker": "nabil",
+   "ask": {
+    "ar": "كَمْ سُكَّرًا؟ وَاحِدٌ أَوِ اثْنَانِ؟",
+    "en": "How much sugar? One or two?",
+    "lemmas": [
+     "kam",
+     "sukkar",
+     "wahid",
+     "aw",
+     "ithnan"
+    ]
+   },
+   "options": [
+    {
+     "ar": "وَاحِدٌ، شُكْرًا.",
+     "en": "One, thank you.",
+     "lemmas": [
+      "wahid",
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "اِثْنَانِ، شُكْرًا.",
+     "en": "Two, thank you.",
+     "lemmas": [
+      "ithnan",
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "هٰذَا قَمَرٌ.",
+     "en": "This is a moon.",
+     "lemmas": [
+      "hadha",
+      "qamar"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَاحِدٌ، شُكْرًا",
+    "اِثْنَانِ، شُكْرًا",
+    "وَاحِدٌ",
+    "اِثْنَانِ"
+   ],
+   "tiles": [
+    "وَاحِدٌ",
+    "اِثْنَانِ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَاحِدٌ؟ اِثْنَانِ؟",
+    "en": "One? Two?",
+    "gesture": "show_one_two"
+   },
+   "lemmas": [
+    "wahid",
+    "shukran"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "نَحْنُ ثَلَاثَةٌ: أَنَا، وَأَنْتَ، وَكَرِيمٌ.",
+   "en": "We are three: me, you and Karim.",
+   "lemmas": [
+    "nahnu",
+    "thalatha",
+    "ana",
+    "wa",
+    "anta"
+   ],
+   "register": "white",
+   "gesture": "count_fingers",
+   "names": [
+    "كَرِيمٌ"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "الدِّرْهَمُ لِي!",
+   "en": "The dirham is on me! (I'll pay)",
+   "lemmas": [
+    "dirham",
+    "li",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  }
+ ]
+}

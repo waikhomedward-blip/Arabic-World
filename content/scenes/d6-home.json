@@ -1,0 +1,136 @@
+{
+ "id": "d6-home",
+ "day": 6,
+ "place": "home",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "اِبْنِي",
+  "en": "My son"
+ },
+ "cast": [
+  "abu_faisal",
+  "majid"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "أَهْلًا وَسَهْلًا! هٰذَا ابْنِي مَاجِدٌ.",
+   "en": "Welcome! This is my son Majid.",
+   "lemmas": [
+    "ahlan",
+    "hadha",
+    "ibn",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "point:majid",
+   "names": [
+    "مَاجِدٌ"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "أَنَا صَغِيرٌ، وَفَيْصَلٌ كَبِيرٌ.",
+   "en": "I am small, and Faisal is big.",
+   "lemmas": [
+    "ana",
+    "saghir",
+    "wa",
+    "kabir"
+   ],
+   "register": "white",
+   "gesture": "hand_low_then_high",
+   "names": [
+    "فَيْصَلٌ"
+   ]
+  },
+  {
+   "type": "prompt",
+   "id": "d6h-small",
+   "speaker": "abu_faisal",
+   "ask": {
+    "ar": "هَلْ مَاجِدٌ صَغِيرٌ؟",
+    "en": "Is Majid small?",
+    "lemmas": [
+     "hal",
+     "saghir"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، مَاجِدٌ صَغِيرٌ.",
+     "en": "Yes, Majid is small.",
+     "lemmas": [
+      "naam",
+      "saghir"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، مَاجِدٌ كَبِيرٌ.",
+     "en": "No, Majid is big.",
+     "lemmas": [
+      "la",
+      "kabir"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، مَاجِدٌ صَغِيرٌ",
+    "نَعَمْ"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "مَاجِدٌ",
+    "صَغِيرٌ",
+    "كَبِيرٌ"
+   ],
+   "recast": {
+    "ar": "مَاجِدٌ… صَغِيرٌ؟",
+    "en": "Majid… small?",
+    "gesture": "hand_low"
+   },
+   "lemmas": [
+    "naam",
+    "saghir"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "كَبِيرٌ… أَكْبَرُ. اللّٰهُ أَكْبَرُ.",
+   "en": "Big… greater. Allah is the Greatest.",
+   "lemmas": [
+    "kabir",
+    "akbar",
+    "allah"
+   ],
+   "register": "white",
+   "gesture": "trace_letters",
+   "notice": {
+    "root": "ك ب ر",
+    "words": [
+     "kabir",
+     "akbar"
+    ],
+    "en": "Same letters k-b-r: big, greater. You hear أَكْبَرُ in every adhan."
+   }
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "اللّٰهُ أَكْبَرُ!",
+   "en": "Allah is the Greatest!",
+   "lemmas": [
+    "allah",
+    "akbar"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  }
+ ]
+}

@@ -1,0 +1,201 @@
+{
+ "id": "d5-souq",
+ "day": 5,
+ "place": "souq",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "أَيْنَ الْمَسْجِدُ؟",
+  "en": "Which way?"
+ },
+ "cast": [
+  "nabil",
+  "karim"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "السَّلَامُ عَلَيْكُمْ!",
+   "en": "Peace be upon you!",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum"
+   ],
+   "register": "white",
+   "gesture": "raise_hand"
+  },
+  {
+   "type": "prompt",
+   "id": "d5s-greet",
+   "speaker": "nabil",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "karim",
+   "ar": "يَلَّا يَا صَاحْبِي!",
+   "en": "Come on, my friend! (Egyptian, just listen)",
+   "lemmas": [],
+   "register": "dialect-listen",
+   "gesture": "beckon"
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "الْمَسْجِدُ قَرِيبٌ.",
+   "en": "The masjid is near.",
+   "lemmas": [
+    "masjid",
+    "qarib"
+   ],
+   "register": "white",
+   "gesture": "point:minaret"
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "الْمَقْهَى بَعِيدٌ.",
+   "en": "The café is far.",
+   "lemmas": [
+    "maqha",
+    "baid"
+   ],
+   "register": "white",
+   "gesture": "point:far_end"
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "قَهْوَةٌ… مَقْهًى!",
+   "en": "Coffee… café!",
+   "lemmas": [
+    "qahwa",
+    "maqha"
+   ],
+   "register": "white",
+   "gesture": "trace_letters",
+   "notice": {
+    "root": "ق ه و",
+    "words": [
+     "qahwa",
+     "maqha"
+    ],
+    "en": "Same letters q-h-w: coffee, and the place for coffee."
+   }
+  },
+  {
+   "type": "prompt",
+   "id": "d5s-go",
+   "speaker": "nabil",
+   "ask": {
+    "ar": "اِذْهَبْ إِلَى الْمَسْجِدِ!",
+    "en": "Go to the masjid!",
+    "lemmas": [
+     "idhhab",
+     "ila",
+     "masjid"
+    ]
+   },
+   "options": [
+    {
+     "ar": "➡️ 🕌",
+     "en": "(walk to the masjid)",
+     "lemmas": [
+      "masjid"
+     ],
+     "correct": true,
+     "action": "go:masjid"
+    },
+    {
+     "ar": "➡️ ☕",
+     "en": "(walk to the café)",
+     "lemmas": [
+      "maqha"
+     ],
+     "correct": false,
+     "action": "go:cafe"
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "الْمَسْجِدُ… قَرِيبٌ.",
+    "en": "The masjid… is near.",
+    "gesture": "point:minaret"
+   },
+   "lemmas": [
+    "idhhab",
+    "ila",
+    "masjid"
+   ],
+   "action": "go:masjid"
+  },
+  {
+   "type": "line",
+   "speaker": "nabil",
+   "ar": "نَعَمْ! هٰذَا الْمَسْجِدُ.",
+   "en": "Yes! This is the masjid.",
+   "lemmas": [
+    "naam",
+    "hadha",
+    "masjid"
+   ],
+   "register": "white",
+   "gesture": "nod"
+  }
+ ]
+}

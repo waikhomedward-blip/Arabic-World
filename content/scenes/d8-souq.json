@@ -1,0 +1,302 @@
+{
+ "id": "d8-souq",
+ "day": 8,
+ "place": "souq",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "وَاحِدٌ، اِثْنَانِ",
+  "en": "One, two"
+ },
+ "cast": [
+  "saeed"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "صَبَاحُ الْخَيْرِ! هٰذَا السُّوقُ.",
+   "en": "Good morning! This is the souq.",
+   "lemmas": [
+    "sabah",
+    "khayr",
+    "hadha",
+    "suq"
+   ],
+   "register": "white",
+   "gesture": "open_arms"
+  },
+  {
+   "type": "prompt",
+   "id": "d8s-morning",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Reply to 'good morning'"
+   },
+   "options": [
+    {
+     "ar": "صَبَاحُ النُّورِ!",
+     "en": "Morning of light! (good morning)",
+     "lemmas": [
+      "sabah",
+      "nur"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
+     "lemmas": [
+      "afwan"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "صَبَاحُ النُّورِ",
+    "صباح النور"
+   ],
+   "tiles": [
+    "صَبَاحُ",
+    "النُّورِ",
+    "الْخَيْرِ"
+   ],
+   "recast": {
+    "ar": "صَبَاحُ…؟",
+    "en": "Morning of…?",
+    "gesture": "raise_hand"
+   },
+   "lemmas": [
+    "sabah",
+    "nur"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "هٰذِهِ تُفَّاحَةٌ وَاحِدَةٌ.",
+   "en": "This is one apple.",
+   "lemmas": [
+    "hadhihi",
+    "tuffaha",
+    "wahid"
+   ],
+   "register": "white",
+   "gesture": "hold_up:apple"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "وَهٰذِهِ تُفَّاحَةٌ كَبِيرَةٌ.",
+   "en": "And this is a big apple.",
+   "lemmas": [
+    "wa",
+    "hadhihi",
+    "tuffaha",
+    "kabir"
+   ],
+   "register": "white",
+   "gesture": "hold_up:apple_big"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "وَاحِدٌ، اِثْنَانِ، ثَلَاثَةٌ.",
+   "en": "One, two, three.",
+   "lemmas": [
+    "wahid",
+    "ithnan",
+    "thalatha"
+   ],
+   "register": "white",
+   "gesture": "count_fingers"
+  },
+  {
+   "type": "prompt",
+   "id": "d8s-count",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "كَمْ؟",
+    "en": "How many? (he holds up two fingers)",
+    "lemmas": [
+     "kam"
+    ]
+   },
+   "options": [
+    {
+     "ar": "اِثْنَانِ",
+     "en": "Two",
+     "lemmas": [
+      "ithnan"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "ثَلَاثَةٌ",
+     "en": "Three",
+     "lemmas": [
+      "thalatha"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "وَاحِدٌ",
+     "en": "One",
+     "lemmas": [
+      "wahid"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "اِثْنَانِ"
+   ],
+   "tiles": [
+    "اِثْنَانِ",
+    "ثَلَاثَةٌ"
+   ],
+   "recast": {
+    "ar": "وَاحِدٌ… اِثْ…؟",
+    "en": "One… tw…?",
+    "gesture": "show_two"
+   },
+   "lemmas": [
+    "ithnan"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "نَعَمْ، اِثْنَانِ.",
+   "en": "Yes, two.",
+   "lemmas": [
+    "naam",
+    "ithnan"
+   ],
+   "register": "white",
+   "gesture": "show_two"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "التُّفَّاحَةُ بِدِرْهَمٍ.",
+   "en": "An apple costs a dirham.",
+   "lemmas": [
+    "tuffaha",
+    "bi",
+    "dirham"
+   ],
+   "register": "white",
+   "gesture": "hold_up:coin"
+  },
+  {
+   "type": "prompt",
+   "id": "d8s-pay",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "دِرْهَمٌ وَاحِدٌ.",
+    "en": "One dirham.",
+    "lemmas": [
+     "dirham",
+     "wahid"
+    ]
+   },
+   "options": [
+    {
+     "ar": "✋ 🪙",
+     "en": "(hand over one coin)",
+     "lemmas": [
+      "dirham"
+     ],
+     "correct": true,
+     "action": "give:coin"
+    },
+    {
+     "ar": "✋ 📖",
+     "en": "(hand over a book)",
+     "lemmas": [
+      "kitab"
+     ],
+     "correct": false,
+     "action": "give:book"
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "دِرْهَمٌ…",
+    "en": "A dirham…",
+    "gesture": "hold_out:hand"
+   },
+   "lemmas": [
+    "dirham",
+    "wahid"
+   ],
+   "action": "give:coin"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "شُكْرًا يَا صَدِيقِي!",
+   "en": "Thank you, my friend!",
+   "lemmas": [
+    "shukran",
+    "ya",
+    "sadiq",
+    "ii"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  },
+  {
+   "type": "prompt",
+   "id": "d8s-welcome",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Reply to 'thank you'"
+   },
+   "options": [
+    {
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
+     "lemmas": [
+      "afwan"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "صَبَاحُ النُّورِ",
+     "en": "Good morning",
+     "lemmas": [
+      "sabah",
+      "nur"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "عَفْوًا"
+   ],
+   "tiles": [
+    "عَفْوًا",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "عَفْ…؟",
+    "en": "You're wel…?",
+    "gesture": "nod"
+   },
+   "lemmas": [
+    "afwan"
+   ]
+  }
+ ]
+}

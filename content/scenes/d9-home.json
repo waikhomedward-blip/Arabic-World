@@ -1,0 +1,186 @@
+{
+ "id": "d9-home",
+ "day": 9,
+ "place": "home",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "الْمُعَلِّمُ",
+  "en": "The teacher"
+ },
+ "cast": [
+  "abu_faisal",
+  "faisal"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "أَنَا كَاتِبٌ وَمُعَلِّمٌ.",
+   "en": "I am a writer and a teacher.",
+   "lemmas": [
+    "ana",
+    "katib",
+    "wa",
+    "muallim"
+   ],
+   "register": "white",
+   "gesture": "hand_on_chest"
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "عِلْمٌ… مُعَلِّمٌ.",
+   "en": "Knowledge… teacher.",
+   "lemmas": [
+    "ilm",
+    "muallim"
+   ],
+   "register": "white",
+   "gesture": "trace_letters",
+   "notice": {
+    "root": "ع ل م",
+    "words": [
+     "ilm",
+     "muallim"
+    ],
+    "en": "Same letters ʿ-l-m: knowledge, and the one who teaches it."
+   }
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "أَبِي مُعَلِّمُ اللُّغَةِ الْعَرَبِيَّةِ.",
+   "en": "My father is a teacher of the Arabic language.",
+   "lemmas": [
+    "ab",
+    "ii",
+    "muallim",
+    "lugha",
+    "arabi"
+   ],
+   "register": "white",
+   "gesture": "point:abu_faisal"
+  },
+  {
+   "type": "prompt",
+   "id": "d9h-teacher",
+   "speaker": "abu_faisal",
+   "ask": {
+    "ar": "هَلْ أَنَا مُعَلِّمٌ؟",
+    "en": "Am I a teacher?",
+    "lemmas": [
+     "hal",
+     "ana",
+     "muallim"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، أَنْتَ مُعَلِّمٌ.",
+     "en": "Yes, you are a teacher.",
+     "lemmas": [
+      "naam",
+      "anta",
+      "muallim"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، أَنْتَ قَمَرٌ.",
+     "en": "No, you are a moon.",
+     "lemmas": [
+      "la",
+      "anta",
+      "qamar"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، أَنْتَ مُعَلِّمٌ",
+    "نَعَمْ"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "أَنْتَ",
+    "مُعَلِّمٌ",
+    "قَمَرٌ"
+   ],
+   "recast": {
+    "ar": "مُعَلِّمٌ؟",
+    "en": "A teacher?",
+    "gesture": "hand_on_chest"
+   },
+   "lemmas": [
+    "naam",
+    "anta",
+    "muallim"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "abu_faisal",
+   "ar": "خُذْ هٰذَا الْكِتَابَ: كِتَابُ اللُّغَةِ الْعَرَبِيَّةِ.",
+   "en": "Take this book: a book of the Arabic language.",
+   "lemmas": [
+    "khudh",
+    "hadha",
+    "kitab",
+    "lugha",
+    "arabi"
+   ],
+   "register": "white",
+   "gesture": "hand_over:book"
+  },
+  {
+   "type": "prompt",
+   "id": "d9h-thanks",
+   "speaker": "abu_faisal",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَنَا",
+     "en": "I",
+     "lemmas": [
+      "ana"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  }
+ ]
+}

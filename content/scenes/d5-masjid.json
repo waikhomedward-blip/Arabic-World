@@ -1,0 +1,216 @@
+{
+ "id": "d5-masjid",
+ "day": 5,
+ "place": "masjid",
+ "tags": [
+  "sanctuary"
+ ],
+ "kind": "story",
+ "title": {
+  "ar": "بَعْدَ الصَّلَاةِ",
+  "en": "After the prayer"
+ },
+ "cast": [
+  "tariq"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "السَّلَامُ عَلَيْكُمْ! صَبَاحُ الْخَيْرِ!",
+   "en": "Peace be upon you! Good morning!",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum",
+    "sabah",
+    "khayr"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  },
+  {
+   "type": "prompt",
+   "id": "d5m-greet",
+   "speaker": "tariq",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "النَّاسُ فِي الْمَسْجِدِ.",
+   "en": "The people are in the masjid.",
+   "lemmas": [
+    "nas",
+    "fi",
+    "masjid"
+   ],
+   "register": "white",
+   "gesture": "point:courtyard"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "الصَّلَاةُ فِي الْمَسْجِدِ.",
+   "en": "The prayer is in the masjid.",
+   "lemmas": [
+    "salah",
+    "fi",
+    "masjid"
+   ],
+   "register": "white",
+   "gesture": "point:minaret"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "بَعْدَ الصَّلَاةِ، اِذْهَبْ إِلَى الْبَيْتِ.",
+   "en": "After the prayer, go home.",
+   "lemmas": [
+    "baada",
+    "salah",
+    "idhhab",
+    "ila",
+    "bayt"
+   ],
+   "register": "white",
+   "gesture": "point:home"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "الْبَيْتُ قَرِيبٌ.",
+   "en": "The house is near.",
+   "lemmas": [
+    "bayt",
+    "qarib"
+   ],
+   "register": "white",
+   "gesture": "point:home"
+  },
+  {
+   "type": "prompt",
+   "id": "d5m-near",
+   "speaker": "tariq",
+   "ask": {
+    "ar": "هَلِ الْبَيْتُ قَرِيبٌ؟",
+    "en": "Is the house near?",
+    "lemmas": [
+     "hal",
+     "bayt",
+     "qarib"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، الْبَيْتُ قَرِيبٌ.",
+     "en": "Yes, the house is near.",
+     "lemmas": [
+      "naam",
+      "bayt",
+      "qarib"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، الْبَيْتُ بَعِيدٌ.",
+     "en": "No, the house is far.",
+     "lemmas": [
+      "la",
+      "bayt",
+      "baid"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، الْبَيْتُ قَرِيبٌ",
+    "نَعَمْ"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "الْبَيْتُ",
+    "قَرِيبٌ",
+    "بَعِيدٌ"
+   ],
+   "recast": {
+    "ar": "قَرِيبٌ؟ بَعِيدٌ؟",
+    "en": "Near? Far?",
+    "gesture": "point:home"
+   },
+   "lemmas": [
+    "naam",
+    "bayt",
+    "qarib"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "الْحَمْدُ لِلّٰهِ.",
+   "en": "Praise be to Allah.",
+   "lemmas": [
+    "hamd",
+    "li",
+    "allah"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  }
+ ],
+ "note": {
+  "en": "This is a story scene, not worship. Prayer is never part of the gameplay."
+ }
+}

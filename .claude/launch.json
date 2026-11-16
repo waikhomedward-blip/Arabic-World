@@ -1,1 +1,1 @@
-{ "version": "0.0.1", "configurations": [ { "name": "game", "runtimeExecutable": "npx", "runtimeArgs": ["vite", "app", "--port", "5173", "--strictPort"], "port": 5173 } ] }
+{ "version": "0.0.1", "configurations": [ { "name": "game", "runtimeExecutable": "/Volumes/EdwardWaikhom/arabic-world/node_modules/.bin/vite", "runtimeArgs": ["/Volumes/EdwardWaikhom/arabic-world/app", "--port", "5173", "--strictPort"], "port": 5173 } ] }

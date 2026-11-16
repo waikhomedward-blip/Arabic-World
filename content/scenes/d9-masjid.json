@@ -1,0 +1,248 @@
+{
+ "id": "d9-masjid",
+ "day": 9,
+ "place": "masjid",
+ "tags": [
+  "sanctuary"
+ ],
+ "kind": "story",
+ "title": {
+  "ar": "الْقَلَمُ",
+  "en": "The pen"
+ },
+ "cast": [
+  "tariq"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "السَّلَامُ عَلَيْكُمْ.",
+   "en": "Peace be upon you.",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  },
+  {
+   "type": "prompt",
+   "id": "d9m-greet",
+   "speaker": "tariq",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "لَا",
+     "en": "No",
+     "lemmas": [
+      "la"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "هٰذَا قَلَمٌ.",
+   "en": "This is a pen.",
+   "lemmas": [
+    "hadha",
+    "qalam"
+   ],
+   "register": "white",
+   "gesture": "hold_up:pen"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "الْقَلَمُ لِلْعِلْمِ.",
+   "en": "The pen is for knowledge.",
+   "lemmas": [
+    "qalam",
+    "li",
+    "ilm"
+   ],
+   "register": "white",
+   "gesture": "write_in_air"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "الصَّلَاةُ وَالْعِلْمُ فِي الْمَسْجِدِ.",
+   "en": "Prayer and knowledge are in the masjid.",
+   "lemmas": [
+    "salah",
+    "wa",
+    "ilm",
+    "fi",
+    "masjid"
+   ],
+   "register": "white",
+   "gesture": "point:courtyard"
+  },
+  {
+   "type": "prompt",
+   "id": "d9m-pen",
+   "speaker": "tariq",
+   "ask": {
+    "ar": "هَلْ هٰذَا قَلَمٌ؟",
+    "en": "Is this a pen?",
+    "lemmas": [
+     "hal",
+     "hadha",
+     "qalam"
+    ]
+   },
+   "options": [
+    {
+     "ar": "نَعَمْ، هٰذَا قَلَمٌ.",
+     "en": "Yes, this is a pen.",
+     "lemmas": [
+      "naam",
+      "hadha",
+      "qalam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "لَا، هٰذَا شَايٌ.",
+     "en": "No, this is tea.",
+     "lemmas": [
+      "la",
+      "hadha",
+      "shay"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "نَعَمْ، هٰذَا قَلَمٌ",
+    "نَعَمْ"
+   ],
+   "tiles": [
+    "نَعَمْ",
+    "هٰذَا",
+    "قَلَمٌ",
+    "شَايٌ"
+   ],
+   "recast": {
+    "ar": "قَلَمٌ؟",
+    "en": "A pen?",
+    "gesture": "hold_up:pen"
+   },
+   "lemmas": [
+    "naam",
+    "hadha",
+    "qalam"
+   ]
+  },
+  {
+   "type": "prompt",
+   "id": "d9m-take",
+   "speaker": "tariq",
+   "ask": {
+    "ar": "خُذِ الْقَلَمَ.",
+    "en": "Take the pen.",
+    "lemmas": [
+     "khudh",
+     "qalam"
+    ]
+   },
+   "options": [
+    {
+     "ar": "✋ ✏️",
+     "en": "(take the pen)",
+     "lemmas": [
+      "qalam"
+     ],
+     "correct": true,
+     "action": "take:pen"
+    },
+    {
+     "ar": "✋ 💧",
+     "en": "(take the water)",
+     "lemmas": [
+      "maa"
+     ],
+     "correct": false,
+     "action": "take:water"
+    }
+   ],
+   "accepted": [],
+   "tiles": [],
+   "recast": {
+    "ar": "الْقَلَمَ…",
+    "en": "The pen…",
+    "gesture": "hold_out:pen"
+   },
+   "lemmas": [
+    "khudh",
+    "qalam"
+   ],
+   "action": "take:pen"
+  },
+  {
+   "type": "line",
+   "speaker": "tariq",
+   "ar": "اللّٰهُ أَكْبَرُ، وَالْحَمْدُ لِلّٰهِ.",
+   "en": "Allah is the Greatest, and praise be to Allah.",
+   "lemmas": [
+    "allah",
+    "akbar",
+    "wa",
+    "hamd",
+    "li"
+   ],
+   "register": "white",
+   "gesture": "hand_on_heart"
+  }
+ ],
+ "note": {
+  "en": "This is a story scene, not worship. Prayer is never part of the gameplay."
+ }
+}
