@@ -26,6 +26,9 @@ The game must welcome **everyone, Muslim or not**. Build on what all people shar
 - No preaching, no debate, no claims about other faiths. Explanations are cultural or linguistic facts ("you hear أَكْبَرُ in every adhan").
 - The hard rules still apply in full.
 
+## Other languages later
+Edward may build this game for other languages. Keep language-specific code (script, normaliser, checker rules, keyboard, direction, morphology, Quran layer) in a language pack; keep engine, ladder, director, lab and world language-neutral.
+
 ## Sourcing rule
 Prefer Muslim sources; non-Muslim only when no Muslim source covers the point, labelled. Never guess anyone's religion ("affiliation unconfirmed"). Log every source in `docs/SOURCES.md`.
 

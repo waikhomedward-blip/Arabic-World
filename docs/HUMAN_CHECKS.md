@@ -3,5 +3,6 @@
 2. Microphone permission and Safari's Arabic recogniser on a real iPhone (voice is off by default).
 3. 3–5 beginner playtesters: silent play, then retell each scene in their own words.
 4. A native Arabic speaker reads every line for naturalness.
-5. Scholar review of the whole build (release gate).
+5. Scholar review of the whole build (release gate). Specific questions: Quran text shown to non-Muslim players; Friday/courtyard scenes; any prophet/Companion name confusion.
 6. Commission a reciter and a licensed adhan recording.
+7. Voices: 3–5 male native Arabic speakers to record lines under a simple written release (or a paid TTS render).
