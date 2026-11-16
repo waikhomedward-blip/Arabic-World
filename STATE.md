@@ -14,9 +14,11 @@
 - Word ladder, Lexical Director (reply type by weakest word), typed-answer checker, on-device progress + export/import, days-in-the-city, word-of-the-day copy.
 - Lab: Suites R, C, G, L (1,468 cases). S, P, V not built. Scoreboard in `lab/scoreboard.json`.
 
+## Where things are
+- Project folder: `/Volumes/EdwardWaikhom/arabic-world` (external drive). GitHub: https://github.com/waikhomedward-blip/Arabic-World (public).
+- Tanzil Quran text imported verbatim (`tools/data/quran-uthmani.txt`); lemma-level Quran meter still to build.
+
 ## Waiting on Edward
-- OK to download the Tanzil Quran text (needed for the Quran meter and coverage staircase).
-- GitHub push: the GitHub CLI login on this Mac has expired, so pushing needs him to sign in once.
 - Missing research files (see `docs/RESEARCH_DIGEST.md`).
 
 ## Next actions (cycles 2–10: foundations)
@@ -25,4 +27,5 @@
 3. Suite P: `npx playwright install chromium webkit`, fps/heap/load metrics in iPhone + Pixel profiles.
 4. Speech port into `app/speech/` behind a flag (needs Edward's speech-test files) and start Suite S.
 5. Suite V: fixed-camera screenshots + rubric; MediaPipe face check on renders.
-6. Adhan schedule + mute UI (no audio until licensed), Quran meter once Tanzil is imported.
+6. Adhan schedule + mute UI (no audio until licensed).
+7. Own morphology/lemma layer over the Tanzil text → lemma staircase + Quran meter.
