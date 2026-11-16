@@ -104,6 +104,14 @@
   "targetRung": 4
  },
  {
+  "id": "min",
+  "ar": "مِنْ",
+  "en": "from; than",
+  "tier": 0,
+  "root": null,
+  "targetRung": 4
+ },
+ {
   "id": "li",
   "ar": "لِـ",
   "en": "for, to",

@@ -112,6 +112,19 @@
   {
    "type": "line",
    "speaker": "saeed",
+   "ar": "هٰذِهِ أَكْبَرُ مِنْ هٰذِهِ.",
+   "en": "This one is bigger than this one.",
+   "lemmas": [
+    "hadhihi",
+    "akbar",
+    "min"
+   ],
+   "register": "white",
+   "gesture": "compare_two_apples"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
    "ar": "وَاحِدٌ، اِثْنَانِ، ثَلَاثَةٌ.",
    "en": "One, two, three.",
    "lemmas": [

@@ -126,23 +126,23 @@
    "crashes": 0,
    "checkerAccuracy": 1,
    "ladder": 1,
-   "learnersMedianRetained": 62,
-   "lemmas": 78,
+   "learnersMedianRetained": 63,
+   "lemmas": 79,
    "days": 10,
    "speech": "not built",
-   "perf": 0.997,
-   "visual": 0.998,
-   "cases": 4997,
+   "perf": 1,
+   "visual": 1,
+   "cases": 5015,
    "failures": 6,
    "parts": {
-    "C": 24.985730593607304,
+    "C": 24.985843714609288,
     "G": 15,
     "checker": 15,
     "ladder": 10,
-    "learners": 14.90625,
-    "P": 9.970588235294118,
+    "learners": 14.94375,
+    "P": 10,
     "S": 0,
-    "V": 4.987500000000001
+    "V": 5
    }
   }
  ]

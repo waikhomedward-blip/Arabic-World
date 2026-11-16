@@ -1162,14 +1162,14 @@
  {
   "scene": "d2-masjid",
   "project": "iphone-se-webkit",
-  "renderer": "unknown",
-  "loadMs": 975,
-  "fps": 56,
-  "p95FrameMs": 64,
+  "renderer": "Apple GPU",
+  "loadMs": 1017,
+  "fps": 59,
+  "p95FrameMs": 18,
   "throttled": null,
   "stats": {
-   "calls": 0,
-   "triangles": 0,
+   "calls": 21,
+   "triangles": 3266,
    "textures": 0,
    "geometries": 22
   },

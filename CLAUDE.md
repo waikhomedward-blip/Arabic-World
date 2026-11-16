@@ -19,11 +19,12 @@ Full spec: `docs/research/CLAUDE_CODE_MASTER_PROMPT.md` (section 0A overrides ol
 - No QAC data shipped. No unclear-licence media committed. No secrets committed.
 - Release gate: **scholar review** (unchecked).
 
-## Universal first (Edward, 16 Nov 2026)
-The game must welcome **everyone, Muslim or not**. Build on what all people share: water, food, home, family, friends, weather, numbers, work, kindness, hospitality.
-- Characters are people of this city and may speak their faith naturally (as-salāmu ʿalaykum, in shā' Allāh, al-ḥamdu lillāh), as Arabic speakers of all backgrounds do.
-- The player is **never required** to say a religious statement: every such prompt also has a neutral correct reply (Suite C `neutral-option`).
-- No preaching, no debate, no claims about other faiths. Explanations are cultural or linguistic facts ("you hear أَكْبَرُ in every adhan").
+## Universal first (Edward, 16 Nov 2026 — "very important")
+The game must welcome **everyone, Muslim or not**. Build on what every human agrees on: water, food, air, home, family, friends, weather, numbers, work, kindness, hospitality, helping a neighbour.
+- **Lessons use universal examples.** Every teaching moment (root noticing, new word, grammar nudge) uses everyday life, never a religious phrase (Suite C `universal-teaching-example`).
+- **Religion is part of the city, not the subject.** Characters may speak their faith naturally (as-salāmu ʿalaykum, in shā' Allāh, al-ḥamdu lillāh) as Arabic speakers of all backgrounds do; the masjid is a landmark and a calm place. Keep it a small share of all text (Suite C `universal:religious-share` ≤ 12%; now 7.8%).
+- **The player is never required to say or affirm anything religious:** every such prompt has a neutral correct reply (Suite C `neutral-option`).
+- **No preaching, no debate, no claims about other faiths.** Explanations are cultural or linguistic facts.
 - The hard rules still apply in full.
 
 ## Other languages later

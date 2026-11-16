@@ -103,35 +103,42 @@
   {
    "type": "line",
    "speaker": "abu_faisal",
-   "ar": "كَبِيرٌ… أَكْبَرُ. اللّٰهُ أَكْبَرُ.",
-   "en": "Big… greater. Allah is the Greatest.",
+   "ar": "كَبِيرٌ… أَكْبَرُ. فَيْصَلٌ أَكْبَرُ مِنْ مَاجِدٍ.",
+   "en": "Big… bigger. Faisal is bigger (older) than Majid.",
    "lemmas": [
     "kabir",
     "akbar",
-    "allah"
+    "min"
    ],
    "register": "white",
-   "gesture": "trace_letters",
+   "gesture": "hand_low_then_high",
    "notice": {
     "root": "ك ب ر",
     "words": [
      "kabir",
      "akbar"
     ],
-    "en": "Same letters k-b-r: big, greater. You hear أَكْبَرُ in every adhan."
-   }
+    "en": "Same letters k-b-r: big, bigger. One pattern turns an adjective into a comparison: كَبِيرٌ → أَكْبَرُ."
+   },
+   "names": [
+    "فَيْصَلٌ",
+    "مَاجِدٍ"
+   ]
   },
   {
    "type": "line",
    "speaker": "majid",
-   "ar": "اللّٰهُ أَكْبَرُ!",
-   "en": "Allah is the Greatest!",
+   "ar": "نَعَمْ، فَيْصَلٌ أَكْبَرُ.",
+   "en": "Yes, Faisal is bigger.",
    "lemmas": [
-    "allah",
+    "naam",
     "akbar"
    ],
    "register": "white",
-   "gesture": "hand_on_heart"
+   "gesture": "nod",
+   "names": [
+    "فَيْصَلٌ"
+   ]
   }
  ]
 }

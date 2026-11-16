@@ -18,3 +18,4 @@
 | 2026-11-16 | Piper ar_JO "kareem" ruled out (fine-tuned from non-commercial lessac data) | Licence |
 | 2026-11-16 | Azure TTS: ship audio only from a paid render or after the free-tier output right is confirmed | Product Terms grant commercial output rights explicitly to paid tier |
 | 2026-11-16 | Draw-call budget tightened to ≤150 (recent phone) / ≤100 (budget Android) | The visuals playbook's 400/250 is optimistic for WebGL |
+| 2026-11-16 | Universal-first audit: 22/269 texts (8%) mention religion, almost all everyday formulas or the masjid as a landmark. Fixed the one lesson that used "اللّٰهُ أَكْبَرُ" as its teaching example (now كَبِيرٌ → أَكْبَرُ with Faisal/Majid and two apples). New Suite C checks: lessons use universal examples; religious share ≤ 12% | Edward: "very important … everyone agrees we need water to survive" |

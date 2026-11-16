@@ -101,7 +101,15 @@ export function suiteC(content: Content): SuiteResult {
     if (correct.length && correct.every((o) => /اللّٰه|الله/.test(o.ar))) cases.push(t(`neutral-option:${p.id}`, false, 'every correct reply contains a religious formula'));
     else cases.push(t(`neutral-option:${p.id}`, true));
   }
-  // 11. ten-day scope (v1 target)
+  // 11. universal first: teaching moments (root noticing) use everyday examples, never religious phrases;
+  //     religion stays a small, natural part of city life (characters' own speech), not the subject of lessons
+  for (const s of content.scenes) s.steps.forEach((st, i) => {
+    if (st.type === 'line' && st.notice) cases.push(t(`universal-teaching-example:${s.id}#${i}`, !/اللّٰه|الله|صلاة|الصَّلَاة/.test(st.ar)));
+  });
+  const allTexts = content.scenes.flatMap(sceneTexts).filter((x) => !/\.tile\d+$/.test(x.where) && !/\.recast$/.test(x.where));
+  const religiousShare = allTexts.filter((x) => /اللّٰه|الله|لِلّٰه|صَلَاة|الصَّلَاة|مَسْجِد/.test(x.ar)).length / allTexts.length;
+  cases.push(t('universal:religious-share<=12%', religiousShare <= 0.12, `${(religiousShare * 100).toFixed(1)}%`));
+  // 12. ten-day scope (v1 target)
   cases.push(t('ten-days-authored', days.length >= 10, `${days.length} days`));
   cases.push(t('lemma-target-150', content.lemmas.length >= 150, `${content.lemmas.length} lemmas`));
   const covVals = Object.values(sceneCoverage);
