@@ -5,7 +5,7 @@ import type { Content } from '../../app/src/core/content';
 import { clockAllowed } from '../../app/src/core/content';
 import { sceneTexts } from '../../app/src/core/content';
 import { AudioPolicy, ALLOWED_AUDIO_KINDS } from '../../app/src/core/audio';
-import { characterParts } from '../../app/src/world/characterSpec';
+import { characterParts, EXTRAS } from '../../app/src/world/characterSpec';
 import { mk, type SuiteResult } from './types';
 
 const FEMALE_NAMES = ['فاطمة', 'عائشة', 'مريم', 'زينب', 'خديجة', 'سارة', 'ليلى', 'هند', 'أمينة', 'سلمى', 'رقية', 'حفصة', 'آمنة', 'نادية', 'منى', 'هدى', 'رانيا', 'ياسمين', 'دينا', 'أسماء'];
@@ -29,7 +29,7 @@ const stripComments = (s: string) => s.replace(/\/\*[\s\S]*?\*\//g, '').replace(
 
 export function suiteR(content: Content, root: string): SuiteResult {
   const t = mk('R'); const cases = [];
-  const chars = content.cast.characters;
+  const chars = [...content.cast.characters, ...EXTRAS.map((e) => ({ ...e, voice: content.cast.allowedVoices[0] }))]; // background extras obey every rule too
   for (const c of chars) {
     cases.push(t(`male:${c.id}`, c.gender === 'male'));
     cases.push(t(`no-face:${c.id}`, c.face === 'none'));
