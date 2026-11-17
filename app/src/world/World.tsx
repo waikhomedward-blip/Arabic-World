@@ -156,6 +156,8 @@ function Crates({ x, z, n = 3 }: { x: number; z: number; n?: number }) {
 
 function Props() {
   const t = shared();
+  const { size } = useThree();
+  const portrait = size.width < size.height; // the camera differs by screen shape, so does the foreground dressing
   return (
     <group>
       {/* souq: three stalls against the facade, cloth awnings (indigo, saffron, green accents) */}
@@ -187,7 +189,7 @@ function Props() {
       <Crates x={25.6} z={BACK_FACE_Z + 0.5} n={4} />
       {/* foreground dressing just off the sight line of every place: layers + partial occlusion (art bible Tier 1) */}
       {Object.entries(PLACES).filter(([k]) => k !== 'masjid').map(([k, [px]]) => (
-        <group key={k} position={[px + 2.1, 0, 3.0]}>
+        <group key={k} position={portrait ? [px + 2.1, 0, 3.0] : [px + 2.9, 0, 3.6]}>
           <mesh position={[0, 1.6, 0]} castShadow><cylinderGeometry args={[0.055, 0.065, 3.2, 8]} /><meshStandardMaterial map={t.teak} color="#6b4a32" roughness={0.75} /></mesh>
           <mesh position={[-0.28, 2.55, 0]} castShadow><boxGeometry args={[0.2, 0.3, 0.2]} /><meshStandardMaterial color="#8c6a3c" metalness={0.6} roughness={0.45} /></mesh>
           <Crates x={0.35} z={0.25} n={k === 'cafe' || k === 'home' ? 3 : 2} />

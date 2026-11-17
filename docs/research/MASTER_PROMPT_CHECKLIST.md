@@ -24,7 +24,7 @@
 ## §2 Sourcing rule | ✅ SOURCES.md labelled
 ## §3 Vision
 | Immersion, engaging without manipulation, warm/cozy | 🟡 systems yes; feel weak until visuals/voices exist |
-| Realistic visuals | ❌ → cycle 6 |
+| Realistic visuals | 🟡 cycle 6 rebuild (art bible); realism pass ongoing |
 | Characters speak with real audio | ❌ no voices (licence decision pending) |
 | Player voice input in parallel | ❌ |
 
