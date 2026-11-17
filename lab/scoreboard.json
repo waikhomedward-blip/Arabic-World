@@ -173,6 +173,35 @@
     "S": 0,
     "V": 5
    }
+  },
+  {
+   "cycle": 6,
+   "date": "2026-11-17",
+   "overall": 95,
+   "suiteR": 1,
+   "suiteC": 0.9994,
+   "gameplay": 1,
+   "crashes": 0,
+   "checkerAccuracy": 1,
+   "ladder": 1,
+   "learnersMedianRetained": 64,
+   "lemmas": 80,
+   "days": 10,
+   "speech": "not built",
+   "perf": 1,
+   "visual": 1,
+   "cases": 5711,
+   "failures": 2,
+   "parts": {
+    "C": 24.98611111111111,
+    "G": 15,
+    "checker": 15,
+    "ladder": 10,
+    "learners": 15,
+    "P": 10,
+    "S": 0,
+    "V": 5
+   }
   }
  ]
 }

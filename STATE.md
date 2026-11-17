@@ -1,6 +1,7 @@
 # STATE
 
-**Cycle:** 5 complete (2026-11-16) · **Overall:** 95.0 · **Best ever:** 95.0 (cycle 5) · **Suite R:** 100%
+**Cycle:** 6 complete (2026-11-17) · **Overall:** 95.0 · **Best ever:** 95.0
+**Playable:** https://claude.ai/artifact/X3NMijD1w7mAmm6eFwL5xk (private to Edward) · **Suite R:** 100%
 
 ## Release gates
 - [ ] Scholar review (release gate)

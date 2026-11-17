@@ -24,7 +24,7 @@ function shuffle<T>(xs: T[], seed: number): T[] {
 }
 
 export function App() {
-  const [progress, setProgress] = useState<Progress>(() => deserialise(localStorage.getItem(KEY)));
+  const [progress, setProgress] = useState<Progress>(() => deserialise((() => { try { return localStorage.getItem(KEY); } catch { return null; } })()));
   const [begun, setBegun] = useState(false);
   const [sceneState, setSceneState] = useState<SceneState | null>(null);
   const [feedback, setFeedback] = useState<Feedback | null>(null);
@@ -36,7 +36,7 @@ export function App() {
   const [pending, setPending] = useState<SceneState | null>(null);
   const audio = useRef<AudioContext | null>(null);
 
-  useEffect(() => { localStorage.setItem(KEY, serialise(progress)); }, [progress]);
+  useEffect(() => { try { localStorage.setItem(KEY, serialise(progress)); } catch { /* storage unavailable (sandboxed viewer): play still works, progress is not kept */ } }, [progress]);
 
   const dayScenes = content.scenes.filter((s) => s.day === progress.inGameDay);
   const nextScene: Scene | undefined = dayScenes.find((s) => !progress.completedScenes.includes(s.id));
@@ -49,7 +49,7 @@ export function App() {
     const at = PLACES[place];
     // centre the group on the camera's focus, in a gentle arc (keeps 3+ people in frame on narrow phones)
     const cast = scene?.cast ?? []; const n = cast.length;
-    return cast.map((id, i) => { const off = (i - (n - 1) / 2) * 1.1; return { c: charById[id], at: [at[0] + off, 0, at[2] - 0.3 * Math.abs(off)] as [number, number, number] }; });
+    return cast.map((id, i) => { const off = (i - (n - 1) / 2) * (n >= 3 ? 0.78 : 1.0); return { c: charById[id], at: [at[0] - 0.6 + off, 0, at[2] - 0.3 * Math.abs(off)] as [number, number, number] }; });
   }, [scene, place]);
 
   const click = () => { if (audio.current) playClick(audio.current, policy); };

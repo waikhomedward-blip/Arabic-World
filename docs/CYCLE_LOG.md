@@ -50,3 +50,11 @@
 - **Bug found by the lab:** the typed-answer checker accepted هوء for هَوَاءٌ (dropped long vowel) because two lenient rules interacted; fixed by comparing with and without the final-alif rule; regression tests added.
 - **Scores:** overall **95.0** (best ever); R 100%; V 100% (100/100 play-throughs); P 100%; checker 100% of 2,596 slips.
 - **Still weak:** 80/150 lemmas; "on the roof" scenes still shown at street level; Muqīm-only slow learners at 1.05 frustration/day (borderline).
+
+## Cycle 6 — 2026-11-16/17 (visual rebuild from the art bible)
+**Goal:** Edward: "the game looks very bad visually". Apply the visuals playbook, the story bible's art direction, the cinematic skill and Edward's realism list (ART_BIBLE.md), which had been read but not applied. **Effort:** high.
+
+- **Built:** procedural textures (lime plaster, coral-stone courses, teak grain, lattice, warm paving, striped cloth, contact blob); a seeded Hijazi quarter (3–6 storeys, stone ground floor + plaster, teak timber bands, rawasheen bays with lattice, doors/shopfronts, parapets, water tanks, grime at wall bases, uneven building line) merged into 5 draw calls; minaret landmark; physical sky + image-based light from it + AgX once + soft shadows + warm bounce + haze; low raking morning sun; gentle grade; eye-level camera looking down the lane with parallax drift and view-offset framing for portrait phones; thobe/sleeves/hands/ghutra characters with breathing and head turns; contact shadows; background men at work (also checked by Suite R); stalls, café tables, fountain, foreground posts and crates (orientation-aware).
+- **Caught by the play-through and fixed:** foreground post hiding single characters; speakers cut off at the frame edge in 1-, 2- and 3-person scenes; iPad landscape occlusion.
+- **Scores:** overall 95.0; R 100%; V 100/100; P 100% (max 78 draw calls, 59–60 fps).
+- **Still weak (next):** surfaces still too clean (wear, streaks, wind, clutter); no rooftop set; characters don't walk or gesture yet. 7 full transcript readers paused at the account spend limit.
