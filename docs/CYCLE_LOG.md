@@ -74,3 +74,18 @@
 - **Draw calls:** at most 112, up from 72. The longer view down the lane shows more stalls and people. Still under the 150 budget; watch it.
 - **Overall score:** 94.7, down from 95.0. The extra failures are learner-simulation retention at 62–63/80 against an 80% bar (64 last cycle). They also fail on main without any visual change, so they are not caused by this stage. The cause is not yet found.
 - **Honest look:** shadows and depth are better, and the floor has sun pools. The walls are still evenly lit and clean, and the characters still look like plastic. That is Stages 2–3.
+
+## Cycle 8 (18 Nov 2026): visual Stage 2 (wall wear and lattice light)
+- **Changes:**
+  - World-space wall shader (`wallShader.ts`) on stone, plaster and teak:
+    - grime and damp band at the wall base, 0.1–0.9 m, with an uneven top edge
+    - macro colour variation of about ±16–18%
+    - weathering streaks
+    - gandal timber courses every 1.1 m, showing only where the plaster is worn
+    - roughness varying ±0.1
+  - Rawasheen lattice now casts patterned sun onto the walls and onto people.
+  - The old vertex grime (a smooth gradient over a whole storey) is removed.
+- **Lab:** 100/100 play-throughs, 0 problems, Suite R 100%. Overall 95.0, with 2 failures (lemma target, plus one learner check).
+- **Learner checks:** the extra learner-retention failures from cycle 7 did not repeat with no learner change, so that check is flaky. Investigate.
+- **Performance:** fps ≥59. p95 at most 26 ms in one iPad case (café), 21 ms in one other iPad case, and ≤19 ms everywhere else. Draw calls at most 111.
+- **Honest look:** dappled lattice light and dirty wall bases are visible. The plaster is still quite flat, and the characters still look like plastic.
