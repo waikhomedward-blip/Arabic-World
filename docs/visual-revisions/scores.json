@@ -304,5 +304,41 @@
    "detail": -2.51,
    "variety": -1.41
   }
+ },
+ {
+  "rev": "REV-017",
+  "score": 0.882,
+  "notes": "Framed slatted windows at facade edges (separate seed; layout unchanged)",
+  "z": {
+   "L_p05": 0.7,
+   "L_p50": -0.64,
+   "L_p95": -1.33,
+   "contrast": -0.27,
+   "saturation": -0.37,
+   "warmth": 0.91,
+   "white_share": -1.19,
+   "shadow_share": 0.03,
+   "sky_share": -0.67,
+   "detail": -2.38,
+   "variety": -1.21
+  }
+ },
+ {
+  "rev": "REV-018",
+  "score": 0.918,
+  "notes": "Real CC0 photo-scan plaster grain (Poly Haven, neutralised to white)",
+  "z": {
+   "L_p05": 0.92,
+   "L_p50": 0.03,
+   "L_p95": -1.36,
+   "contrast": -0.38,
+   "saturation": -0.62,
+   "warmth": 0.88,
+   "white_share": -1.18,
+   "shadow_share": -0.35,
+   "sky_share": -0.69,
+   "detail": -2.39,
+   "variety": -1.31
+  }
  }
 ]

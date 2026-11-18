@@ -25,3 +25,10 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 014 | 0.96 | ❌ | Stronger sun, less fill (shade too dark) |
 | 015 | 1.01 | ❌ | Sun turned onto the facades |
 | 016 | 0.96 | ❌ | Extra windows (reshuffled the seeded houses; build windows without changing the seed sequence) |
+| 017 | 0.88 | ❌ | Framed slatted windows at facade edges, using a separate seed (no gain over 0.874) |
+| 018 | 0.92 | ❌ | Real CC0 photo-scan plaster grain, Poly Haven, neutralised to white (no gain) |
+
+Best so far: **REV-009, 0.874**. Next ideas to try:
+- the camera frame versus the photos' framing
+- rawasheen slat detail
+- a cooler grade on the shadows
