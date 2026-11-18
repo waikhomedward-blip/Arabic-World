@@ -1,0 +1,43 @@
+# Free checks on every push and pull request (standard GitHub runners are free and unlimited for public repos).
+name: checks
+on:
+  push:
+    branches: [main, 'wip/**', 'bot/**', 'setup/**']
+  pull_request:
+  workflow_dispatch:
+concurrency: { group: checks-${{ github.ref }}, cancel-in-progress: true }
+jobs:
+  rules:
+    name: Hard rules, content, unit tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 18, cache: npm }
+      - run: npm ci
+      - run: npx tsc -p tsconfig.json --noEmit
+      - run: npm test
+      - run: npm run validate
+      - name: Lab suites (R hard rules must be 100%)
+        run: npm run lab:fast
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: lab-summary, path: lab/results/cycle-*/summary.md, if-no-files-found: ignore }
+  phones:
+    name: Phone screenshots (iPhone + Android, opening frame of every scene)
+    needs: rules
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 18, cache: npm }
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium webkit
+      - name: Visibility check on every scene (software rendering, so no fps judgement here)
+        env: { AW_SHOTS: '1' }
+        run: npx playwright test tests/e2e/verify.spec.ts --project=iphone-webkit --project=android-chromium --workers=2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: { name: phone-screenshots, path: lab/results/e2e/**/*-1-intro.png, if-no-files-found: ignore }
