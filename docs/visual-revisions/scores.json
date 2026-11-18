@@ -142,5 +142,41 @@
    "detail": -2.4,
    "variety": -1.31
   }
+ },
+ {
+  "rev": "REV-008",
+  "score": 0.921,
+  "notes": "Horizon lower in frame (more facade and sky, like the photos)",
+  "z": {
+   "L_p05": 0.75,
+   "L_p50": -0.37,
+   "L_p95": -1.42,
+   "contrast": -0.39,
+   "saturation": -0.56,
+   "warmth": 0.88,
+   "white_share": -1.21,
+   "shadow_share": -0.24,
+   "sky_share": -0.67,
+   "detail": -2.33,
+   "variety": -1.31
+  }
+ },
+ {
+  "rev": "REV-009",
+  "score": 0.874,
+  "notes": "Brighter limewash albedo (near-white, warm)",
+  "z": {
+   "L_p05": 0.78,
+   "L_p50": -0.18,
+   "L_p95": -1.33,
+   "contrast": -0.28,
+   "saturation": -0.4,
+   "warmth": 0.91,
+   "white_share": -1.21,
+   "shadow_share": -0.11,
+   "sky_share": -0.69,
+   "detail": -2.42,
+   "variety": -1.31
+  }
  }
 ]

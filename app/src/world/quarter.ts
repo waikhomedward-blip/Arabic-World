@@ -71,8 +71,8 @@ class Builder {
 
 // Palette (art bible): warm sand / off-white / coral plaster; faded teak, green and blue-grey bays.
 // Reference: Wikimedia photos of Al-Balad (Historic Jeddah): mostly white and cream limewash, greyed by weather.
-const PLASTER = ['#ece5d6', '#e6dfcf', '#efe9dd', '#ddd4c2', '#e9dfc9'].map((c) => new THREE.Color(c));
-const STONE = ['#d6cbb6', '#cdbfa6', '#d9cfbd'].map((c) => new THREE.Color(c)); // ground floors: mostly plastered, coral stone shows through
+const PLASTER = ['#fbf7ee', '#f6f0e3', '#fdfaf3', '#efe7d7', '#f8f1e2'].map((c) => new THREE.Color(c));
+const STONE = ['#efe7d6', '#e8dfcc', '#f2ebdc'].map((c) => new THREE.Color(c)); // ground floors: mostly plastered, coral stone shows through
 const TEAK = ['#7a5236', '#6b4730', '#5f7a62', '#6a7d86', '#8a5f3c'].map((c) => new THREE.Color(c));
 const WHITE = new THREE.Color('#eeeae2');
 const DARK = new THREE.Color('#ffffff');
