@@ -14,8 +14,20 @@ export const PLACES: Record<string, [number, number, number]> = {
   home: [-14, 0, 0], souq: [-4, 0, 0], square: [7, 0, 0], masjid: [7, 0, 0], cafe: [17, 0, 0], shop: [24, 0, 0],
 };
 
-// Morning sun from the east-south-east, ~29° up (strict rule: 08:00–11:00)
-const SUN = new THREE.Vector3(36, 21, 24); // low and from the east: rakes along the facades so bays, doors and people cast shadows
+// Morning sun (strict rule: 08:00–11:00). It follows the game clock: low at 08:00, higher by 11:00
+// (capped at 45° so shadows stay long and raking; art bible rebuild rules). Azimuth keeps it 30–90° off the
+// camera axis, nearly along the lane, so facades rake and thobes get a bright edge (never flat front light).
+function minutes(clock: string): number { const [h, m] = clock.split(':').map(Number); return (h || 8) * 60 + (m || 0); }
+export function morning(clock: string) {
+  const t = Math.min(1, Math.max(0, (minutes(clock) - 480) / 180)); // 0 at 08:00, 1 at 11:00
+  const elev = THREE.MathUtils.degToRad(20 + 25 * t);
+  const az = THREE.MathUtils.degToRad(10);
+  const R = 48;
+  const sun = new THREE.Vector3(Math.cos(elev) * Math.cos(az) * R, Math.sin(elev) * R, Math.cos(elev) * Math.sin(az) * R);
+  const colour = new THREE.Color('#ffe4c2').lerp(new THREE.Color('#fff3e4'), t);
+  const fog = 0.006 - 0.0015 * t; // ~15% haze at 80 m, thinning through the morning
+  return { t, sun, colour, fog };
+}
 const HORIZON = '#d9e3e6';
 
 /** Weak devices get a lighter preset automatically (visuals playbook). */
@@ -184,14 +196,14 @@ function Props() {
       ))}
       {/* home: stone bench and plant tins by the door; shop: crates */}
       <mesh position={[-16.2, 0.22, BACK_FACE_Z + 0.35]} castShadow receiveShadow><boxGeometry args={[1.6, 0.44, 0.5]} /><meshStandardMaterial map={t.stone} color="#e6d9c3" roughness={0.95} /></mesh>
-      {[-12.3, -11.8].map((x, i) => <mesh key={x} position={[x, 0.2, BACK_FACE_Z + 0.3]} castShadow><cylinderGeometry args={[0.16, 0.14, 0.4, 12]} /><meshStandardMaterial color={i ? '#9a8f80' : '#7f8f9a'} metalness={0.6} roughness={0.5} /></mesh>)}
+      {[-12.3, -11.8].map((x, i) => <mesh key={x} position={[x, 0.2, BACK_FACE_Z + 0.3]} castShadow><cylinderGeometry args={[0.16, 0.14, 0.4, 12]} /><meshStandardMaterial color={i ? '#9a8f80' : '#7f8f9a'} metalness={1} roughness={0.5} /></mesh>)}
       {[-12.3, -11.8].map((x) => <mesh key={x + 'p'} position={[x, 0.55, BACK_FACE_Z + 0.3]} castShadow><sphereGeometry args={[0.24, 10, 8]} /><meshStandardMaterial color="#4f6b3a" roughness={0.9} /></mesh>)}
       <Crates x={25.6} z={BACK_FACE_Z + 0.5} n={4} />
       {/* foreground dressing just off the sight line of every place: layers + partial occlusion (art bible Tier 1) */}
       {Object.entries(PLACES).filter(([k]) => k !== 'masjid').map(([k, [px]]) => (
-        <group key={k} position={portrait ? [px + 2.1, 0, 3.0] : [px + 2.9, 0, 3.6]}>
+        <group key={k} position={portrait ? [px + 3.05, 0, 3.0] : [px + 4.6, 0, 1.7]}>
           <mesh position={[0, 1.6, 0]} castShadow><cylinderGeometry args={[0.055, 0.065, 3.2, 8]} /><meshStandardMaterial map={t.teak} color="#6b4a32" roughness={0.75} /></mesh>
-          <mesh position={[-0.28, 2.55, 0]} castShadow><boxGeometry args={[0.2, 0.3, 0.2]} /><meshStandardMaterial color="#8c6a3c" metalness={0.6} roughness={0.45} /></mesh>
+          <mesh position={[-0.28, 2.55, 0]} castShadow><boxGeometry args={[0.2, 0.3, 0.2]} /><meshStandardMaterial color="#8c6a3c" metalness={1} roughness={0.4} /></mesh>
           <Crates x={0.35} z={0.25} n={k === 'cafe' || k === 'home' ? 3 : 2} />
         </group>
       ))}
@@ -217,17 +229,38 @@ function Ground() {
 }
 
 /** Sun with a shadow camera that follows the action (shadow map only where the player looks). */
-function SunLight({ target, shadows }: { target: [number, number, number]; shadows: boolean }) {
+function SunLight({ target, shadows, sun, colour }: { target: [number, number, number]; shadows: boolean; sun: THREE.Vector3; colour: THREE.Color }) {
   const light = useRef<THREE.DirectionalLight>(null);
   useFrame(() => {
     const l = light.current; if (!l) return;
-    l.position.set(target[0] + SUN.x, SUN.y, target[2] + SUN.z);
+    l.position.set(target[0] + sun.x, sun.y, target[2] + sun.z);
     l.target.position.set(target[0], 0, target[2]); l.target.updateMatrixWorld();
   });
   return (
-    <directionalLight ref={light} intensity={4.6} color="#ffe2b8" castShadow={shadows}
+    <directionalLight ref={light} intensity={4.6} color={colour} castShadow={shadows}
       shadow-mapSize={[1536, 1536]} shadow-bias={-0.0004} shadow-normalBias={0.03}
       shadow-camera-left={-16} shadow-camera-right={16} shadow-camera-top={16} shadow-camera-bottom={-16} shadow-camera-near={1} shadow-camera-far={90} />
+  );
+}
+
+/** ~200 dust motes drifting in the sunlit air near the action: one draw call, never in front of faces (there are none). */
+function DustMotes({ target }: { target: [number, number, number] }) {
+  const ref = useRef<THREE.Points>(null);
+  const geo = useMemo(() => {
+    const g = new THREE.BufferGeometry(); const n = 200; const p = new Float32Array(n * 3); let s = 17;
+    const r = () => ((s = (s * 1664525 + 1013904223) >>> 0) / 2 ** 32);
+    for (let i = 0; i < n; i++) { p[i * 3] = (r() - 0.5) * 14; p[i * 3 + 1] = 0.3 + r() * 4.5; p[i * 3 + 2] = -1 + r() * 6; }
+    g.setAttribute('position', new THREE.BufferAttribute(p, 3)); return g;
+  }, []);
+  useFrame(({ clock }) => {
+    const pts = ref.current; if (!pts) return;
+    const t = clock.getElapsedTime();
+    pts.position.set(target[0] + Math.sin(t * 0.05) * 0.6, Math.sin(t * 0.07) * 0.15, target[2]);
+  });
+  return (
+    <points ref={ref} geometry={geo} userData={{ noRay: true }}>
+      <pointsMaterial size={0.018} color="#fff1d6" transparent opacity={0.55} depthWrite={false} sizeAttenuation />
+    </points>
   );
 }
 
@@ -244,16 +277,23 @@ function CameraRig({ target }: { target: [number, number, number] }) {
     const cam = camera as THREE.PerspectiveCamera;
     const portrait = size.width < size.height;
     const t = clock.getElapsedTime();
-    const drift = Math.sin(t * 0.09) * 0.35;
+    // Handheld feel: slow lateral drift (parallax) + tiny multi-octave sway (0.1–0.5 Hz, ~0.15°). Off when the
+    // player asks the system for reduced motion ("still camera").
+    const still = STILL;
+    const drift = still ? 0 : Math.sin(t * 0.09) * 0.35;
+    const swayX = still ? 0 : (Math.sin(t * 0.63) * 0.6 + Math.sin(t * 1.7 + 1.3) * 0.3 + Math.sin(t * 2.9 + 0.4) * 0.1) * 0.022;
+    const swayY = still ? 0 : (Math.sin(t * 0.81 + 2.1) * 0.6 + Math.sin(t * 2.3) * 0.4) * 0.012;
     const k = 1 - Math.exp(-dt * 2.2);
+    // Narrower lens than before (portrait 54° visible, landscape 44°): the camera steps back along the lane
+    // instead of widening, staying in front of the opposite houses (z ≤ 5.4).
     const want = portrait
-      ? new THREE.Vector3(target[0] + 1.2 + drift, 1.55, target[2] + 5.0)
-      : new THREE.Vector3(target[0] + 3.4 + drift, 1.6, target[2] + 5.6);
+      ? new THREE.Vector3(target[0] + 4.4 + drift, 1.55, target[2] + 5.2)
+      : new THREE.Vector3(target[0] + 5.4 + drift, 1.6, target[2] + 5.4);
     pos.current.lerp(want, k);
     look.current.lerp(new THREE.Vector3(target[0] - 2.0, 1.55, target[2] - 0.8), k); // down the lane: leading lines, sky over far roofs
     cam.position.copy(pos.current);
-    cam.lookAt(look.current.x, cam.position.y, look.current.z); // level: vertical lines stay vertical
-    const visibleFov = portrait ? 68 : 50;
+    cam.lookAt(look.current.x + swayX, cam.position.y + swayY, look.current.z); // level: vertical lines stay vertical
+    const visibleFov = portrait ? 54 : 44;
     const horizonFromTop = portrait ? 0.45 : 0.5;
     const fullH = size.height * 2;
     cam.fov = (2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(visibleFov / 2)) * 2) * 180) / Math.PI;
@@ -264,6 +304,7 @@ function CameraRig({ target }: { target: [number, number, number] }) {
   return null;
 }
 
+const STILL = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 const LAB = typeof location !== 'undefined' && new URLSearchParams(location.search).has('lab');
 
 /** Lab-only probe (?lab=1): visibility of each character from the camera, screen position, frame times, draw stats. */
@@ -311,8 +352,9 @@ function LabProbe() {
 
 export interface Placed { c: Char; at: [number, number, number] }
 
-export function World({ place, people, speaker, onTapPerson, activeId }: { place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void }) {
+export function World({ place, people, speaker, onTapPerson, activeId, clock = '08:30' }: { place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void; clock?: string }) {
   const target = PLACES[place] ?? PLACES.home;
+  const m = useMemo(() => morning(clock), [clock]);
   const low = useMemo(lowTier, []);
   const shadows = !low;
   // Phones can drop the WebGL context under memory pressure: pause calmly and rebuild the view on tap.
@@ -333,12 +375,14 @@ export function World({ place, people, speaker, onTapPerson, activeId }: { place
         gl.domElement.addEventListener('webglcontextlost', (e) => { e.preventDefault(); setLost(true); });
       }}>
       {/* Morning only (strict rule: 08:00–11:00): physical sky, sky light on every surface, warm bounce from sand and plaster */}
-      <Sky sunPosition={SUN.toArray()} turbidity={7} rayleigh={1.4} mieCoefficient={0.006} mieDirectionalG={0.82} distance={1000} />
-      <Environment frames={1} resolution={64}><Sky sunPosition={SUN.toArray()} turbidity={7} rayleigh={1.4} mieCoefficient={0.006} mieDirectionalG={0.82} distance={1000} /></Environment>
-      <fogExp2 attach="fog" args={[HORIZON, 0.011]} />
-      <hemisphereLight args={['#cfe0ff', '#c79a6a', 0.22]} />
-      <EnvIntensity v={0.42} />
-      <SunLight target={target} shadows={shadows} />
+      <Sky sunPosition={m.sun.toArray()} turbidity={7} rayleigh={1.4} mieCoefficient={0.006} mieDirectionalG={0.82} distance={1000} />
+      <Environment key={clock} frames={1} resolution={64}><Sky sunPosition={m.sun.toArray()} turbidity={7} rayleigh={1.4} mieCoefficient={0.006} mieDirectionalG={0.82} distance={1000} /></Environment>
+      <fogExp2 attach="fog" args={[HORIZON, m.fog]} />
+      {/* cool sky above, warm bounce from sand and coral below; kept well under the sun (sun:fill ~4–6:1) */}
+      <hemisphereLight args={['#bfd8ff', '#c89a6a', 0.3]} />
+      <EnvIntensity v={0.45} />
+      <SunLight target={target} shadows={shadows} sun={m.sun} colour={m.colour} />
+      <DustMotes target={target} />
       <Ground />
       <Quarter shadows={shadows} />
       <Props />

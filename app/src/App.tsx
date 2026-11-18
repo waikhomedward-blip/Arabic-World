@@ -159,7 +159,8 @@ export function App() {
   return (
     <div className="app">
       <World place={morningActive && morningItems.length ? 'home' : place} people={people} speaker={step?.type === 'line' ? step.speaker : step?.type === 'prompt' && feedback?.type !== 'correct' ? step.speaker : null}
-        activeId={!sceneState && nextScene ? nextScene.cast[0] : null} onTapPerson={() => !sceneState && openScene()} />
+        activeId={!sceneState && nextScene ? nextScene.cast[0] : null} onTapPerson={() => !sceneState && openScene()}
+        clock={morningActive ? '08:00' : (scene?.clock ?? nextScene?.clock ?? '08:30')} />
 
       <div className="hud" dir="ltr">
         <button className="chip" onClick={() => setJournal(true)} aria-label="Words I have met">📖 {Object.keys(progress.words).length}</button>

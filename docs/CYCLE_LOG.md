@@ -58,3 +58,19 @@
 - **Caught by the play-through and fixed:** foreground post hiding single characters; speakers cut off at the frame edge in 1-, 2- and 3-person scenes; iPad landscape occlusion.
 - **Scores:** overall 95.0; R 100%; V 100/100; P 100% (max 78 draw calls, 59–60 fps).
 - **Still weak (next):** surfaces still too clean (wear, streaks, wind, clutter); no rooftop set; characters don't walk or gesture yet. 7 full transcript readers paused at the account spend limit.
+
+## Cycle 7 (18 Nov 2026): visual rebuild Stage 1, on branch wip/visual-rebuild
+- **Changes:**
+  - The sun follows the scene clock: elevation 20° at 08:00 rising to 45° by 11:00, azimuth 10°, so it rakes along the lane instead of sitting behind the camera.
+  - Sun colour warms toward 08:00.
+  - Hemisphere fill #bfd8ff/#c89a6a at 0.3. Sky light 0.45.
+  - Haze thinned from 0.011 to 0.006, and to 0.0045 by 11:00.
+  - About 200 dust motes in 1 draw call.
+  - Narrower lens: portrait 68° → 54°, landscape 50° → 44°. The camera steps back along the lane.
+  - Handheld sway of about 0.15°, turned off when the system asks for reduced motion.
+  - Foreground pole moved to the frame edge, after it hid Nabil in the café (caught by the visibility probe).
+  - Metal props use metalness 1.
+- **Lab:** 100/100 play-throughs, 0 visibility or flow problems. Suite R 100%. Frame rate ≥59 fps, p95 ≤19 ms.
+- **Draw calls:** at most 112, up from 72. The longer view down the lane shows more stalls and people. Still under the 150 budget; watch it.
+- **Overall score:** 94.7, down from 95.0. The extra failures are learner-simulation retention at 62–63/80 against an 80% bar (64 last cycle). They also fail on main without any visual change, so they are not caused by this stage. The cause is not yet found.
+- **Honest look:** shadows and depth are better, and the floor has sun pools. The walls are still evenly lit and clean, and the characters still look like plastic. That is Stages 2–3.
