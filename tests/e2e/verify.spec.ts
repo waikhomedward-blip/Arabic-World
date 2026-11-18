@@ -61,6 +61,8 @@ for (const scene of content.scenes) {
     page.on('pageerror', (e) => errors.push(String(e)));
     const dir = join(OUT, info.project.name); mkdirSync(dir, { recursive: true });
 
+    // AW_SHOTS: report an iPhone 13's 6 cores so a 4-core cloud runner renders the phone tier (shadows on), not the low tier
+    if (process.env.AW_SHOTS) await page.addInitScript(() => { Object.defineProperty(navigator, 'hardwareConcurrency', { get: () => 6 }); });
     await page.addInitScript((p) => { localStorage.setItem('arabic-world-progress', JSON.stringify(p)); }, progressFor(scene));
     const t0 = Date.now();
     await page.goto('/?lab=1');
