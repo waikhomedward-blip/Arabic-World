@@ -52,6 +52,7 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 039 | 0.55 | ✅ | Goods on display in the open shopfronts: three shelves of cloth bolts, tins and boxes in muted real colours |
 | 040 | 0.54 | ✅ | Grade white point 0.97 → 0.95 (0.541 and 0.543; REV-039 repeated at 0.550) |
 | 041 | 0.52 | ✅ | Exposure 1.25 → 1.18 (midtones were too bright after the grade) |
+| 042 | 0.53 | ❌ | Exposure 1.18 → 1.12 (too far) |
 
 Best so far: **REV-041, 0.516** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
