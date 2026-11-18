@@ -49,8 +49,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 036 | 0.63 | ❌ | Paving stones half as orange (warmth better, saturation worse; no net gain) |
 | 037 | 0.62 | ❌ | Less blue sky fill (no change beyond noise; shade colour comes from the sky map) |
 | 038 | 0.61 | ✅ | Denser clutter: more window AC units with drain lines, 1–3 cables per house (0.606 and 0.611 on repeat) |
+| 039 | 0.55 | ✅ | Goods on display in the open shopfronts: three shelves of cloth bolts, tins and boxes in muted real colours |
 
-Best so far: **REV-038, 0.609** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-039, 0.550** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

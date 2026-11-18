@@ -772,5 +772,23 @@
    "detail": -1.49,
    "variety": -0.86
   }
+ },
+ {
+  "rev": "REV-039",
+  "score": 0.55,
+  "notes": "Goods on display in the open shopfronts (shelves of cloth, tins, boxes)",
+  "z": {
+   "L_p05": 0.43,
+   "L_p50": 0.49,
+   "L_p95": -0.56,
+   "contrast": 0.35,
+   "saturation": -0.42,
+   "warmth": 0.89,
+   "white_share": -0.6,
+   "shadow_share": 0.06,
+   "sky_share": -0.66,
+   "detail": -1.42,
+   "variety": -0.18
+  }
  }
 ]

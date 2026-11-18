@@ -78,12 +78,26 @@ const TEAK = ['#7a5236', '#6b4730', '#5f7a62', '#6a7d86', '#8a5f3c'].map((c) => 
 const WHITE = new THREE.Color('#eeeae2');
 const DARK = new THREE.Color('#ffffff');
 
+const GOODS = ['#b5462f', '#d9b45a', '#3f6e8c', '#e8e2d0', '#6b8c4a', '#c97a3a', '#7a4a6a', '#2f4f6f', '#e0c9a0'].map((c) => new THREE.Color(c));
 const AC = new THREE.Color('#dcd8cf'), CABLE = new THREE.Color('#1c1b1a'), SHUTTER = new THREE.Color('#9a9892');
 
 /** Street clutter from its own RNG (D), so the seeded houses never change: window AC units, cables, shutter boxes. */
 function clutter(b: Builder, D: () => number, w: number, storeys: number, shop: boolean, dx: number, bays: [number, number, number][]) {
   // shop: rolled-up shutter box above the opening
-  if (shop) b.box('metal', Math.min(2.7, w - 0.9), 0.28, 0.22, dx, 2.75, 0.11, SHUTTER);
+  if (shop) {
+    b.box('metal', Math.min(2.7, w - 0.9), 0.28, 0.22, dx, 2.75, 0.11, SHUTTER);
+    // goods on display in the open shopfront: three shelves of cloth bolts, tins and boxes
+    const ow = Math.min(2.6, w - 1) - 0.2;
+    for (let s = 0; s < 3; s++) {
+      let x = dx - ow / 2;
+      while (x < dx + ow / 2 - 0.12) {
+        const gw = 0.12 + D() * 0.22, gh = 0.14 + D() * 0.26;
+        if (D() < 0.8) b.box('metal', gw - 0.02, gh, 0.22, x + gw / 2, 0.35 + s * 0.62 + gh / 2, 0.14, GOODS[Math.floor(D() * GOODS.length)]);
+        x += gw;
+      }
+      b.box('metal', ow, 0.03, 0.3, dx, 0.34 + s * 0.62, 0.15, SHUTTER.clone().multiplyScalar(0.6)); // shelf
+    }
+  }
   // window AC units on upper floors, never inside a bay
   for (let f = 1; f < storeys; f++) {
     if (D() > 0.8) continue;
