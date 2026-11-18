@@ -10,7 +10,7 @@ import { mk, type SuiteResult } from './types';
 
 const FEMALE_NAMES = ['فاطمة', 'عائشة', 'مريم', 'زينب', 'خديجة', 'سارة', 'ليلى', 'هند', 'أمينة', 'سلمى', 'رقية', 'حفصة', 'آمنة', 'نادية', 'منى', 'هدى', 'رانيا', 'ياسمين', 'دينا', 'أسماء'];
 const FEMALE_NAMES_EN = /\b(fatima|aisha|maryam|zainab|khadija|sara|sarah|layla|hind|amina|salma|ruqayya|hafsa|nadia|mona|huda|rania|yasmin|dina|asma)\b/i;
-const FACE_EMOJI = /[\u{1F600}-\u{1F64F}\u{1F910}-\u{1F92F}\u{1F970}-\u{1F97A}\u{1F466}-\u{1F487}\u{1F574}-\u{1F575}\u{1F645}-\u{1F64E}\u{1F926}\u{1F937}\u{1F9D1}-\u{1F9DD}\u{263A}\u{2639}\u{1F642}\u{1F643}\u{1F47C}\u{1F478}\u{1F470}\u{1F930}\u{1F931}\u{1F9D5}]/u;
+const FACE_EMOJI = /[\u{1F600}-\u{1F64F}\u{1F910}-\u{1F92F}\u{1F970}-\u{1F97A}\u{1F466}-\u{1F487}\u{1F574}-\u{1F575}\u{1F645}-\u{1F64E}\u{1F926}\u{1F937}\u{1F9D1}-\u{1F9DD}\u{263A}\u{2639}\u{1F642}\u{1F643}\u{1F47C}\u{1F478}\u{1F470}\u{1F930}\u{1F931}\u{1F9D5}\u{1F400}-\u{1F43F}\u{1F980}-\u{1F9AE}\u{1F54A}]/u; // includes animal emoji: animals have no faces either (Edward, 18 Nov)
 // Words for a female person, in Arabic (base form, no vowels) and English. Strict: not even a passing mention.
 const FEMALE_PERSON_AR = /(^|\s)[وفبلك]?(ام|امي|امك|امه|والدة|والدتي|اخت|اختي|اخته|زوجة|زوجتي|زوجته|بنت|بنتي|ابنة|ابنتي|خالة|خالتي|عمة|عمتي|جدة|جدتي|امرأة|امراة|مرأة|نساء|فتاة|فتيات|سيدة|سيدات|بنات|هي)(\s|$|[،.!؟])/;
 const FEMALE_PERSON_EN = /\b(she|her|hers|herself|woman|women|girl|girls|lady|ladies|mother|mum|mom|sister|sisters|wife|daughter|aunt|grandmother|grandma|niece|female|madam|mrs|ms|miss)\b/i;
@@ -92,7 +92,7 @@ export function suiteR(content: Content, root: string): SuiteResult {
     const rel = p.slice(root.length + 1);
     cases.push(t(`no-oscillator(music):${rel}`, !/createOscillator|OscillatorNode/.test(code)));
     if (/\.tsx$/.test(p)) cases.push(t(`no-gamification-ui:${rel}`, !/['">\s](XP|Coins?|Gems?|Streaks?|Leaderboard|Loot ?box)\b/.test(code)));
-    if (/world\//.test(rel)) cases.push(t(`no-face-parts-in-world-code:${rel}`, !/\b(eye|eyes|nose|mouth|lips?|pupil|eyebrow)\b/i.test(code)));
+    if (/world\//.test(rel)) cases.push(t(`no-face-parts-in-world-code:${rel}`, !/\b(eye|eyes|nose|mouth|lips?|pupil|eyebrow|snout|muzzle|beak|nostrils?)\b/i.test(code)));
     cases.push(t(`no-face-emoji-src:${rel}`, !FACE_EMOJI.test(code)));
   }
   // Licensing

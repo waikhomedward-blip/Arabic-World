@@ -8,7 +8,7 @@ Full spec: `docs/research/CLAUDE_CODE_MASTER_PROMPT.md` (section 0A overrides ol
 3. Before a session ends: finish the step, commit, update `STATE.md`.
 
 ## Hard rules (override everything; Suite R checks them every cycle)
-1. **No faces.** No eyes, nose or mouth on any character; heads are smooth. No faces in textures, posters, icons, UI art, reports.
+1. **No faces — people and animals.** No eyes, nose or mouth on any character **or animal** (Edward, 18 Nov: non-negotiable); heads are smooth. No faces in textures, posters, icons, UI art, reports.
 2. **Modest dress** for everyone (thobes, loose clothing).
 3. **No female characters** anywhere — **strict** (Edward, 16 Nov): no NPCs, voices, TTS, crowds, names, texts, photos or illustrations, and not even a passing mention of a female person in Arabic or English (mother, sister, wife, girl, she…). All-male cast. Suite R `no-female-person-word-*` blocks it.
 4. **No music.** Only Quran recitation and the adhan as melodic audio. Allowed: speech, ambient, plain non-melodic clicks. Unsure → it's music, leave it out.

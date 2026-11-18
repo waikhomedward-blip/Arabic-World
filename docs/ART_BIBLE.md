@@ -97,3 +97,9 @@ These override older numbers above where they conflict. Every number marked [unv
     - Speed and phase vary ±10–15%. Each has a distinct gait.
     - Each man's meshes merged into 2 draw calls.
     - They never look at the camera.
+
+## Animals (Edward, 18 Nov: non-negotiable)
+Animals have no faces either: no eyes, nose, mouth, beak, snout or nostrils.
+- Heads are smooth, simple shapes, like the people's.
+- Animals are read by silhouette and motion. A cat is a curled tail and a pounce; a camel is its neck and gait; a bird is wings and a hop.
+- Suite R bans face-part words, including snout, muzzle, beak and nostril, in world code. It also bans animal emoji in content and source.
