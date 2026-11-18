@@ -32,8 +32,12 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 020 | 0.74 | ✅ | White point 0.93 → 0.97 (less clipping on walls) |
 | 021 | 0.80 | ❌ | Black point 0.12 → 0.15 (shadows too heavy) |
 | 022 | 0.69 | ❌ | Cooler white balance in the grade: score fell, but walls turned blue-grey and the judge counted them as sky. Real plaster is warm cream |
+| 023 | 0.73 | ✅ | Rawasheen: dark room behind the lattice, lighter sun-greyed lattice (the grille reads instead of a solid box) |
+| 024 | 0.72 | ❌ | Louvre slats in the lower panel, but the texture tiled every 0.6 m and broke into fragments (replaced by 025) |
+| 025 | 0.72 | ✅ | One lattice screen per bay: fine grille above, mid rail, louvres below, stiles and frame |
+| 026 | 0.68 | ✅ | Paving at real stone size (0.55 × 0.37 m, was 1.7 × 1.1 m) |
 
-Best so far: **REV-020, 0.743** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-026, 0.684** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

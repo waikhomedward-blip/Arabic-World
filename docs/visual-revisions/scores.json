@@ -430,5 +430,77 @@
    "detail": -2.3,
    "variety": -1.13
   }
+ },
+ {
+  "rev": "REV-023",
+  "score": 0.727,
+  "notes": "Rawasheen: dark room behind the lattice, lighter lattice with a mid rail",
+  "z": {
+   "L_p05": 0.91,
+   "L_p50": 0.33,
+   "L_p95": -0.55,
+   "contrast": 0.38,
+   "saturation": -0.39,
+   "warmth": 0.91,
+   "white_share": -0.57,
+   "shadow_share": 0.2,
+   "sky_share": -0.67,
+   "detail": -2.12,
+   "variety": -0.98
+  }
+ },
+ {
+  "rev": "REV-024",
+  "score": 0.719,
+  "notes": "Rawasheen: louvre slats in the lower panel, grille above",
+  "z": {
+   "L_p05": 0.9,
+   "L_p50": 0.33,
+   "L_p95": -0.55,
+   "contrast": 0.38,
+   "saturation": -0.39,
+   "warmth": 0.91,
+   "white_share": -0.58,
+   "shadow_share": 0.2,
+   "sky_share": -0.67,
+   "detail": -2.14,
+   "variety": -0.86
+  }
+ },
+ {
+  "rev": "REV-025",
+  "score": 0.718,
+  "notes": "Rawasheen screen fitted once per bay: fine grille above, louvres below, stiles",
+  "z": {
+   "L_p05": 0.91,
+   "L_p50": 0.33,
+   "L_p95": -0.54,
+   "contrast": 0.39,
+   "saturation": -0.39,
+   "warmth": 0.91,
+   "white_share": -0.58,
+   "shadow_share": 0.22,
+   "sky_share": -0.67,
+   "detail": -2.06,
+   "variety": -0.91
+  }
+ },
+ {
+  "rev": "REV-026",
+  "score": 0.684,
+  "notes": "Paving at real stone size (0.55 x 0.37 m)",
+  "z": {
+   "L_p05": 0.91,
+   "L_p50": 0.36,
+   "L_p95": -0.54,
+   "contrast": 0.39,
+   "saturation": -0.41,
+   "warmth": 0.9,
+   "white_share": -0.57,
+   "shadow_share": 0.21,
+   "sky_share": -0.67,
+   "detail": -1.66,
+   "variety": -0.91
+  }
  }
 ]

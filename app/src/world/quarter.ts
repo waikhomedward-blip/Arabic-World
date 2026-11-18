@@ -42,10 +42,11 @@ class Builder {
     colourise(g, colour, grime ? 0.05 : -1);
     this.buckets[b].push(g);
   }
+  /** tile = 0: the texture is fitted once across the plane (e.g. one lattice screen per bay). */
   plane(b: Bucket, w: number, h: number, x: number, y: number, z: number, colour: THREE.Color, tile = 0.6) {
     const g = new THREE.PlaneGeometry(w, h);
     const uv = g.attributes.uv as THREE.BufferAttribute;
-    for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * w / tile, uv.getY(i) * h / tile);
+    if (tile > 0) for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * w / tile, uv.getY(i) * h / tile);
     g.translate(x, y, z); g.applyMatrix4(this.m);
     colourise(g, colour);
     this.buckets[b].push(g);
@@ -111,7 +112,8 @@ function house(b: Builder, R: () => number, w: number, storeys: number, depth: n
         const bh = 2.2 + R() * 0.4, proj = 0.55 + R() * 0.2, by = y0 + 0.5 + bh / 2;
         const tint = R() < 0.25 ? TEAK[Math.floor(R() * TEAK.length)] : teak;
         b.box('teak', bw, bh, proj, bx, by, proj / 2, tint, 1);                                   // bay body
-        b.plane('lattice', bw * 0.84, bh * 0.72, bx, by + 0.05, proj + 0.006, tint.clone().lerp(WHITE, 0.08)); // lattice screen
+        b.plane('dark', bw * 0.84, bh * 0.72, bx, by + 0.05, proj + 0.004, DARK);                         // shaded room behind the grille
+        b.plane('lattice', bw * 0.84, bh * 0.72, bx, by + 0.05, proj + 0.025, tint.clone().lerp(WHITE, 0.08), 0); // lattice screen, one per bay
         b.box('teak', bw + 0.18, 0.14, proj + 0.18, bx, by + bh / 2 + 0.07, proj / 2, tint.clone().multiplyScalar(0.8), 1); // cap
         b.box('teak', bw * 0.9, 0.22, proj * 0.8, bx, y0 + 0.45, proj * 0.4, tint.clone().multiplyScalar(0.75), 1);      // corbel
       } else {

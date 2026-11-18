@@ -42,16 +42,23 @@ export function stoneTexture(): THREE.Texture {
   return tex(c, [1, 1]);
 }
 
-/** Teak lattice for rawasheen: dark wood frame with a fine geometric grille. Used as colour + alpha. */
+/** Teak lattice for rawasheen, laid out once per bay: a fine grille in the upper panel, a solid mid rail,
+ * horizontal louvre slats in the lower panel, three stiles and a frame. Used as colour + alpha. */
 export function latticeTexture(): { map: THREE.Texture; alpha: THREE.Texture } {
-  const [c, g] = canvas(128, 128); const [a, ga] = canvas(128, 128);
-  g.fillStyle = '#4a2e1c'; g.fillRect(0, 0, 128, 128);
-  ga.fillStyle = '#fff'; ga.fillRect(0, 0, 128, 128);
+  const N = 256; const [c, g] = canvas(N, N); const [a, ga] = canvas(N, N); const R = rng(41);
+  g.fillStyle = '#9a7a5c'; g.fillRect(0, 0, N, N); // sun-greyed teak (tinted by the bay's vertex colour)
+  ga.fillStyle = '#fff'; ga.fillRect(0, 0, N, N);
   ga.fillStyle = '#000';
-  for (let y = 10; y < 118; y += 12) for (let x = 10; x < 118; x += 12) {
-    ga.beginPath(); ga.moveTo(x + 5, y); ga.lineTo(x + 10, y + 5); ga.lineTo(x + 5, y + 10); ga.lineTo(x, y + 5); ga.closePath(); ga.fill();
+  const cols: [number, number][] = [[14, 80], [92, 164], [176, 242]]; // three panels between the stiles
+  // upper panel (top of the canvas = top of the bay): diamond grille
+  for (const [x0, x1] of cols) for (let y = 14; y < 118; y += 8) for (let x = x0; x < x1 - 6; x += 8) {
+    ga.beginPath(); ga.moveTo(x + 3.5, y); ga.lineTo(x + 7, y + 3.5); ga.lineTo(x + 3.5, y + 7); ga.lineTo(x, y + 3.5); ga.closePath(); ga.fill();
   }
-  for (let i = 0; i < 300; i++) { g.fillStyle = `rgba(30,18,10,${Math.random() * 0.25})`; g.fillRect(Math.random() * 128, Math.random() * 128, 1, 6); }
+  // lower panel: louvre slats with open gaps
+  for (const [x0, x1] of cols) for (let y = 136; y < 242; y += 7) ga.fillRect(x0, y, x1 - x0, 3);
+  for (let y = 136; y < 242; y += 7) { g.fillStyle = 'rgba(255,240,220,0.3)'; g.fillRect(0, y - 1, N, 1); } // sunlit slat edges
+  g.fillStyle = 'rgba(40,24,14,0.35)'; g.fillRect(0, 122, N, 10); // mid rail shadow line
+  for (let i = 0; i < 500; i++) { g.fillStyle = `rgba(30,18,10,${R() * 0.25})`; g.fillRect(R() * N, R() * N, 1, 8); }
   return { map: tex(c, [1, 1]), alpha: tex(a, [1, 1], false) };
 }
 
@@ -72,7 +79,7 @@ export function pavingTexture(): THREE.Texture {
     const v = 150 + Math.floor(R() * 45); g.fillStyle = `rgb(${v + 12},${v - 6},${v - 34})`; g.fillRect(x + 2, y + 2, 44, 28);
     g.fillStyle = 'rgba(60,50,40,0.15)'; g.fillRect(x + 2, y + 26, 44, 4);
   }
-  return tex(c, [12, 4]);
+  return tex(c, [36, 12]); // ~0.55 × 0.37 m stones (photo scale)
 }
 
 /** Striped cloth for awnings. */
