@@ -52,11 +52,11 @@ export function applyWallWear(mat: THREE.MeshStandardMaterial, w: WallWear): THR
         float worn = smoothstep(0.38, 0.62, awFbm(vec2(along, P.y) / 3.1 + 11.0));
         diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.30, 0.22, 0.16), line * worn * 0.85);` : ''}
         ${w.spall ? `
-        // spalled limewash: sharp-edged patches of bare coral stone in courses, a shaded lip at the edge
+        // spalled limewash: sharp-edged patches of bare coral stone in courses, a shaded ledge at the edge
         float sp = awFbm(vec2(along, P.y) / 1.7 + 31.0);
         float hole = smoothstep(0.665, 0.675, sp);
         float spUp = awFbm(vec2(along, P.y + 0.05) / 1.7 + 31.0);
-        float lip = clamp(smoothstep(0.665, 0.675, spUp) - hole, 0.0, 1.0); // shadow under the upper plaster edge only
+        float ledge = clamp(smoothstep(0.665, 0.675, spUp) - hole, 0.0, 1.0); // shadow under the upper plaster edge only
         float row = floor(P.y / 0.27);
         float u = (along + row * 0.23) / 0.42;
         float col = floor(u);
@@ -65,7 +65,7 @@ export function applyWallWear(mat: THREE.MeshStandardMaterial, w: WallWear): THR
         vec3 coral = vec3(0.58, 0.47, 0.34) * (0.8 + 0.35 * awHash(vec2(col, row))) * (0.85 + 0.3 * awNoise(P.xy * 9.0 + P.z * 9.0));
         coral = mix(coral, vec3(0.74, 0.70, 0.62), joint * 0.85);
         diffuseColor.rgb = mix(diffuseColor.rgb, coral, hole);
-        diffuseColor.rgb *= 1.0 - lip * 0.45;` : ''}
+        diffuseColor.rgb *= 1.0 - ledge * 0.45;` : ''}
       }`)
       .replace('#include <roughnessmap_fragment>', `#include <roughnessmap_fragment>
       roughnessFactor = clamp(roughnessFactor + (awFbm(vAwWorld.xy / 3.0 + vAwWorld.z * 0.2) - 0.5) * ${(roughVar * 2).toFixed(3)}, 0.0, 1.0);`);
