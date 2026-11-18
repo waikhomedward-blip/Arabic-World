@@ -178,5 +178,131 @@
    "detail": -2.42,
    "variety": -1.31
   }
+ },
+ {
+  "rev": "REV-010",
+  "score": 1.531,
+  "notes": "Neutral tone mapping (Khronos PBR Neutral), exposure 0.95",
+  "z": {
+   "L_p05": -1.66,
+   "L_p50": -1.62,
+   "L_p95": -1.18,
+   "contrast": 0.87,
+   "saturation": 2.17,
+   "warmth": 1.5,
+   "white_share": -1.11,
+   "shadow_share": 3.44,
+   "sky_share": -0.53,
+   "detail": -2.21,
+   "variety": 0.53
+  }
+ },
+ {
+  "rev": "REV-011",
+  "score": 1.044,
+  "notes": "Neutral tone mapping, exposure 1.7",
+  "z": {
+   "L_p05": -0.73,
+   "L_p50": 0.37,
+   "L_p95": 0.45,
+   "contrast": 1.8,
+   "saturation": 0.73,
+   "warmth": 1.42,
+   "white_share": 2.07,
+   "shadow_share": 0.96,
+   "sky_share": -0.2,
+   "detail": -2.21,
+   "variety": 0.55
+  }
+ },
+ {
+  "rev": "REV-012",
+  "score": 0.963,
+  "notes": "Neutral tone mapping, exposure 1.35",
+  "z": {
+   "L_p05": -1.09,
+   "L_p50": -0.26,
+   "L_p95": 0.01,
+   "contrast": 1.61,
+   "saturation": 0.88,
+   "warmth": 1.41,
+   "white_share": 0.61,
+   "shadow_share": 1.55,
+   "sky_share": -0.21,
+   "detail": -2.19,
+   "variety": 0.76
+  }
+ },
+ {
+  "rev": "REV-013",
+  "score": 1.007,
+  "notes": "AgX, exposure 1.25 \u2192 1.5",
+  "z": {
+   "L_p05": 1.31,
+   "L_p50": 0.15,
+   "L_p95": -1.08,
+   "contrast": -0.35,
+   "saturation": -0.54,
+   "warmth": 0.89,
+   "white_share": -1.18,
+   "shadow_share": -1.06,
+   "sky_share": -0.69,
+   "detail": -2.41,
+   "variety": -1.41
+  }
+ },
+ {
+  "rev": "REV-014",
+  "score": 0.963,
+  "notes": "Sun 7 \u2192 9, fill down (hemi 0.3 \u2192 0.22, sky 0.45 \u2192 0.36)",
+  "z": {
+   "L_p05": 0.18,
+   "L_p50": -0.64,
+   "L_p95": -1.33,
+   "contrast": -0.28,
+   "saturation": -0.16,
+   "warmth": 1.0,
+   "white_share": -1.22,
+   "shadow_share": 1.58,
+   "sky_share": -0.69,
+   "detail": -2.34,
+   "variety": -1.16
+  }
+ },
+ {
+  "rev": "REV-015",
+  "score": 1.008,
+  "notes": "Sun azimuth 10\u00b0 \u2192 32\u00b0 (lit facades, as in the photos)",
+  "z": {
+   "L_p05": 0.9,
+   "L_p50": -0.93,
+   "L_p95": -1.41,
+   "contrast": -0.4,
+   "saturation": -0.55,
+   "warmth": 0.63,
+   "white_share": -1.3,
+   "shadow_share": -0.07,
+   "sky_share": -0.69,
+   "detail": -2.59,
+   "variety": -1.61
+  }
+ },
+ {
+  "rev": "REV-016",
+  "score": 0.957,
+  "notes": "Facades crowded with framed windows and slatted shutters (photos)",
+  "z": {
+   "L_p05": 0.92,
+   "L_p50": -0.48,
+   "L_p95": -1.37,
+   "contrast": -0.42,
+   "saturation": -0.33,
+   "warmth": 0.84,
+   "white_share": -1.27,
+   "shadow_share": -0.31,
+   "sky_share": -0.67,
+   "detail": -2.51,
+   "variety": -1.41
+  }
  }
 ]

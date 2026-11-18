@@ -14,3 +14,14 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 003 | 1.03 | ❌ | Grey paving and whiter sun (lost detail, flat shadows) |
 | 004 | 1.04 | ❌ | Grey paving with joints and grit (too dark) |
 | 005 | 0.97 | ❌ | Whiter sun only |
+| 006 | 0.95 | ❌ | Weathered plaster texture (blobs looked cartoonish by eye) |
+| 007 | 0.92 | ✅ | Ground floors plastered, no fake stone-block grid |
+| 008 | 0.92 | ❌ | Lower horizon (no gain; people pushed low) |
+| 009 | 0.87 | ✅ | Near-white warm limewash albedo |
+| 010 | 1.53 | ❌ | Neutral tone mapping at exposure 0.95 (dark, oversaturated) |
+| 011 | 1.04 | ❌ | Neutral at exposure 1.7 (clipped, too contrasty) |
+| 012 | 0.96 | ❌ | Neutral at exposure 1.35 |
+| 013 | 1.01 | ❌ | AgX at exposure 1.5 (milky shadows) |
+| 014 | 0.96 | ❌ | Stronger sun, less fill (shade too dark) |
+| 015 | 1.01 | ❌ | Sun turned onto the facades |
+| 016 | 0.96 | ❌ | Extra windows (reshuffled the seeded houses; build windows without changing the seed sequence) |
