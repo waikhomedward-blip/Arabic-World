@@ -441,7 +441,7 @@ export function World({ place, people, speaker, onTapPerson, activeId, clock = '
       gl={{ antialias: true, powerPreference: 'high-performance' }}
       onCreated={({ gl }) => {
         gl.toneMapping = THREE.AgXToneMapping; // tone-map once (art bible)
-        gl.toneMappingExposure = 1.25;
+        gl.toneMappingExposure = 1.18;
         gl.domElement.addEventListener('webglcontextlost', (e) => { e.preventDefault(); setLost(true); });
       }}>
       {/* Morning only (strict rule: 08:00–11:00): physical sky, sky light on every surface, warm bounce from sand and plaster */}

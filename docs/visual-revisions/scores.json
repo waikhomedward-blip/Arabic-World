@@ -844,5 +844,23 @@
    "detail": -1.43,
    "variety": -0.15
   }
+ },
+ {
+  "rev": "REV-041",
+  "score": 0.516,
+  "notes": "Exposure 1.25 to 1.18",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.5,
+   "L_p95": -0.46,
+   "contrast": 0.49,
+   "saturation": -0.37,
+   "warmth": 0.9,
+   "white_share": -0.23,
+   "shadow_share": 0.18,
+   "sky_share": -0.65,
+   "detail": -1.39,
+   "variety": 0.2
+  }
  }
 ]
