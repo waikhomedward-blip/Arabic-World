@@ -2,8 +2,10 @@
 // AgX once, soft shadows + contact shadows, haze that grows with distance, layered composition with
 // foreground dressing, an eye-level camera with slow parallax drift, and men at work in the background.
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Environment, Html, Sky } from '@react-three/drei';
-import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
+import { Environment, Html, Sky, useGLTF } from '@react-three/drei';
+import { clone as cloneSkinned } from 'three/examples/jsm/utils/SkeletonUtils.js';
+import { colouredGeometry, dressBody, headwearFor, type Dressed } from './humanModel';
+import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import * as THREE from 'three';
 import type { Character as Char } from '../core/content';
 import { characterParts, EXTRAS, type Part } from './characterSpec';
@@ -84,6 +86,45 @@ function clampBubble(obj: THREE.Object3D, cam: THREE.Camera, size: { width: numb
   return [Math.min(size.width - half - 8, Math.max(half + 8, x)), Math.min(size.height * 0.6, Math.max(210, y))];
 }
 
+const MAN_URL = '/models/man.glb?v=2'; // bump when tools/build-man.mjs output changes
+let dressedCache: Dressed | null = null;
+
+/** A real body (skeleton, hands, loose thobe, plain rounded head) with everyday animation. */
+function Human({ c, speaking, task, phase }: { c: Char; speaking: boolean; task?: 'sweep' | 'carry' | 'sit' | 'stand'; phase: number }) {
+  const gltf = useGLTF(MAN_URL);
+  const rig = useMemo(() => {
+    if (!dressedCache) {
+      let src: THREE.SkinnedMesh | undefined;
+      gltf.scene.traverse((o) => { if ((o as THREE.SkinnedMesh).isSkinnedMesh) src = o as THREE.SkinnedMesh; });
+      dressedCache = dressBody(src!);
+    }
+    const d = dressedCache;
+    const scene = cloneSkinned(gltf.scene) as THREE.Group;
+    let sk: THREE.SkinnedMesh | undefined;
+    scene.traverse((o) => { if ((o as THREE.SkinnedMesh).isSkinnedMesh) sk = o as THREE.SkinnedMesh; });
+    const g = c.garments;
+    sk!.geometry = colouredGeometry(d, g.includes('bisht') ? { thobe: c.colour, over: '#4a3829', overFrom: 0.08 } : g.includes('jacket') ? { thobe: c.colour, over: '#2f3d4f', overFrom: 0.48 } : { thobe: c.colour });
+    sk!.material = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.88 });
+    sk!.castShadow = true; sk!.receiveShadow = true; sk!.frustumCulled = false;
+    const headBone = scene.getObjectByName('Head')!;
+    for (const m of headwearFor(d, sk!, g)) headBone.add(m);
+    const mixer = new THREE.AnimationMixer(scene);
+    return { scene, mixer, scale: c.height / d.modelHeight };
+  }, [gltf, c]);
+  const current = useRef<THREE.AnimationAction | null>(null);
+  useEffect(() => {
+    const name = task === 'sit' ? (speaking ? 'Sitting_Talking_Loop' : 'Sitting_Idle_Loop') : task === 'sweep' ? 'Push_Loop' : speaking ? 'Idle_Talking_Loop' : 'Idle_Loop';
+    const clip = gltf.animations.find((a) => a.name === name) ?? gltf.animations.find((a) => a.name === 'Idle_Loop');
+    if (!clip) return;
+    const next = rig.mixer.clipAction(clip);
+    next.reset(); next.time = phase % clip.duration; next.timeScale = 0.9 + (phase % 1) * 0.2; next.play();
+    if (current.current && current.current !== next) current.current.crossFadeTo(next, 0.35, false);
+    current.current = next;
+  }, [rig, speaking, task, gltf, phase]);
+  useFrame((_, dt) => rig.mixer.update(Math.min(dt, 0.05)));
+  return <primitive object={rig.scene} scale={rig.scale} />;
+}
+
 function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, bubble }: { c: Char; at: [number, number, number]; speaking: boolean; active: boolean; onTap?: () => void; task?: 'sweep' | 'carry' | 'sit' | 'stand'; facing?: number; bubble?: ReactNode }) {
   const head = useRef<THREE.Group>(null);
   const body = useRef<THREE.Group>(null);
@@ -115,9 +156,10 @@ function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, b
         </Html>
       )}
       {task === 'sit' && <mesh position={[0, 0.22, -0.05]} castShadow receiveShadow><boxGeometry args={[1.3, 0.44, 0.5]} /><meshStandardMaterial map={shared().stone} color="#e0d2bb" roughness={0.95} /></mesh>}
-      <group ref={body} position={[0, y, 0]}>
-        {rest.map((p) => <Shape key={p.name} p={p} />)}
-        <group ref={head}>{top.map((p) => <Shape key={p.name} p={p} />)}</group>
+      <Suspense fallback={<group ref={body} position={[0, y, 0]}>{rest.map((p) => <Shape key={p.name} p={p} />)}<group ref={head}>{top.map((p) => <Shape key={p.name} p={p} />)}</group></group>}>
+        <Human c={c} speaking={speaking} task={task} phase={phase} />
+      </Suspense>
+      <group position={[0, y, 0]}>
         {task === 'carry' && <mesh position={[0, c.height * 0.62, 0.25]} castShadow><boxGeometry args={[0.5, 0.32, 0.4]} /><meshStandardMaterial map={shared().teak} color="#c9a57a" roughness={0.8} /></mesh>}
         {task === 'sweep' && <mesh position={[0.28, 0.55, 0.25]} rotation={[0.5, 0, 0.2]} castShadow><cylinderGeometry args={[0.015, 0.015, 1.2, 6]} /><meshStandardMaterial color="#9b7b4f" roughness={0.8} /></mesh>}
       </group>

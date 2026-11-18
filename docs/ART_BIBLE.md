@@ -103,3 +103,35 @@ Animals have no faces either: no eyes, nose, mouth, beak, snout or nostrils.
 - Heads are smooth, simple shapes, like the people's.
 - Animals are read by silhouette and motion. A cat is a curled tail and a pounce; a camel is its neck and gait; a bird is wings and a hop.
 - Suite R bans face-part words, including snout, muzzle, beak and nostril, in world code. It also bans animal emoji in content and source.
+
+## From real reference photos (18 Nov, Edward: "look at actual pictures and emulate")
+Sources, observed only and not shipped: Wikimedia Commons "Dishdasha.jpg" (men in thobes, Salalah) and the Commons "Al-Balad Jeddah" search results. Faces in the photos are ignored, since our people have none.
+
+**Thobe**
+- Hangs straight from natural, not broad, shoulders. Slightly A-line, ending at the ankle.
+- Soft vertical folds, a collar band and a front placket.
+- Sleeves are long and loose down to the wrist. Nothing is fitted.
+
+**Ghutra**
+- Covers the whole head and falls like a cape: longest down the back, over the shoulders.
+- Its two front edges hang down the chest.
+- The agal is a black double ring on top, sitting toward the back and tilted.
+
+**Feet:** dark open sandals, with the feet visible below the hem.
+
+**Posture:** relaxed. Weight on one leg, hands loose in front or clasped. Small groups stand at angles to each other.
+
+**Al-Balad walls**
+- White and cream limewash, greyed and stained by weather.
+- Coral stone shows only where plaster has fallen.
+- Rawasheen are dark teak, stacked in vertical columns over several storeys.
+- Arched doorways and windows are common.
+
+**What was applied in the game:**
+- real skinned male bodies (CC0), with a loose thobe skirt hanging from the hips
+- smooth sleeves and a smooth chest, so no muscles show
+- a ghutra cape with front edges and a double agal
+- sandals
+- white and cream wall palette
+
+**Still to do:** slimmer shoulders, collar and placket detail, arched openings.
