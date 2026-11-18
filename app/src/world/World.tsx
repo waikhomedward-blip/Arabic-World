@@ -2,8 +2,8 @@
 // AgX once, soft shadows + contact shadows, haze that grows with distance, layered composition with
 // foreground dressing, an eye-level camera with slow parallax drift, and men at work in the background.
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { Environment, Sky } from '@react-three/drei';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { Environment, Html, Sky } from '@react-three/drei';
+import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import * as THREE from 'three';
 import type { Character as Char } from '../core/content';
 import { characterParts, EXTRAS, type Part } from './characterSpec';
@@ -75,7 +75,16 @@ function ContactShadow({ r = 0.55 }: { r?: number }) {
   );
 }
 
-function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10 }: { c: Char; at: [number, number, number]; speaking: boolean; active: boolean; onTap?: () => void; task?: 'sweep' | 'carry' | 'sit' | 'stand'; facing?: number }) {
+/** Speech bubble anchor: just above the head, clamped inside the screen between the HUD and the dialogue panel. */
+const bubbleVec = new THREE.Vector3();
+function clampBubble(obj: THREE.Object3D, cam: THREE.Camera, size: { width: number; height: number }): [number, number] {
+  bubbleVec.setFromMatrixPosition(obj.matrixWorld).project(cam);
+  const x = (bubbleVec.x * 0.5 + 0.5) * size.width, y = (-bubbleVec.y * 0.5 + 0.5) * size.height;
+  const half = Math.min(170, size.width * 0.42);
+  return [Math.min(size.width - half - 8, Math.max(half + 8, x)), Math.min(size.height * 0.6, Math.max(210, y))];
+}
+
+function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, bubble }: { c: Char; at: [number, number, number]; speaking: boolean; active: boolean; onTap?: () => void; task?: 'sweep' | 'carry' | 'sit' | 'stand'; facing?: number; bubble?: ReactNode }) {
   const head = useRef<THREE.Group>(null);
   const body = useRef<THREE.Group>(null);
   const parts = useMemo(() => characterParts(c), [c]);
@@ -100,6 +109,11 @@ function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10 }:
   return (
     <group position={at} rotation={[0, facing, 0]} userData={c.face === 'none' && c.nameEn ? { charId: c.id } : {}} onClick={(e) => { if (!onTap) return; e.stopPropagation(); onTap(); }}>
       <ContactShadow r={task === 'sit' ? 0.7 : 0.5} />
+      {bubble && (
+        <Html position={[0, c.height + 0.3, 0]} calculatePosition={clampBubble} zIndexRange={[20, 0]} style={{ pointerEvents: 'none' }}>
+          <div className="bubble-anchor">{bubble}</div>
+        </Html>
+      )}
       {task === 'sit' && <mesh position={[0, 0.22, -0.05]} castShadow receiveShadow><boxGeometry args={[1.3, 0.44, 0.5]} /><meshStandardMaterial map={shared().stone} color="#e0d2bb" roughness={0.95} /></mesh>}
       <group ref={body} position={[0, y, 0]}>
         {rest.map((p) => <Shape key={p.name} p={p} />)}
@@ -361,7 +375,7 @@ function LabProbe() {
 
 export interface Placed { c: Char; at: [number, number, number] }
 
-export function World({ place, people, speaker, onTapPerson, activeId, clock = '08:30' }: { place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void; clock?: string }) {
+export function World({ place, people, speaker, onTapPerson, activeId, clock = '08:30', bubble }: { place: string; people: Placed[]; speaker: string | null; activeId: string | null; onTapPerson: (id: string) => void; clock?: string; bubble?: { for: string; node: ReactNode } | null }) {
   const target = PLACES[place] ?? PLACES.home;
   const m = useMemo(() => morning(clock), [clock]);
   const low = useMemo(lowTier, []);
@@ -397,7 +411,7 @@ export function World({ place, people, speaker, onTapPerson, activeId, clock = '
       <Props />
       {EXTRAS.map((e) => <Person key={e.id} c={e} at={e.at} speaking={false} active={false} task={e.task} facing={e.task === 'carry' ? -Math.PI / 2 : Math.PI / 8} />)}
       {people.map((p) => (
-        <Person key={p.c.id} c={p.c} at={p.at} speaking={speaker === p.c.id} active={activeId === p.c.id} onTap={() => onTapPerson(p.c.id)} facing={Math.PI / 5} />
+        <Person key={p.c.id} c={p.c} at={p.at} speaking={speaker === p.c.id} active={activeId === p.c.id} onTap={() => onTapPerson(p.c.id)} facing={Math.PI / 5} bubble={bubble?.for === p.c.id ? bubble.node : undefined} />
       ))}
       <CameraRig target={target} />
       {LAB && <LabProbe />}
