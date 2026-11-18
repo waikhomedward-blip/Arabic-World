@@ -183,8 +183,8 @@ function Quarter({ shadows }: { shadows: boolean }) {
   // streaks, macro variation and roughness variation. No extra draw calls.
   const mats = useMemo(() => ({
     // Reference photos: ground floors are plastered like the rest (stone shows only where plaster has gone)
-    stone: applyWallWear(new THREE.MeshStandardMaterial({ map: t.plaster, vertexColors: true, roughness: 0.9 }), { grime: 0.6, macro: 0.18, streaks: true }),
-    plaster: applyWallWear(new THREE.MeshStandardMaterial({ map: t.plaster, vertexColors: true, roughness: 0.88 }), { grime: 0.5, gandal: true, streaks: true, macro: 0.16 }),
+    stone: applyWallWear(new THREE.MeshStandardMaterial({ map: t.plaster, vertexColors: true, roughness: 0.9 }), { grime: 0.6, macro: 0.18, streaks: true, spall: true }),
+    plaster: applyWallWear(new THREE.MeshStandardMaterial({ map: t.plaster, vertexColors: true, roughness: 0.88 }), { grime: 0.5, gandal: true, streaks: true, macro: 0.16, spall: true }),
     teak: applyWallWear(new THREE.MeshStandardMaterial({ map: t.teak, vertexColors: true, roughness: 0.72 }), { grime: 0.15, macro: 0.08, roughVar: 0.08 }),
   }), [t]);
   return (
@@ -194,7 +194,7 @@ function Quarter({ shadows }: { shadows: boolean }) {
       <mesh geometry={geo.teak} material={mats.teak} castShadow={shadows} receiveShadow />
       {/* lattice screens cast patterned sun onto walls and lane (art bible Tier 1: dappled shade) */}
       <mesh geometry={geo.lattice} castShadow={shadows} receiveShadow><meshStandardMaterial map={t.lattice.map} alphaMap={t.lattice.alpha} alphaTest={0.5} vertexColors roughness={0.7} side={THREE.DoubleSide} /></mesh>
-      <mesh geometry={geo.dark}><meshStandardMaterial color="#20160f" roughness={1} /></mesh>
+      <mesh geometry={geo.dark}><meshStandardMaterial color="#0e0a07" roughness={1} /></mesh>
     </group>
   );
 }

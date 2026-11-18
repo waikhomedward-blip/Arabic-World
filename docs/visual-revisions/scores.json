@@ -502,5 +502,113 @@
    "detail": -1.66,
    "variety": -0.91
   }
+ },
+ {
+  "rev": "REV-027",
+  "score": 0.682,
+  "notes": "Spalled limewash patches showing coral-stone courses",
+  "z": {
+   "L_p05": 0.9,
+   "L_p50": 0.35,
+   "L_p95": -0.55,
+   "contrast": 0.39,
+   "saturation": -0.41,
+   "warmth": 0.9,
+   "white_share": -0.59,
+   "shadow_share": 0.21,
+   "sky_share": -0.67,
+   "detail": -1.65,
+   "variety": -0.88
+  }
+ },
+ {
+  "rev": "REV-028",
+  "score": 0.68,
+  "notes": "Spalling retry: darker coral, mortar joints, shadow lip on the upper edge only",
+  "z": {
+   "L_p05": 0.91,
+   "L_p50": 0.35,
+   "L_p95": -0.54,
+   "contrast": 0.38,
+   "saturation": -0.41,
+   "warmth": 0.91,
+   "white_share": -0.59,
+   "shadow_share": 0.2,
+   "sky_share": -0.67,
+   "detail": -1.66,
+   "variety": -0.86
+  }
+ },
+ {
+  "rev": "REV-029",
+  "score": 0.689,
+  "notes": "Paving tint more neutral (grey-beige)",
+  "z": {
+   "L_p05": 0.92,
+   "L_p50": 0.43,
+   "L_p95": -0.55,
+   "contrast": 0.39,
+   "saturation": -0.66,
+   "warmth": 0.6,
+   "white_share": -0.59,
+   "shadow_share": 0.2,
+   "sky_share": -0.67,
+   "detail": -1.64,
+   "variety": -0.93
+  }
+ },
+ {
+  "rev": "REV-030",
+  "score": 0.745,
+  "notes": "Camera turned slightly down the lane (look z -0.8 to +0.2)",
+  "z": {
+   "L_p05": 1.26,
+   "L_p50": 0.86,
+   "L_p95": -0.42,
+   "contrast": 0.12,
+   "saturation": -0.58,
+   "warmth": 0.86,
+   "white_share": -0.37,
+   "shadow_share": -0.69,
+   "sky_share": -0.66,
+   "detail": -1.46,
+   "variety": -0.91
+  }
+ },
+ {
+  "rev": "REV-031",
+  "score": 0.689,
+  "notes": "Sky fill 0.45 to 0.36",
+  "z": {
+   "L_p05": 0.91,
+   "L_p50": 0.35,
+   "L_p95": -0.55,
+   "contrast": 0.38,
+   "saturation": -0.41,
+   "warmth": 0.91,
+   "white_share": -0.59,
+   "shadow_share": 0.2,
+   "sky_share": -0.67,
+   "detail": -1.66,
+   "variety": -0.96
+  }
+ },
+ {
+  "rev": "REV-032",
+  "score": 0.633,
+  "notes": "Openings darker, like real interiors (#20160f to #0e0a07)",
+  "z": {
+   "L_p05": 0.42,
+   "L_p50": 0.33,
+   "L_p95": -0.54,
+   "contrast": 0.4,
+   "saturation": -0.44,
+   "warmth": 0.9,
+   "white_share": -0.59,
+   "shadow_share": 0.22,
+   "sky_share": -0.67,
+   "detail": -1.62,
+   "variety": -0.83
+  }
  }
 ]

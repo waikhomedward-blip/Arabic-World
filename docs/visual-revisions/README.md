@@ -36,8 +36,14 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 024 | 0.72 | ❌ | Louvre slats in the lower panel, but the texture tiled every 0.6 m and broke into fragments (replaced by 025) |
 | 025 | 0.72 | ✅ | One lattice screen per bay: fine grille above, mid rail, louvres below, stiles and frame |
 | 026 | 0.68 | ✅ | Paving at real stone size (0.55 × 0.37 m, was 1.7 × 1.1 m) |
+| 027 | 0.68 | ❌ | Spalled limewash patches: came out as pale outlined blobs, no stone joints (a maths slip) |
+| 028 | 0.68 | ✅ | Spalling retry: darker coral blocks with mortar joints, shadow under the upper plaster edge only (marginal gain, 0.680) |
+| 029 | 0.69 | ❌ | Neutral grey-beige paving tint (shade turned blue-grey) |
+| 030 | 0.75 | ❌ | Camera turned slightly down the lane (no sky gained, frame lighter) |
+| 031 | 0.69 | ❌ | Less sky fill, 0.45 → 0.36 (the darkest tones did not move) |
+| 032 | 0.63 | ✅ | Door, window and shop openings as dark as real interiors |
 
-Best so far: **REV-026, 0.684** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-032, 0.633** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

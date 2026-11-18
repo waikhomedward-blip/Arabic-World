@@ -5,9 +5,10 @@
 // - Gandal: dark timber courses every ~1.1 m that show only where the plaster is worn.
 // - Sun streaks: faint vertical weathering streaks.
 // - Roughness: varies ±0.1 with the same noise.
+// - Spalling: patches where the limewash has fallen away, showing coral-stone blocks (Al-Balad reference photos).
 import type * as THREE from 'three';
 
-export interface WallWear { grime?: number; gandal?: boolean; streaks?: boolean; macro?: number; roughVar?: number }
+export interface WallWear { grime?: number; gandal?: boolean; streaks?: boolean; macro?: number; roughVar?: number; spall?: boolean }
 
 const NOISE = /* glsl */ `
 varying vec3 vAwWorld;
@@ -50,10 +51,25 @@ export function applyWallWear(mat: THREE.MeshStandardMaterial, w: WallWear): THR
         float line = 1.0 - smoothstep(0.025, 0.055, d);
         float worn = smoothstep(0.38, 0.62, awFbm(vec2(along, P.y) / 3.1 + 11.0));
         diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.30, 0.22, 0.16), line * worn * 0.85);` : ''}
+        ${w.spall ? `
+        // spalled limewash: sharp-edged patches of bare coral stone in courses, a shaded lip at the edge
+        float sp = awFbm(vec2(along, P.y) / 1.7 + 31.0);
+        float hole = smoothstep(0.665, 0.675, sp);
+        float spUp = awFbm(vec2(along, P.y + 0.05) / 1.7 + 31.0);
+        float lip = clamp(smoothstep(0.665, 0.675, spUp) - hole, 0.0, 1.0); // shadow under the upper plaster edge only
+        float row = floor(P.y / 0.27);
+        float u = (along + row * 0.23) / 0.42;
+        float col = floor(u);
+        float dj = min(min(fract(u), 1.0 - fract(u)) * 0.42, min(fract(P.y / 0.27), 1.0 - fract(P.y / 0.27)) * 0.27);
+        float joint = 1.0 - smoothstep(0.008, 0.016, dj);
+        vec3 coral = vec3(0.58, 0.47, 0.34) * (0.8 + 0.35 * awHash(vec2(col, row))) * (0.85 + 0.3 * awNoise(P.xy * 9.0 + P.z * 9.0));
+        coral = mix(coral, vec3(0.74, 0.70, 0.62), joint * 0.85);
+        diffuseColor.rgb = mix(diffuseColor.rgb, coral, hole);
+        diffuseColor.rgb *= 1.0 - lip * 0.45;` : ''}
       }`)
       .replace('#include <roughnessmap_fragment>', `#include <roughnessmap_fragment>
       roughnessFactor = clamp(roughnessFactor + (awFbm(vAwWorld.xy / 3.0 + vAwWorld.z * 0.2) - 0.5) * ${(roughVar * 2).toFixed(3)}, 0.0, 1.0);`);
   };
-  mat.customProgramCacheKey = () => `aw-wall-${grime}-${w.gandal ? 1 : 0}-${w.streaks ? 1 : 0}-${macro}-${roughVar}`;
+  mat.customProgramCacheKey = () => `aw-wall-${grime}-${w.gandal ? 1 : 0}-${w.streaks ? 1 : 0}-${macro}-${roughVar}-${w.spall ? 1 : 0}`;
   return mat;
 }
