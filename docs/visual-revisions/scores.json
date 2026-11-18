@@ -790,5 +790,59 @@
    "detail": -1.42,
    "variety": -0.18
   }
+ },
+ {
+  "rev": "REV-040",
+  "score": 0.541,
+  "notes": "Grade white point 0.97 to 0.95",
+  "z": {
+   "L_p05": 0.51,
+   "L_p50": 0.61,
+   "L_p95": -0.37,
+   "contrast": 0.46,
+   "saturation": -0.43,
+   "warmth": 0.91,
+   "white_share": 0.37,
+   "shadow_share": -0.08,
+   "sky_share": -0.65,
+   "detail": -1.39,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-040b",
+  "score": 0.543,
+  "notes": "repeat of REV-040",
+  "z": {
+   "L_p05": 0.52,
+   "L_p50": 0.61,
+   "L_p95": -0.37,
+   "contrast": 0.47,
+   "saturation": -0.43,
+   "warmth": 0.91,
+   "white_share": 0.36,
+   "shadow_share": -0.07,
+   "sky_share": -0.65,
+   "detail": -1.39,
+   "variety": 0.2
+  }
+ },
+ {
+  "rev": "REV-039b",
+  "score": 0.55,
+  "notes": "repeat of REV-039",
+  "z": {
+   "L_p05": 0.43,
+   "L_p50": 0.49,
+   "L_p95": -0.56,
+   "contrast": 0.35,
+   "saturation": -0.42,
+   "warmth": 0.89,
+   "white_share": -0.6,
+   "shadow_share": 0.07,
+   "sky_share": -0.66,
+   "detail": -1.43,
+   "variety": -0.15
+  }
  }
 ]

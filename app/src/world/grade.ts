@@ -2,7 +2,7 @@
 // black and white points. Visual revisions REV-019+ (docs/visual-revisions/README.md).
 import * as THREE from 'three';
 
-export const GRADE = { black: 0.12, white: 0.97, wb: [1.0, 1.0, 1.0] as const };
+export const GRADE = { black: 0.12, white: 0.95, wb: [1.0, 1.0, 1.0] as const };
 
 let done = false;
 export function installGrade() {

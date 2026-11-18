@@ -50,8 +50,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 037 | 0.62 | ❌ | Less blue sky fill (no change beyond noise; shade colour comes from the sky map) |
 | 038 | 0.61 | ✅ | Denser clutter: more window AC units with drain lines, 1–3 cables per house (0.606 and 0.611 on repeat) |
 | 039 | 0.55 | ✅ | Goods on display in the open shopfronts: three shelves of cloth bolts, tins and boxes in muted real colours |
+| 040 | 0.54 | ✅ | Grade white point 0.97 → 0.95 (0.541 and 0.543; REV-039 repeated at 0.550) |
 
-Best so far: **REV-039, 0.550** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-040, 0.542** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
