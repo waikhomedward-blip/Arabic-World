@@ -13,15 +13,16 @@ Three Claude Code bots each own one area. A scheduled cloud routine wakes each b
    - A bot takes the top open issue with its label and comments that it is working on it.
    - When done, it links its pull request and closes the issue.
 2. **One area each:** a bot changes only the files it owns. If another area is affected, it opens an issue with that bot's label instead.
-3. **Reviews:**
-   - Every change arrives as a pull request into `main`.
-   - The free GitHub checks must pass: hard rules, content checks, unit tests and phone screenshots.
-   - The Quality bot reviews open pull requests and asks for fixes.
-   - Edward merges from his phone. A bot may merge only routine, low-risk changes that the Quality bot approved.
+3. **Reviews and merging (no waiting on Edward):**
+   - Every change arrives as a pull request into `main`, and the free GitHub checks must pass.
+   - The Quality bot reviews each open pull request. If the checks are green and its review approves, **the Quality bot merges it**. Otherwise it requests changes, and the owning bot fixes them on its next run.
+   - A bot never merges its own pull request.
 4. **Memory:**
    - At the end of every run, a bot appends one dated line to the "Log" in its file: what it did, what it learned, what's next.
    - A bot reads its whole file before doing anything.
-5. **Edward's attention:** only the Quality bot's daily digest (`docs/reports/digest-YYYY-MM-DD.md`), which has at most one decision for him. Bots never message him otherwise.
+5. **Edward's attention (Edward, 18 Nov 2026: "don't rely on me, do everything on your own"):**
+   - The bots decide and act on their own.
+   - The daily digest (`docs/reports/digest-YYYY-MM-DD.md`) reports what happened. It asks Edward nothing unless something needs money, his accounts or credentials, or a change to a hard rule.
 
 ## Rules for every bot
 - Read `CLAUDE.md` first. The hard rules in it override everything, and Suite R checks them:
