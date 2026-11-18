@@ -610,5 +610,77 @@
    "detail": -1.62,
    "variety": -0.83
   }
+ },
+ {
+  "rev": "REV-033",
+  "score": 0.629,
+  "notes": "Street clutter: window AC units, drain pipes, sagging cables, shutter boxes (own RNG)",
+  "z": {
+   "L_p05": 0.41,
+   "L_p50": 0.29,
+   "L_p95": -0.56,
+   "contrast": 0.39,
+   "saturation": -0.42,
+   "warmth": 0.89,
+   "white_share": -0.59,
+   "shadow_share": 0.23,
+   "sky_share": -0.67,
+   "detail": -1.56,
+   "variety": -0.91
+  }
+ },
+ {
+  "rev": "REV-034",
+  "score": 0.643,
+  "notes": "Open painted shutter leaves beside the plain upper windows",
+  "z": {
+   "L_p05": 0.41,
+   "L_p50": 0.25,
+   "L_p95": -0.59,
+   "contrast": 0.39,
+   "saturation": -0.42,
+   "warmth": 0.89,
+   "white_share": -0.73,
+   "shadow_share": 0.22,
+   "sky_share": -0.67,
+   "detail": -1.6,
+   "variety": -0.91
+  }
+ },
+ {
+  "rev": "REV-033b",
+  "score": 0.619,
+  "notes": "check: REV-033 restored",
+  "z": {
+   "L_p05": 0.42,
+   "L_p50": 0.29,
+   "L_p95": -0.54,
+   "contrast": 0.39,
+   "saturation": -0.43,
+   "warmth": 0.89,
+   "white_share": -0.59,
+   "shadow_share": 0.22,
+   "sky_share": -0.67,
+   "detail": -1.56,
+   "variety": -0.81
+  }
+ },
+ {
+  "rev": "REV-033c",
+  "score": 0.621,
+  "notes": "check: repeat",
+  "z": {
+   "L_p05": 0.42,
+   "L_p50": 0.28,
+   "L_p95": -0.55,
+   "contrast": 0.39,
+   "saturation": -0.43,
+   "warmth": 0.89,
+   "white_share": -0.59,
+   "shadow_share": 0.22,
+   "sky_share": -0.67,
+   "detail": -1.54,
+   "variety": -0.86
+  }
  }
 ]

@@ -8,7 +8,7 @@ export const STOREY = 3.2;
 export const BACK_FACE_Z = -1.6;   // facade line behind the characters
 export const FRONT_FACE_Z = 6.2;   // facade line behind the camera side of the lane
 
-type Bucket = 'plaster' | 'stone' | 'teak' | 'lattice' | 'dark';
+type Bucket = 'plaster' | 'stone' | 'teak' | 'lattice' | 'dark' | 'metal';
 export type QuarterGeometry = Record<Bucket, THREE.BufferGeometry>;
 
 function rng(seed: number) { return () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 2 ** 32); }
@@ -32,7 +32,7 @@ function colourise(g: THREE.BufferGeometry, c: THREE.Color, grimeBelow = -1) {
 }
 
 class Builder {
-  buckets: Record<Bucket, THREE.BufferGeometry[]> = { plaster: [], stone: [], teak: [], lattice: [], dark: [] };
+  buckets: Record<Bucket, THREE.BufferGeometry[]> = { plaster: [], stone: [], teak: [], lattice: [], dark: [], metal: [] };
   m = new THREE.Matrix4();
   box(b: Bucket, w: number, h: number, d: number, x: number, y: number, z: number, colour: THREE.Color, tile = 3.2, grime = false) {
     const g = new THREE.BoxGeometry(w, h, d);
@@ -78,7 +78,34 @@ const TEAK = ['#7a5236', '#6b4730', '#5f7a62', '#6a7d86', '#8a5f3c'].map((c) => 
 const WHITE = new THREE.Color('#eeeae2');
 const DARK = new THREE.Color('#ffffff');
 
-function house(b: Builder, R: () => number, w: number, storeys: number, depth: number) {
+const AC = new THREE.Color('#dcd8cf'), CABLE = new THREE.Color('#1c1b1a'), SHUTTER = new THREE.Color('#9a9892');
+
+/** Street clutter from its own RNG (D), so the seeded houses never change: window AC units, cables, shutter boxes. */
+function clutter(b: Builder, D: () => number, w: number, storeys: number, shop: boolean, dx: number, bays: [number, number, number][]) {
+  // shop: rolled-up shutter box above the opening
+  if (shop) b.box('metal', Math.min(2.7, w - 0.9), 0.28, 0.22, dx, 2.75, 0.11, SHUTTER);
+  // window AC units on upper floors, never inside a bay
+  for (let f = 1; f < storeys; f++) {
+    if (D() > 0.45) continue;
+    const ax = (D() - 0.5) * (w - 1.2), ay = f * STOREY + 0.9 + D() * 0.6;
+    if (bays.some(([fl, bx, bw]) => fl === f && Math.abs(ax - bx) < bw / 2 + 0.5)) continue;
+    b.box('metal', 0.66, 0.44, 0.42, ax, ay, 0.21, AC);
+    b.box('dark', 0.5, 0.3, 0.02, ax, ay, 0.43, AC);          // grille
+    b.box('metal', 0.02, ay - 0.3, 0.02, ax + 0.3, (ay - 0.3) / 2 + 0.3, 0.03, CABLE); // drain pipe / cable down the wall
+  }
+  // one or two sagging cables across the facade
+  const n = D() < 0.6 ? 1 : 2;
+  for (let i = 0; i < n; i++) {
+    const y = STOREY + 0.25 + D() * 1.4, segs = 4;
+    for (let k = 0; k < segs; k++) {
+      const x0 = -w / 2 + (w * k) / segs, sag = Math.sin(((k + 0.5) / segs) * Math.PI) * 0.12;
+      b.box('metal', w / segs + 0.02, 0.025, 0.025, x0 + w / segs / 2, y - sag, 0.05, CABLE);
+    }
+  }
+}
+
+function house(b: Builder, R: () => number, w: number, storeys: number, depth: number, D?: () => number) {
+  const bayList: [number, number, number][] = [];
   const plaster = PLASTER[Math.floor(R() * PLASTER.length)];
   const stone = STONE[Math.floor(R() * STONE.length)];
   const teak = TEAK[Math.floor(R() * TEAK.length)];
@@ -111,6 +138,7 @@ function house(b: Builder, R: () => number, w: number, storeys: number, depth: n
       if (R() < 0.82) {
         const bh = 2.2 + R() * 0.4, proj = 0.55 + R() * 0.2, by = y0 + 0.5 + bh / 2;
         const tint = R() < 0.25 ? TEAK[Math.floor(R() * TEAK.length)] : teak;
+        bayList.push([f, bx, bw]);
         b.box('teak', bw, bh, proj, bx, by, proj / 2, tint, 1);                                   // bay body
         b.plane('dark', bw * 0.84, bh * 0.72, bx, by + 0.05, proj + 0.004, DARK);                         // shaded room behind the grille
         b.plane('lattice', bw * 0.84, bh * 0.72, bx, by + 0.05, proj + 0.025, tint.clone().lerp(WHITE, 0.08), 0); // lattice screen, one per bay
@@ -126,11 +154,12 @@ function house(b: Builder, R: () => number, w: number, storeys: number, depth: n
   b.box('plaster', w, 0.45, 0.3, 0, H + 0.22, -0.15, plaster, 2);
   for (let x = -w / 2 + 0.3; x < w / 2 - 0.2; x += 0.62) b.box('plaster', 0.32, 0.4, 0.3, x, H + 0.65, -0.15, plaster, 1);
   if (R() < 0.55) b.cylinder('plaster', 0.55, 0.55, 1.1, 14, (R() - 0.5) * (w - 1.5), H + 0.55, -depth * 0.6, WHITE);
+  if (D) clutter(b, D, w, storeys, shop, dx, bayList);
 }
 
 /** Two facing rows of houses along the lane, with an opening onto the square, and the minaret as the landmark. */
 export function buildQuarter(seed = 17): QuarterGeometry {
-  const R = rng(seed); const b = new Builder();
+  const R = rng(seed); const D = rng(seed * 7919 + 13); const b = new Builder();
   const rows: { face: number; flip: boolean; gaps: [number, number][] }[] = [
     { face: BACK_FACE_Z, flip: false, gaps: [] },
     { face: FRONT_FACE_Z, flip: true, gaps: [[2.5, 11.5]] }, // the square opens to the south
@@ -146,7 +175,7 @@ export function buildQuarter(seed = 17): QuarterGeometry {
         const setback = (R() - 0.5) * 0.35; // uneven building line: nothing perfectly aligned
         b.m.makeTranslation(cx, 0, row.face + (row.flip ? -setback : setback));
         if (row.flip) b.m.multiply(new THREE.Matrix4().makeRotationY(Math.PI));
-        house(b, R, w - 0.02, storeys, depth);
+        house(b, R, w - 0.02, storeys, depth, D);
       }
       x += w;
     }

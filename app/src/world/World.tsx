@@ -195,6 +195,8 @@ function Quarter({ shadows }: { shadows: boolean }) {
       {/* lattice screens cast patterned sun onto walls and lane (art bible Tier 1: dappled shade) */}
       <mesh geometry={geo.lattice} castShadow={shadows} receiveShadow><meshStandardMaterial map={t.lattice.map} alphaMap={t.lattice.alpha} alphaTest={0.5} vertexColors roughness={0.7} side={THREE.DoubleSide} /></mesh>
       <mesh geometry={geo.dark}><meshStandardMaterial color="#0e0a07" roughness={1} /></mesh>
+      {/* street clutter: AC units, cables, shutter boxes (one draw call) */}
+      <mesh geometry={geo.metal} castShadow={shadows} receiveShadow><meshStandardMaterial vertexColors roughness={0.55} /></mesh>
     </group>
   );
 }

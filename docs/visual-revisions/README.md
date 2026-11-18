@@ -42,8 +42,11 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 030 | 0.75 | ❌ | Camera turned slightly down the lane (no sky gained, frame lighter) |
 | 031 | 0.69 | ❌ | Less sky fill, 0.45 → 0.36 (the darkest tones did not move) |
 | 032 | 0.63 | ✅ | Door, window and shop openings as dark as real interiors |
+| 033 | 0.63 | ✅ | Street clutter from its own RNG (houses unchanged): window AC units, drain pipes, sagging cables, shutter boxes over shops |
+| 034 | 0.64 | ❌ | Open painted shutter leaves beside the upper windows (rendered near-black through the teak texture) |
+| 033b/c | 0.62 | noise check | REV-033 rerun twice: 0.619 and 0.621 (first run 0.629). Random animation phases and the clock-driven camera sway give about ±0.01 of noise, so from here a gain under 0.02 must hold on a repeat run (mean counts) |
 
-Best so far: **REV-032, 0.633** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-033, 0.623** (mean of 3 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
