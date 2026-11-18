@@ -57,3 +57,43 @@ Tier 1 (do first):
 Tier 2: subtle haze increasing with distance (never an "effect"); controlled reflections (brass, fountain water, glass); material variety (roughness, wear, dust).
 Tier 3: very fine grain, gentle vignette, highlight roll-off (AgX); no sharpening, no heavy chromatic aberration.
 Not applicable: eyes, catchlights and skin realism (characters are faceless by rule); f/1.8 depth of field is optional (phones), and must never blur away the setting.
+
+## Rebuild rules from the merged study (18 Nov; full list: docs/research/VISUAL_BUILD_LIST.md)
+These override older numbers above where they conflict. Every number marked [unverified] must be replaced by a lab or real-phone measurement.
+1. **Sun:** follows the clock. Elevation 20° at 08:00 rising to 45° by 11:00. That cap keeps raking shadows; the true value at 11:00 is 59°.
+   - Azimuth: 30–90° off the camera axis, never straight behind the camera.
+   - Sun to fill ratio: 4:1–6:1.
+   - Sky light on facades: 0.4–0.6.
+   - Sun colour: #FFF1E0 at 08:00, moving to #FFF8F0 by 11:00 [unverified].
+2. **Haze:** FogExp2 density is 2/visibility.
+   - Aim for about 15% haze at 80 m, a density of about 0.005. The current 0.011 is about 10× too dense.
+   - Pale blue-grey, never yellow. Warmer toward the sun. Thinner from 08:00 to 11:00.
+   - About 200 dust motes in one draw call.
+3. **Camera:**
+   - Vertical field of view in portrait: dialogue 44–50°, walking about 54°, establishing shots ≤60°, never above 65°.
+   - Level horizon, eye height 1.55–1.6 m.
+   - Micro-motion: 0.1–0.25° at 0.1–0.5 Hz, with a "still camera" setting for players who want none.
+   - A foreground occluder 0.5–1 m from the lens.
+   - No depth-of-field blur.
+4. **Final pass:** one merged pass, which holds the single AgX tone mapping when post is on.
+   - Order: vignette, bloom, tone mapping, grade, grain.
+   - Saturation about 0.9. Black point lifted 2–3%. Grain about 0.025. Vignette 0.2–0.25. Bloom only above 1.0.
+   - Chromatic aberration off. No sharpening.
+   - Lit limewash sits at 85–92% sRGB.
+   - Low-tier phones get no post pass.
+5. **Materials:** every material gets a roughness map, and metalness is only 0 or 1.
+   - Plaster and stone: roughness 0.8–0.95 ±0.1. Weathered teak: 0.6–0.8. Handled brass: 0.25–0.45.
+   - World-space noise breaks up tiling, with a period of 4–12 m and ±8–15% value.
+   - Grime: a real band 0.3–1 m high, plus streaks below sills.
+6. **Architecture:** gandal timber courses every 1.1–1.2 m, about 3 bands per storey.
+   - Houses mostly 4–6 storeys. Walls 50–60 cm thick with deep reveals.
+   - Rawasheen bays on brackets. A dakka bench no higher than 60 cm.
+7. **Ambient occlusion and sky visibility:** baked, and applied to indirect light only, never to the sun.
+8. **Budgets:** static quarter ≤10 draw calls, 2 per character, clutter 10–20, one post pass, textures ≤64 MB [unverified].
+9. **Failure tags (new):** TILE, FLAT, SYM, FOV-wide, STATIC.
+10. **Judging:** add a `?grey` greyscale review, a luma-spread metric (lit vs shaded facade) and a hue-bucket metric.
+11. **Promoted to Tier 1:** dust motes, wind on cloth, and sun patterned through lattice.
+12. **Background men:** 10–14 of them, each with an 8–20 s job loop.
+    - Speed and phase vary ±10–15%. Each has a distinct gait.
+    - Each man's meshes merged into 2 draw calls.
+    - They never look at the camera.
