@@ -70,8 +70,9 @@ class Builder {
 }
 
 // Palette (art bible): warm sand / off-white / coral plaster; faded teak, green and blue-grey bays.
-const PLASTER = ['#cfb58f', '#d8c6a8', '#c9a37c', '#c6a07a', '#d3bd99'].map((c) => new THREE.Color(c));
-const STONE = ['#b89d78', '#ad9270', '#bfa684'].map((c) => new THREE.Color(c));
+// Reference: Wikimedia photos of Al-Balad (Historic Jeddah): mostly white and cream limewash, greyed by weather.
+const PLASTER = ['#fbf7ee', '#f6f0e3', '#fdfaf3', '#efe7d7', '#f8f1e2'].map((c) => new THREE.Color(c));
+const STONE = ['#efe7d6', '#e8dfcc', '#f2ebdc'].map((c) => new THREE.Color(c)); // ground floors: mostly plastered, coral stone shows through
 const TEAK = ['#7a5236', '#6b4730', '#5f7a62', '#6a7d86', '#8a5f3c'].map((c) => new THREE.Color(c));
 const WHITE = new THREE.Color('#eeeae2');
 const DARK = new THREE.Color('#ffffff');
@@ -82,7 +83,7 @@ function house(b: Builder, R: () => number, w: number, storeys: number, depth: n
   const teak = TEAK[Math.floor(R() * TEAK.length)];
   const H = storeys * STOREY;
   // ground floor in coral stone courses, upper floors in lime plaster (grime at the base)
-  b.box('stone', w, STOREY, depth, 0, STOREY / 2, -depth / 2, stone, 3.2, true);
+  b.box('stone', w, STOREY, depth, 0, STOREY / 2, -depth / 2, stone, 3.2); // grime is in the wall shader now
   b.box('plaster', w, H - STOREY, depth, 0, STOREY + (H - STOREY) / 2, -depth / 2, plaster, 4);
   // horizontal teak timber bands at every floor line (UNESCO: timber-reinforced coral walls)
   for (let f = 1; f <= storeys; f++) b.box('teak', w + 0.04, 0.12, 0.08, 0, f * STOREY - 0.06, 0.02, teak.clone().multiplyScalar(0.8), 1);

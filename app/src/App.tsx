@@ -137,6 +137,8 @@ export function App() {
   };
 
   const speakerChar = step ? charById[step.speaker] : null;
+  // Comic-style speech: the spoken line sits in a bubble over the speaker (falls back to the panel if he is not on stage).
+  const bubbleLine = sceneState && !sceneState.done && step?.type === 'line' && people.some((p) => p.c.id === step.speaker) ? step : null;
 
   const morningItems = useMemo(() => {
     if (progress.morningDoneDay >= progress.inGameDay || progress.inGameDay > maxDay) return [];
@@ -159,7 +161,13 @@ export function App() {
   return (
     <div className="app">
       <World place={morningActive && morningItems.length ? 'home' : place} people={people} speaker={step?.type === 'line' ? step.speaker : step?.type === 'prompt' && feedback?.type !== 'correct' ? step.speaker : null}
-        activeId={!sceneState && nextScene ? nextScene.cast[0] : null} onTapPerson={() => !sceneState && openScene()} />
+        activeId={!sceneState && nextScene ? nextScene.cast[0] : null} onTapPerson={() => !sceneState && openScene()}
+        clock={morningActive ? '08:00' : (scene?.clock ?? nextScene?.clock ?? '08:30')}
+        bubble={bubbleLine ? { for: bubbleLine.speaker, node: (
+          <div className="bubble" onClick={() => setShowEn((v) => !v)} role="button" aria-label="tap for meaning">
+            <div className={`caption bubble-text ${bubbleLine.register === 'dialect-listen' ? 'dialect' : ''}`} dir="rtl" lang="ar">{bubbleLine.ar}</div>
+            {showEn && <div className="bubble-en">{bubbleLine.en}</div>}
+          </div>) } : null} />
 
       <div className="hud" dir="ltr">
         <button className="chip" onClick={() => setJournal(true)} aria-label="Words I have met">📖 {Object.keys(progress.words).length}</button>
@@ -210,7 +218,7 @@ export function App() {
           {scene.note && sceneState.step === 0 && <div className="note">{scene.note.en}</div>}
           <div className="speaker" dir="rtl">{speakerChar?.nameAr} <span className="en">{speakerChar?.nameEn}</span></div>
           {step.type === 'line' ? (
-            <LineView line={step} showEn={showEn} onToggle={() => setShowEn((v) => !v)} onNext={next} />
+            <LineView line={step} inBubble={!!bubbleLine} showEn={showEn} onToggle={() => setShowEn((v) => !v)} onNext={next} />
           ) : (
             <PromptView
               prompt={step} scene={scene} state={sceneState} feedback={feedback} replyType={replyType!}
@@ -232,11 +240,11 @@ export function App() {
   );
 }
 
-function LineView({ line, showEn, onToggle, onNext }: { line: Line; showEn: boolean; onToggle: () => void; onNext: () => void }) {
+function LineView({ line, inBubble, showEn, onToggle, onNext }: { line: Line; inBubble: boolean; showEn: boolean; onToggle: () => void; onNext: () => void }) {
   return (
     <>
-      <div className={`caption ${line.register === 'dialect-listen' ? 'dialect' : ''}`} dir="rtl" lang="ar" onClick={onToggle}>{line.ar}</div>
-      {showEn ? <div className="en-reveal">{line.en}</div> : <div className="tap-hint">tap the Arabic for meaning</div>}
+      {!inBubble && <div className={`caption ${line.register === 'dialect-listen' ? 'dialect' : ''}`} dir="rtl" lang="ar" onClick={onToggle}>{line.ar}</div>}
+      {inBubble ? (!showEn && <div className="tap-hint">tap the bubble for meaning</div>) : showEn ? <div className="en-reveal">{line.en}</div> : <div className="tap-hint">tap the Arabic for meaning</div>}
       {line.notice && <div className="notice"><span dir="rtl">{line.notice.root}</span> — {line.notice.en}</div>}
       <button className="btn primary next" onClick={onNext} aria-label="next">←</button>
     </>

@@ -73,6 +73,8 @@ for (const scene of content.scenes) {
     // 1. intro: the friend to tap must be visible and above the hint pill
     checkVis(await probe(page), scene.cast, await panelTop(page, '.hint'), 'intro', problems);
     await page.screenshot({ path: join(dir, `${scene.id}-1-intro.png`) });
+    // AW_SHOTS=1: visual-revision mode (tools/visual-rev.sh): opening frame only, no play-through
+    if (process.env.AW_SHOTS) { expect(problems, 'intro visibility').toEqual([]); return; }
 
     // frame sampling; Chromium is also sampled under 4× CPU throttling as a mid-range phone proxy
     const sample = () => page.evaluate(async () => { const a: number[] = []; const end = performance.now() + 3000; await new Promise<void>((r) => { const f = (t: number) => { a.push(t); t < end ? requestAnimationFrame(f) : r(); }; requestAnimationFrame(f); }); return a; });

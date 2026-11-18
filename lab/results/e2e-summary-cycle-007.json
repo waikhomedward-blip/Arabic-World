@@ -1,0 +1,1722 @@
+[
+ {
+  "scene": "d1-home",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 335,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 37,
+   "triangles": 26184,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-souq",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 335,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 55,
+   "triangles": 29096,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-cafe",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 279,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 53,
+   "triangles": 32716,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-home",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 286,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 45,
+   "triangles": 32674,
+   "textures": 11,
+   "geometries": 171
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-cafe",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 281,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 53,
+   "triangles": 32876,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-square",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 304,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 30,
+   "triangles": 17372,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-home",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 256,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 37,
+   "triangles": 26184,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-souq",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 256,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 64,
+   "triangles": 35842,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-home",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 265,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 33,
+   "triangles": 23560,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-shop",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 247,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 48,
+   "triangles": 26320,
+   "textures": 12,
+   "geometries": 113
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-souq",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 304,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 61,
+   "triangles": 33602,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-square",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 298,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 30,
+   "triangles": 17372,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-cafe",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 337,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 44,
+   "triangles": 26130,
+   "textures": 11,
+   "geometries": 142
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-home",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 320,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 36,
+   "triangles": 26088,
+   "textures": 11,
+   "geometries": 162
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-home",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 277,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 33,
+   "triangles": 23560,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-souq",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 304,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 55,
+   "triangles": 29096,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-cafe",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 267,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 53,
+   "triangles": 32876,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-souq",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 301,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 55,
+   "triangles": 29096,
+   "textures": 13,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-home",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 283,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 37,
+   "triangles": 26184,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-square",
+  "project": "android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 259,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 30,
+   "triangles": 17372,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-home",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 313,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-souq",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 270,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-cafe",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 276,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 54,
+   "triangles": 32748,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-home",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 295,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 47,
+   "triangles": 33950,
+   "textures": 11,
+   "geometries": 171
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-cafe",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 298,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 54,
+   "triangles": 32908,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-square",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 334,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 33,
+   "triangles": 17492,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-home",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 282,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-souq",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 246,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 67,
+   "triangles": 36032,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-home",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 319,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 35,
+   "triangles": 24836,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-shop",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 251,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 49,
+   "triangles": 26368,
+   "textures": 12,
+   "geometries": 113
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-souq",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 320,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 64,
+   "triangles": 33792,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-square",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 336,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 33,
+   "triangles": 17492,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-cafe",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 355,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 19
+  },
+  "stats": {
+   "calls": 45,
+   "triangles": 26162,
+   "textures": 11,
+   "geometries": 142
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-home",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 348,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 38,
+   "triangles": 27364,
+   "textures": 11,
+   "geometries": 162
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-home",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 293,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 35,
+   "triangles": 24836,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-souq",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 261,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-cafe",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 267,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 54,
+   "triangles": 32908,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-souq",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 321,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-home",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 287,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-square",
+  "project": "budget-android-chromium",
+  "renderer": "ANGLE (Apple, ANGLE Metal Renderer: Apple M1, Unspecified Version)",
+  "loadMs": 253,
+  "fps": 60,
+  "p95FrameMs": 18,
+  "throttled": {
+   "fps": 60,
+   "p95": 18
+  },
+  "stats": {
+   "calls": 33,
+   "triangles": 17492,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-home",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 311,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 45,
+   "triangles": 33012,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-souq",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 289,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 71,
+   "triangles": 30772,
+   "textures": 13,
+   "geometries": 153
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-cafe",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 248,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 112,
+   "triangles": 50102,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-home",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 289,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 53,
+   "triangles": 39502,
+   "textures": 11,
+   "geometries": 171
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-cafe",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 280,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 111,
+   "triangles": 48790,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-square",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 293,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 76,
+   "triangles": 30546,
+   "textures": 13,
+   "geometries": 157
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-home",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 312,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 45,
+   "triangles": 33012,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-souq",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 290,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 80,
+   "triangles": 37518,
+   "textures": 13,
+   "geometries": 162
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-home",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 270,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 41,
+   "triangles": 30388,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-shop",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 247,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 93,
+   "triangles": 36148,
+   "textures": 14,
+   "geometries": 121
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-souq",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 270,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 77,
+   "triangles": 35278,
+   "textures": 13,
+   "geometries": 162
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-square",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 262,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 76,
+   "triangles": 30546,
+   "textures": 13,
+   "geometries": 157
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-cafe",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 250,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 102,
+   "triangles": 42044,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-home",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 265,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 44,
+   "triangles": 32916,
+   "textures": 11,
+   "geometries": 162
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-home",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 300,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 41,
+   "triangles": 30388,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-souq",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 260,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 71,
+   "triangles": 30772,
+   "textures": 13,
+   "geometries": 153
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-cafe",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 252,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 111,
+   "triangles": 48790,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-souq",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 288,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 71,
+   "triangles": 30772,
+   "textures": 13,
+   "geometries": 156
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-home",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 277,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 45,
+   "triangles": 33012,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-square",
+  "project": "ipad-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 278,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 74,
+   "triangles": 29062,
+   "textures": 13,
+   "geometries": 157
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-home",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 307,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-souq",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 316,
+  "fps": 59,
+  "p95FrameMs": 19,
+  "throttled": null,
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-cafe",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 268,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 54,
+   "triangles": 32748,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-home",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 262,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 47,
+   "triangles": 33950,
+   "textures": 11,
+   "geometries": 171
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-cafe",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 258,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 54,
+   "triangles": 32908,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-square",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 277,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 31,
+   "triangles": 17420,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-home",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 311,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-souq",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 292,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 67,
+   "triangles": 36032,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-home",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 292,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 35,
+   "triangles": 24836,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-shop",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 274,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 49,
+   "triangles": 26368,
+   "textures": 12,
+   "geometries": 113
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-souq",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 282,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 64,
+   "triangles": 33792,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-square",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 301,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 31,
+   "triangles": 17420,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-cafe",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 287,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 45,
+   "triangles": 26162,
+   "textures": 11,
+   "geometries": 142
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-home",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 266,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 38,
+   "triangles": 27364,
+   "textures": 11,
+   "geometries": 162
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-home",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 268,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 35,
+   "triangles": 24836,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-souq",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 268,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-cafe",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 259,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 54,
+   "triangles": 32908,
+   "textures": 11,
+   "geometries": 151
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-souq",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 270,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-home",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 258,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-square",
+  "project": "iphone-se-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 276,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 31,
+   "triangles": 17420,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-home",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 1081,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d1-souq",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 1094,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-cafe",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 259,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 55,
+   "triangles": 32750,
+   "textures": 11,
+   "geometries": 153
+  },
+  "problems": []
+ },
+ {
+  "scene": "d10-home",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 253,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 47,
+   "triangles": 33950,
+   "textures": 11,
+   "geometries": 171
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-cafe",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 312,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 55,
+   "triangles": 32910,
+   "textures": 11,
+   "geometries": 153
+  },
+  "problems": []
+ },
+ {
+  "scene": "d2-square",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 311,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 34,
+   "triangles": 17540,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-home",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 290,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d3-souq",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 285,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 67,
+   "triangles": 36032,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-home",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 286,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 35,
+   "triangles": 24836,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d4-shop",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 278,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 49,
+   "triangles": 26368,
+   "textures": 12,
+   "geometries": 113
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-souq",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 282,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 64,
+   "triangles": 33792,
+   "textures": 13,
+   "geometries": 161
+  },
+  "problems": []
+ },
+ {
+  "scene": "d5-square",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 265,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 34,
+   "triangles": 17540,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-cafe",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 291,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 46,
+   "triangles": 26164,
+   "textures": 11,
+   "geometries": 144
+  },
+  "problems": []
+ },
+ {
+  "scene": "d6-home",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 267,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 38,
+   "triangles": 27364,
+   "textures": 11,
+   "geometries": 162
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-home",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 284,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 35,
+   "triangles": 24836,
+   "textures": 11,
+   "geometries": 159
+  },
+  "problems": []
+ },
+ {
+  "scene": "d7-souq",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 273,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 152
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-cafe",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 273,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 55,
+   "triangles": 32910,
+   "textures": 11,
+   "geometries": 153
+  },
+  "problems": []
+ },
+ {
+  "scene": "d8-souq",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 267,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 58,
+   "triangles": 29286,
+   "textures": 13,
+   "geometries": 155
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-home",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 266,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 39,
+   "triangles": 27460,
+   "textures": 11,
+   "geometries": 163
+  },
+  "problems": []
+ },
+ {
+  "scene": "d9-square",
+  "project": "iphone-webkit",
+  "renderer": "Apple GPU",
+  "loadMs": 265,
+  "fps": 59,
+  "p95FrameMs": 18,
+  "throttled": null,
+  "stats": {
+   "calls": 34,
+   "triangles": 17540,
+   "textures": 12,
+   "geometries": 155
+  },
+  "problems": []
+ }
+]

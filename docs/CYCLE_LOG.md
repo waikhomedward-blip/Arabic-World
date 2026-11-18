@@ -58,3 +58,46 @@
 - **Caught by the play-through and fixed:** foreground post hiding single characters; speakers cut off at the frame edge in 1-, 2- and 3-person scenes; iPad landscape occlusion.
 - **Scores:** overall 95.0; R 100%; V 100/100; P 100% (max 78 draw calls, 59–60 fps).
 - **Still weak (next):** surfaces still too clean (wear, streaks, wind, clutter); no rooftop set; characters don't walk or gesture yet. 7 full transcript readers paused at the account spend limit.
+
+## Cycle 7 (18 Nov 2026): visual rebuild Stage 1, on branch wip/visual-rebuild
+- **Changes:**
+  - The sun follows the scene clock: elevation 20° at 08:00 rising to 45° by 11:00, azimuth 10°, so it rakes along the lane instead of sitting behind the camera.
+  - Sun colour warms toward 08:00.
+  - Hemisphere fill #bfd8ff/#c89a6a at 0.3. Sky light 0.45.
+  - Haze thinned from 0.011 to 0.006, and to 0.0045 by 11:00.
+  - About 200 dust motes in 1 draw call.
+  - Narrower lens: portrait 68° → 54°, landscape 50° → 44°. The camera steps back along the lane.
+  - Handheld sway of about 0.15°, turned off when the system asks for reduced motion.
+  - Foreground pole moved to the frame edge, after it hid Nabil in the café (caught by the visibility probe).
+  - Metal props use metalness 1.
+- **Lab:** 100/100 play-throughs, 0 visibility or flow problems. Suite R 100%. Frame rate ≥59 fps, p95 ≤19 ms.
+- **Draw calls:** at most 112, up from 72. The longer view down the lane shows more stalls and people. Still under the 150 budget; watch it.
+- **Overall score:** 94.7, down from 95.0. The extra failures are learner-simulation retention at 62–63/80 against an 80% bar (64 last cycle). They also fail on main without any visual change, so they are not caused by this stage. The cause is not yet found.
+- **Honest look:** shadows and depth are better, and the floor has sun pools. The walls are still evenly lit and clean, and the characters still look like plastic. That is Stages 2–3.
+
+## Cycle 8 (18 Nov 2026): visual Stage 2 (wall wear and lattice light)
+- **Changes:**
+  - World-space wall shader (`wallShader.ts`) on stone, plaster and teak:
+    - grime and damp band at the wall base, 0.1–0.9 m, with an uneven top edge
+    - macro colour variation of about ±16–18%
+    - weathering streaks
+    - gandal timber courses every 1.1 m, showing only where the plaster is worn
+    - roughness varying ±0.1
+  - Rawasheen lattice now casts patterned sun onto the walls and onto people.
+  - The old vertex grime (a smooth gradient over a whole storey) is removed.
+- **Lab:** 100/100 play-throughs, 0 problems, Suite R 100%. Overall 95.0, with 2 failures (lemma target, plus one learner check).
+- **Learner checks:** the extra learner-retention failures from cycle 7 did not repeat with no learner change, so that check is flaky. Investigate.
+- **Performance:** fps ≥59. p95 at most 26 ms in one iPad case (café), 21 ms in one other iPad case, and ≤19 ms everywhere else. Draw calls at most 111.
+- **Honest look:** dappled lattice light and dirty wall bases are visible. The plaster is still quite flat, and the characters still look like plastic.
+
+## Cycles 9–12 (18 Nov 2026): speech bubbles, own Arabic font, real human characters
+- **Speech bubbles:** comic-style bubbles over the speaker.
+- **Arabic font:** Scheherazade New is now shipped with the game. It caused an iPhone SE overflow, which is fixed with compact option rows on short screens.
+- **Characters:** Edward said they looked like mannequins and statues.
+  - They are now real skinned bodies from CC0 Quaternius, with 10 everyday clips.
+  - Each is dressed at load: a closed thobe skirt hanging from the hips, a smooth loose chest and sleeves, a plain rounded head, sandals.
+  - The ghutra is a draped cape with a double agal, based on reference photos (Edward: "look at actual pictures").
+  - Walls moved to the Al-Balad white limewash palette.
+- **Lab:** 100/100 play-throughs, 0 problems, Suite R 100% (new model checks included). fps ≥59, p95 ≤18 ms, draw calls ≤84.
+- **Failures:** the lemma target, plus one flaky learner-retention check (63/80 against an 80% bar). It flips between runs with no content change; needs a fix.
+- **Honest look:** people now read as men in thobes and ghutras, and they move. Shoulders are still broad (superhero base body). No collar or placket yet, no walking between places yet, and hands are a little clenched.

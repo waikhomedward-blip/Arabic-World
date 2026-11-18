@@ -7,3 +7,5 @@
 | QuranEnc translations | Re-publish, no edits, credit + version | Not yet used |
 | Recitation audio | No clear commercial licence anywhere | **None shipped**; commission a reciter |
 | Adhan recording | None licensed yet | Placeholder slot only |
+- **Scheherazade New** (SIL International): SIL Open Font License 1.1, https://software.sil.org/scheherazade/ . Shipped as the Arabic subset woff2 in app/public/fonts/.
+- **Quaternius** Universal Base Characters and Universal Animation Library: CC0 1.0, https://quaternius.com . Used for models/man.glb (male body plus 10 animation clips).

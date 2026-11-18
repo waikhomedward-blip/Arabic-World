@@ -95,6 +95,16 @@ export function suiteR(content: Content, root: string): SuiteResult {
     if (/world\//.test(rel)) cases.push(t(`no-face-parts-in-world-code:${rel}`, !/\b(eye|eyes|nose|mouth|lips?|pupil|eyebrow|snout|muzzle|beak|nostrils?)\b/i.test(code)));
     cases.push(t(`no-face-emoji-src:${rel}`, !FACE_EMOJI.test(code)));
   }
+  // Shipped 3D model: male body only, no face meshes or textures (hard rules 1 and 3)
+  const glbPath = join(root, 'app/public/models/man.glb');
+  if (existsSync(glbPath)) {
+    const b = readFileSync(glbPath); const j = JSON.parse(b.subarray(20, 20 + b.readUInt32LE(12)).toString());
+    const names: string[] = [...(j.meshes ?? []).map((m: { name: string }) => m.name), ...(j.nodes ?? []).map((n: { name: string }) => n.name)];
+    cases.push(t('model:no-face-meshes', !names.some((n) => /^(eyes?|eyebrows?|face(\.\d+)?|teeth|tongue|lashes)$/i.test(n)), names.filter((n) => /eye|brow|face/i.test(n)).join(',')));
+    cases.push(t('model:no-female-model', !names.some((n) => /female|woman|girl/i.test(n))));
+    cases.push(t('model:no-textures', !(j.images ?? []).length));
+    cases.push(t('model:no-dance-clip', !(j.animations ?? []).some((a: { name: string }) => /dance/i.test(a.name))));
+  }
   // Licensing
   const assetLog = readFileSync(join(root, 'docs/ASSET_LOG.md'), 'utf8');
   for (const p of publicFiles.filter((p) => !/\.(webmanifest)$/.test(p) && !p.startsWith('icons/'))) cases.push(t(`asset-logged:${p}`, assetLog.includes(p)));

@@ -21,6 +21,9 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",
+    "@gltf-transform/core": "^3.10.1",
+    "@gltf-transform/extensions": "^3.10.1",
+    "@gltf-transform/functions": "^3.10.1",
     "@playwright/test": "^1.61.1",
     "@types/node": "^20.19.43",
     "@types/react": "^18.3.31",
