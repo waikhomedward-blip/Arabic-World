@@ -36,3 +36,13 @@
 5. Suite V next step: visual rubric score per place + MediaPipe face check on renders.
 6. Adhan schedule + mute UI (no audio until licensed).
 7. Own morphology/lemma layer over the Tanzil text → lemma staircase + Quran meter.
+
+## 18 Nov 2026: study complete
+- **Transcripts read:** 64 of 77 parts. Edward stopped Rahmaniyyah after part 1, and Al-Andalusi's non-method videos after part 1. The private notes are in `research-private/channel-readers/` and `research-private/synthesis/`.
+- **Outputs:**
+  - `docs/research/GAME_STUDY.md`: method, hero story, world.
+  - `docs/research/BUILD_WORKFLOW_STUDY.md`: Matt Pocock and AI Engineer, kept separate.
+  - `docs/research/VISUAL_BUILD_LIST.md`: 12 ranked items.
+  - `docs/research/FEASIBILITY.md`.
+  - Art bible: new "Rebuild rules" section.
+- **Next:** visual rebuild items 1 to 3 (sun rig, lens, wear and gandal bands), each with screenshots and a lab cycle.
