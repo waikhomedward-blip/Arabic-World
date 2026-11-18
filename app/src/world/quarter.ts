@@ -82,7 +82,7 @@ function house(b: Builder, R: () => number, w: number, storeys: number, depth: n
   const teak = TEAK[Math.floor(R() * TEAK.length)];
   const H = storeys * STOREY;
   // ground floor in coral stone courses, upper floors in lime plaster (grime at the base)
-  b.box('stone', w, STOREY, depth, 0, STOREY / 2, -depth / 2, stone, 3.2, true);
+  b.box('stone', w, STOREY, depth, 0, STOREY / 2, -depth / 2, stone, 3.2); // grime is in the wall shader now
   b.box('plaster', w, H - STOREY, depth, 0, STOREY + (H - STOREY) / 2, -depth / 2, plaster, 4);
   // horizontal teak timber bands at every floor line (UNESCO: timber-reinforced coral walls)
   for (let f = 1; f <= storeys; f++) b.box('teak', w + 0.04, 0.12, 0.08, 0, f * STOREY - 0.06, 0.02, teak.clone().multiplyScalar(0.8), 1);

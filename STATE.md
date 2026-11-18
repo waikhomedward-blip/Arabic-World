@@ -10,7 +10,7 @@
 - [ ] Commissioned reciter (Quran station stays text-only until then)
 
 ## What exists
-- Playable web game (`npm run dev`): Hijazi-style street at dusk, faceless all-male cast, 10 in-game days / 20 scenes / 78 lemmas.
+- Playable web game (`npm run dev`): Hijazi-style street in morning light (08:00–11:00), faceless all-male cast, 10 in-game days / 20 scenes / 78 lemmas.
 - Arabic captions with full tashkeel, tap for English; reply modes Musāfir (tap/act), Ṭālib (tiles, hinted typing), Muqīm (in-game Arabic keyboard).
 - Word ladder, Lexical Director (reply type by weakest word), typed-answer checker, on-device progress + export/import, days-in-the-city, word-of-the-day copy, morning check of yesterday's words.
 - Lab: Suites R, C, G, L, V, P (≈5,000 cases incl. 100 real play-throughs on 5 devices). S (speech) not built. Scoreboard in `lab/scoreboard.json`.

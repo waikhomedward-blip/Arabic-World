@@ -8,6 +8,7 @@ import * as THREE from 'three';
 import type { Character as Char } from '../core/content';
 import { characterParts, EXTRAS, type Part } from './characterSpec';
 import { buildQuarter, BACK_FACE_Z } from './quarter';
+import { applyWallWear } from './wallShader';
 import { clothTexture, contactTexture, latticeTexture, pavingTexture, plasterTexture, stoneTexture, teakTexture } from './textures';
 
 export const PLACES: Record<string, [number, number, number]> = {
@@ -120,12 +121,20 @@ function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10 }:
 function Quarter({ shadows }: { shadows: boolean }) {
   const geo = useMemo(() => buildQuarter(17), []);
   const t = shared();
+  // Wear is computed in world space inside these materials (wallShader.ts): grime band, worn gandal courses,
+  // streaks, macro variation and roughness variation. No extra draw calls.
+  const mats = useMemo(() => ({
+    stone: applyWallWear(new THREE.MeshStandardMaterial({ map: t.stone, vertexColors: true, roughness: 0.9 }), { grime: 0.6, macro: 0.18 }),
+    plaster: applyWallWear(new THREE.MeshStandardMaterial({ map: t.plaster, vertexColors: true, roughness: 0.88 }), { grime: 0.5, gandal: true, streaks: true, macro: 0.16 }),
+    teak: applyWallWear(new THREE.MeshStandardMaterial({ map: t.teak, vertexColors: true, roughness: 0.72 }), { grime: 0.15, macro: 0.08, roughVar: 0.08 }),
+  }), [t]);
   return (
     <group>
-      <mesh geometry={geo.stone} castShadow={shadows} receiveShadow><meshStandardMaterial map={t.stone} vertexColors roughness={0.93} /></mesh>
-      <mesh geometry={geo.plaster} castShadow={shadows} receiveShadow><meshStandardMaterial map={t.plaster} vertexColors roughness={0.9} /></mesh>
-      <mesh geometry={geo.teak} castShadow={shadows} receiveShadow><meshStandardMaterial map={t.teak} vertexColors roughness={0.68} /></mesh>
-      <mesh geometry={geo.lattice} receiveShadow><meshStandardMaterial map={t.lattice.map} alphaMap={t.lattice.alpha} alphaTest={0.5} vertexColors roughness={0.7} side={THREE.DoubleSide} /></mesh>
+      <mesh geometry={geo.stone} material={mats.stone} castShadow={shadows} receiveShadow />
+      <mesh geometry={geo.plaster} material={mats.plaster} castShadow={shadows} receiveShadow />
+      <mesh geometry={geo.teak} material={mats.teak} castShadow={shadows} receiveShadow />
+      {/* lattice screens cast patterned sun onto walls and lane (art bible Tier 1: dappled shade) */}
+      <mesh geometry={geo.lattice} castShadow={shadows} receiveShadow><meshStandardMaterial map={t.lattice.map} alphaMap={t.lattice.alpha} alphaTest={0.5} vertexColors roughness={0.7} side={THREE.DoubleSide} /></mesh>
       <mesh geometry={geo.dark}><meshStandardMaterial color="#20160f" roughness={1} /></mesh>
     </group>
   );

@@ -37,19 +37,19 @@ export function applyWallWear(mat: THREE.MeshStandardMaterial, w: WallWear): THR
         diffuseColor.rgb *= 1.0 + (n - 0.5) * ${(macro * 2).toFixed(3)};
         // grime band at the base: dark, warm, uneven top edge
         float edge = 0.55 + 0.45 * awNoise(vec2(along * 1.3, 2.0));
-        float g = 1.0 - smoothstep(0.15, edge + 0.25, P.y);
+        float g = 1.0 - smoothstep(0.1, edge + 0.45, P.y);
         diffuseColor.rgb = mix(diffuseColor.rgb, diffuseColor.rgb * vec3(0.62, 0.55, 0.46), g * ${grime.toFixed(3)} * (0.75 + 0.5 * n));
         ${w.streaks ? `
         // faint vertical weathering streaks (rain is rare, dust and salt are not)
         float s = awNoise(vec2(along * 2.7, P.y * 0.12));
-        diffuseColor.rgb *= 1.0 - 0.07 * smoothstep(0.55, 0.9, s);` : ''}
+        diffuseColor.rgb *= 1.0 - 0.13 * smoothstep(0.5, 0.85, s);` : ''}
         ${w.gandal ? `
         // gandal timber courses every ~1.1 m, visible only where the plaster has worn
         float f = fract(P.y / 1.1);
         float d = min(f, 1.0 - f) * 1.1;
         float line = 1.0 - smoothstep(0.025, 0.055, d);
-        float worn = smoothstep(0.5, 0.78, awFbm(vec2(along, P.y) / 3.1 + 11.0));
-        diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.30, 0.22, 0.16), line * worn * 0.75);` : ''}
+        float worn = smoothstep(0.38, 0.62, awFbm(vec2(along, P.y) / 3.1 + 11.0));
+        diffuseColor.rgb = mix(diffuseColor.rgb, vec3(0.30, 0.22, 0.16), line * worn * 0.85);` : ''}
       }`)
       .replace('#include <roughnessmap_fragment>', `#include <roughnessmap_fragment>
       roughnessFactor = clamp(roughnessFactor + (awFbm(vAwWorld.xy / 3.0 + vAwWorld.z * 0.2) - 0.5) * ${(roughVar * 2).toFixed(3)}, 0.0, 1.0);`);
