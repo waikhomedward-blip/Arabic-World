@@ -180,7 +180,8 @@ function Quarter({ shadows }: { shadows: boolean }) {
   // Wear is computed in world space inside these materials (wallShader.ts): grime band, worn gandal courses,
   // streaks, macro variation and roughness variation. No extra draw calls.
   const mats = useMemo(() => ({
-    stone: applyWallWear(new THREE.MeshStandardMaterial({ map: t.stone, vertexColors: true, roughness: 0.9 }), { grime: 0.6, macro: 0.18 }),
+    // Reference photos: ground floors are plastered like the rest (stone shows only where plaster has gone)
+    stone: applyWallWear(new THREE.MeshStandardMaterial({ map: t.plaster, vertexColors: true, roughness: 0.9 }), { grime: 0.6, macro: 0.18, streaks: true }),
     plaster: applyWallWear(new THREE.MeshStandardMaterial({ map: t.plaster, vertexColors: true, roughness: 0.88 }), { grime: 0.5, gandal: true, streaks: true, macro: 0.16 }),
     teak: applyWallWear(new THREE.MeshStandardMaterial({ map: t.teak, vertexColors: true, roughness: 0.72 }), { grime: 0.15, macro: 0.08, roughVar: 0.08 }),
   }), [t]);

@@ -106,5 +106,41 @@
    "detail": -2.38,
    "variety": -1.39
   }
+ },
+ {
+  "rev": "REV-006",
+  "score": 0.952,
+  "notes": "Plaster: 512px, grey run-off stains, flaked patches showing coral, cracks",
+  "z": {
+   "L_p05": 0.73,
+   "L_p50": -0.37,
+   "L_p95": -1.45,
+   "contrast": -0.89,
+   "saturation": -0.15,
+   "warmth": 1.24,
+   "white_share": -1.28,
+   "shadow_share": -0.05,
+   "sky_share": -0.68,
+   "detail": -2.39,
+   "variety": -1.26
+  }
+ },
+ {
+  "rev": "REV-007",
+  "score": 0.918,
+  "notes": "Ground floors plastered (no regular stone-block grid)",
+  "z": {
+   "L_p05": 0.85,
+   "L_p50": -0.08,
+   "L_p95": -1.45,
+   "contrast": -0.59,
+   "saturation": -0.34,
+   "warmth": 1.02,
+   "white_share": -1.2,
+   "shadow_share": -0.17,
+   "sky_share": -0.69,
+   "detail": -2.4,
+   "variety": -1.31
+  }
  }
 ]
