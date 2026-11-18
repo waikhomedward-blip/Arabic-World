@@ -11,6 +11,8 @@ import type { Character as Char } from '../core/content';
 import { characterParts, EXTRAS, type Part } from './characterSpec';
 import { buildQuarter, BACK_FACE_Z } from './quarter';
 import { applyWallWear } from './wallShader';
+import { installGrade } from './grade';
+installGrade();
 import { clothTexture, contactTexture, latticeTexture, pavingTexture, plasterTexture, stoneTexture, teakTexture } from './textures';
 
 export const PLACES: Record<string, [number, number, number]> = {

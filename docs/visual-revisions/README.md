@@ -27,8 +27,13 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 016 | 0.96 | ❌ | Extra windows (reshuffled the seeded houses; build windows without changing the seed sequence) |
 | 017 | 0.88 | ❌ | Framed slatted windows at facade edges, using a separate seed (no gain over 0.874) |
 | 018 | 0.92 | ❌ | Real CC0 photo-scan plaster grain, Poly Haven, neutralised to white (no gain) |
+| 000c | 1.22 | cloud baseline | Same code as REV-009 rendered in the cloud (Linux WebKit). Lighter overall than the Mac (darkest 5% 0.26 vs 0.15), so the cloud judges against this. Screenshot mode now reports an iPhone 13's 6 cores; before that the 4-core runner used the low tier with no shadows (1.31) |
+| 019 | 0.89 | ✅ | Final grade after AgX: levels in display space, black 0.12, white 0.93 |
+| 020 | 0.74 | ✅ | White point 0.93 → 0.97 (less clipping on walls) |
+| 021 | 0.80 | ❌ | Black point 0.12 → 0.15 (shadows too heavy) |
+| 022 | 0.69 | ❌ | Cooler white balance in the grade: score fell, but walls turned blue-grey and the judge counted them as sky. Real plaster is warm cream |
 
-Best so far: **REV-009, 0.874**. Next ideas to try:
+Best so far: **REV-020, 0.743** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
