@@ -17,3 +17,4 @@
 15. **Arabic word-list checks must anchor prefixes at word start** (`(^|\s)[وفبلك]?`), or endings like السلامُ read as أم (mother). Self-test every new word rule with planted good and bad text.
 16. **لِـ + الـ drops the alif** (لِلنَّاسِ): the tashkeel validator now handles it.
 17. **Read every document Edward provides, including files sitting next to the ones he names** (a `.skill` beside the master prompt was missed for a day). Log each in `docs/research/READ_LOG.md` with what it changed. **Apply** guidance, don't just verify it: the visuals playbook was checked but not used, and the game looked like a grey-box.
+- Visual revisions (18 Nov): Suite R's face-word check also reads shader code, so a variable named `lip` (a plaster edge) failed it. Name shader variables after the building, never body words (ledge, rim, edge).
