@@ -14,11 +14,11 @@
    - Are hard rules respected?
    - Is there evidence: screenshots, lab output?
    - No checks loosened?
-   Comment approve or request changes. Approve only when the checks are green.
+   Comment approve or request changes. If it's approved and the checks are green, **merge it** (`gh pr merge --merge`).
 3. **Write the daily digest** in `docs/reports/digest-YYYY-MM-DD.md`, readable on a phone and under one screen:
    - what changed today, with links
    - what's not verified
-   - at most ONE decision for Edward
+   - questions for Edward ONLY if something needs money, his accounts, or a hard-rule change. Otherwise none.
 4. **Lessons:** when a mistake happens twice, add a test or rule and a `LESSONS.md` line.
 5. **Every 10 merged visual or content changes:** run the full lab (`npm run lab`) and update `STATE.md`.
 
