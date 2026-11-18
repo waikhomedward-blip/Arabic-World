@@ -86,7 +86,7 @@ function clutter(b: Builder, D: () => number, w: number, storeys: number, shop: 
   if (shop) b.box('metal', Math.min(2.7, w - 0.9), 0.28, 0.22, dx, 2.75, 0.11, SHUTTER);
   // window AC units on upper floors, never inside a bay
   for (let f = 1; f < storeys; f++) {
-    if (D() > 0.45) continue;
+    if (D() > 0.8) continue;
     const ax = (D() - 0.5) * (w - 1.2), ay = f * STOREY + 0.9 + D() * 0.6;
     if (bays.some(([fl, bx, bw]) => fl === f && Math.abs(ax - bx) < bw / 2 + 0.5)) continue;
     b.box('metal', 0.66, 0.44, 0.42, ax, ay, 0.21, AC);
@@ -94,7 +94,7 @@ function clutter(b: Builder, D: () => number, w: number, storeys: number, shop: 
     b.box('metal', 0.02, ay - 0.3, 0.02, ax + 0.3, (ay - 0.3) / 2 + 0.3, 0.03, CABLE); // drain pipe / cable down the wall
   }
   // one or two sagging cables across the facade
-  const n = D() < 0.6 ? 1 : 2;
+  const n = 1 + Math.floor(D() * 3);
   for (let i = 0; i < n; i++) {
     const y = STOREY + 0.25 + D() * 1.4, segs = 4;
     for (let k = 0; k < segs; k++) {

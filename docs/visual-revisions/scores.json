@@ -682,5 +682,95 @@
    "detail": -1.54,
    "variety": -0.86
   }
+ },
+ {
+  "rev": "REV-035",
+  "score": 0.625,
+  "notes": "Morning sun less orange (#ffe4c2 to #ffecd6)",
+  "z": {
+   "L_p05": 0.46,
+   "L_p50": 0.3,
+   "L_p95": -0.54,
+   "contrast": 0.39,
+   "saturation": -0.46,
+   "warmth": 0.85,
+   "white_share": -0.58,
+   "shadow_share": 0.18,
+   "sky_share": -0.67,
+   "detail": -1.54,
+   "variety": -0.91
+  }
+ },
+ {
+  "rev": "REV-036",
+  "score": 0.626,
+  "notes": "Paving stones half as orange (texture), warm tint kept",
+  "z": {
+   "L_p05": 0.41,
+   "L_p50": 0.35,
+   "L_p95": -0.55,
+   "contrast": 0.39,
+   "saturation": -0.62,
+   "warmth": 0.66,
+   "white_share": -0.59,
+   "shadow_share": 0.21,
+   "sky_share": -0.66,
+   "detail": -1.52,
+   "variety": -0.91
+  }
+ },
+ {
+  "rev": "REV-037",
+  "score": 0.622,
+  "notes": "Sky fill less blue (hemisphere #bfd8ff to #d8e2ee)",
+  "z": {
+   "L_p05": 0.42,
+   "L_p50": 0.28,
+   "L_p95": -0.55,
+   "contrast": 0.39,
+   "saturation": -0.41,
+   "warmth": 0.93,
+   "white_share": -0.58,
+   "shadow_share": 0.2,
+   "sky_share": -0.67,
+   "detail": -1.56,
+   "variety": -0.86
+  }
+ },
+ {
+  "rev": "REV-038",
+  "score": 0.606,
+  "notes": "Denser clutter: more AC units, 1-3 cables per house",
+  "z": {
+   "L_p05": 0.4,
+   "L_p50": 0.27,
+   "L_p95": -0.52,
+   "contrast": 0.38,
+   "saturation": -0.43,
+   "warmth": 0.89,
+   "white_share": -0.56,
+   "shadow_share": 0.24,
+   "sky_share": -0.67,
+   "detail": -1.45,
+   "variety": -0.86
+  }
+ },
+ {
+  "rev": "REV-038b",
+  "score": 0.611,
+  "notes": "repeat of REV-038",
+  "z": {
+   "L_p05": 0.4,
+   "L_p50": 0.28,
+   "L_p95": -0.53,
+   "contrast": 0.38,
+   "saturation": -0.43,
+   "warmth": 0.89,
+   "white_share": -0.56,
+   "shadow_share": 0.24,
+   "sky_share": -0.67,
+   "detail": -1.49,
+   "variety": -0.86
+  }
  }
 ]

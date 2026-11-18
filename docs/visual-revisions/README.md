@@ -45,8 +45,12 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 033 | 0.63 | ✅ | Street clutter from its own RNG (houses unchanged): window AC units, drain pipes, sagging cables, shutter boxes over shops |
 | 034 | 0.64 | ❌ | Open painted shutter leaves beside the upper windows (rendered near-black through the teak texture) |
 | 033b/c | 0.62 | noise check | REV-033 rerun twice: 0.619 and 0.621 (first run 0.629). Random animation phases and the clock-driven camera sway give about ±0.01 of noise, so from here a gain under 0.02 must hold on a repeat run (mean counts) |
+| 035 | 0.63 | ❌ | Morning sun less orange (no change beyond noise) |
+| 036 | 0.63 | ❌ | Paving stones half as orange (warmth better, saturation worse; no net gain) |
+| 037 | 0.62 | ❌ | Less blue sky fill (no change beyond noise; shade colour comes from the sky map) |
+| 038 | 0.61 | ✅ | Denser clutter: more window AC units with drain lines, 1–3 cables per house (0.606 and 0.611 on repeat) |
 
-Best so far: **REV-033, 0.623** (mean of 3 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-038, 0.609** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
