@@ -1,0 +1,110 @@
+[
+ {
+  "rev": "REV-000",
+  "score": 1.19,
+  "notes": "Baseline after real characters and white walls",
+  "z": {
+   "L_p05": -0.3,
+   "L_p50": -1.07,
+   "L_p95": -2.45,
+   "contrast": -1.05,
+   "saturation": 0.07,
+   "warmth": 1.07,
+   "white_share": -1.33,
+   "shadow_share": 1.14,
+   "sky_share": -0.71,
+   "detail": -2.5,
+   "variety": -1.41
+  }
+ },
+ {
+  "rev": "REV-001",
+  "score": 1.068,
+  "notes": "Exposure 0.82 \u2192 1.1 (real whites are far brighter)",
+  "z": {
+   "L_p05": 0.38,
+   "L_p50": -0.53,
+   "L_p95": -2.06,
+   "contrast": -0.96,
+   "saturation": -0.16,
+   "warmth": 1.11,
+   "white_share": -1.29,
+   "shadow_share": 0.79,
+   "sky_share": -0.7,
+   "detail": -2.45,
+   "variety": -1.31
+  }
+ },
+ {
+  "rev": "REV-002",
+  "score": 0.949,
+  "notes": "Sun 4.6 \u2192 7, exposure 1.25 (sunlit limewash near white)",
+  "z": {
+   "L_p05": 0.78,
+   "L_p50": -0.2,
+   "L_p95": -1.45,
+   "contrast": -0.87,
+   "saturation": -0.18,
+   "warmth": 1.22,
+   "white_share": -1.26,
+   "shadow_share": -0.09,
+   "sky_share": -0.68,
+   "detail": -2.4,
+   "variety": -1.31
+  }
+ },
+ {
+  "rev": "REV-003",
+  "score": 1.027,
+  "notes": "Grey stone paving, whiter sun (real light is near-neutral)",
+  "z": {
+   "L_p05": 0.94,
+   "L_p50": 0.13,
+   "L_p95": -1.61,
+   "contrast": -0.97,
+   "saturation": -0.72,
+   "warmth": 0.37,
+   "white_share": -1.23,
+   "shadow_share": -0.64,
+   "sky_share": -0.66,
+   "detail": -2.65,
+   "variety": -1.39
+  }
+ },
+ {
+  "rev": "REV-004",
+  "score": 1.036,
+  "notes": "Grey paving with dark joints, grit and wear; whiter sun",
+  "z": {
+   "L_p05": 0.73,
+   "L_p50": -1.37,
+   "L_p95": -1.85,
+   "contrast": -0.79,
+   "saturation": -0.34,
+   "warmth": 0.38,
+   "white_share": -1.26,
+   "shadow_share": -0.13,
+   "sky_share": -0.65,
+   "detail": -2.49,
+   "variety": -1.41
+  }
+ },
+ {
+  "rev": "REV-005",
+  "score": 0.974,
+  "notes": "Only whiter sun (#fff0dc\u2192#fffaf2); ground as REV-002",
+  "z": {
+   "L_p05": 0.73,
+   "L_p50": -0.38,
+   "L_p95": -1.49,
+   "contrast": -0.89,
+   "saturation": -0.28,
+   "warmth": 1.11,
+   "white_share": -1.26,
+   "shadow_share": -0.15,
+   "sky_share": -0.67,
+   "detail": -2.38,
+   "variety": -1.39
+  }
+ }
+]
