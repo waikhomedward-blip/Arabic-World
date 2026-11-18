@@ -89,3 +89,15 @@
 - **Learner checks:** the extra learner-retention failures from cycle 7 did not repeat with no learner change, so that check is flaky. Investigate.
 - **Performance:** fps ≥59. p95 at most 26 ms in one iPad case (café), 21 ms in one other iPad case, and ≤19 ms everywhere else. Draw calls at most 111.
 - **Honest look:** dappled lattice light and dirty wall bases are visible. The plaster is still quite flat, and the characters still look like plastic.
+
+## Cycles 9–12 (18 Nov 2026): speech bubbles, own Arabic font, real human characters
+- **Speech bubbles:** comic-style bubbles over the speaker.
+- **Arabic font:** Scheherazade New is now shipped with the game. It caused an iPhone SE overflow, which is fixed with compact option rows on short screens.
+- **Characters:** Edward said they looked like mannequins and statues.
+  - They are now real skinned bodies from CC0 Quaternius, with 10 everyday clips.
+  - Each is dressed at load: a closed thobe skirt hanging from the hips, a smooth loose chest and sleeves, a plain rounded head, sandals.
+  - The ghutra is a draped cape with a double agal, based on reference photos (Edward: "look at actual pictures").
+  - Walls moved to the Al-Balad white limewash palette.
+- **Lab:** 100/100 play-throughs, 0 problems, Suite R 100% (new model checks included). fps ≥59, p95 ≤18 ms, draw calls ≤84.
+- **Failures:** the lemma target, plus one flaky learner-retention check (63/80 against an 80% bar). It flips between runs with no content change; needs a fix.
+- **Honest look:** people now read as men in thobes and ghutras, and they move. Shoulders are still broad (superhero base body). No collar or placket yet, no walking between places yet, and hands are a little clenched.
