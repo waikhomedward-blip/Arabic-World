@@ -2086,5 +2086,77 @@
    "detail": -0.68,
    "variety": 0.3
   }
+ },
+ {
+  "rev": "REV-087c",
+  "score": 0.383,
+  "notes": "check: REV-087 state restored",
+  "z": {
+   "L_p05": 0.56,
+   "L_p50": 0.24,
+   "L_p95": -0.3,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.61,
+   "white_share": -0.03,
+   "shadow_share": 0.08,
+   "sky_share": -0.66,
+   "detail": -0.76,
+   "variety": 0.03
+  }
+ },
+ {
+  "rev": "REV-098",
+  "score": 0.383,
+  "notes": "Openings darker still (#0e0a07 to #060403)",
+  "z": {
+   "L_p05": 0.47,
+   "L_p50": 0.25,
+   "L_p95": -0.31,
+   "contrast": 0.59,
+   "saturation": -0.37,
+   "warmth": 0.6,
+   "white_share": -0.03,
+   "shadow_share": 0.1,
+   "sky_share": -0.66,
+   "detail": -0.74,
+   "variety": 0.1
+  }
+ },
+ {
+  "rev": "REV-099",
+  "score": 0.393,
+  "notes": "AC units on almost every free upper floor",
+  "z": {
+   "L_p05": 0.56,
+   "L_p50": 0.25,
+   "L_p95": -0.3,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.61,
+   "white_share": -0.03,
+   "shadow_share": 0.09,
+   "sky_share": -0.66,
+   "detail": -0.76,
+   "variety": 0.13
+  }
+ },
+ {
+  "rev": "REV-100",
+  "score": 0.441,
+  "notes": "White point 0.95 to 0.94",
+  "z": {
+   "L_p05": 0.58,
+   "L_p50": 0.3,
+   "L_p95": -0.21,
+   "contrast": 0.63,
+   "saturation": -0.38,
+   "warmth": 0.63,
+   "white_share": 0.46,
+   "shadow_share": -0.01,
+   "sky_share": -0.66,
+   "detail": -0.73,
+   "variety": 0.28
+  }
  }
 ]

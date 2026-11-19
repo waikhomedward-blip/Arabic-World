@@ -107,8 +107,12 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 095 | 0.37 | ❌ reversed | Retest of REV-036, paving stones half as orange (0.372 and 0.374). Kept at first, then reversed: the judge started counting the bluish shaded paving as sky (sky share 0.008 → 0.034), which is more than the whole gain. The same artefact as REV-022 |
 | 096 | 0.37 | ❌ | Paving tint a little less orange, on top of 095 (level) |
 | 097 | 0.44 | ❌ | Less blue sky light in shade (environment Rayleigh 1.4 → 0.8): much worse, and sky share jumped |
+| 087c | 0.38 | check | REV-087's state restored after the reversals: 0.383 (earlier 0.389 and 0.391; mean 0.388) |
+| 098 | 0.38 | ❌ | Openings darker still (level) |
+| 099 | 0.39 | ❌ | AC units on almost every free upper floor (worse) |
+| 100 | 0.44 | ❌ | White point 0.95 → 0.94 (walls clip) |
 
-Best so far: **REV-087, 0.390** (mean of 2 runs; REV-090 and REV-095 reversed after a sky-measure audit: every other kept revision left the sky measure unchanged) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Final best: **REV-087, 0.388** (mean of 3 runs; REV-090 and REV-095 reversed after a sky-measure audit: every other kept revision left the sky measure unchanged) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
