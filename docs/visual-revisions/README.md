@@ -85,6 +85,7 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 072 | 0.42 | ✅ | Portrait lens 60° → 66° (0.414 and 0.416). Stopping here: wider would make the people too small to tap comfortably |
 | 073 | 0.42 | ❌ | Window rhythm retested at the 66° lens (0.418; still no gain) |
 | 074 | 0.41 | ✅ bug fix | Each man his own build: every character had a build value (0.85–1.2) that was ignored, so all bodies were one width (the "one body for every man" problem in the euphoria video). The garment now widens or narrows around the body's axis; head and headwear untouched. Judge-neutral (0.410 and 0.418, mean 0.414); by eye the older shopkeeper now reads broader than the young men |
+| 075 | 0.42 | ✅ motion | Attention (euphoria lesson): chest, neck and head turn toward whoever is speaking, or toward the traveller, driven like a muscle (spring + damper), shared 30/30/40, at most 60°, no snap. Still-frame score within noise; judged by eye on a frame sequence of the first lines of d1-home: Faisal now turns to listen to Abu Faisal instead of staring ahead |
 
 Best so far: **REV-074, 0.414** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing

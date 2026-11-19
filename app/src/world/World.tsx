@@ -92,7 +92,16 @@ const MAN_URL = '/models/man.glb?v=2'; // bump when tools/build-man.mjs output c
 let dressedCache: Dressed | null = null;
 
 /** A real body (skeleton, hands, loose thobe, plain rounded head) with everyday animation. */
-function Human({ c, speaking, task, phase }: { c: Char; speaking: boolean; task?: 'sweep' | 'carry' | 'sit' | 'stand'; phase: number }) {
+const UP = new THREE.Vector3(0, 1, 0), tmpQ = new THREE.Quaternion(), tmpQ2 = new THREE.Quaternion(), tmpAxis = new THREE.Vector3();
+/** Turn a bone about the world's vertical axis, on top of whatever the animation clip set this frame. */
+function turnBone(b: THREE.Object3D, angle: number) {
+  if (!b.parent) return;
+  b.parent.getWorldQuaternion(tmpQ2);
+  tmpAxis.copy(UP).applyQuaternion(tmpQ2.invert());
+  b.quaternion.premultiply(tmpQ.setFromAxisAngle(tmpAxis, angle));
+}
+
+function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolean; task?: 'sweep' | 'carry' | 'sit' | 'stand'; phase: number; turnTo?: number | null }) {
   const gltf = useGLTF(MAN_URL);
   const rig = useMemo(() => {
     if (!dressedCache) {
@@ -123,11 +132,22 @@ function Human({ c, speaking, task, phase }: { c: Char; speaking: boolean; task?
     if (current.current && current.current !== next) current.current.crossFadeTo(next, 0.35, false);
     current.current = next;
   }, [rig, speaking, task, gltf, phase]);
-  useFrame((_, dt) => rig.mixer.update(Math.min(dt, 0.05)));
+  // Attention, like a muscle (spring + damper, critically damped): chest, neck and head turn toward whoever matters,
+  // shared 30/30/40, never more than 60°, and settle without a snap (euphoria lesson; videos Edward shared, 19 Nov).
+  const bones = useMemo(() => ['spine_03', 'neck_01', 'Head'].map((n) => rig.scene.getObjectByName(n)), [rig]);
+  const turn = useRef({ a: 0, v: 0 });
+  useFrame((_, dt0) => {
+    const dt = Math.min(dt0, 0.05);
+    rig.mixer.update(dt);
+    const want = THREE.MathUtils.clamp(turnTo ?? 0, -1.05, 1.05), k = 18, damp = 2 * Math.sqrt(k), s = turn.current;
+    s.v += (k * (want - s.a) - damp * s.v) * dt; s.a += s.v * dt;
+    if (Math.abs(s.a) > 1e-4) bones.forEach((b, i) => b && turnBone(b, s.a * [0.3, 0.3, 0.4][i]));
+  });
   return <primitive object={rig.scene} scale={rig.scale} />;
 }
 
-function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, bubble }: { c: Char; at: [number, number, number]; speaking: boolean; active: boolean; onTap?: () => void; task?: 'sweep' | 'carry' | 'sit' | 'stand'; facing?: number; bubble?: ReactNode }) {
+function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, bubble, lookAt }: { c: Char; at: [number, number, number]; speaking: boolean; active: boolean; onTap?: () => void; task?: 'sweep' | 'carry' | 'sit' | 'stand'; facing?: number; bubble?: ReactNode; lookAt?: [number, number] | null }) {
+  const turnTo = lookAt ? Math.atan2(Math.sin(Math.atan2(lookAt[0] - at[0], lookAt[1] - at[2]) - facing), Math.cos(Math.atan2(lookAt[0] - at[0], lookAt[1] - at[2]) - facing)) : null;
   const head = useRef<THREE.Group>(null);
   const body = useRef<THREE.Group>(null);
   const parts = useMemo(() => characterParts(c), [c]);
@@ -159,7 +179,7 @@ function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, b
       )}
       {task === 'sit' && <mesh position={[0, 0.22, -0.05]} castShadow receiveShadow><boxGeometry args={[1.3, 0.44, 0.5]} /><meshStandardMaterial map={shared().stone} color="#e0d2bb" roughness={0.95} /></mesh>}
       <Suspense fallback={<group ref={body} position={[0, y, 0]}>{rest.map((p) => <Shape key={p.name} p={p} />)}<group ref={head}>{top.map((p) => <Shape key={p.name} p={p} />)}</group></group>}>
-        <Human c={c} speaking={speaking} task={task} phase={phase} />
+        <Human c={c} speaking={speaking} task={task} phase={phase} turnTo={turnTo} />
       </Suspense>
       <group position={[0, y, 0]}>
         {task === 'carry' && <mesh position={[0, c.height * 0.62, 0.25]} castShadow><boxGeometry args={[0.5, 0.32, 0.4]} /><meshStandardMaterial map={shared().teak} color="#c9a57a" roughness={0.8} /></mesh>}
@@ -463,9 +483,12 @@ export function World({ place, people, speaker, onTapPerson, activeId, clock = '
       <Quarter shadows={shadows} />
       <Props />
       {EXTRAS.map((e) => <Person key={e.id} c={e} at={e.at} speaking={false} active={false} task={e.task} facing={e.task === 'carry' ? -Math.PI / 2 : Math.PI / 8} />)}
-      {people.map((p) => (
-        <Person key={p.c.id} c={p.c} at={p.at} speaking={speaker === p.c.id} active={activeId === p.c.id} onTap={() => onTapPerson(p.c.id)} facing={Math.PI / 5} bubble={bubble?.for === p.c.id ? bubble.node : undefined} />
-      ))}
+      {people.map((p) => {
+        const sp = people.find((q) => q.c.id === speaker);
+        const traveller: [number, number] = [target[0] + 4.4, target[2] + 5.2]; // where the camera (the player) stands
+        const look: [number, number] | null = speaker === p.c.id ? traveller : sp ? [sp.at[0], sp.at[2]] : traveller;
+        return <Person key={p.c.id} c={p.c} at={p.at} speaking={speaker === p.c.id} active={activeId === p.c.id} onTap={() => onTapPerson(p.c.id)} facing={Math.PI / 5} bubble={bubble?.for === p.c.id ? bubble.node : undefined} lookAt={look} />;
+      })}
       <CameraRig target={target} />
       {LAB && <LabProbe />}
     </Canvas>

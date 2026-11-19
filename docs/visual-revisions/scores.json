@@ -1618,5 +1618,23 @@
    "detail": -0.78,
    "variety": 0.18
   }
+ },
+ {
+  "rev": "REV-075",
+  "score": 0.42,
+  "notes": "Attention: chest, neck and head turn toward the speaker (or the traveller), spring-damped",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.41,
+   "contrast": 0.54,
+   "saturation": -0.37,
+   "warmth": 0.61,
+   "white_share": -0.12,
+   "shadow_share": 0.08,
+   "sky_share": -0.66,
+   "detail": -0.8,
+   "variety": 0.2
+  }
  }
 ]
