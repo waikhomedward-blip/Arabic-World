@@ -53,8 +53,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 040 | 0.54 | ✅ | Grade white point 0.97 → 0.95 (0.541 and 0.543; REV-039 repeated at 0.550) |
 | 041 | 0.52 | ✅ | Exposure 1.25 → 1.18 (midtones were too bright after the grade) |
 | 042 | 0.53 | ❌ | Exposure 1.18 → 1.12 (too far) |
+| 043 | 0.51 | ✅ | Paving wear from its own RNG: mottling, hairline cracks, chipped corners (0.510 and 0.508) |
 
-Best so far: **REV-041, 0.516** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-043, 0.509** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

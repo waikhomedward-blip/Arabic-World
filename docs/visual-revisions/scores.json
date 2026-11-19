@@ -880,5 +880,41 @@
    "detail": -1.37,
    "variety": 0.15
   }
+ },
+ {
+  "rev": "REV-043",
+  "score": 0.51,
+  "notes": "Paving wear: mottling, hairline cracks, chipped corners",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.46,
+   "L_p95": -0.45,
+   "contrast": 0.49,
+   "saturation": -0.39,
+   "warmth": 0.89,
+   "white_share": -0.24,
+   "shadow_share": 0.18,
+   "sky_share": -0.65,
+   "detail": -1.38,
+   "variety": 0.18
+  }
+ },
+ {
+  "rev": "REV-043b",
+  "score": 0.508,
+  "notes": "repeat of REV-043",
+  "z": {
+   "L_p05": 0.3,
+   "L_p50": 0.46,
+   "L_p95": -0.45,
+   "contrast": 0.48,
+   "saturation": -0.38,
+   "warmth": 0.89,
+   "white_share": -0.24,
+   "shadow_share": 0.19,
+   "sky_share": -0.65,
+   "detail": -1.39,
+   "variety": 0.15
+  }
  }
 ]
