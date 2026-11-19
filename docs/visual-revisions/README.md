@@ -67,8 +67,11 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 054 | 0.48 | ❌ | 053 with every window shuttered in sun-greyed wood (no gain) |
 | 055 | 0.50 | ❌ | Grade saturation 1.12 (warmer and worse) |
 | 056 | 0.47 | ✅ | Paving stones 0.42 × 0.28 m (0.466 and 0.467) |
+| 057 | 0.47 | ❌ | Crates in sun-greyed wood (no gain) |
+| 058 | 0.47 | ❌ | Paving tint a little less orange (warmth traded for saturation again) |
+| 059 | 0.45 | ✅ | Painted woodwork green and turquoise more saturated, like the photos (0.447 and 0.452). Measured first: the warmth sits in the bottom half (ground, wood), and saturation only fell when warmth fell, so the frame needed cool saturated colour |
 
-Best so far: **REV-056, 0.467** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-059, 0.450** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

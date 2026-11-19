@@ -1204,5 +1204,77 @@
    "detail": -1.06,
    "variety": 0.18
   }
+ },
+ {
+  "rev": "REV-057",
+  "score": 0.47,
+  "notes": "Crates in sun-greyed wood",
+  "z": {
+   "L_p05": 0.47,
+   "L_p50": 0.39,
+   "L_p95": -0.46,
+   "contrast": 0.41,
+   "saturation": -0.43,
+   "warmth": 0.73,
+   "white_share": -0.28,
+   "shadow_share": 0.15,
+   "sky_share": -0.64,
+   "detail": -1.06,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-058",
+  "score": 0.465,
+  "notes": "Paving tint a little less orange (#f6dcbc to #f0e0cc)",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.4,
+   "L_p95": -0.47,
+   "contrast": 0.5,
+   "saturation": -0.62,
+   "warmth": 0.5,
+   "white_share": -0.29,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.06,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-059",
+  "score": 0.447,
+  "notes": "Painted woodwork: green and turquoise more saturated, like the photos",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.38,
+   "L_p95": -0.47,
+   "contrast": 0.51,
+   "saturation": -0.33,
+   "warmth": 0.6,
+   "white_share": -0.29,
+   "shadow_share": 0.2,
+   "sky_share": -0.64,
+   "detail": -1.07,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-059b",
+  "score": 0.452,
+  "notes": "repeat of REV-059",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.38,
+   "L_p95": -0.46,
+   "contrast": 0.51,
+   "saturation": -0.33,
+   "warmth": 0.6,
+   "white_share": -0.3,
+   "shadow_share": 0.21,
+   "sky_share": -0.64,
+   "detail": -1.08,
+   "variety": 0.18
+  }
  }
 ]
