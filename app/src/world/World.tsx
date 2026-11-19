@@ -94,12 +94,13 @@ let dressedCache: Dressed | null = null;
 /** A real body (skeleton, hands, loose thobe, plain rounded head) with everyday animation. */
 const UP = new THREE.Vector3(0, 1, 0), tmpQ = new THREE.Quaternion(), tmpQ2 = new THREE.Quaternion(), tmpAxis = new THREE.Vector3();
 /** Turn a bone about the world's vertical axis, on top of whatever the animation clip set this frame. */
-function turnBone(b: THREE.Object3D, angle: number) {
+function turnBone(b: THREE.Object3D, angle: number, axis: THREE.Vector3 = UP) {
   if (!b.parent) return;
   b.parent.getWorldQuaternion(tmpQ2);
-  tmpAxis.copy(UP).applyQuaternion(tmpQ2.invert());
+  tmpAxis.copy(axis).applyQuaternion(tmpQ2.invert());
   b.quaternion.premultiply(tmpQ.setFromAxisAngle(tmpAxis, angle));
 }
+const FWD = new THREE.Vector3(), SIDE = new THREE.Vector3(), rootQ = new THREE.Quaternion();
 
 function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolean; task?: 'sweep' | 'carry' | 'sit' | 'stand'; phase: number; turnTo?: number | null }) {
   const gltf = useGLTF(MAN_URL);
@@ -135,13 +136,25 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
   // Attention, like a muscle (spring + damper, critically damped): chest, neck and head turn toward whoever matters,
   // shared 30/30/40, never more than 60°, and settle without a snap (euphoria lesson; videos Edward shared, 19 Nov).
   const bones = useMemo(() => ['spine_03', 'neck_01', 'Head'].map((n) => rig.scene.getObjectByName(n)), [rig]);
+  const [pelvisB, spine1, spine2] = useMemo(() => ['pelvis', 'spine_01', 'spine_02'].map((n) => rig.scene.getObjectByName(n)), [rig]);
   const turn = useRef({ a: 0, v: 0 });
-  useFrame((_, dt0) => {
+  useFrame(({ clock }, dt0) => {
     const dt = Math.min(dt0, 0.05);
     rig.mixer.update(dt);
     const want = THREE.MathUtils.clamp(turnTo ?? 0, -1.05, 1.05), k = 18, damp = 2 * Math.sqrt(k), s = turn.current;
     s.v += (k * (want - s.a) - damp * s.v) * dt; s.a += s.v * dt;
     if (Math.abs(s.a) > 1e-4) bones.forEach((b, i) => b && turnBone(b, s.a * [0.3, 0.3, 0.4][i]));
+    // Life on top of the clip: slow breathing in the chest (faster while talking) and an unhurried weight shift
+    // from one foot to the other, the hips and spine counter-leaning so the head stays steady. Nobody stands like a statue.
+    if (task !== 'sit') {
+      const t = clock.getElapsedTime() + phase * 7;
+      rig.scene.getWorldQuaternion(rootQ);
+      FWD.set(0, 0, 1).applyQuaternion(rootQ); SIDE.set(1, 0, 0).applyQuaternion(rootQ);
+      const shift = Math.sin(t * 0.23) * 0.035 + Math.sin(t * 0.61) * 0.01;
+      if (pelvisB) turnBone(pelvisB, shift, FWD);
+      if (spine1) turnBone(spine1, -shift * 0.7, FWD);
+      if (spine2) turnBone(spine2, Math.sin(t * (speaking ? 2.1 : 1.5)) * 0.012, SIDE);
+    }
   });
   return <primitive object={rig.scene} scale={rig.scale} />;
 }

@@ -1636,5 +1636,23 @@
    "detail": -0.8,
    "variety": 0.2
   }
+ },
+ {
+  "rev": "REV-076",
+  "score": 0.41,
+  "notes": "Breathing and a slow weight shift on the real bodies",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.41,
+   "contrast": 0.54,
+   "saturation": -0.37,
+   "warmth": 0.61,
+   "white_share": -0.12,
+   "shadow_share": 0.08,
+   "sky_share": -0.66,
+   "detail": -0.8,
+   "variety": 0.1
+  }
  }
 ]
