@@ -23,7 +23,7 @@
 
 ## Checked
 - **Full lab every 10 revisions:** Suite R 100%, all 100 play-throughs visible.
-- **Draw calls:** at most 91 (phones ≤150), budget Android 55 (≤100).
+- **Draw calls:** at most 96 (phones ≤150), budget Android 55 (≤100). Final full lab: [LAB-REV-100.md](LAB-REV-100.md).
 - **Hard rules unchanged:** no faces, all-male, modest dress, morning only, no music.
 
 ## Honest notes
