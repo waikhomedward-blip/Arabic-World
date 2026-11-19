@@ -125,7 +125,7 @@ export function dressBody(mesh: THREE.SkinnedMesh): Dressed {
       if (r > 1e-5 && (isLeg || h < skirtTop)) {
         // hips and legs move inside the skirt: pull them in so nothing shows through the cloth
         const R = thobeR(h) * 0.82;
-        if (r > R * 0.9) v.copy(axisPt).addScaledVector(d.normalize(), R * 0.9);
+        if (r > R * 0.73) v.copy(axisPt).addScaledVector(d.normalize(), R * 0.73); // well inside: legs never poke through when they swing
       } else if (h < shoulderH - 0.02 * H && r > 1e-5) {
         // chest and waist: a smooth, loose shape; the body underneath never shows
         const R = thobeR(h);

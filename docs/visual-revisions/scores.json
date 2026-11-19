@@ -1402,5 +1402,59 @@
    "detail": -1.02,
    "variety": 0.03
   }
+ },
+ {
+  "rev": "REV-066",
+  "score": 0.432,
+  "notes": "Deeper thobe skirt folds",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.42,
+   "L_p95": -0.43,
+   "contrast": 0.56,
+   "saturation": -0.38,
+   "warmth": 0.54,
+   "white_share": -0.21,
+   "shadow_share": 0.21,
+   "sky_share": -0.64,
+   "detail": -1.04,
+   "variety": 0.05
+  }
+ },
+ {
+  "rev": "REV-067",
+  "score": 0.438,
+  "notes": "Thobe skirt follows the legs half as much (hangs loose)",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.42,
+   "L_p95": -0.43,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.54,
+   "white_share": -0.21,
+   "shadow_share": 0.21,
+   "sky_share": -0.64,
+   "detail": -1.03,
+   "variety": 0.1
+  }
+ },
+ {
+  "rev": "REV-068",
+  "score": 0.44,
+  "notes": "Legs pulled further inside the thobe skirt (no poke-through)",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.4,
+   "L_p95": -0.44,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.54,
+   "white_share": -0.22,
+   "shadow_share": 0.22,
+   "sky_share": -0.64,
+   "detail": -1.03,
+   "variety": 0.13
+  }
  }
 ]
