@@ -102,6 +102,7 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 089 | 0.40 | ❌ | Stronger grain, 0.035 (worse) |
 | 090 | 0.38 | ❌ reversed | Limewash palette 75% of the way to neutral (0.383 and 0.376). Reversed after an audit of the sky measure: almost all of the gain was shaded walls turning bluish and being counted as sky (sky z −0.66 → −0.56) |
 | 091 | 0.38 | ❌ | Foreground pole and crates in sun-greyed wood (no gain) |
+| 092 | – | lab | No change: the slot was the full-lab checkpoint (LAB-REV-092.md) |
 | 093 | 0.38 | ❌ | Stand-up collar round the neck of thobes and shirts (merged into the headwear, no extra draw call). Barely visible at phone scale, score level: not proven |
 | 094 | 0.39 | ❌ | Stronger grime at the wall foot (worse) |
 | 095 | 0.37 | ❌ reversed | Retest of REV-036, paving stones half as orange (0.372 and 0.374). Kept at first, then reversed: the judge started counting the bluish shaded paving as sky (sky share 0.008 → 0.034), which is more than the whole gain. The same artefact as REV-022 |

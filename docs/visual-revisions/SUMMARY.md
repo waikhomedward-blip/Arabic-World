@@ -3,7 +3,7 @@
 ![Before, after, real](BEFORE-AFTER.jpg)
 
 **Score 1.22 → 0.39** (cloud judge; lower = closer to the real Historic Jeddah photos). Branch `wip/visual-rebuild`.
-82 revisions tried: about 30 kept, the rest rejected or reversed. Every one is logged in [README.md](README.md).
+81 revisions run (the REV-092 slot was the full-lab checkpoint): 32 kept (including bug fixes and motion changes), the rest rejected or reversed. Every one is logged in [README.md](README.md).
 
 ## What made it look more real
 - **A final grade after AgX:** photo-like black and white points, faint grain.
