@@ -1150,5 +1150,59 @@
    "detail": -1.21,
    "variety": 0.15
   }
+ },
+ {
+  "rev": "REV-055",
+  "score": 0.496,
+  "notes": "Grade saturation 1.12",
+  "z": {
+   "L_p05": 0.3,
+   "L_p50": 0.35,
+   "L_p95": -0.46,
+   "contrast": 0.51,
+   "saturation": -0.31,
+   "warmth": 0.77,
+   "white_share": -0.31,
+   "shadow_share": 0.18,
+   "sky_share": -0.58,
+   "detail": -1.21,
+   "variety": 0.48
+  }
+ },
+ {
+  "rev": "REV-056",
+  "score": 0.466,
+  "notes": "Paving stones 0.42 x 0.28 m",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.38,
+   "L_p95": -0.46,
+   "contrast": 0.5,
+   "saturation": -0.46,
+   "warmth": 0.68,
+   "white_share": -0.29,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.07,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-056b",
+  "score": 0.467,
+  "notes": "repeat of REV-056",
+  "z": {
+   "L_p05": 0.3,
+   "L_p50": 0.38,
+   "L_p95": -0.46,
+   "contrast": 0.5,
+   "saturation": -0.45,
+   "warmth": 0.69,
+   "white_share": -0.29,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.06,
+   "variety": 0.18
+  }
  }
 ]

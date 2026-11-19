@@ -65,8 +65,10 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 052 | 0.49 | ❌ | 051 with the overlap fixed, but the fix also removed AC units |
 | 053 | 0.48 | ❌ | 051 with the overlap fixed cleanly: 0.475 and 0.478, no gain. **By eye the facades looked closer to the photos**; the judge did not agree, so it is out. Worth a second look by Edward |
 | 054 | 0.48 | ❌ | 053 with every window shuttered in sun-greyed wood (no gain) |
+| 055 | 0.50 | ❌ | Grade saturation 1.12 (warmer and worse) |
+| 056 | 0.47 | ✅ | Paving stones 0.42 × 0.28 m (0.466 and 0.467) |
 
-Best so far: **REV-047, 0.474** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-056, 0.467** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

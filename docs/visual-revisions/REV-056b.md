@@ -1,0 +1,19 @@
+# REV-056b
+
+**Score 0.47** (mean |z| from the real-photo distribution; lower is closer to reality). repeat of REV-056
+
+| Measure | Game | Real (median) | z |
+|---|---|---|---|
+| detail | 0.201 | 0.286 | -1.06 |
+| warmth | 0.044 | 0.001 | +0.69 |
+| sky_share | 0.011 | 0.090 | -0.64 |
+| contrast | 0.271 | 0.247 | +0.50 |
+| L_p95 | 0.866 | 0.917 | -0.46 |
+| saturation | 0.162 | 0.214 | -0.45 |
+| L_p50 | 0.571 | 0.528 | +0.38 |
+| L_p05 | 0.120 | 0.103 | +0.30 |
+| white_share | 0.092 | 0.118 | -0.29 |
+| shadow_share | 0.145 | 0.132 | +0.18 |
+| variety | 0.146 | 0.139 | +0.18 |
+
+Frames: 20 game intros vs 19 reference photos. Sheet: `REV-056b.jpg`.

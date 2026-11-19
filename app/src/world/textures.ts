@@ -85,7 +85,7 @@ export function pavingTexture(): THREE.Texture {
   g.strokeStyle = 'rgba(55,45,35,0.55)'; g.lineWidth = 1;
   for (let i = 0; i < 9; i++) { g.beginPath(); let x = W() * 256, y = W() * 256; g.moveTo(x, y); for (let k = 0; k < 4; k++) { x += (W() - 0.5) * 16; y += (W() - 0.5) * 10; g.lineTo(x, y); } g.stroke(); }
   for (let i = 0; i < 14; i++) { g.fillStyle = 'rgba(70,58,44,0.6)'; const x = Math.floor(W() * 6) * 48 + (W() < 0.5 ? 2 : 40), y = Math.floor(W() * 8) * 32 + (W() < 0.5 ? 2 : 24); g.fillRect(x, y, 4 + W() * 4, 3 + W() * 3); }
-  return tex(c, [36, 12]); // ~0.55 × 0.37 m stones (photo scale)
+  return tex(c, [48, 16]); // ~0.42 × 0.28 m stones (photo scale)
 }
 
 /** Striped cloth for awnings. */
