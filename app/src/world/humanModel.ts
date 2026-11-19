@@ -17,6 +17,7 @@ export interface Dressed {
   headRadius: number;
   up: THREE.Vector3; side: THREE.Vector3; fwd: THREE.Vector3;
   shoulderH: number; headH: number; modelHeight: number;
+  axisG: THREE.Vector3; upG: THREE.Vector3;  // the body's vertical axis in geometry space (for per-man build)
 }
 
 const lerp = THREE.MathUtils.lerp;
@@ -155,7 +156,8 @@ export function dressBody(mesh: THREE.SkinnedMesh): Dressed {
   const region2 = new Uint8Array(nB + nS); region2.set(region); region2.fill(2, nB);
   const ch2 = new Float32Array(nB + nS); ch2.set(clothHeight); ch2.set(skirt.height, nB);
   out.computeVertexNormals(); out.computeBoundingBox(); out.computeBoundingSphere();
-  return { geometry: out, region: region2, clothHeight: ch2, headCentre: hc, headRadius, up, side, fwd, shoulderH, headH: hOf(hc), modelHeight };
+  const axisG = pelvis.clone().applyMatrix4(Binv), upG = up.clone().transformDirection(Binv);
+  return { geometry: out, region: region2, clothHeight: ch2, headCentre: hc, headRadius, up, side, fwd, shoulderH, headH: hOf(hc), modelHeight, axisG, upG };
 }
 
 function buildSkirt(o: { pelvis: THREE.Vector3; up: THREE.Vector3; side: THREE.Vector3; fwd: THREE.Vector3; H: number; hPelvis: number; thobeR: (h: number) => number; hemH: number; B: THREE.Matrix4; pelvisI: number; thighL: number; thighR: number }) {
@@ -191,10 +193,25 @@ const SKIN = new THREE.Color('#b98a66');
 const SANDAL = new THREE.Color('#5a3c28');
 
 /** Per-man colours on the shared dressed geometry (positions, normals and skin data are shared, not copied). */
-export function colouredGeometry(d: Dressed, opts: { thobe: string; over?: string; overFrom?: number }): THREE.BufferGeometry {
+export function colouredGeometry(d: Dressed, opts: { thobe: string; over?: string; overFrom?: number; build?: number }): THREE.BufferGeometry {
   const g = new THREE.BufferGeometry();
   for (const k of Object.keys(d.geometry.attributes)) g.setAttribute(k, d.geometry.attributes[k]);
+  // Every man his own body (GTA lesson: not one shared body): the garment is widened or narrowed around the body's
+  // vertical axis by his build. Head, headwear, hands and feet keep their shape, so the agal never deforms.
+  const bw = 1 + ((opts.build ?? 1) - 1) * 0.7;
+  if (Math.abs(bw - 1) > 1e-3) {
+    const src = d.geometry.attributes.position as THREE.BufferAttribute; const P = new Float32Array(src.array as Float32Array);
+    const v = new THREE.Vector3(), a = new THREE.Vector3();
+    for (let i = 0; i < d.region.length; i++) {
+      if (d.region[i] !== 2) continue;
+      v.fromBufferAttribute(src, i); a.copy(d.axisG).addScaledVector(d.upG, v.clone().sub(d.axisG).dot(d.upG));
+      v.sub(a).multiplyScalar(bw).add(a); P[i * 3] = v.x; P[i * 3 + 1] = v.y; P[i * 3 + 2] = v.z;
+    }
+    g.setAttribute('position', new THREE.BufferAttribute(P, 3));
+    g.setAttribute('normal', (d.geometry.attributes.normal as THREE.BufferAttribute).clone()); // own copy: never touch the shared one
+  }
   g.setIndex(d.geometry.index);
+  if (Math.abs(bw - 1) > 1e-3) g.computeVertexNormals();
   const thobe = new THREE.Color(opts.thobe), over = opts.over ? new THREE.Color(opts.over) : null;
   const n = d.region.length; const c = new Float32Array(n * 3);
   for (let i = 0; i < n; i++) {

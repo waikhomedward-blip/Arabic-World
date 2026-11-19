@@ -105,7 +105,7 @@ function Human({ c, speaking, task, phase }: { c: Char; speaking: boolean; task?
     let sk: THREE.SkinnedMesh | undefined;
     scene.traverse((o) => { if ((o as THREE.SkinnedMesh).isSkinnedMesh) sk = o as THREE.SkinnedMesh; });
     const g = c.garments;
-    sk!.geometry = colouredGeometry(d, g.includes('bisht') ? { thobe: c.colour, over: '#4a3829', overFrom: 0.08 } : g.includes('jacket') ? { thobe: c.colour, over: '#2f3d4f', overFrom: 0.48 } : { thobe: c.colour });
+    sk!.geometry = colouredGeometry(d, { ...(g.includes('bisht') ? { thobe: c.colour, over: '#4a3829', overFrom: 0.08 } : g.includes('jacket') ? { thobe: c.colour, over: '#2f3d4f', overFrom: 0.48 } : { thobe: c.colour }), build: c.build });
     sk!.material = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.88 });
     sk!.castShadow = true; sk!.receiveShadow = true; sk!.frustumCulled = false;
     const headBone = scene.getObjectByName('Head')!;
