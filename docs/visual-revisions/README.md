@@ -61,6 +61,10 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 048 | 0.49 | ❌ | Hazier sky light for the environment (turbidity 7 → 10) |
 | 049 | 0.48 | ❌ | Panelled two-leaf doors (no gain) |
 | 050 | 0.49 | ❌ | Crates, sacks, potted plants and benches at the wall base (worse; plants looked like toys) |
+| 051 | 0.47 | ❌ | Tall windows between the bays, about 3–5 openings per floor like the photos (single run; it had an overlap bug) |
+| 052 | 0.49 | ❌ | 051 with the overlap fixed, but the fix also removed AC units |
+| 053 | 0.48 | ❌ | 051 with the overlap fixed cleanly: 0.475 and 0.478, no gain. **By eye the facades looked closer to the photos**; the judge did not agree, so it is out. Worth a second look by Edward |
+| 054 | 0.48 | ❌ | 053 with every window shuttered in sun-greyed wood (no gain) |
 
 Best so far: **REV-047, 0.474** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing

@@ -1060,5 +1060,95 @@
    "detail": -1.25,
    "variety": 0.23
   }
+ },
+ {
+  "rev": "REV-051",
+  "score": 0.466,
+  "notes": "Regular rhythm of tall windows between the bays (position hash, seed unchanged)",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.34,
+   "L_p95": -0.46,
+   "contrast": 0.5,
+   "saturation": -0.46,
+   "warmth": 0.68,
+   "white_share": -0.29,
+   "shadow_share": 0.16,
+   "sky_share": -0.64,
+   "detail": -1.18,
+   "variety": 0.1
+  }
+ },
+ {
+  "rev": "REV-052",
+  "score": 0.487,
+  "notes": "REV-051 plus: no new window where a small window already is",
+  "z": {
+   "L_p05": 0.3,
+   "L_p50": 0.39,
+   "L_p95": -0.46,
+   "contrast": 0.52,
+   "saturation": -0.46,
+   "warmth": 0.68,
+   "white_share": -0.3,
+   "shadow_share": 0.19,
+   "sky_share": -0.64,
+   "detail": -1.26,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-053",
+  "score": 0.475,
+  "notes": "REV-051 plus: windows skip small windows (separate list, AC units unchanged)",
+  "z": {
+   "L_p05": 0.3,
+   "L_p50": 0.36,
+   "L_p95": -0.46,
+   "contrast": 0.5,
+   "saturation": -0.46,
+   "warmth": 0.68,
+   "white_share": -0.29,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.2,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-053b",
+  "score": 0.478,
+  "notes": "repeat of REV-053",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.37,
+   "L_p95": -0.46,
+   "contrast": 0.5,
+   "saturation": -0.46,
+   "warmth": 0.68,
+   "white_share": -0.28,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.21,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-054",
+  "score": 0.477,
+  "notes": "Window rhythm, every window shuttered in sun-greyed wood",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.37,
+   "L_p95": -0.46,
+   "contrast": 0.5,
+   "saturation": -0.46,
+   "warmth": 0.68,
+   "white_share": -0.29,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.21,
+   "variety": 0.15
+  }
  }
 ]
