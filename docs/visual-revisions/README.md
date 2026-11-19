@@ -88,3 +88,10 @@ Best so far: **REV-072, 0.415** (mean of 2 runs) (cloud; Mac best was REV-009, 0
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
+
+## Ideas from two videos Edward shared (19 Nov)
+Only the titles, descriptions and chapter lists could be read in the cloud (the transcripts were blocked), so these are general lessons of the topics, not quotes:
+- *Inside the Physics Engine Behind GTA VI* (euphoria, procedural animation): people look alive when the body reacts to the world on top of the canned clips: weight shifts, balance, feet that stay planted, the head and chest turning toward whoever speaks. Calm versions fit this game: listeners turn toward the speaker, idle weight shifts, cloth that sways with the walk.
+- *GTA VI review* (Game Informer): the believable city comes from density of life: many people each doing something.
+Still frames can only test part of this (more people in the street); motion changes need Edward's eye in the running game, since the judge only scores the opening frame.
+
