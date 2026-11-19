@@ -2068,5 +2068,23 @@
    "detail": -0.74,
    "variety": 0.28
   }
+ },
+ {
+  "rev": "REV-097",
+  "score": 0.44,
+  "notes": "Less blue sky light in shade (environment Rayleigh 1.4 to 0.8)",
+  "z": {
+   "L_p05": -0.05,
+   "L_p50": -0.23,
+   "L_p95": -0.51,
+   "contrast": 0.65,
+   "saturation": -0.05,
+   "warmth": 0.39,
+   "white_share": -0.66,
+   "shadow_share": 0.84,
+   "sky_share": 0.47,
+   "detail": -0.68,
+   "variety": 0.3
+  }
  }
 ]

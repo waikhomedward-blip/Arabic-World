@@ -100,14 +100,15 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 087 | 0.39 | ✅ | Faint photographic grain in the final grade (0.389 and 0.391) |
 | 088 | 0.39 | ❌ | Black point 0.12 → 0.135 (no gain) |
 | 089 | 0.40 | ❌ | Stronger grain, 0.035 (worse) |
-| 090 | 0.38 | ✅ | Limewash palette 75% of the way to neutral (0.383 and 0.376): sunlit walls read as clean white limewash |
+| 090 | 0.38 | ❌ reversed | Limewash palette 75% of the way to neutral (0.383 and 0.376). Reversed after an audit of the sky measure: almost all of the gain was shaded walls turning bluish and being counted as sky (sky z −0.66 → −0.56) |
 | 091 | 0.38 | ❌ | Foreground pole and crates in sun-greyed wood (no gain) |
 | 093 | 0.38 | ❌ | Stand-up collar round the neck of thobes and shirts (merged into the headwear, no extra draw call). Barely visible at phone scale, score level: not proven |
 | 094 | 0.39 | ❌ | Stronger grime at the wall foot (worse) |
 | 095 | 0.37 | ❌ reversed | Retest of REV-036, paving stones half as orange (0.372 and 0.374). Kept at first, then reversed: the judge started counting the bluish shaded paving as sky (sky share 0.008 → 0.034), which is more than the whole gain. The same artefact as REV-022 |
 | 096 | 0.37 | ❌ | Paving tint a little less orange, on top of 095 (level) |
+| 097 | 0.44 | ❌ | Less blue sky light in shade (environment Rayleigh 1.4 → 0.8): much worse, and sky share jumped |
 
-Best so far: **REV-090, 0.380** (mean of 2 runs; REV-095 reversed) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-087, 0.390** (mean of 2 runs; REV-090 and REV-095 reversed after a sky-measure audit: every other kept revision left the sky measure unchanged) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
