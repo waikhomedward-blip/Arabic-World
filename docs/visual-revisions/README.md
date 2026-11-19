@@ -58,6 +58,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 045 | 0.49 | ✅ | Darker grey-brown, dirt-filled paving joints |
 | 046 | 0.60 | ❌ | Grade midtone gamma 1.08 (too much deep shadow) |
 | 047 | 0.47 | ✅ | Limewash palette halfway to neutral (0.476 and 0.472) |
+| 048 | 0.49 | ❌ | Hazier sky light for the environment (turbidity 7 → 10) |
+| 049 | 0.48 | ❌ | Panelled two-leaf doors (no gain) |
+| 050 | 0.49 | ❌ | Crates, sacks, potted plants and benches at the wall base (worse; plants looked like toys) |
 
 Best so far: **REV-047, 0.474** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing

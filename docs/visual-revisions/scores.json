@@ -1006,5 +1006,59 @@
    "detail": -1.2,
    "variety": 0.1
   }
+ },
+ {
+  "rev": "REV-048",
+  "score": 0.489,
+  "notes": "Hazier sky light for the environment only (turbidity 7 to 10)",
+  "z": {
+   "L_p05": 0.14,
+   "L_p50": 0.37,
+   "L_p95": -0.51,
+   "contrast": 0.52,
+   "saturation": -0.4,
+   "warmth": 0.67,
+   "white_share": -0.49,
+   "shadow_share": 0.34,
+   "sky_share": -0.62,
+   "detail": -1.19,
+   "variety": 0.13
+  }
+ },
+ {
+  "rev": "REV-049",
+  "score": 0.476,
+  "notes": "Panelled two-leaf doors",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.37,
+   "L_p95": -0.47,
+   "contrast": 0.5,
+   "saturation": -0.46,
+   "warmth": 0.68,
+   "white_share": -0.29,
+   "shadow_share": 0.17,
+   "sky_share": -0.64,
+   "detail": -1.18,
+   "variety": 0.18
+  }
+ },
+ {
+  "rev": "REV-050",
+  "score": 0.493,
+  "notes": "Everyday things at the foot of the walls: crates, sacks, potted plants, benches",
+  "z": {
+   "L_p05": 0.29,
+   "L_p50": 0.33,
+   "L_p95": -0.46,
+   "contrast": 0.51,
+   "saturation": -0.45,
+   "warmth": 0.7,
+   "white_share": -0.28,
+   "shadow_share": 0.27,
+   "sky_share": -0.66,
+   "detail": -1.25,
+   "variety": 0.23
+  }
  }
 ]
