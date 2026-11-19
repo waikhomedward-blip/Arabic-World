@@ -6,6 +6,7 @@
 //   - arms get loose sleeves, hands and neck keep skin, feet become sandals.
 // Every man then shares the same geometry and differs by colour, scale, headwear and animation.
 import * as THREE from 'three';
+import { mergeGeometries } from 'three/examples/jsm/utils/BufferGeometryUtils.js';
 
 export type Region = 'head' | 'skin' | 'cloth' | 'sandal';
 
@@ -253,6 +254,21 @@ export function headwearFor(d: Dressed, sk: THREE.SkinnedMesh, garments: string[
     }
   } else if (garments.includes('kufi')) {
     out.push(new THREE.Mesh(at(new THREE.CylinderGeometry(R * 0.98, R * 1.02, R * 0.6, 24), c0.clone().addScaledVector(d.up, R * 0.62)), mat('#fbfaf6', 0.85)));
+  }
+  // One rigid mesh per man (art bible budget: 2 draw calls per character): cap, cape and agal merged with their
+  // colours baked in. It lives in the head bone's space, so nothing in it ever stretches.
+  if (out.length > 1) {
+    const parts = out.map((m) => {
+      const g = m.geometry.index ? m.geometry.toNonIndexed() : m.geometry.clone();
+      g.deleteAttribute('uv'); if (!g.attributes.normal) g.computeVertexNormals();
+      const col = (m.material as THREE.MeshStandardMaterial).color; const n = g.attributes.position.count;
+      const c = new Float32Array(n * 3); for (let i = 0; i < n; i++) { c[i * 3] = col.r; c[i * 3 + 1] = col.g; c[i * 3 + 2] = col.b; }
+      g.setAttribute('color', new THREE.BufferAttribute(c, 3)); return g;
+    });
+    const merged = mergeGeometries(parts, false)!;
+    const one = new THREE.Mesh(merged, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.85, side: THREE.DoubleSide }));
+    out.forEach((m) => { m.geometry.dispose(); (m.material as THREE.Material).dispose(); });
+    out.length = 0; out.push(one);
   }
   for (const m of out) { m.castShadow = true; m.receiveShadow = true; }
   return out;

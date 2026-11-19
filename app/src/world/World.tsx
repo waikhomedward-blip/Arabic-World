@@ -119,7 +119,10 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
     sk!.geometry = colouredGeometry(d, { ...(g.includes('bisht') ? { thobe: c.colour, over: '#4a3829', overFrom: 0.08 } : g.includes('jacket') ? { thobe: c.colour, over: '#2f3d4f', overFrom: 0.48 } : { thobe: c.colour }), build: c.build });
     sk!.material = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.88 });
     addClothSway(sk!.material as THREE.MeshStandardMaterial, d, phase);
-    sk!.castShadow = true; sk!.receiveShadow = true; sk!.frustumCulled = false;
+    sk!.castShadow = true; sk!.receiveShadow = true;
+    // Cull bodies that are off screen (people at other places cost nothing): a bounding sphere around the body,
+    // enlarged 1.6× so a raised arm or a bend never pops at the frame edge.
+    sk!.computeBoundingSphere(); sk!.boundingSphere!.radius *= 1.6; sk!.frustumCulled = true;
     const headBone = scene.getObjectByName('Head')!;
     for (const m of headwearFor(d, sk!, g)) headBone.add(m);
     const mixer = new THREE.AnimationMixer(scene);

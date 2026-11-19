@@ -93,8 +93,10 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 080 | 0.40 | ❌ | Windblown sand drifts at the wall foot (barely visible; no gain) |
 | 081 | 0.44 | ❌ | Sun azimuth 10° → 20° (walls too bright) |
 | 082 | 0.45 | ❌ | Sun azimuth 10° → 4° (warmer, brighter midtones); 10° stays |
+| 083 | 0.40 | ✅ budget | Each man's headwear merged into one rigid mesh in the head bone's space (was up to 4 draw calls; art bible: 2 per character). The agal can never deform. Looks identical |
+| 084 | 0.40 | ✅ fix | Off-screen bodies are culled (every man in the quarter used to be drawn in every scene); the fruit-stall customer from REV-079 removed because the d3-souq play-through on the cloud runner had no time left. Triangles in a souq scene fell from ~190k to ~80k |
 
-Best so far: **REV-079, 0.399** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-084, 0.400** (REV-079's look within the draw-call and time budgets) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

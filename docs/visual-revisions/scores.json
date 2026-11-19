@@ -1780,5 +1780,41 @@
    "detail": -0.76,
    "variety": 0.0
   }
+ },
+ {
+  "rev": "REV-083",
+  "score": 0.401,
+  "notes": "Headwear merged into one rigid mesh per man (draw-call budget)",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.3,
+   "contrast": 0.56,
+   "saturation": -0.38,
+   "warmth": 0.61,
+   "white_share": -0.02,
+   "shadow_share": 0.08,
+   "sky_share": -0.66,
+   "detail": -0.77,
+   "variety": 0.2
+  }
+ },
+ {
+  "rev": "REV-084",
+  "score": 0.4,
+  "notes": "Off-screen bodies culled; fruit-stall customer removed (souq had no time headroom)",
+  "z": {
+   "L_p05": 0.59,
+   "L_p50": 0.25,
+   "L_p95": -0.3,
+   "contrast": 0.56,
+   "saturation": -0.38,
+   "warmth": 0.61,
+   "white_share": -0.03,
+   "shadow_share": 0.06,
+   "sky_share": -0.66,
+   "detail": -0.76,
+   "variety": 0.2
+  }
  }
 ]
