@@ -1528,5 +1528,41 @@
    "detail": -0.85,
    "variety": 0.18
   }
+ },
+ {
+  "rev": "REV-072",
+  "score": 0.414,
+  "notes": "Portrait lens 60 to 66 degrees",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.41,
+   "contrast": 0.54,
+   "saturation": -0.38,
+   "warmth": 0.61,
+   "white_share": -0.11,
+   "shadow_share": 0.07,
+   "sky_share": -0.66,
+   "detail": -0.8,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-072b",
+  "score": 0.416,
+  "notes": "repeat of REV-072",
+  "z": {
+   "L_p05": 0.56,
+   "L_p50": 0.25,
+   "L_p95": -0.41,
+   "contrast": 0.54,
+   "saturation": -0.38,
+   "warmth": 0.61,
+   "white_share": -0.12,
+   "shadow_share": 0.08,
+   "sky_share": -0.66,
+   "detail": -0.8,
+   "variety": 0.15
+  }
  }
 ]

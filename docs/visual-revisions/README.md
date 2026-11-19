@@ -82,8 +82,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 069 | 0.44 | ❌ | Slimmer chest and shoulders (no visible difference at this size) |
 | 070 | 0.44 | ❌ | More, clearer hairline cracks in the limewash (no gain) |
 | 071 | 0.43 | ✅ | Portrait lens 54° → 60°: more of the street in frame (0.431 and 0.428), speakers still clear |
+| 072 | 0.42 | ✅ | Portrait lens 60° → 66° (0.414 and 0.416). Stopping here: wider would make the people too small to tap comfortably |
 
-Best so far: **REV-071, 0.430** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-072, 0.415** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
