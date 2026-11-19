@@ -19,6 +19,9 @@
 - Project folder: `/Volumes/EdwardWaikhom/arabic-world` (external drive). GitHub: https://github.com/waikhomedward-blip/Arabic-World (public).
 - Tanzil Quran text imported verbatim (`tools/data/quran-uthmani.txt`); lemma-level Quran meter still to build.
 
+## Visual revisions (branch `wip/visual-rebuild`, 19 Nov)
+- REV-019 to REV-100 done in the cloud: judge score 1.22 → 0.39. Summary: `docs/visual-revisions/SUMMARY.md`; full log: `docs/visual-revisions/README.md`.
+
 ## Running in the background
 - Story research: transcripts of 4 YouTube channels → `research-private/` (gitignored, never published). `build_digest.py` makes digests + STORY_LEADS.txt.
 
