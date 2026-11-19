@@ -1330,5 +1330,41 @@
    "detail": -1.05,
    "variety": 0.18
   }
+ },
+ {
+  "rev": "REV-063",
+  "score": 0.45,
+  "notes": "Rawasheen frames: corner posts and rails proud of the screen",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.35,
+   "L_p95": -0.47,
+   "contrast": 0.51,
+   "saturation": -0.32,
+   "warmth": 0.6,
+   "white_share": -0.32,
+   "shadow_share": 0.24,
+   "sky_share": -0.64,
+   "detail": -1.05,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-064",
+  "score": 0.449,
+  "notes": "Square paving at the same stone size as the lane (was 6x too small)",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.38,
+   "L_p95": -0.46,
+   "contrast": 0.51,
+   "saturation": -0.33,
+   "warmth": 0.61,
+   "white_share": -0.29,
+   "shadow_share": 0.2,
+   "sky_share": -0.64,
+   "detail": -1.06,
+   "variety": 0.18
+  }
  }
 ]
