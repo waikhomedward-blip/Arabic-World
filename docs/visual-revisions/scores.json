@@ -1978,5 +1978,77 @@
    "detail": -0.76,
    "variety": 0.15
   }
+ },
+ {
+  "rev": "REV-093",
+  "score": 0.381,
+  "notes": "Stand-up collar at the neck of thobes and shirts",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.24,
+   "L_p95": -0.31,
+   "contrast": 0.56,
+   "saturation": -0.35,
+   "warmth": 0.56,
+   "white_share": -0.08,
+   "shadow_share": 0.08,
+   "sky_share": -0.56,
+   "detail": -0.76,
+   "variety": 0.13
+  }
+ },
+ {
+  "rev": "REV-094",
+  "score": 0.389,
+  "notes": "Stronger grime at the foot of the ground-floor walls",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.31,
+   "contrast": 0.56,
+   "saturation": -0.35,
+   "warmth": 0.56,
+   "white_share": -0.09,
+   "shadow_share": 0.07,
+   "sky_share": -0.56,
+   "detail": -0.76,
+   "variety": 0.2
+  }
+ },
+ {
+  "rev": "REV-095",
+  "score": 0.372,
+  "notes": "Retest: paving stones half as orange",
+  "z": {
+   "L_p05": 0.56,
+   "L_p50": 0.3,
+   "L_p95": -0.3,
+   "contrast": 0.57,
+   "saturation": -0.55,
+   "warmth": 0.3,
+   "white_share": -0.09,
+   "shadow_share": 0.07,
+   "sky_share": -0.46,
+   "detail": -0.73,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-095b",
+  "score": 0.374,
+  "notes": "repeat of REV-095",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.31,
+   "L_p95": -0.31,
+   "contrast": 0.57,
+   "saturation": -0.55,
+   "warmth": 0.3,
+   "white_share": -0.09,
+   "shadow_share": 0.08,
+   "sky_share": -0.46,
+   "detail": -0.73,
+   "variety": 0.15
+  }
  }
 ]

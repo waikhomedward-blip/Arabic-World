@@ -102,8 +102,11 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 089 | 0.40 | ❌ | Stronger grain, 0.035 (worse) |
 | 090 | 0.38 | ✅ | Limewash palette 75% of the way to neutral (0.383 and 0.376): sunlit walls read as clean white limewash |
 | 091 | 0.38 | ❌ | Foreground pole and crates in sun-greyed wood (no gain) |
+| 093 | 0.38 | ❌ | Stand-up collar round the neck of thobes and shirts (merged into the headwear, no extra draw call). Barely visible at phone scale, score level: not proven |
+| 094 | 0.39 | ❌ | Stronger grime at the wall foot (worse) |
+| 095 | 0.37 | ✅ | Retest of REV-036, paving stones half as orange (0.372 and 0.374). It failed before because saturation fell with warmth; the frame now has its own saturated colour |
 
-Best so far: **REV-090, 0.380** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-095, 0.373** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
