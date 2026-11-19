@@ -263,10 +263,24 @@ export function headwearFor(d: Dressed, sk: THREE.SkinnedMesh, garments: string[
       g.deleteAttribute('uv'); if (!g.attributes.normal) g.computeVertexNormals();
       const col = (m.material as THREE.MeshStandardMaterial).color; const n = g.attributes.position.count;
       const c = new Float32Array(n * 3); for (let i = 0; i < n; i++) { c[i * 3] = col.r; c[i * 3 + 1] = col.g; c[i * 3 + 2] = col.b; }
-      g.setAttribute('color', new THREE.BufferAttribute(c, 3)); return g;
+      g.setAttribute('color', new THREE.BufferAttribute(c, 3));
+      if (!g.attributes.aSway) g.setAttribute('aSway', new THREE.BufferAttribute(new Float32Array(n), 1));
+      return g;
     });
     const merged = mergeGeometries(parts, false)!;
-    const one = new THREE.Mesh(merged, new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.85, side: THREE.DoubleSide }));
+    const hm = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.85, side: THREE.DoubleSide });
+    // the ghutra's cape lifts a little in the same breeze as the thobes (its rigid cap and agal never move)
+    const sideB = d.side.clone().transformDirection(toBone), fwdB = d.fwd.clone().transformDirection(toBone), amp = d.modelHeight * 0.008;
+    hm.onBeforeCompile = (sh) => {
+      sh.uniforms.uAwTime = WIND.time; sh.uniforms.uAwPhase = { value: Math.random() * 10 };
+      sh.vertexShader = sh.vertexShader.replace('#include <common>', '#include <common>\nattribute float aSway; uniform float uAwTime; uniform float uAwPhase;')
+        .replace('#include <begin_vertex>', `#include <begin_vertex>
+{ float t = uAwTime + uAwPhase; float a = aSway * ${amp.toFixed(5)} * (0.6 + 0.4 * sin(t * 0.37));
+  transformed += vec3(${sideB.x.toFixed(5)}, ${sideB.y.toFixed(5)}, ${sideB.z.toFixed(5)}) * a * sin(t * 1.5 + aSway * 3.0);
+  transformed += vec3(${fwdB.x.toFixed(5)}, ${fwdB.y.toFixed(5)}, ${fwdB.z.toFixed(5)}) * a * 0.5 * sin(t * 1.2 + 1.3); }`);
+    };
+    hm.customProgramCacheKey = () => 'aw-ghutra';
+    const one = new THREE.Mesh(merged, hm);
     out.forEach((m) => { m.geometry.dispose(); (m.material as THREE.Material).dispose(); });
     out.length = 0; out.push(one);
   }
@@ -303,6 +317,9 @@ function capeGeometry(d: Dressed, toBone: THREE.Matrix4): THREE.BufferGeometry {
   const g = new THREE.BufferGeometry();
   g.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3)); g.setIndex(idx);
   g.computeVertexNormals(); g.applyMatrix4(toBone);
+  const sw = new Float32Array(pos.length / 3);
+  for (let j = 0; j <= RINGS; j++) for (let i = 0; i <= SEG; i++) sw[j * (SEG + 1) + i] = Math.pow(j / RINGS, 1.5);
+  g.setAttribute('aSway', new THREE.BufferAttribute(sw, 1));
   (g as THREE.BufferGeometry & { userData: object }).userData = { doubleSided: true };
   return g;
 }

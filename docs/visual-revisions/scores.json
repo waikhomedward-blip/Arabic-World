@@ -1816,5 +1816,23 @@
    "detail": -0.76,
    "variety": 0.2
   }
+ },
+ {
+  "rev": "REV-085",
+  "score": 0.395,
+  "notes": "Ghutra cape lifts in the same breeze",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.3,
+   "contrast": 0.56,
+   "saturation": -0.38,
+   "warmth": 0.61,
+   "white_share": -0.03,
+   "shadow_share": 0.07,
+   "sky_share": -0.66,
+   "detail": -0.77,
+   "variety": 0.15
+  }
  }
 ]
