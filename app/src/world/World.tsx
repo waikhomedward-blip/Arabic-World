@@ -240,6 +240,8 @@ function Props() {
   const t = shared();
   const { size } = useThree();
   const portrait = size.width < size.height; // the camera differs by screen shape, so does the foreground dressing
+  // the square's disc (UV 0–1 over 9.2 m) gets its own repeat so its stones match the lane's (2.5 m per texture tile)
+  const squarePaving = useMemo(() => { const p = t.paving.clone(); p.repeat.set(9.2 / 2.5, 9.2 / 2.5); p.needsUpdate = true; return p; }, [t]);
   return (
     <group>
       {/* souq: three stalls against the facade, cloth awnings (indigo, saffron, green accents) */}
@@ -247,7 +249,7 @@ function Props() {
       <Stall x={-1.6} z={BACK_FACE_Z + 0.65} cloth={1} goods="sacks" />
       <Stall x={22.6} z={BACK_FACE_Z + 0.65} cloth={2} goods="pots" />
       {/* square: paving, the drinking fountain (water for everyone) */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[7, 0.004, 1.8]} receiveShadow><circleGeometry args={[4.6, 48]} /><meshStandardMaterial map={t.paving} color="#efe6d8" roughness={0.9} /></mesh>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[7, 0.004, 1.8]} receiveShadow><circleGeometry args={[4.6, 48]} /><meshStandardMaterial map={squarePaving} color="#efe6d8" roughness={0.9} /></mesh>
       <group position={[5.0, 0, -0.9]}>
         <mesh position={[0, 0.35, 0]} castShadow receiveShadow><cylinderGeometry args={[0.8, 0.9, 0.7, 24]} /><meshStandardMaterial map={t.stone} color="#efe4d2" roughness={0.9} /></mesh>
         <mesh position={[0, 0.705, 0]}><cylinderGeometry args={[0.68, 0.68, 0.02, 24]} /><meshStandardMaterial color="#5f8f9f" metalness={0} roughness={0.05} /></mesh>
