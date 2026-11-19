@@ -18,6 +18,7 @@ export interface Dressed {
   up: THREE.Vector3; side: THREE.Vector3; fwd: THREE.Vector3;
   shoulderH: number; headH: number; modelHeight: number;
   axisG: THREE.Vector3; upG: THREE.Vector3;  // the body's vertical axis in geometry space (for per-man build)
+  sideG: THREE.Vector3; fwdG: THREE.Vector3; // across and forward, in geometry space (for cloth sway)
 }
 
 const lerp = THREE.MathUtils.lerp;
@@ -157,7 +158,8 @@ export function dressBody(mesh: THREE.SkinnedMesh): Dressed {
   const ch2 = new Float32Array(nB + nS); ch2.set(clothHeight); ch2.set(skirt.height, nB);
   out.computeVertexNormals(); out.computeBoundingBox(); out.computeBoundingSphere();
   const axisG = pelvis.clone().applyMatrix4(Binv), upG = up.clone().transformDirection(Binv);
-  return { geometry: out, region: region2, clothHeight: ch2, headCentre: hc, headRadius, up, side, fwd, shoulderH, headH: hOf(hc), modelHeight, axisG, upG };
+  const sideG = side.clone().transformDirection(Binv), fwdG = fwd.clone().transformDirection(Binv);
+  return { geometry: out, region: region2, clothHeight: ch2, headCentre: hc, headRadius, up, side, fwd, shoulderH, headH: hOf(hc), modelHeight, axisG, upG, sideG, fwdG };
 }
 
 function buildSkirt(o: { pelvis: THREE.Vector3; up: THREE.Vector3; side: THREE.Vector3; fwd: THREE.Vector3; H: number; hPelvis: number; thobeR: (h: number) => number; hemH: number; B: THREE.Matrix4; pelvisI: number; thighL: number; thighR: number }) {
@@ -220,6 +222,10 @@ export function colouredGeometry(d: Dressed, opts: { thobe: string; over?: strin
     c[i * 3] = col.r; c[i * 3 + 1] = col.g; c[i * 3 + 2] = col.b;
   }
   g.setAttribute('color', new THREE.BufferAttribute(c, 3));
+  // how much each vertex sways with the breeze: cloth only, nothing above the hips, most at the hem
+  const sway = new Float32Array(n);
+  for (let i = 0; i < n; i++) if (d.region[i] === 2 && d.clothHeight[i] < 0.55) sway[i] = Math.pow((0.55 - d.clothHeight[i]) / 0.55, 1.5);
+  g.setAttribute('aSway', new THREE.BufferAttribute(sway, 1));
   g.boundingSphere = d.geometry.boundingSphere; g.boundingBox = d.geometry.boundingBox;
   return g;
 }
@@ -284,3 +290,27 @@ function capeGeometry(d: Dressed, toBone: THREE.Matrix4): THREE.BufferGeometry {
   (g as THREE.BufferGeometry & { userData: object }).userData = { doubleSided: true };
   return g;
 }
+
+/** Cloth that moves (videos Edward shared: animated noise, not a cloth simulation): the thobe skirt sways with one
+ * shared breeze, a little out of step per man, before skinning so it follows the body. No extra draw calls. */
+export const WIND = { time: { value: 0 } };
+export function addClothSway(mat: THREE.MeshStandardMaterial, d: Dressed, phase: number) {
+  const amp = d.modelHeight * 0.006;
+  mat.onBeforeCompile = (sh) => {
+    sh.uniforms.uAwTime = WIND.time; sh.uniforms.uAwPhase = { value: phase };
+    sh.vertexShader = sh.vertexShader
+      .replace('#include <common>', `#include <common>
+attribute float aSway; uniform float uAwTime; uniform float uAwPhase;`)
+      .replace('#include <begin_vertex>', `#include <begin_vertex>
+{
+  float t = uAwTime + uAwPhase;
+  float h = dot(position, vec3(${d.upG.x.toFixed(5)}, ${d.upG.y.toFixed(5)}, ${d.upG.z.toFixed(5)})) / ${d.modelHeight.toFixed(4)};
+  float gust = 0.6 + 0.4 * sin(t * 0.37);
+  float a = aSway * ${amp.toFixed(5)} * gust;
+  transformed += vec3(${d.sideG.x.toFixed(5)}, ${d.sideG.y.toFixed(5)}, ${d.sideG.z.toFixed(5)}) * a * sin(t * 1.3 + h * 9.0);
+  transformed += vec3(${d.fwdG.x.toFixed(5)}, ${d.fwdG.y.toFixed(5)}, ${d.fwdG.z.toFixed(5)}) * a * 0.6 * sin(t * 1.1 + h * 7.0 + 1.7);
+}`);
+  };
+  mat.customProgramCacheKey = () => 'aw-cloth'; // one shader for every man; the phase is a uniform
+}
+

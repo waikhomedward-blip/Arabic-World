@@ -4,7 +4,7 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Environment, Html, Sky, useGLTF } from '@react-three/drei';
 import { clone as cloneSkinned } from 'three/examples/jsm/utils/SkeletonUtils.js';
-import { colouredGeometry, dressBody, headwearFor, type Dressed } from './humanModel';
+import { addClothSway, colouredGeometry, dressBody, headwearFor, WIND, type Dressed } from './humanModel';
 import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import * as THREE from 'three';
 import type { Character as Char } from '../core/content';
@@ -101,6 +101,7 @@ function turnBone(b: THREE.Object3D, angle: number, axis: THREE.Vector3 = UP) {
   b.quaternion.premultiply(tmpQ.setFromAxisAngle(tmpAxis, angle));
 }
 const FWD = new THREE.Vector3(), SIDE = new THREE.Vector3(), rootQ = new THREE.Quaternion();
+const CARRY_SIGN = -1;
 
 function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolean; task?: 'sweep' | 'carry' | 'sit' | 'stand'; phase: number; turnTo?: number | null }) {
   const gltf = useGLTF(MAN_URL);
@@ -117,12 +118,13 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
     const g = c.garments;
     sk!.geometry = colouredGeometry(d, { ...(g.includes('bisht') ? { thobe: c.colour, over: '#4a3829', overFrom: 0.08 } : g.includes('jacket') ? { thobe: c.colour, over: '#2f3d4f', overFrom: 0.48 } : { thobe: c.colour }), build: c.build });
     sk!.material = new THREE.MeshStandardMaterial({ vertexColors: true, roughness: 0.88 });
+    addClothSway(sk!.material as THREE.MeshStandardMaterial, d, phase);
     sk!.castShadow = true; sk!.receiveShadow = true; sk!.frustumCulled = false;
     const headBone = scene.getObjectByName('Head')!;
     for (const m of headwearFor(d, sk!, g)) headBone.add(m);
     const mixer = new THREE.AnimationMixer(scene);
     return { scene, mixer, scale: c.height / d.modelHeight };
-  }, [gltf, c]);
+  }, [gltf, c, phase]);
   const current = useRef<THREE.AnimationAction | null>(null);
   useEffect(() => {
     const name = task === 'sit' ? (speaking ? 'Sitting_Talking_Loop' : 'Sitting_Idle_Loop') : task === 'sweep' ? 'Push_Loop' : speaking ? 'Idle_Talking_Loop' : 'Idle_Loop';
@@ -137,10 +139,12 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
   // shared 30/30/40, never more than 60°, and settle without a snap (euphoria lesson; videos Edward shared, 19 Nov).
   const bones = useMemo(() => ['spine_03', 'neck_01', 'Head'].map((n) => rig.scene.getObjectByName(n)), [rig]);
   const [pelvisB, spine1, spine2] = useMemo(() => ['pelvis', 'spine_01', 'spine_02'].map((n) => rig.scene.getObjectByName(n)), [rig]);
+  const armsB = useMemo(() => ['upperarm_l', 'upperarm_r', 'lowerarm_l', 'lowerarm_r'].map((n) => rig.scene.getObjectByName(n)), [rig]);
   const turn = useRef({ a: 0, v: 0 });
   useFrame(({ clock }, dt0) => {
     const dt = Math.min(dt0, 0.05);
     rig.mixer.update(dt);
+    WIND.time.value = clock.getElapsedTime();
     const want = THREE.MathUtils.clamp(turnTo ?? 0, -1.05, 1.05), k = 18, damp = 2 * Math.sqrt(k), s = turn.current;
     s.v += (k * (want - s.a) - damp * s.v) * dt; s.a += s.v * dt;
     if (Math.abs(s.a) > 1e-4) bones.forEach((b, i) => b && turnBone(b, s.a * [0.3, 0.3, 0.4][i]));
@@ -154,6 +158,8 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
       if (pelvisB) turnBone(pelvisB, shift, FWD);
       if (spine1) turnBone(spine1, -shift * 0.7, FWD);
       if (spine2) turnBone(spine2, Math.sin(t * (speaking ? 2.1 : 1.5)) * 0.012, SIDE);
+      // carrying: both arms come forward and the forearms bend up under the load (it never floats)
+      if (task === 'carry') armsB.forEach((b, i) => b && turnBone(b, CARRY_SIGN * (i < 2 ? 0.75 : 0.85), SIDE));
     }
   });
   return <primitive object={rig.scene} scale={rig.scale} />;

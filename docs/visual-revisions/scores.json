@@ -1654,5 +1654,41 @@
    "detail": -0.8,
    "variety": 0.1
   }
+ },
+ {
+  "rev": "REV-077",
+  "score": 0.417,
+  "notes": "Carriers hold their load: arms forward, forearms bent under it",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.41,
+   "contrast": 0.53,
+   "saturation": -0.37,
+   "warmth": 0.61,
+   "white_share": -0.12,
+   "shadow_share": 0.08,
+   "sky_share": -0.66,
+   "detail": -0.78,
+   "variety": 0.18
+  }
+ },
+ {
+  "rev": "REV-078",
+  "score": 0.408,
+  "notes": "Cloth sway: thobe skirts move with one shared breeze (vertex noise)",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.25,
+   "L_p95": -0.41,
+   "contrast": 0.53,
+   "saturation": -0.37,
+   "warmth": 0.62,
+   "white_share": -0.13,
+   "shadow_share": 0.09,
+   "sky_share": -0.66,
+   "detail": -0.79,
+   "variety": 0.08
+  }
  }
 ]
