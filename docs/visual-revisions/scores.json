@@ -1888,5 +1888,77 @@
    "detail": -0.75,
    "variety": 0.1
   }
+ },
+ {
+  "rev": "REV-088",
+  "score": 0.389,
+  "notes": "Black point 0.12 to 0.135",
+  "z": {
+   "L_p05": 0.22,
+   "L_p50": 0.16,
+   "L_p95": -0.33,
+   "contrast": 0.68,
+   "saturation": -0.24,
+   "warmth": 0.62,
+   "white_share": -0.18,
+   "shadow_share": 0.3,
+   "sky_share": -0.66,
+   "detail": -0.72,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-089",
+  "score": 0.397,
+  "notes": "Grain 0.02 to 0.035",
+  "z": {
+   "L_p05": 0.55,
+   "L_p50": 0.24,
+   "L_p95": -0.3,
+   "contrast": 0.57,
+   "saturation": -0.37,
+   "warmth": 0.61,
+   "white_share": -0.03,
+   "shadow_share": 0.07,
+   "sky_share": -0.66,
+   "detail": -0.73,
+   "variety": 0.23
+  }
+ },
+ {
+  "rev": "REV-090",
+  "score": 0.383,
+  "notes": "Limewash palette 75% to neutral",
+  "z": {
+   "L_p05": 0.57,
+   "L_p50": 0.24,
+   "L_p95": -0.3,
+   "contrast": 0.56,
+   "saturation": -0.35,
+   "warmth": 0.56,
+   "white_share": -0.08,
+   "shadow_share": 0.08,
+   "sky_share": -0.56,
+   "detail": -0.76,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-090b",
+  "score": 0.376,
+  "notes": "repeat of REV-090",
+  "z": {
+   "L_p05": 0.56,
+   "L_p50": 0.25,
+   "L_p95": -0.3,
+   "contrast": 0.56,
+   "saturation": -0.35,
+   "warmth": 0.56,
+   "white_share": -0.08,
+   "shadow_share": 0.08,
+   "sky_share": -0.56,
+   "detail": -0.75,
+   "variety": 0.08
+  }
  }
 ]
