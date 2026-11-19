@@ -54,8 +54,10 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 041 | 0.52 | ✅ | Exposure 1.25 → 1.18 (midtones were too bright after the grade) |
 | 042 | 0.53 | ❌ | Exposure 1.18 → 1.12 (too far) |
 | 043 | 0.51 | ✅ | Paving wear from its own RNG: mottling, hairline cracks, chipped corners (0.510 and 0.508) |
+| 044 | 0.57 | ❌ | Pale grey-sand paving joints (the ground lost its detail) |
+| 045 | 0.49 | ✅ | Darker grey-brown, dirt-filled paving joints |
 
-Best so far: **REV-043, 0.509** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-045, 0.486** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

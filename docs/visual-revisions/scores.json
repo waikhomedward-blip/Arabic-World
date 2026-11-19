@@ -916,5 +916,41 @@
    "detail": -1.39,
    "variety": 0.15
   }
+ },
+ {
+  "rev": "REV-044",
+  "score": 0.565,
+  "notes": "Paving joints pale grey-sand mortar (was orange-brown)",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.52,
+   "L_p95": -0.46,
+   "contrast": 0.46,
+   "saturation": -0.5,
+   "warmth": 0.81,
+   "white_share": -0.24,
+   "shadow_share": 0.17,
+   "sky_share": -0.65,
+   "detail": -2.0,
+   "variety": 0.1
+  }
+ },
+ {
+  "rev": "REV-045",
+  "score": 0.486,
+  "notes": "Paving joints darker grey-brown (dirt-filled)",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.37,
+   "L_p95": -0.45,
+   "contrast": 0.52,
+   "saturation": -0.48,
+   "warmth": 0.8,
+   "white_share": -0.23,
+   "shadow_share": 0.18,
+   "sky_share": -0.65,
+   "detail": -1.2,
+   "variety": 0.15
+  }
  }
 ]
