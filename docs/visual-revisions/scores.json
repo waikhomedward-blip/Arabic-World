@@ -1726,5 +1726,59 @@
    "detail": -0.76,
    "variety": 0.2
   }
+ },
+ {
+  "rev": "REV-080",
+  "score": 0.398,
+  "notes": "Windblown sand drifts at the foot of the walls",
+  "z": {
+   "L_p05": 0.59,
+   "L_p50": 0.25,
+   "L_p95": -0.3,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.6,
+   "white_share": -0.02,
+   "shadow_share": 0.07,
+   "sky_share": -0.65,
+   "detail": -0.77,
+   "variety": 0.18
+  }
+ },
+ {
+  "rev": "REV-081",
+  "score": 0.44,
+  "notes": "Sun azimuth 10 to 20 degrees (more cast shadow on the facades)",
+  "z": {
+   "L_p05": 0.65,
+   "L_p50": -0.04,
+   "L_p95": -0.13,
+   "contrast": 0.49,
+   "saturation": -0.43,
+   "warmth": 0.53,
+   "white_share": 0.51,
+   "shadow_share": -0.39,
+   "sky_share": -0.66,
+   "detail": -0.85,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-082",
+  "score": 0.454,
+  "notes": "Sun azimuth 10 to 4 degrees",
+  "z": {
+   "L_p05": 0.21,
+   "L_p50": 0.76,
+   "L_p95": -0.44,
+   "contrast": 0.45,
+   "saturation": -0.05,
+   "warmth": 0.88,
+   "white_share": -0.63,
+   "shadow_share": -0.17,
+   "sky_share": -0.65,
+   "detail": -0.76,
+   "variety": 0.0
+  }
  }
 ]

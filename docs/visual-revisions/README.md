@@ -90,6 +90,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 077 | 0.42 | ✅ fix | Carriers hold their load: arms forward, forearms bent under it (the crate used to float in front of a man with hanging arms). Score within noise |
 | 078 | 0.41 | ✅ motion | Cloth sway: thobe skirts move with one shared breeze (animated noise in the vertex shader, as in the Blender short; most at the hem, nothing above the hips; one shader for all men). Score 0.408; judged by eye on a sequence, no tearing |
 | 079 | 0.40 | ✅ | Density of life (GTA VI review): six more men doing ordinary things down the lane, behind the speakers: two neighbours chatting, a customer at the fruit stall, a man kneeling to fix a door, a shopkeeper arranging pots, a man waiting with a sack (0.400 and 0.398). Uses animation clips the model had but nobody used |
+| 080 | 0.40 | ❌ | Windblown sand drifts at the wall foot (barely visible; no gain) |
+| 081 | 0.44 | ❌ | Sun azimuth 10° → 20° (walls too bright) |
+| 082 | 0.45 | ❌ | Sun azimuth 10° → 4° (warmer, brighter midtones); 10° stays |
 
 Best so far: **REV-079, 0.399** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
