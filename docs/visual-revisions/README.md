@@ -96,8 +96,10 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 083 | 0.40 | ✅ budget | Each man's headwear merged into one rigid mesh in the head bone's space (was up to 4 draw calls; art bible: 2 per character). The agal can never deform. Looks identical |
 | 084 | 0.40 | ✅ fix | Off-screen bodies are culled (every man in the quarter used to be drawn in every scene); the fruit-stall customer from REV-079 removed because the d3-souq play-through on the cloud runner had no time left. Triangles in a souq scene fell from ~190k to ~80k |
 | 085 | 0.40 | ✅ motion | The ghutra's cape lifts a little in the same breeze as the thobes; cap and agal stay rigid. Score 0.395; judged by eye on a sequence |
+| 086 | 0.40 | ❌ | More rawasheen in the free wall between the seeded ones (0.402; the judge again does not reward more facade openings) |
+| 087 | 0.39 | ✅ | Faint photographic grain in the final grade (0.389 and 0.391) |
 
-Best so far: **REV-085, 0.395** (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-087, 0.390** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
