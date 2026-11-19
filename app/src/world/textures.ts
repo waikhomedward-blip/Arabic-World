@@ -76,7 +76,7 @@ export function pavingTexture(): THREE.Texture {
   const [c, g] = canvas(256, 256); const R = rng(31);
   g.fillStyle = '#5c5246'; g.fillRect(0, 0, 256, 256); // dirt-filled joints, grey-brown
   for (let y = 0; y < 256; y += 32) for (let x = (y / 32) % 2 ? -24 : 0; x < 256; x += 48) {
-    const v = 150 + Math.floor(R() * 45); g.fillStyle = `rgb(${v + 6},${v - 2},${v - 16})`; g.fillRect(x + 2, y + 2, 44, 28);
+    const v = 150 + Math.floor(R() * 45); g.fillStyle = `rgb(${v + 12},${v - 6},${v - 34})`; g.fillRect(x + 2, y + 2, 44, 28);
     g.fillStyle = 'rgba(60,50,40,0.15)'; g.fillRect(x + 2, y + 26, 44, 4);
   }
   // wear (own RNG, so the stones above keep their tones): mottling, hairline cracks, chipped corners

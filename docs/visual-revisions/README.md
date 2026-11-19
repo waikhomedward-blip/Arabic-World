@@ -104,9 +104,10 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 091 | 0.38 | ❌ | Foreground pole and crates in sun-greyed wood (no gain) |
 | 093 | 0.38 | ❌ | Stand-up collar round the neck of thobes and shirts (merged into the headwear, no extra draw call). Barely visible at phone scale, score level: not proven |
 | 094 | 0.39 | ❌ | Stronger grime at the wall foot (worse) |
-| 095 | 0.37 | ✅ | Retest of REV-036, paving stones half as orange (0.372 and 0.374). It failed before because saturation fell with warmth; the frame now has its own saturated colour |
+| 095 | 0.37 | ❌ reversed | Retest of REV-036, paving stones half as orange (0.372 and 0.374). Kept at first, then reversed: the judge started counting the bluish shaded paving as sky (sky share 0.008 → 0.034), which is more than the whole gain. The same artefact as REV-022 |
+| 096 | 0.37 | ❌ | Paving tint a little less orange, on top of 095 (level) |
 
-Best so far: **REV-095, 0.373** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-090, 0.380** (mean of 2 runs; REV-095 reversed) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows
