@@ -2,7 +2,7 @@
 // black and white points. Visual revisions REV-019+ (docs/visual-revisions/README.md).
 import * as THREE from 'three';
 
-export const GRADE = { black: 0.12, white: 0.95, wb: [1.0, 1.0, 1.0] as const };
+export const GRADE = { black: 0.12, white: 0.95, gamma: 1.0, wb: [1.0, 1.0, 1.0] as const };
 
 let done = false;
 export function installGrade() {
@@ -14,6 +14,6 @@ export function installGrade() {
   THREE.ShaderChunk.tonemapping_pars_fragment = src.replace(marker, `${marker}
 \tcolor = clamp( color * vec3( ${GRADE.wb.map((v) => v.toFixed(4)).join(', ')} ), 0.0, 1.0 );
 \tvec3 d = pow( color, vec3( 1.0 / 2.2 ) );
-\td = clamp( ( d - ${b} ) / ( ${w} - ${b} ), 0.0, 1.0 );
+\td = pow( clamp( ( d - ${b} ) / ( ${w} - ${b} ), 0.0, 1.0 ), vec3( ${GRADE.gamma.toFixed(4)} ) );
 \tcolor = pow( d, vec3( 2.2 ) );`);
 }

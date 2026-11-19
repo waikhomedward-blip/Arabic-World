@@ -952,5 +952,59 @@
    "detail": -1.2,
    "variety": 0.15
   }
+ },
+ {
+  "rev": "REV-046",
+  "score": 0.599,
+  "notes": "Grade midtone gamma 1.08",
+  "z": {
+   "L_p05": -0.19,
+   "L_p50": 0.14,
+   "L_p95": -0.56,
+   "contrast": 0.64,
+   "saturation": -0.33,
+   "warmth": 0.81,
+   "white_share": -0.63,
+   "shadow_share": 1.08,
+   "sky_share": -0.65,
+   "detail": -1.16,
+   "variety": 0.4
+  }
+ },
+ {
+  "rev": "REV-047",
+  "score": 0.476,
+  "notes": "Limewash palette halfway to neutral",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.36,
+   "L_p95": -0.47,
+   "contrast": 0.5,
+   "saturation": -0.45,
+   "warmth": 0.68,
+   "white_share": -0.28,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.21,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-047b",
+  "score": 0.472,
+  "notes": "repeat of REV-047",
+  "z": {
+   "L_p05": 0.31,
+   "L_p50": 0.36,
+   "L_p95": -0.47,
+   "contrast": 0.5,
+   "saturation": -0.45,
+   "warmth": 0.68,
+   "white_share": -0.29,
+   "shadow_share": 0.18,
+   "sky_share": -0.64,
+   "detail": -1.2,
+   "variety": 0.1
+  }
  }
 ]
