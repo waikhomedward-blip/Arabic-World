@@ -1276,5 +1276,59 @@
    "detail": -1.08,
    "variety": 0.18
   }
+ },
+ {
+  "rev": "REV-060",
+  "score": 0.457,
+  "notes": "One more painted colour: blue woodwork replaces a light brown",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.39,
+   "L_p95": -0.46,
+   "contrast": 0.51,
+   "saturation": -0.35,
+   "warmth": 0.61,
+   "white_share": -0.29,
+   "shadow_share": 0.28,
+   "sky_share": -0.64,
+   "detail": -1.08,
+   "variety": 0.13
+  }
+ },
+ {
+  "rev": "REV-061",
+  "score": 0.469,
+  "notes": "Grade black point 0.12 to 0.10",
+  "z": {
+   "L_p05": 0.72,
+   "L_p50": 0.47,
+   "L_p95": -0.43,
+   "contrast": 0.37,
+   "saturation": -0.45,
+   "warmth": 0.59,
+   "white_share": -0.07,
+   "shadow_share": -0.27,
+   "sky_share": -0.64,
+   "detail": -1.11,
+   "variety": 0.03
+  }
+ },
+ {
+  "rev": "REV-062",
+  "score": 0.448,
+  "notes": "Sun 7 to 8 (sunlit surfaces only)",
+  "z": {
+   "L_p05": 0.37,
+   "L_p50": 0.41,
+   "L_p95": -0.45,
+   "contrast": 0.51,
+   "saturation": -0.34,
+   "warmth": 0.64,
+   "white_share": -0.21,
+   "shadow_share": 0.14,
+   "sky_share": -0.64,
+   "detail": -1.05,
+   "variety": 0.18
+  }
  }
 ]

@@ -70,6 +70,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 057 | 0.47 | ❌ | Crates in sun-greyed wood (no gain) |
 | 058 | 0.47 | ❌ | Paving tint a little less orange (warmth traded for saturation again) |
 | 059 | 0.45 | ✅ | Painted woodwork green and turquoise more saturated, like the photos (0.447 and 0.452). Measured first: the warmth sits in the bottom half (ground, wood), and saturation only fell when warmth fell, so the frame needed cool saturated colour |
+| 060 | 0.46 | ❌ | Blue painted woodwork replacing a light brown (no gain) |
+| 061 | 0.47 | ❌ | Black point 0.12 → 0.10 (shadows too light) |
+| 062 | 0.45 | ❌ | Sun 7 → 8 (no change beyond noise) |
 
 Best so far: **REV-059, 0.450** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
