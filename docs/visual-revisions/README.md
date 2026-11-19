@@ -79,8 +79,11 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 066 | 0.43 | ❌ | Deeper thobe skirt folds (not visible at this size; within noise) |
 | 067 | 0.44 | ❌ | Skirt follows the legs half as much (no visible change: the lines were the legs themselves) |
 | 068 | 0.44 | ✅ bug fix | Legs pulled further inside the thobe skirt: they poked through when they swung, showing leg shapes (clipping, and less modest). Score neutral |
+| 069 | 0.44 | ❌ | Slimmer chest and shoulders (no visible difference at this size) |
+| 070 | 0.44 | ❌ | More, clearer hairline cracks in the limewash (no gain) |
+| 071 | 0.43 | ✅ | Portrait lens 54° → 60°: more of the street in frame (0.431 and 0.428), speakers still clear |
 
-Best so far: **REV-065, 0.436** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-071, 0.430** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

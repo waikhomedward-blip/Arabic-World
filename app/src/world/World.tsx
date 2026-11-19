@@ -369,7 +369,7 @@ function CameraRig({ target }: { target: [number, number, number] }) {
     look.current.lerp(new THREE.Vector3(target[0] - 2.0, 1.55, target[2] - 0.8), k); // down the lane: leading lines, sky over far roofs
     cam.position.copy(pos.current);
     cam.lookAt(look.current.x + swayX, cam.position.y + swayY, look.current.z); // level: vertical lines stay vertical
-    const visibleFov = portrait ? 54 : 44;
+    const visibleFov = portrait ? 60 : 44;
     const horizonFromTop = portrait ? 0.45 : 0.5;
     const fullH = size.height * 2;
     cam.fov = (2 * Math.atan(Math.tan(THREE.MathUtils.degToRad(visibleFov / 2)) * 2) * 180) / Math.PI;

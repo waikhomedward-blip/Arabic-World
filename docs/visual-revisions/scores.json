@@ -1456,5 +1456,77 @@
    "detail": -1.03,
    "variety": 0.13
   }
+ },
+ {
+  "rev": "REV-069",
+  "score": 0.437,
+  "notes": "Slimmer chest and shoulders",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.4,
+   "L_p95": -0.44,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.54,
+   "white_share": -0.21,
+   "shadow_share": 0.22,
+   "sky_share": -0.64,
+   "detail": -1.03,
+   "variety": 0.1
+  }
+ },
+ {
+  "rev": "REV-070",
+  "score": 0.44,
+  "notes": "More, clearer hairline cracks in the limewash",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.4,
+   "L_p95": -0.45,
+   "contrast": 0.56,
+   "saturation": -0.38,
+   "warmth": 0.54,
+   "white_share": -0.25,
+   "shadow_share": 0.21,
+   "sky_share": -0.64,
+   "detail": -1.01,
+   "variety": 0.13
+  }
+ },
+ {
+  "rev": "REV-071",
+  "score": 0.431,
+  "notes": "Portrait lens 54 to 60 degrees",
+  "z": {
+   "L_p05": 0.5,
+   "L_p50": 0.25,
+   "L_p95": -0.44,
+   "contrast": 0.56,
+   "saturation": -0.35,
+   "warmth": 0.59,
+   "white_share": -0.2,
+   "shadow_share": 0.14,
+   "sky_share": -0.65,
+   "detail": -0.86,
+   "variety": 0.2
+  }
+ },
+ {
+  "rev": "REV-071b",
+  "score": 0.428,
+  "notes": "repeat of REV-071",
+  "z": {
+   "L_p05": 0.49,
+   "L_p50": 0.25,
+   "L_p95": -0.44,
+   "contrast": 0.56,
+   "saturation": -0.35,
+   "warmth": 0.59,
+   "white_share": -0.2,
+   "shadow_share": 0.15,
+   "sky_share": -0.65,
+   "detail": -0.85,
+   "variety": 0.18
+  }
  }
 ]
