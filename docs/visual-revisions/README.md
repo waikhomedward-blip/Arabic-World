@@ -101,6 +101,7 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 088 | 0.39 | ❌ | Black point 0.12 → 0.135 (no gain) |
 | 089 | 0.40 | ❌ | Stronger grain, 0.035 (worse) |
 | 090 | 0.38 | ✅ | Limewash palette 75% of the way to neutral (0.383 and 0.376): sunlit walls read as clean white limewash |
+| 091 | 0.38 | ❌ | Foreground pole and crates in sun-greyed wood (no gain) |
 
 Best so far: **REV-090, 0.380** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing

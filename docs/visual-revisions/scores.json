@@ -1960,5 +1960,23 @@
    "detail": -0.75,
    "variety": 0.08
   }
+ },
+ {
+  "rev": "REV-091",
+  "score": 0.382,
+  "notes": "Foreground pole and crates in sun-greyed wood",
+  "z": {
+   "L_p05": 0.6,
+   "L_p50": 0.25,
+   "L_p95": -0.31,
+   "contrast": 0.51,
+   "saturation": -0.21,
+   "warmth": 0.68,
+   "white_share": -0.08,
+   "shadow_share": -0.1,
+   "sky_share": -0.56,
+   "detail": -0.76,
+   "variety": 0.15
+  }
  }
 ]
