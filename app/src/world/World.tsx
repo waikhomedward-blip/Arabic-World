@@ -8,7 +8,7 @@ import { addClothSway, colouredGeometry, dressBody, headwearFor, WIND, type Dres
 import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react';
 import * as THREE from 'three';
 import type { Character as Char } from '../core/content';
-import { characterParts, EXTRAS, type Part } from './characterSpec';
+import { characterParts, EXTRAS, type Part, type Task } from './characterSpec';
 import { buildQuarter, BACK_FACE_Z } from './quarter';
 import { applyWallWear } from './wallShader';
 import { installGrade } from './grade';
@@ -103,7 +103,7 @@ function turnBone(b: THREE.Object3D, angle: number, axis: THREE.Vector3 = UP) {
 const FWD = new THREE.Vector3(), SIDE = new THREE.Vector3(), rootQ = new THREE.Quaternion();
 const CARRY_SIGN = -1;
 
-function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolean; task?: 'sweep' | 'carry' | 'sit' | 'stand'; phase: number; turnTo?: number | null }) {
+function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolean; task?: Task; phase: number; turnTo?: number | null }) {
   const gltf = useGLTF(MAN_URL);
   const rig = useMemo(() => {
     if (!dressedCache) {
@@ -127,7 +127,7 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
   }, [gltf, c, phase]);
   const current = useRef<THREE.AnimationAction | null>(null);
   useEffect(() => {
-    const name = task === 'sit' ? (speaking ? 'Sitting_Talking_Loop' : 'Sitting_Idle_Loop') : task === 'sweep' ? 'Push_Loop' : speaking ? 'Idle_Talking_Loop' : 'Idle_Loop';
+    const name = task === 'sit' ? (speaking ? 'Sitting_Talking_Loop' : 'Sitting_Idle_Loop') : task === 'sweep' ? 'Push_Loop' : task === 'kneel' ? 'Fixing_Kneeling' : task === 'tend' ? 'Interact' : speaking || task === 'chat' ? 'Idle_Talking_Loop' : 'Idle_Loop';
     const clip = gltf.animations.find((a) => a.name === name) ?? gltf.animations.find((a) => a.name === 'Idle_Loop');
     if (!clip) return;
     const next = rig.mixer.clipAction(clip);
@@ -150,7 +150,7 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
     if (Math.abs(s.a) > 1e-4) bones.forEach((b, i) => b && turnBone(b, s.a * [0.3, 0.3, 0.4][i]));
     // Life on top of the clip: slow breathing in the chest (faster while talking) and an unhurried weight shift
     // from one foot to the other, the hips and spine counter-leaning so the head stays steady. Nobody stands like a statue.
-    if (task !== 'sit') {
+    if (task !== 'sit' && task !== 'kneel') {
       const t = clock.getElapsedTime() + phase * 7;
       rig.scene.getWorldQuaternion(rootQ);
       FWD.set(0, 0, 1).applyQuaternion(rootQ); SIDE.set(1, 0, 0).applyQuaternion(rootQ);
@@ -165,7 +165,7 @@ function Human({ c, speaking, task, phase, turnTo }: { c: Char; speaking: boolea
   return <primitive object={rig.scene} scale={rig.scale} />;
 }
 
-function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, bubble, lookAt }: { c: Char; at: [number, number, number]; speaking: boolean; active: boolean; onTap?: () => void; task?: 'sweep' | 'carry' | 'sit' | 'stand'; facing?: number; bubble?: ReactNode; lookAt?: [number, number] | null }) {
+function Person({ c, at, speaking, active, onTap, task, facing = Math.PI / 10, bubble, lookAt }: { c: Char; at: [number, number, number]; speaking: boolean; active: boolean; onTap?: () => void; task?: Task; facing?: number; bubble?: ReactNode; lookAt?: [number, number] | null }) {
   const turnTo = lookAt ? Math.atan2(Math.sin(Math.atan2(lookAt[0] - at[0], lookAt[1] - at[2]) - facing), Math.cos(Math.atan2(lookAt[0] - at[0], lookAt[1] - at[2]) - facing)) : null;
   const head = useRef<THREE.Group>(null);
   const body = useRef<THREE.Group>(null);
@@ -501,7 +501,7 @@ export function World({ place, people, speaker, onTapPerson, activeId, clock = '
       <Ground />
       <Quarter shadows={shadows} />
       <Props />
-      {EXTRAS.map((e) => <Person key={e.id} c={e} at={e.at} speaking={false} active={false} task={e.task} facing={e.task === 'carry' ? -Math.PI / 2 : Math.PI / 8} />)}
+      {EXTRAS.map((e) => <Person key={e.id} c={e} at={e.at} speaking={false} active={false} task={e.task} facing={e.facing ?? (e.task === 'carry' ? -Math.PI / 2 : Math.PI / 8)} />)}
       {people.map((p) => {
         const sp = people.find((q) => q.c.id === speaker);
         const traveller: [number, number] = [target[0] + 4.4, target[2] + 5.2]; // where the camera (the player) stands
