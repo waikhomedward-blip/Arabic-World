@@ -75,8 +75,9 @@ Rejected revisions are undone and logged too. Run one with `sh tools/visual-rev.
 | 062 | 0.45 | ❌ | Sun 7 → 8 (no change beyond noise) |
 | 063 | 0.45 | ❌ | Rawasheen frames: corner posts and rails (no gain) |
 | 064 | 0.45 | ✅ bug fix | The square's paving used the lane's texture repeat over a 9.2 m disc, so its stones were 6× too small. Now the same size as the lane. Median unchanged (squares are 3 of 20 frames), but the square frames' detail rose 0.15 → 0.20, in line with every other scene |
+| 065 | 0.44 | ✅ | Lantern with dark iron posts, glass panes and a cap (was a solid brass block): 0.441 and 0.430 |
 
-Best so far: **REV-064, 0.449** (REV-059 + square paving fix) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
+Best so far: **REV-065, 0.436** (mean of 2 runs) (cloud; Mac best was REV-009, 0.874). Next ideas to try:
 - the camera frame versus the photos' framing
 - rawasheen slat detail
 - a cooler grade on the shadows

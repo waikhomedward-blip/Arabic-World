@@ -275,7 +275,11 @@ function Props() {
       {Object.entries(PLACES).filter(([k]) => k !== 'masjid').map(([k, [px]]) => (
         <group key={k} position={portrait ? [px + 3.05, 0, 3.0] : [px + 4.6, 0, 1.7]}>
           <mesh position={[0, 1.6, 0]} castShadow><cylinderGeometry args={[0.055, 0.065, 3.2, 8]} /><meshStandardMaterial map={t.teak} color="#6b4a32" roughness={0.75} /></mesh>
-          <mesh position={[-0.28, 2.55, 0]} castShadow><boxGeometry args={[0.2, 0.3, 0.2]} /><meshStandardMaterial color="#8c6a3c" metalness={1} roughness={0.4} /></mesh>
+          {/* lantern (off in the morning): dark iron corner posts, pale glass panes, a small cap */}
+          <mesh position={[-0.28, 2.55, 0]} castShadow><boxGeometry args={[0.17, 0.28, 0.17]} /><meshStandardMaterial color="#26221e" roughness={0.6} /></mesh>
+          <mesh position={[-0.28, 2.55, 0]}><boxGeometry args={[0.135, 0.22, 0.18]} /><meshStandardMaterial color="#d9d6cc" roughness={0.15} /></mesh>
+          <mesh position={[-0.28, 2.55, 0]}><boxGeometry args={[0.18, 0.22, 0.135]} /><meshStandardMaterial color="#d9d6cc" roughness={0.15} /></mesh>
+          <mesh position={[-0.28, 2.74, 0]} castShadow><coneGeometry args={[0.14, 0.12, 4]} /><meshStandardMaterial color="#26221e" roughness={0.6} /></mesh>
           <Crates x={0.35} z={0.25} n={k === 'cafe' || k === 'home' ? 3 : 2} />
         </group>
       ))}

@@ -1366,5 +1366,41 @@
    "detail": -1.06,
    "variety": 0.18
   }
+ },
+ {
+  "rev": "REV-065",
+  "score": 0.441,
+  "notes": "Lantern with iron posts and glass panes (was a solid brass block)",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.41,
+   "L_p95": -0.43,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.54,
+   "white_share": -0.21,
+   "shadow_share": 0.22,
+   "sky_share": -0.64,
+   "detail": -1.03,
+   "variety": 0.15
+  }
+ },
+ {
+  "rev": "REV-065b",
+  "score": 0.43,
+  "notes": "repeat of REV-065",
+  "z": {
+   "L_p05": 0.28,
+   "L_p50": 0.41,
+   "L_p95": -0.43,
+   "contrast": 0.57,
+   "saturation": -0.38,
+   "warmth": 0.54,
+   "white_share": -0.22,
+   "shadow_share": 0.21,
+   "sky_share": -0.64,
+   "detail": -1.02,
+   "variety": 0.03
+  }
  }
 ]
