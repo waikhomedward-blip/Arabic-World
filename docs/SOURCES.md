@@ -12,3 +12,5 @@ All research sources so far are listed inline (with links and Muslim/non-Muslim 
 | 2026-11-16 | Azure language support + Q&A on output rights | https://learn.microsoft.com/azure/ai-services/speech-service/language-support | non-Muslim (vendor) | Male Arabic voices, licence |
 | 2026-11-16 | CSTR lessac licence; Piper #271 | https://www.cstr.ed.ac.uk/projects/blizzard/2013/lessac_blizzard2013/license.html | non-Muslim (labelled) | Piper voice not commercial |
 | 2026-11-16 | Koschmieder / three.js FogExp2 / AgX PR / N8AO | see docs/research/DOC_REVIEW_2026-11-16.md | n/a (tech) | Visuals playbook check |
+| 2026-11-19 | Camel Morph repository (licence: MIT code, CC BY 4.0 MSA database, credit line) | https://github.com/CAMeL-Lab/camel_morph | affiliation unconfirmed (NYU Abu Dhabi lab) | Shipped-data licence lock |
+| 2026-11-19 | CAMeL Tools data packages page (r13 = GPL v2) | https://camel-tools.readthedocs.io/en/latest/reference/packages.html | affiliation unconfirmed | Why r13 is never shipped |

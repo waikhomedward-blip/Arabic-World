@@ -38,3 +38,4 @@
 
 ## Log
 - 2026-11-18: research done (game study, review-free report). 80 lemmas, 20 scenes. Speech bubbles and Scheherazade New font shipped.
+- 2026-11-19: licence lock (issue #6): Camel Morph MSA CC BY 4.0 adopted with credit line; r13/SAMER/Tashkeela/Farasa/MADAMIRA never shipped; LICENCES/SOURCES/DECISIONS updated; validator licence guard + tests. Lab baseline unchanged (80/100, Suite R 100%, only lemma-target-150 fails). Next: issue #7 labelled lemma whitelist.
