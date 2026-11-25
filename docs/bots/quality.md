@@ -29,3 +29,4 @@
 
 ## Log
 - 2026-11-18: bot team set up. Free GitHub checks added.
+- 2026-11-25: reviewed and merged PR #29 (lemma labels, checks only added); wrote digest. Next: issue #12 flaky retention.
