@@ -6,6 +6,7 @@ import { baseForm } from './arabic';
 import type { Scene } from './content';
 
 export type ReviewClass = 'universal' | 'cultural' | 'sacred';
+export const RANK: Record<ReviewClass, number> = { universal: 0, cultural: 1, sacred: 2 };
 
 const SACRED = /صلا[ةه]|قرا?ن|قرآن|اذان|أذان|آي[ةه]|سور[ةه]|دعاء|وضوء|صوم|صيام|حج|عمر[ةه]|تلاو[ةه]/;
 const CULTURAL = /الله|لله|السلام عليكم|وعليكم السلام|مسجد/;

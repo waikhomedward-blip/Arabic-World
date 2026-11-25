@@ -1,5 +1,5 @@
 // Content types + loader (Vite glob in the app; fs in tools/lab via loadContentFromDisk).
-export interface Lemma { id: string; ar: string; en: string; tier: 0 | 1 | 2 | 3 | 'everyday'; root: string | null; targetRung: number }
+export interface Lemma { id: string; ar: string; en: string; tier: 0 | 1 | 2 | 3 | 'everyday'; root: string | null; targetRung: number; label: 'universal' | 'cultural' | 'sacred' }
 export interface Line { type: 'line'; speaker: string; ar: string; en: string; lemmas: string[]; register: 'fusha' | 'white' | 'dialect-listen'; gesture?: string; names?: string[]; notice?: { root: string; words: string[]; en: string } }
 export interface Option { ar: string; en: string; lemmas: string[]; correct: boolean; action?: string }
 export interface Prompt {

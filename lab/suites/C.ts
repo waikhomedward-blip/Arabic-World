@@ -5,7 +5,7 @@ import { tashkeelReport } from '../../app/src/core/arabic';
 import { checkTyped } from '../../app/src/core/checker';
 import { baseForm } from '../../app/src/core/arabic';
 import { optionOrder } from '../../app/src/core/engine';
-import { classifyScene, classifyText } from '../../app/src/core/review';
+import { classifyScene, classifyText, RANK } from '../../app/src/core/review';
 import { mk, type SuiteResult, type Case } from './types';
 
 function occurrences(s: Scene): { lemma: string; step: number }[] {
@@ -114,6 +114,20 @@ export function suiteC(content: Content): SuiteResult {
   for (const s of content.scenes) { const cls = classifyScene(s); cases.push(t(`sacred-only-optional:${s.id}`, cls !== 'sacred' || !!s.optional, cls)); }
   const universalShare = allTexts.filter((x) => classifyText(x.ar) === 'universal').length / allTexts.length;
   cases.push(t('review-free:universal-share>=80%', universalShare >= 0.8, `${(universalShare * 100).toFixed(1)}%`));
+  // 14. labelled whitelist (issue #7): every lemma carries a review label; labels never understate the Arabic itself;
+  //     a scene's label is at least the highest label of the lemmas it uses
+  const lemmaById = new Map(content.lemmas.map((l) => [l.id, l]));
+  for (const l of content.lemmas) {
+    const ok = l.label === 'universal' || l.label === 'cultural' || l.label === 'sacred';
+    cases.push(t(`lemma-label:${l.id}`, ok, String(l.label)));
+    if (ok) cases.push(t(`lemma-label-not-understated:${l.id}`, RANK[l.label] >= RANK[classifyText(l.ar)], `${l.label} vs text ${classifyText(l.ar)}`));
+  }
+  for (const s of content.scenes) {
+    const worst = Math.max(0, ...occurrences(s).map((o) => RANK[lemmaById.get(o.lemma)?.label ?? 'sacred']));
+    cases.push(t(`scene-label>=lemmas:${s.id}`, RANK[classifyScene(s)] >= worst, `scene ${classifyScene(s)}`));
+  }
+  const labelled = content.lemmas.filter((l) => l.label === 'universal').length / content.lemmas.length;
+  cases.push(t('lemma-universal-share>=80%', labelled >= 0.8, `${(labelled * 100).toFixed(1)}%`));
   // 13. ten-day scope (v1 target)
   cases.push(t('ten-days-authored', days.length >= 10, `${days.length} days`));
   cases.push(t('lemma-target-150', content.lemmas.length >= 150, `${content.lemmas.length} lemmas`));
