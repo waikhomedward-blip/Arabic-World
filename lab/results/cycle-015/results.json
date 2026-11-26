@@ -884,6 +884,41 @@
    },
    {
     "suite": "R",
+    "id": "no-female-person-word-lemma:bab",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-lemma:nafidha",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-lemma:kass",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-lemma:halib",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-lemma:barid",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-lemma:sakhin",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-lemma:burtuqal",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
     "id": "no-female-person-word-role:abu_faisal",
     "status": "pass"
    },
@@ -12124,6 +12159,1125 @@
    },
    {
     "suite": "R",
+    "id": "speaker-in-cast:d11-home:faisal",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:faisal",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:majid",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:majid",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:faisal",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:faisal",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:faisal",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:majid",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-home:faisal",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#4.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#4.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#4.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#6",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#6",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#6",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#6",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#7",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#7",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#7",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#7",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#8.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#8.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#8.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#8.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#8.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#8.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#8.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#8.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#8.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#8.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#8.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#8.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#8.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#8.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#8.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-home#8.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-home#8.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-home#8.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#4.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-home#8.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-en:d11-home",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "R",
+    "id": "world-time-08-11:d11-home",
+    "status": "pass",
+    "detail": "08:30"
+   },
+   {
+    "suite": "R",
+    "id": "no-night-scene:d11-home",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "quran-only-sanctuary:d11-home",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "quran-never-in-failure-reward-menu:d11-home",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-souq:saeed",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-souq:saeed",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-souq:saeed",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-souq:saeed",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-souq:saeed",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-souq:saeed",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "speaker-in-cast:d11-souq:saeed",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#1.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#1.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#1.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#1.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#1.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#1.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#1.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#1.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#1.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#1.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#1.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#1.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#1.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#1.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#1.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#1.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#1.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#1.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#1.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#1.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#1.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.ask",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.tile2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#3.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#3.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#3.tile3",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#4",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#4",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#4",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#4",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#5",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#6.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#6.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#6.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#6.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#6.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#6.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#6.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#6.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#6.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#6.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#6.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#6.recast",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#6.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#6.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#6.tile0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-name-text:d11-souq#6.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-feminine-address:d11-souq#6.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-ar:d11-souq#6.tile1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#1.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#3.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.opt0",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.opt1",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-face-emoji:d11-souq#6.opt2",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "no-female-person-word-en:d11-souq",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "R",
+    "id": "world-time-08-11:d11-souq",
+    "status": "pass",
+    "detail": "09:45"
+   },
+   {
+    "suite": "R",
+    "id": "no-night-scene:d11-souq",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "quran-only-sanctuary:d11-souq",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
+    "id": "quran-never-in-failure-reward-menu:d11-souq",
+    "status": "pass"
+   },
+   {
+    "suite": "R",
     "id": "adhan-mutes-everything-else",
     "status": "pass"
    },
@@ -15238,6 +16392,282 @@
    },
    {
     "suite": "C",
+    "id": "tashkeel:d11-home#0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#3",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.ask",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.opt0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.opt1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.recast",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.tile0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.tile1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.tile2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#4.tile3",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#5",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#6",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#7",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#8.opt0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#8.opt1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#8.opt2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#8.recast",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#8.tile0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-home#8.tile1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#1.opt0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#1.opt1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#1.opt2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#1.recast",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#1.tile0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#1.tile1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#1.tile2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.ask",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.opt0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.opt1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.recast",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.tile0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.tile1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.tile2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#3.tile3",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#4",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#5",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#6.opt0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#6.opt1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#6.opt2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#6.recast",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#6.tile0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:d11-souq#6.tile1",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
     "id": "tashkeel:lemma:wa",
     "status": "pass",
     "detail": ""
@@ -15713,6 +17143,48 @@
    {
     "suite": "C",
     "id": "tashkeel:lemma:sahaba",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:lemma:bab",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:lemma:nafidha",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:lemma:kass",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:lemma:halib",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:lemma:barid",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:lemma:sakhin",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "tashkeel:lemma:burtuqal",
     "status": "pass",
     "detail": ""
    },
@@ -19263,9 +20735,369 @@
    },
    {
     "suite": "C",
+    "id": "lemma-exists:d11-home#0:sabah",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#0:khayr",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#0:hadha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#0:bab",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#1:wa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#1:hadhihi",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#1:nafidha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#1:kabir",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#2:hadhihi",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#2:kass",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#2:fi",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#2:maa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#3:maa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#3:barid",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:hal",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:maa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:sakhin",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:la",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:maa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:barid",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:naam",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:maa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#4:sakhin",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#5:shay",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#5:sakhin",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#6:khudh",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#6:kass",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#6:min",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#6:halib",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#7:hadha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#7:burtuqal",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#7:saghir",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#8:shukran",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#8:afwan",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-home#8:ahlan",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#0:salam",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#0:ala",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#0:kum",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#0:tafaddal",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:wa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:ala",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:kum",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:salam",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:salam",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:ala",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:kum",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#1:ahlan",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#2:hadha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#2:burtuqal",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#2:halib",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#2:barid",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:hal",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:hadha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:halib",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:la",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:hadha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:burtuqal",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:naam",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:hadha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#3:halib",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#4:bab",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#4:kabir",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#4:wa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#4:nafidha",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#4:saghir",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#5:hadhihi",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#5:kass",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#5:qahwa",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#5:sakhin",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#6:shukran",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#6:afwan",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-exists:d11-souq#6:ahlan",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
     "id": "twice-two-situations:wa",
     "status": "pass",
-    "detail": "29 uses / 20 scenes"
+    "detail": "32 uses / 22 scenes"
    },
    {
     "suite": "C",
@@ -19283,25 +21115,25 @@
     "suite": "C",
     "id": "twice-two-situations:hadha",
     "status": "pass",
-    "detail": "35 uses / 17 scenes"
+    "detail": "41 uses / 19 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:hadhihi",
     "status": "pass",
-    "detail": "13 uses / 8 scenes"
+    "detail": "16 uses / 10 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:ala",
     "status": "pass",
-    "detail": "38 uses / 16 scenes"
+    "detail": "41 uses / 17 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:kum",
     "status": "pass",
-    "detail": "38 uses / 16 scenes"
+    "detail": "41 uses / 17 scenes"
    },
    {
     "suite": "C",
@@ -19325,13 +21157,13 @@
     "suite": "C",
     "id": "twice-two-situations:la",
     "status": "pass",
-    "detail": "13 uses / 12 scenes"
+    "detail": "15 uses / 14 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:hal",
     "status": "pass",
-    "detail": "11 uses / 11 scenes"
+    "detail": "13 uses / 13 scenes"
    },
    {
     "suite": "C",
@@ -19343,7 +21175,7 @@
     "suite": "C",
     "id": "twice-two-situations:min",
     "status": "pass",
-    "detail": "2 uses / 2 scenes"
+    "detail": "3 uses / 3 scenes"
    },
    {
     "suite": "C",
@@ -19361,13 +21193,13 @@
     "suite": "C",
     "id": "twice-two-situations:salam",
     "status": "pass",
-    "detail": "38 uses / 16 scenes"
+    "detail": "41 uses / 17 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:ahlan",
     "status": "pass",
-    "detail": "29 uses / 18 scenes"
+    "detail": "32 uses / 20 scenes"
    },
    {
     "suite": "C",
@@ -19379,25 +21211,25 @@
     "suite": "C",
     "id": "twice-two-situations:shukran",
     "status": "pass",
-    "detail": "25 uses / 14 scenes"
+    "detail": "27 uses / 16 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:afwan",
     "status": "pass",
-    "detail": "18 uses / 11 scenes"
+    "detail": "20 uses / 13 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:tafaddal",
     "status": "pass",
-    "detail": "5 uses / 5 scenes"
+    "detail": "6 uses / 6 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:maa",
     "status": "pass",
-    "detail": "13 uses / 7 scenes"
+    "detail": "18 uses / 8 scenes"
    },
    {
     "suite": "C",
@@ -19409,13 +21241,13 @@
     "suite": "C",
     "id": "twice-two-situations:khudh",
     "status": "pass",
-    "detail": "9 uses / 8 scenes"
+    "detail": "10 uses / 9 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:naam",
     "status": "pass",
-    "detail": "18 uses / 15 scenes"
+    "detail": "20 uses / 17 scenes"
    },
    {
     "suite": "C",
@@ -19451,13 +21283,13 @@
     "suite": "C",
     "id": "twice-two-situations:khayr",
     "status": "pass",
-    "detail": "14 uses / 9 scenes"
+    "detail": "15 uses / 10 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:qahwa",
     "status": "pass",
-    "detail": "7 uses / 4 scenes"
+    "detail": "8 uses / 5 scenes"
    },
    {
     "suite": "C",
@@ -19493,7 +21325,7 @@
     "suite": "C",
     "id": "twice-two-situations:fi",
     "status": "pass",
-    "detail": "6 uses / 5 scenes"
+    "detail": "7 uses / 6 scenes"
    },
    {
     "suite": "C",
@@ -19523,7 +21355,7 @@
     "suite": "C",
     "id": "twice-two-situations:sabah",
     "status": "pass",
-    "detail": "12 uses / 7 scenes"
+    "detail": "13 uses / 8 scenes"
    },
    {
     "suite": "C",
@@ -19595,7 +21427,7 @@
     "suite": "C",
     "id": "twice-two-situations:shay",
     "status": "pass",
-    "detail": "6 uses / 3 scenes"
+    "detail": "7 uses / 4 scenes"
    },
    {
     "suite": "C",
@@ -19613,13 +21445,13 @@
     "suite": "C",
     "id": "twice-two-situations:saghir",
     "status": "pass",
-    "detail": "5 uses / 3 scenes"
+    "detail": "7 uses / 5 scenes"
    },
    {
     "suite": "C",
     "id": "twice-two-situations:kabir",
     "status": "pass",
-    "detail": "7 uses / 3 scenes"
+    "detail": "9 uses / 5 scenes"
    },
    {
     "suite": "C",
@@ -19743,6 +21575,48 @@
    },
    {
     "suite": "C",
+    "id": "twice-two-situations:bab",
+    "status": "pass",
+    "detail": "2 uses / 2 scenes"
+   },
+   {
+    "suite": "C",
+    "id": "twice-two-situations:nafidha",
+    "status": "pass",
+    "detail": "2 uses / 2 scenes"
+   },
+   {
+    "suite": "C",
+    "id": "twice-two-situations:kass",
+    "status": "pass",
+    "detail": "3 uses / 2 scenes"
+   },
+   {
+    "suite": "C",
+    "id": "twice-two-situations:halib",
+    "status": "pass",
+    "detail": "4 uses / 2 scenes"
+   },
+   {
+    "suite": "C",
+    "id": "twice-two-situations:barid",
+    "status": "pass",
+    "detail": "3 uses / 2 scenes"
+   },
+   {
+    "suite": "C",
+    "id": "twice-two-situations:sakhin",
+    "status": "pass",
+    "detail": "4 uses / 2 scenes"
+   },
+   {
+    "suite": "C",
+    "id": "twice-two-situations:burtuqal",
+    "status": "pass",
+    "detail": "3 uses / 2 scenes"
+   },
+   {
+    "suite": "C",
     "id": "new-lemmas-per-day:d1",
     "status": "pass",
     "detail": "8 new"
@@ -19800,6 +21674,12 @@
     "id": "new-lemmas-per-day:d10",
     "status": "pass",
     "detail": "3 new"
+   },
+   {
+    "suite": "C",
+    "id": "new-lemmas-per-day:d11",
+    "status": "pass",
+    "detail": "7 new"
    },
    {
     "suite": "C",
@@ -20605,6 +22485,107 @@
    {
     "suite": "C",
     "id": "max-2-new-per-line:d10-cafe#8",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-home#0",
+    "status": "pass",
+    "detail": "bab"
+   },
+   {
+    "suite": "C",
+    "id": "new-word-has-visual-support:d11-home#0",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-home#1",
+    "status": "pass",
+    "detail": "nafidha"
+   },
+   {
+    "suite": "C",
+    "id": "new-word-has-visual-support:d11-home#1",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-home#2",
+    "status": "pass",
+    "detail": "kass"
+   },
+   {
+    "suite": "C",
+    "id": "new-word-has-visual-support:d11-home#2",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-home#3",
+    "status": "pass",
+    "detail": "barid"
+   },
+   {
+    "suite": "C",
+    "id": "new-word-has-visual-support:d11-home#3",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-home#5",
+    "status": "pass",
+    "detail": "sakhin"
+   },
+   {
+    "suite": "C",
+    "id": "new-word-has-visual-support:d11-home#5",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-home#6",
+    "status": "pass",
+    "detail": "halib"
+   },
+   {
+    "suite": "C",
+    "id": "new-word-has-visual-support:d11-home#6",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-home#7",
+    "status": "pass",
+    "detail": "burtuqal"
+   },
+   {
+    "suite": "C",
+    "id": "new-word-has-visual-support:d11-home#7",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-souq#0",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-souq#2",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-souq#4",
+    "status": "pass",
+    "detail": ""
+   },
+   {
+    "suite": "C",
+    "id": "max-2-new-per-line:d11-souq#5",
     "status": "pass",
     "detail": ""
    },
@@ -21755,6 +23736,101 @@
    },
    {
     "suite": "C",
+    "id": "prompt-has-correct:d11-home#4",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-home#4:لَا، الْمَاءُ بَارِدٌ",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-home#4:لَا",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "tiles-can-build:d11-home#4",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "prompt-has-correct:d11-home#8",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-home#8:شُكْرًا",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "tiles-can-build:d11-home#8",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "prompt-has-correct:d11-souq#1",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-souq#1:وَعَلَيْكُمُ السَّلَامُ",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-souq#1:وَعَلَيْكُمْ السَّلَامُ",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-souq#1:وعليكم السلام",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "tiles-can-build:d11-souq#1",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "prompt-has-correct:d11-souq#3",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-souq#3:لَا، هٰذَا بُرْتُقَالٌ",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-souq#3:لَا",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "tiles-can-build:d11-souq#3",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "prompt-has-correct:d11-souq#6",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "accepted-self-check:d11-souq#6:شُكْرًا",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "tiles-can-build:d11-souq#6",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
     "id": "root-twist:س ل م",
     "status": "pass",
     "detail": "salam,salama"
@@ -21793,19 +23869,19 @@
     "suite": "C",
     "id": "bias:correct-shown-first<=60%",
     "status": "pass",
-    "detail": "43%"
+    "detail": "44%"
    },
    {
     "suite": "C",
     "id": "bias:correct-is-longest<=40%",
     "status": "pass",
-    "detail": "25% of 36"
+    "detail": "27% of 41"
    },
    {
     "suite": "C",
     "id": "bias:yes-no-answer-is-no>=25%",
     "status": "pass",
-    "detail": "40% of 10"
+    "detail": "50% of 12"
    },
    {
     "suite": "C",
@@ -22079,6 +24155,31 @@
    },
    {
     "suite": "C",
+    "id": "neutral-option:d11h-cold",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "neutral-option:d11h-thanks",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "neutral-option:d11s-greet",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "neutral-option:d11s-milk",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
+    "id": "neutral-option:d11s-thanks",
+    "status": "pass"
+   },
+   {
+    "suite": "C",
     "id": "universal-teaching-example:d3-home#5",
     "status": "pass"
    },
@@ -22111,7 +24212,7 @@
     "suite": "C",
     "id": "universal:religious-share<=12%",
     "status": "pass",
-    "detail": "5.1%"
+    "detail": "4.6%"
    },
    {
     "suite": "C",
@@ -22235,9 +24336,21 @@
    },
    {
     "suite": "C",
+    "id": "sacred-only-optional:d11-home",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "sacred-only-optional:d11-souq",
+    "status": "pass",
+    "detail": "cultural"
+   },
+   {
+    "suite": "C",
     "id": "review-free:universal-share>=80%",
     "status": "pass",
-    "detail": "80.2%"
+    "detail": "80.9%"
    },
    {
     "suite": "C",
@@ -23201,6 +25314,90 @@
    },
    {
     "suite": "C",
+    "id": "lemma-label:bab",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label-not-understated:bab",
+    "status": "pass",
+    "detail": "universal vs text universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label:nafidha",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label-not-understated:nafidha",
+    "status": "pass",
+    "detail": "universal vs text universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label:kass",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label-not-understated:kass",
+    "status": "pass",
+    "detail": "universal vs text universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label:halib",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label-not-understated:halib",
+    "status": "pass",
+    "detail": "universal vs text universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label:barid",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label-not-understated:barid",
+    "status": "pass",
+    "detail": "universal vs text universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label:sakhin",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label-not-understated:sakhin",
+    "status": "pass",
+    "detail": "universal vs text universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label:burtuqal",
+    "status": "pass",
+    "detail": "universal"
+   },
+   {
+    "suite": "C",
+    "id": "lemma-label-not-understated:burtuqal",
+    "status": "pass",
+    "detail": "universal vs text universal"
+   },
+   {
+    "suite": "C",
     "id": "scene-label>=lemmas:d1-home",
     "status": "pass",
     "detail": "scene cultural"
@@ -23321,31 +25518,43 @@
    },
    {
     "suite": "C",
+    "id": "scene-label>=lemmas:d11-home",
+    "status": "pass",
+    "detail": "scene universal"
+   },
+   {
+    "suite": "C",
+    "id": "scene-label>=lemmas:d11-souq",
+    "status": "pass",
+    "detail": "scene cultural"
+   },
+   {
+    "suite": "C",
     "id": "lemma-universal-share>=80%",
     "status": "pass",
-    "detail": "95.0%"
+    "detail": "95.4%"
    },
    {
     "suite": "C",
     "id": "ten-days-authored",
     "status": "pass",
-    "detail": "10 days"
+    "detail": "11 days"
    },
    {
     "suite": "C",
     "id": "lemma-target-150",
     "status": "fail",
-    "detail": "80 lemmas"
+    "detail": "87 lemmas"
    }
   ],
   "metrics": {
-   "universalShare": 0.802,
-   "lemmas": 80,
-   "days": 10,
-   "scenes": 20,
-   "tenEncounterShare": 0.275,
+   "universalShare": 0.809,
+   "lemmas": 87,
+   "days": 11,
+   "scenes": 22,
+   "tenEncounterShare": 0.264,
    "minSceneCoverage": 0.231,
-   "meanSceneCoverage": 0.78
+   "meanSceneCoverage": 0.786
   }
  },
  {
@@ -24149,6 +26358,86 @@
    {
     "suite": "G",
     "id": "completes:d10-cafe:wrong-action",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:always-correct-tap",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:always-wrong-tap",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:typed-correct",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:typed-garbage",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:typed-empty",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:tiles-correct",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:tiles-wrong-order",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-home:wrong-action",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:always-correct-tap",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:always-wrong-tap",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:typed-correct",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:typed-garbage",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:typed-empty",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:tiles-correct",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:tiles-wrong-order",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "completes:d11-souq:wrong-action",
     "status": "pass"
    },
    {
@@ -26653,6 +28942,256 @@
    },
    {
     "suite": "G",
+    "id": "fuzz:d11-home:0",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:1",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:2",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:3",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:4",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:5",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:6",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:7",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:8",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:9",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:10",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:11",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:12",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:13",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:14",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:15",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:16",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:17",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:18",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:19",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:20",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:21",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:22",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:23",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-home:24",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:0",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:1",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:2",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:3",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:4",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:5",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:6",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:7",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:8",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:9",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:10",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:11",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:12",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:13",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:14",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:15",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:16",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:17",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:18",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:19",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:20",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:21",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:22",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:23",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
+    "id": "fuzz:d11-souq:24",
+    "status": "pass"
+   },
+   {
+    "suite": "G",
     "id": "morning:no-suffix-forms",
     "status": "pass"
    },
@@ -26698,7 +29237,7 @@
     "suite": "L",
     "id": "checker:>=99%-correct-classification",
     "status": "pass",
-    "detail": "100.00% of 2553"
+    "detail": "100.00% of 2757"
    },
    {
     "suite": "L",
@@ -26710,67 +29249,67 @@
     "suite": "L",
     "id": "checker-kind:exact",
     "status": "pass",
-    "detail": "234/234"
+    "detail": "252/252"
    },
    {
     "suite": "L",
     "id": "checker-kind:no-harakat",
     "status": "pass",
-    "detail": "234/234"
+    "detail": "252/252"
    },
    {
     "suite": "L",
     "id": "checker-kind:punct-space",
     "status": "pass",
-    "detail": "234/234"
+    "detail": "252/252"
    },
    {
     "suite": "L",
     "id": "checker-kind:tatweel",
     "status": "pass",
-    "detail": "234/234"
+    "detail": "252/252"
    },
    {
     "suite": "L",
     "id": "checker-kind:root-swap",
     "status": "pass",
-    "detail": "384/384"
+    "detail": "410/410"
    },
    {
     "suite": "L",
     "id": "checker-kind:random-typo",
     "status": "pass",
-    "detail": "709/709"
+    "detail": "765/765"
    },
    {
     "suite": "L",
     "id": "checker-kind:long-vowel-drop",
     "status": "pass",
-    "detail": "224/224"
+    "detail": "250/250"
    },
    {
     "suite": "L",
     "id": "checker-kind:long-vowel-add",
     "status": "pass",
-    "detail": "212/212"
+    "detail": "230/230"
    },
    {
     "suite": "L",
     "id": "checker-kind:ta-marbuta-h",
     "status": "pass",
-    "detail": "24/24"
+    "detail": "26/26"
    },
    {
     "suite": "L",
     "id": "checker-kind:ta-marbuta-t",
     "status": "pass",
-    "detail": "24/24"
+    "detail": "26/26"
    },
    {
     "suite": "L",
     "id": "checker-kind:hamza",
     "status": "pass",
-    "detail": "34/34"
+    "detail": "36/36"
    },
    {
     "suite": "L",
@@ -26847,25 +29386,25 @@
     "suite": "L",
     "id": "learners:auto:slow-frustration<=1/day",
     "status": "pass",
-    "detail": "0.17"
+    "detail": "0.08"
    },
    {
     "suite": "L",
     "id": "learners:auto:median-retained>=80%-of-lemmas",
     "status": "pass",
-    "detail": "68/80"
+    "detail": "71/87"
    },
    {
     "suite": "L",
     "id": "learners:musafir:slow-frustration<=1/day",
     "status": "pass",
-    "detail": "0.02"
+    "detail": "0.01"
    },
    {
     "suite": "L",
     "id": "learners:musafir:median-retained>=80%-of-lemmas",
     "status": "pass",
-    "detail": "68/80"
+    "detail": "72/87"
    },
    {
     "suite": "L",
@@ -26877,39 +29416,39 @@
     "suite": "L",
     "id": "learners:talib:median-retained>=80%-of-lemmas",
     "status": "pass",
-    "detail": "69/80"
+    "detail": "72/87"
    },
    {
     "suite": "L",
     "id": "learners:muqim:slow-frustration<=1/day",
-    "status": "pass",
-    "detail": "0.99"
+    "status": "fail",
+    "detail": "1.01"
    },
    {
     "suite": "L",
     "id": "learners:muqim:median-retained>=80%-of-lemmas",
     "status": "pass",
-    "detail": "68/80"
+    "detail": "73/87"
    }
   ],
   "metrics": {
-   "checkerItems": 2553,
+   "checkerItems": 2757,
    "checkerAccuracy": 1,
    "learners": 120,
-   "auto:medianRetained": 68,
-   "auto:slowFrustrationPerDay": 0.17,
+   "auto:medianRetained": 71,
+   "auto:slowFrustrationPerDay": 0.08,
    "auto:boredomDays": 0,
-   "musafir:medianRetained": 68,
-   "musafir:slowFrustrationPerDay": 0.02,
+   "musafir:medianRetained": 72,
+   "musafir:slowFrustrationPerDay": 0.01,
    "musafir:boredomDays": 0,
-   "talib:medianRetained": 69,
+   "talib:medianRetained": 72,
    "talib:slowFrustrationPerDay": 0.53,
-   "talib:boredomDays": 0.01,
-   "muqim:medianRetained": 68,
-   "muqim:slowFrustrationPerDay": 0.99,
+   "talib:boredomDays": 0,
+   "muqim:medianRetained": 73,
+   "muqim:slowFrustrationPerDay": 1.01,
    "muqim:boredomDays": 0,
-   "auto:noMorningMedianRetained": 61,
-   "retainedFraction": 0.85
+   "auto:noMorningMedianRetained": 63,
+   "retainedFraction": 0.816
   }
  },
  {

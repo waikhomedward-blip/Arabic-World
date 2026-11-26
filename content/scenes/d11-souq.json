@@ -1,0 +1,239 @@
+{
+ "id": "d11-souq",
+ "day": 11,
+ "place": "souq",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "صَبَاحُ السُّوقِ",
+  "en": "Morning at the souq"
+ },
+ "cast": [
+  "saeed"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "السَّلَامُ عَلَيْكُمْ! تَفَضَّلْ.",
+   "en": "Peace be upon you! Here you are.",
+   "lemmas": [
+    "salam",
+    "ala",
+    "kum",
+    "tafaddal"
+   ],
+   "register": "white",
+   "gesture": "raise_hand"
+  },
+  {
+   "type": "prompt",
+   "id": "d11s-greet",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Reply to the greeting"
+   },
+   "options": [
+    {
+     "ar": "وَعَلَيْكُمُ السَّلَامُ",
+     "en": "And upon you be peace",
+     "lemmas": [
+      "wa",
+      "ala",
+      "kum",
+      "salam"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "السَّلَامُ عَلَيْكُمْ",
+     "en": "Peace be upon you (repeating the greeting back)",
+     "lemmas": [
+      "salam",
+      "ala",
+      "kum"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
+     "lemmas": [
+      "ahlan"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "وَعَلَيْكُمُ السَّلَامُ",
+    "وَعَلَيْكُمْ السَّلَامُ",
+    "وعليكم السلام"
+   ],
+   "tiles": [
+    "وَعَلَيْكُمُ",
+    "السَّلَامُ",
+    "شُكْرًا"
+   ],
+   "recast": {
+    "ar": "وَعَلَيْكُمُ…؟",
+    "en": "And upon you…?",
+    "gesture": "lean_in"
+   },
+   "lemmas": [
+    "wa",
+    "ala",
+    "kum",
+    "salam"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "هٰذَا بُرْتُقَالٌ. هٰذَا حَلِيبٌ بَارِدٌ.",
+   "en": "This is an orange. This is cold milk.",
+   "lemmas": [
+    "hadha",
+    "burtuqal",
+    "halib",
+    "barid"
+   ],
+   "register": "white",
+   "gesture": "hold_up:orange"
+  },
+  {
+   "type": "prompt",
+   "id": "d11s-milk",
+   "speaker": "saeed",
+   "ask": {
+    "ar": "هَلْ هٰذَا حَلِيبٌ؟",
+    "en": "Is this milk? (he holds up an orange)",
+    "lemmas": [
+     "hal",
+     "hadha",
+     "halib"
+    ]
+   },
+   "options": [
+    {
+     "ar": "لَا، هٰذَا بُرْتُقَالٌ.",
+     "en": "No, this is an orange.",
+     "lemmas": [
+      "la",
+      "hadha",
+      "burtuqal"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "نَعَمْ، هٰذَا حَلِيبٌ.",
+     "en": "Yes, this is milk.",
+     "lemmas": [
+      "naam",
+      "hadha",
+      "halib"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "لَا، هٰذَا بُرْتُقَالٌ",
+    "لَا"
+   ],
+   "tiles": [
+    "لَا",
+    "هٰذَا",
+    "بُرْتُقَالٌ",
+    "حَلِيبٌ"
+   ],
+   "recast": {
+    "ar": "حَلِيبٌ؟ بُرْتُقَالٌ؟",
+    "en": "Milk? Orange?",
+    "gesture": "hold_up:orange"
+   },
+   "lemmas": [
+    "la",
+    "hadha",
+    "burtuqal"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "الْبَابُ كَبِيرٌ وَالنَّافِذَةُ صَغِيرَةٌ.",
+   "en": "The door is big and the window is small.",
+   "lemmas": [
+    "bab",
+    "kabir",
+    "wa",
+    "nafidha",
+    "saghir"
+   ],
+   "register": "white",
+   "gesture": "point:shop"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "هٰذِهِ كَأْسٌ. الْقَهْوَةُ سَاخِنَةٌ.",
+   "en": "This is a glass. The coffee is hot.",
+   "lemmas": [
+    "hadhihi",
+    "kass",
+    "qahwa",
+    "sakhin"
+   ],
+   "register": "white",
+   "gesture": "hold_up:glass"
+  },
+  {
+   "type": "prompt",
+   "id": "d11s-thanks",
+   "speaker": "saeed",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
+     "lemmas": [
+      "afwan"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
+     "lemmas": [
+      "ahlan"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  }
+ ],
+ "clock": "09:45"
+}

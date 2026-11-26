@@ -1,0 +1,216 @@
+{
+ "id": "d11-home",
+ "day": 11,
+ "place": "home",
+ "tags": [],
+ "kind": "story",
+ "title": {
+  "ar": "فِي الْبَيْتِ",
+  "en": "Inside the house"
+ },
+ "cast": [
+  "faisal",
+  "majid"
+ ],
+ "steps": [
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "صَبَاحُ الْخَيْرِ! هٰذَا بَابٌ.",
+   "en": "Good morning! This is a door.",
+   "lemmas": [
+    "sabah",
+    "khayr",
+    "hadha",
+    "bab"
+   ],
+   "register": "white",
+   "gesture": "point:door"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "وَهٰذِهِ نَافِذَةٌ. النَّافِذَةُ كَبِيرَةٌ.",
+   "en": "And this is a window. The window is big.",
+   "lemmas": [
+    "wa",
+    "hadhihi",
+    "nafidha",
+    "kabir"
+   ],
+   "register": "white",
+   "gesture": "point:window"
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "هٰذِهِ كَأْسٌ. فِيهَا مَاءٌ.",
+   "en": "This is a glass. There is water in it.",
+   "lemmas": [
+    "hadhihi",
+    "kass",
+    "fi",
+    "maa"
+   ],
+   "register": "white",
+   "gesture": "hold_up:glass"
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "الْمَاءُ بَارِدٌ.",
+   "en": "The water is cold.",
+   "lemmas": [
+    "maa",
+    "barid"
+   ],
+   "register": "white",
+   "gesture": "hold_out:glass"
+  },
+  {
+   "type": "prompt",
+   "id": "d11h-cold",
+   "speaker": "faisal",
+   "ask": {
+    "ar": "هَلِ الْمَاءُ سَاخِنٌ؟",
+    "en": "Is the water hot?",
+    "lemmas": [
+     "hal",
+     "maa",
+     "sakhin"
+    ]
+   },
+   "options": [
+    {
+     "ar": "لَا، الْمَاءُ بَارِدٌ.",
+     "en": "No, the water is cold.",
+     "lemmas": [
+      "la",
+      "maa",
+      "barid"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "نَعَمْ، الْمَاءُ سَاخِنٌ.",
+     "en": "Yes, the water is hot.",
+     "lemmas": [
+      "naam",
+      "maa",
+      "sakhin"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "لَا، الْمَاءُ بَارِدٌ",
+    "لَا"
+   ],
+   "tiles": [
+    "لَا",
+    "الْمَاءُ",
+    "بَارِدٌ",
+    "سَاخِنٌ"
+   ],
+   "recast": {
+    "ar": "الْمَاءُ… سَاخِنٌ؟",
+    "en": "The water… hot?",
+    "gesture": "shake_head_hand"
+   },
+   "lemmas": [
+    "la",
+    "maa",
+    "barid"
+   ]
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "الشَّايُ سَاخِنٌ.",
+   "en": "The tea is hot.",
+   "lemmas": [
+    "shay",
+    "sakhin"
+   ],
+   "register": "white",
+   "gesture": "hold_up:tea"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
+   "ar": "خُذْ كَأْسًا مِنَ الْحَلِيبِ.",
+   "en": "Take a glass of milk.",
+   "lemmas": [
+    "khudh",
+    "kass",
+    "min",
+    "halib"
+   ],
+   "register": "white",
+   "gesture": "hand_over:glass"
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "هٰذَا بُرْتُقَالٌ صَغِيرٌ.",
+   "en": "This is a small orange.",
+   "lemmas": [
+    "hadha",
+    "burtuqal",
+    "saghir"
+   ],
+   "register": "white",
+   "gesture": "hold_up:orange"
+  },
+  {
+   "type": "prompt",
+   "id": "d11h-thanks",
+   "speaker": "faisal",
+   "ask": {
+    "en": "Say thank you"
+   },
+   "options": [
+    {
+     "ar": "شُكْرًا",
+     "en": "Thank you",
+     "lemmas": [
+      "shukran"
+     ],
+     "correct": true
+    },
+    {
+     "ar": "عَفْوًا",
+     "en": "You're welcome",
+     "lemmas": [
+      "afwan"
+     ],
+     "correct": false
+    },
+    {
+     "ar": "أَهْلًا وَسَهْلًا",
+     "en": "Welcome",
+     "lemmas": [
+      "ahlan"
+     ],
+     "correct": false
+    }
+   ],
+   "accepted": [
+    "شُكْرًا"
+   ],
+   "tiles": [
+    "شُكْرًا",
+    "لَا"
+   ],
+   "recast": {
+    "ar": "شُكْ…؟",
+    "en": "Thank…?",
+    "gesture": "hand_on_heart"
+   },
+   "lemmas": [
+    "shukran"
+   ]
+  }
+ ],
+ "clock": "08:30"
+}
