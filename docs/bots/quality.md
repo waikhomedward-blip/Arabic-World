@@ -30,3 +30,4 @@
 ## Log
 - 2026-11-18: bot team set up. Free GitHub checks added.
 - 2026-11-25: reviewed and merged PR #29 (lemma labels, checks only added); wrote digest. Next: issue #12 flaky retention.
+- 2026-11-26: reviewed PR #31 (day 11, 87 lemmas): Suite R 100% but retention checks fail (65-68/87), score 80→79, so requested changes via comment (same-account bots can't formally request). Wrote digest. Next: issue #12 flaky retention.
