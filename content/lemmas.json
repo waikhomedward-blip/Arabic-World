@@ -718,5 +718,59 @@
   "root": "س ح ب",
   "targetRung": 2,
   "label": "universal"
+ },
+ {
+  "id": "bab",
+  "ar": "بَابٌ",
+  "en": "door",
+  "tier": 1,
+  "root": "ب و ب",
+  "targetRung": 4,
+  "label": "universal"
+ },
+ {
+  "id": "nafidha",
+  "ar": "نَافِذَةٌ",
+  "en": "window",
+  "tier": 1,
+  "root": "ن ف ذ",
+  "targetRung": 4,
+  "label": "universal"
+ },
+ {
+  "id": "kass",
+  "ar": "كَأْسٌ",
+  "en": "glass (for drinking)",
+  "tier": 1,
+  "root": "ك أ س",
+  "targetRung": 4,
+  "label": "universal"
+ },
+ {
+  "id": "halib",
+  "ar": "حَلِيبٌ",
+  "en": "milk",
+  "tier": 1,
+  "root": "ح ل ب",
+  "targetRung": 4,
+  "label": "universal"
+ },
+ {
+  "id": "barid",
+  "ar": "بَارِدٌ",
+  "en": "cold",
+  "tier": 1,
+  "root": "ب ر د",
+  "targetRung": 4,
+  "label": "universal"
+ },
+ {
+  "id": "sakhin",
+  "ar": "سَاخِنٌ",
+  "en": "hot (warm)",
+  "tier": 1,
+  "root": "س خ ن",
+  "targetRung": 4,
+  "label": "universal"
  }
 ]
