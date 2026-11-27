@@ -87,26 +87,12 @@
    ]
   },
   {
-   "type": "line",
-   "speaker": "saeed",
-   "ar": "هٰذَا بُرْتُقَالٌ. هٰذَا حَلِيبٌ بَارِدٌ.",
-   "en": "This is an orange. This is cold milk.",
-   "lemmas": [
-    "hadha",
-    "burtuqal",
-    "halib",
-    "barid"
-   ],
-   "register": "white",
-   "gesture": "hold_up:orange"
-  },
-  {
    "type": "prompt",
    "id": "d11s-milk",
    "speaker": "saeed",
    "ask": {
     "ar": "هَلْ هٰذَا حَلِيبٌ؟",
-    "en": "Is this milk? (he holds up an orange)",
+    "en": "Is this milk? (he holds up water)",
     "lemmas": [
      "hal",
      "hadha",
@@ -115,12 +101,12 @@
    },
    "options": [
     {
-     "ar": "لَا، هٰذَا بُرْتُقَالٌ.",
-     "en": "No, this is an orange.",
+     "ar": "لَا، هٰذَا مَاءٌ.",
+     "en": "No, this is water.",
      "lemmas": [
       "la",
       "hadha",
-      "burtuqal"
+      "maa"
      ],
      "correct": true
     },
@@ -136,24 +122,24 @@
     }
    ],
    "accepted": [
-    "لَا، هٰذَا بُرْتُقَالٌ",
+    "لَا، هٰذَا مَاءٌ",
     "لَا"
    ],
    "tiles": [
     "لَا",
     "هٰذَا",
-    "بُرْتُقَالٌ",
+    "مَاءٌ",
     "حَلِيبٌ"
    ],
    "recast": {
-    "ar": "حَلِيبٌ؟ بُرْتُقَالٌ؟",
-    "en": "Milk? Orange?",
-    "gesture": "hold_up:orange"
+    "ar": "حَلِيبٌ؟ مَاءٌ؟",
+    "en": "Milk? Water?",
+    "gesture": "hold_up:glass"
    },
    "lemmas": [
     "la",
     "hadha",
-    "burtuqal"
+    "maa"
    ]
   },
   {
@@ -181,6 +167,23 @@
     "kass",
     "qahwa",
     "sakhin"
+   ],
+   "register": "white",
+   "gesture": "hold_up:glass"
+  },
+  {
+   "type": "line",
+   "speaker": "saeed",
+   "ar": "الْحَلِيبُ بَارِدٌ وَالشَّايُ سَاخِنٌ. الْكَأْسُ صَغِيرَةٌ.",
+   "en": "The milk is cold and the tea is hot. The glass is small.",
+   "lemmas": [
+    "halib",
+    "barid",
+    "wa",
+    "shay",
+    "sakhin",
+    "kass",
+    "saghir"
    ],
    "register": "white",
    "gesture": "hold_up:glass"

@@ -772,14 +772,5 @@
   "root": "س خ ن",
   "targetRung": 4,
   "label": "universal"
- },
- {
-  "id": "burtuqal",
-  "ar": "بُرْتُقَالٌ",
-  "en": "orange (fruit)",
-  "tier": 1,
-  "root": null,
-  "targetRung": 2,
-  "label": "universal"
  }
 ]

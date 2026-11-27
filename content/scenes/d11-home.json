@@ -126,6 +126,51 @@
   {
    "type": "line",
    "speaker": "faisal",
+   "ar": "هٰذَا بَابٌ. هٰذِهِ نَافِذَةٌ. هٰذِهِ كَأْسٌ.",
+   "en": "This is a door. This is a window. This is a glass.",
+   "lemmas": [
+    "hadha",
+    "bab",
+    "hadhihi",
+    "nafidha",
+    "kass"
+   ],
+   "register": "white",
+   "gesture": "point:door"
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "هٰذِهِ كَأْسٌ وَهٰذِهِ نَافِذَةٌ. الْبَابُ كَبِيرٌ.",
+   "en": "This is a glass and this is a window. The door is big.",
+   "lemmas": [
+    "hadhihi",
+    "kass",
+    "wa",
+    "nafidha",
+    "bab",
+    "kabir"
+   ],
+   "register": "white",
+   "gesture": "point:window"
+  },
+  {
+   "type": "line",
+   "speaker": "majid",
+   "ar": "النَّافِذَةُ كَبِيرَةٌ وَالْبَابُ كَبِيرٌ.",
+   "en": "The window is big and the door is big.",
+   "lemmas": [
+    "nafidha",
+    "kabir",
+    "wa",
+    "bab"
+   ],
+   "register": "white",
+   "gesture": "point:window"
+  },
+  {
+   "type": "line",
+   "speaker": "faisal",
    "ar": "الشَّايُ سَاخِنٌ.",
    "en": "The tea is hot.",
    "lemmas": [
@@ -151,16 +196,17 @@
   },
   {
    "type": "line",
-   "speaker": "majid",
-   "ar": "هٰذَا بُرْتُقَالٌ صَغِيرٌ.",
-   "en": "This is a small orange.",
+   "speaker": "faisal",
+   "ar": "الْحَلِيبُ بَارِدٌ فِي الْكَأْسِ.",
+   "en": "The milk is cold in the glass.",
    "lemmas": [
-    "hadha",
-    "burtuqal",
-    "saghir"
+    "halib",
+    "barid",
+    "fi",
+    "kass"
    ],
    "register": "white",
-   "gesture": "hold_up:orange"
+   "gesture": "hold_up:glass"
   },
   {
    "type": "prompt",
