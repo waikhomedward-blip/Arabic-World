@@ -1,6 +1,6 @@
 # Cycle 15
 
-Overall: **80** / 100 · Suite R 100.0% · cases 5169 · failures 1
+Overall: **80** / 100 · Suite R 100.0% · cases 5167 · failures 1
 
 | Suite | pass rate | metrics |
 |---|---|---|

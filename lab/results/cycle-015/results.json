@@ -12154,16 +12154,6 @@
    },
    {
     "suite": "R",
-    "id": "no-oscillator(music):app/src/core/agreement.ts",
-    "status": "pass"
-   },
-   {
-    "suite": "R",
-    "id": "no-face-emoji-src:app/src/core/agreement.ts",
-    "status": "pass"
-   },
-   {
-    "suite": "R",
     "id": "no-oscillator(music):app/src/core/arabic.ts",
     "status": "pass"
    },
